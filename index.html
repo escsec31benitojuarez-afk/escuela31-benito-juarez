@@ -82,7 +82,7 @@
     .resource small{display:block;color:var(--gris);font-weight:900;text-transform:uppercase;letter-spacing:.4px;margin-bottom:7px}
     .resource:nth-child(2n){border-left-color:var(--amarillo)}
     .resource:nth-child(3n){border-left-color:var(--rojo)}
-    .team-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}.team-grid.clean{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+    .team-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}.team-grid.clean{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:stretch}.team-grid.clean .card{height:100%}
     .team-photo{border-radius:24px;box-shadow:var(--sombra);overflow:hidden;background:#fff}
     .team-photo img{width:100%;height:100%;object-fit:cover}
     .info-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:14px;margin-top:16px}
@@ -161,10 +161,10 @@
         <p>Atajos principales para llegar rápidamente a la información institucional más utilizada.</p>
       </div>
       <div class="quick-grid">
+        <a class="quick-card" href="#equipo"><div class="icon">👥</div><h3>Equipo institucional</h3><p>Equipo directivo, pedagógico y acompañamiento digital.</p></a>
         <a class="quick-card" href="#novedades"><div class="icon">📌</div><h3>Novedades</h3><p>Comunicados, flyers, actos y fechas importantes.</p></a>
         <a class="quick-card" href="#recursos"><div class="icon">📁</div><h3>Documentación</h3><p>Formularios, normativa, horarios y recursos institucionales.</p></a>
         <a class="quick-card" href="#programas"><div class="icon">💻</div><h3>Programas</h3><p>Alfabetización Digital, ABP, proyectos y acompañamiento.</p></a>
-        <a class="quick-card" href="#equipo"><div class="icon">👥</div><h3>Equipo institucional</h3><p>Equipo directivo, pedagógico y acompañamiento RTI.</p></a>
       </div>
     </section>
 
@@ -251,7 +251,7 @@
     <section id="equipo">
       <div class="section-title">
         <h2>Equipo institucional y acompañamiento</h2>
-        <p>Espacio destinado a visibilizar el trabajo del equipo directivo, pedagógico, preceptores, tutores y acompañamiento tecnológico-pedagógico.</p>
+        <p>Espacio destinado a visibilizar el trabajo del equipo directivo, pedagógico, tutores, orientadores y acompañamiento pedagógico-digital.</p>
       </div>
 
       <div class="team-grid clean">
@@ -262,14 +262,37 @@
         </div>
 
         <div class="card">
-          <h2>Equipo pedagógico</h2>
-          <p>La institución cuenta con espacios de orientación, tutoría y acompañamiento para fortalecer las trayectorias escolares.</p>
-          <p><a class="btn btn-primary" href="assets/documentos/horarios-equipo-pedagogico.pdf" target="_blank">Ver horarios del equipo pedagógico</a></p>
+          <h2>Asesoría pedagógica</h2>
+          <p><strong>Prof. Daiana Mohn</strong></p>
+          <div class="info-list">
+            <div class="info"><strong>Lunes</strong>8:00 a 11:00 hs</div>
+            <div class="info"><strong>Miércoles</strong>8:00 a 11:00 hs</div>
+            <div class="info"><strong>Viernes</strong>8:00 a 10:00 hs</div>
+          </div>
         </div>
 
         <div class="card">
-          <h2>Acompañamiento RTI</h2>
-          <p>Espacio de acompañamiento tecnológico y pedagógico para docentes y estudiantes. Asesoramiento en TIC, metodologías activas e Inteligencia Artificial Generativa.</p>
+          <h2>Orientación educacional</h2>
+          <p><strong>Mahler Julián</strong></p>
+          <div class="info-list">
+            <div class="info"><strong>Lunes</strong>11:40 a 12:50 hs</div>
+            <div class="info"><strong>Miércoles</strong>11:40 a 12:50 hs</div>
+            <div class="info"><strong>Jueves</strong>7:20 a 12:50 hs</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Orientación educacional</h2>
+          <p><strong>Velázquez, Luciano Daniel</strong></p>
+          <div class="info-list">
+            <div class="info"><strong>Viernes</strong>9:25 a 10:45 hs</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Acompañamiento pedagógico y digital</h2>
+          <p>Espacio de acompañamiento pedagógico y digital destinado al fortalecimiento de las prácticas educativas institucionales.</p>
+          <p>Orientación y asesoramiento para docentes y estudiantes en alfabetización digital, integración de tecnologías, metodologías activas, Aprendizaje Basado en Proyectos (ABP), recursos digitales e Inteligencia Artificial Generativa aplicada a la educación.</p>
           <div class="info-list">
             <div class="info"><strong>Martes</strong>7:30 a 11:40 hs</div>
             <div class="info"><strong>Jueves</strong>7:30 a 10:00 hs</div>
