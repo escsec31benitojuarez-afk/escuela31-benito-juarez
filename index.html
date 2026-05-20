@@ -48,7 +48,7 @@
     main{max-width:1220px;margin:0 auto;padding:52px 6%}
     section{margin-bottom:56px;scroll-margin-top:110px}
     .section-title{margin-bottom:24px}
-    h2{font-size:clamp(1.9rem,3vw,2.6rem);line-height:1.18;color:var(--verde);margin-bottom:8px}
+    h2{font-size:clamp(1.75rem,2.7vw,2.45rem);line-height:1.18;color:var(--verde);margin-bottom:8px;overflow-wrap:break-word}
     h3{font-size:1.25rem;color:var(--verde);line-height:1.25;margin-bottom:8px}
     .section-title p,.muted{color:var(--gris)}
     .card{background:#fff;border-radius:var(--radio);box-shadow:var(--sombra);padding:32px;border-left:9px solid var(--verde-2)}
@@ -82,7 +82,7 @@
     .resource small{display:block;color:var(--gris);font-weight:900;text-transform:uppercase;letter-spacing:.4px;margin-bottom:7px}
     .resource:nth-child(2n){border-left-color:var(--amarillo)}
     .resource:nth-child(3n){border-left-color:var(--rojo)}
-    .team-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}.team-grid.clean{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:stretch}.team-grid.clean .card{height:100%}
+    .team-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}.team-grid.clean{grid-template-columns:repeat(auto-fit,minmax(315px,1fr));align-items:stretch}.team-grid.clean .card{height:100%;min-width:0}.team-grid.clean h2{font-size:clamp(1.55rem,2.3vw,2.15rem)}
     .team-photo{border-radius:24px;box-shadow:var(--sombra);overflow:hidden;background:#fff}
     .team-photo img{width:100%;height:100%;object-fit:cover}
     .info-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:14px;margin-top:16px}
@@ -168,6 +168,76 @@
       </div>
     </section>
 
+    <section id="equipo">
+      <div class="section-title">
+        <h2>Equipo institucional y acompañamiento</h2>
+        <p>Espacio destinado a visibilizar el trabajo del equipo directivo, pedagógico, preceptores, tutores, orientadores y acompañamiento pedagógico-digital.</p>
+      </div>
+
+      <div class="team-grid clean">
+        <div class="card">
+          <h2>Equipo directivo</h2>
+          <p><strong>Rector:</strong> Mg. Julio Gallardo.</p>
+          <p><strong>Secretaria:</strong> Prof. Romina Benitti.</p>
+        </div>
+
+        <div class="card">
+          <h2>Asesoría pedagógica</h2>
+          <p><strong>Prof. Daiana Mohn</strong></p>
+          <div class="info-list">
+            <div class="info"><strong>Lunes</strong>8:00 a 11:00 hs</div>
+            <div class="info"><strong>Miércoles</strong>8:00 a 11:00 hs</div>
+            <div class="info"><strong>Viernes</strong>8:00 a 10:00 hs</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Preceptores</h2>
+          <p><strong>Lucas Gastón Acosta</strong></p>
+          <p><strong>Flavia Romani</strong></p>
+          <div class="info-list">
+            <div class="info"><strong>Lunes a viernes</strong>7:20 a 13:00 hs</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Orientación educacional</h2>
+          <p><strong>Mahler Julián</strong></p>
+          <div class="info-list">
+            <div class="info"><strong>Lunes</strong>11:40 a 12:50 hs</div>
+            <div class="info"><strong>Miércoles</strong>11:40 a 12:50 hs</div>
+            <div class="info"><strong>Jueves</strong>7:20 a 12:50 hs</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Tutoría</h2>
+          <p><strong>Avecedo, Maximiliano</strong></p>
+          <div class="info-list">
+            <div class="info"><strong>Lunes</strong>10:40 a 12:50 hs</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Tutoría</h2>
+          <p><strong>Velázquez, Luciano Daniel</strong></p>
+          <div class="info-list">
+            <div class="info"><strong>Viernes</strong>9:25 a 10:45 hs</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Acompañamiento pedagógico-digital</h2>
+          <p>Espacio de acompañamiento pedagógico y digital destinado al fortalecimiento de las prácticas educativas institucionales.</p>
+          <p>Orientación y asesoramiento para docentes y estudiantes en alfabetización digital, integración de tecnologías, metodologías activas, Aprendizaje Basado en Proyectos (ABP), recursos digitales e Inteligencia Artificial Generativa aplicada a la educación.</p>
+          <div class="info-list">
+            <div class="info"><strong>Martes</strong>7:30 a 11:40 hs</div>
+            <div class="info"><strong>Jueves</strong>7:30 a 10:00 hs</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="novedades">
       <div class="section-title">
         <h2>Novedades institucionales</h2>
@@ -176,11 +246,11 @@
       <div class="news-grid">
         <article class="news-card">
           <img src="assets/imagenes/fechas-institucionales.jpg" alt="Fechas institucionales a tener en cuenta">
-          <div class="news-body"><span class="tag">Calendario escolar</span><h3>Fechas institucionales a tener en cuenta</h3><p>Organización de cierre del primer trimestre, carga de notas y comienzo del segundo trimestre.</p></div>
+          <div class="news-body"><span class="tag">Calendario escolar</span><h3>Fechas institucionales a tener en cuenta</h3><p>Entrega de planillas de calificaciones, finalización del primer trimestre, carga de notas en SAGE e inicio del segundo trimestre.</p></div>
         </article>
         <article class="news-card">
           <img src="assets/imagenes/informacion-preceptores.jpg" alt="Información para preceptores">
-          <div class="news-body"><span class="tag">Preceptoría</span><h3>Información para preceptores</h3><p>Entrega de planillas, recepción de calificaciones y actualización de asistencia en LUA SAGE.</p></div>
+          <div class="news-body"><span class="tag">Preceptoría</span><h3>Información para preceptores</h3><p>Entrega de planillas de calificaciones a docentes, recepción de planillas y control de carga de notas y asistencia en SAGE.</p></div>
         </article>
         <article class="news-card">
           <img src="assets/imagenes/desfile-25-mayo-2026.jpg" alt="Desfile 25 de Mayo 2026">
@@ -248,59 +318,6 @@
       </div>
     </section>
 
-    <section id="equipo">
-      <div class="section-title">
-        <h2>Equipo institucional y acompañamiento</h2>
-        <p>Espacio destinado a visibilizar el trabajo del equipo directivo, pedagógico, tutores, orientadores y acompañamiento pedagógico-digital.</p>
-      </div>
-
-      <div class="team-grid clean">
-        <div class="card">
-          <h2>Equipo directivo</h2>
-          <p><strong>Rector:</strong> Mg. Julio Gallardo.</p>
-          <p><strong>Secretaria:</strong> Prof. Romina Benitti.</p>
-        </div>
-
-        <div class="card">
-          <h2>Asesoría pedagógica</h2>
-          <p><strong>Prof. Daiana Mohn</strong></p>
-          <div class="info-list">
-            <div class="info"><strong>Lunes</strong>8:00 a 11:00 hs</div>
-            <div class="info"><strong>Miércoles</strong>8:00 a 11:00 hs</div>
-            <div class="info"><strong>Viernes</strong>8:00 a 10:00 hs</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <h2>Orientación educacional</h2>
-          <p><strong>Mahler Julián</strong></p>
-          <div class="info-list">
-            <div class="info"><strong>Lunes</strong>11:40 a 12:50 hs</div>
-            <div class="info"><strong>Miércoles</strong>11:40 a 12:50 hs</div>
-            <div class="info"><strong>Jueves</strong>7:20 a 12:50 hs</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <h2>Orientación educacional</h2>
-          <p><strong>Velázquez, Luciano Daniel</strong></p>
-          <div class="info-list">
-            <div class="info"><strong>Viernes</strong>9:25 a 10:45 hs</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <h2>Acompañamiento pedagógico y digital</h2>
-          <p>Espacio de acompañamiento pedagógico y digital destinado al fortalecimiento de las prácticas educativas institucionales.</p>
-          <p>Orientación y asesoramiento para docentes y estudiantes en alfabetización digital, integración de tecnologías, metodologías activas, Aprendizaje Basado en Proyectos (ABP), recursos digitales e Inteligencia Artificial Generativa aplicada a la educación.</p>
-          <div class="info-list">
-            <div class="info"><strong>Martes</strong>7:30 a 11:40 hs</div>
-            <div class="info"><strong>Jueves</strong>7:30 a 10:00 hs</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="recursos">
       <div class="section-title">
         <h2>Recursos y documentación institucional</h2>
@@ -342,6 +359,20 @@
         <div class="info"><strong>Asesoría</strong><a href="mailto:asesoriabenitojuarez@gmail.com">asesoriabenitojuarez@gmail.com</a></div>
       </div>
     </section>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
   </main>
 
   <footer>
