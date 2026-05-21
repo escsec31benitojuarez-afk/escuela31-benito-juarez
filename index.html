@@ -373,6 +373,176 @@ details.accordion-card ul{
 }
 
 
+
+/* ===== PROYECTO INSTITUCIONAL: LA ESCUELA VA AL BARRIO ===== */
+
+.escuela-barrio-section{
+  overflow:hidden;
+  border:1px solid rgba(11,90,53,.12);
+  background:
+    radial-gradient(circle at top right, rgba(214,187,66,.18), transparent 34%),
+    linear-gradient(135deg,#ffffff,#f3f8f5);
+}
+
+.escuela-barrio-hero{
+  background:linear-gradient(135deg,#063f25,#0b5a35);
+  color:#ffffff;
+  border-radius:24px;
+  padding:34px;
+  margin-bottom:24px;
+  position:relative;
+  overflow:hidden;
+}
+
+.escuela-barrio-hero::after{
+  content:"";
+  position:absolute;
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  background:rgba(214,187,66,.18);
+  right:-55px;
+  top:-55px;
+}
+
+.escuela-barrio-hero .eyebrow{
+  display:inline-block;
+  background:rgba(214,187,66,.95);
+  color:#063f25;
+  padding:7px 16px;
+  border-radius:999px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+  font-size:.78rem;
+  margin-bottom:14px;
+}
+
+.escuela-barrio-hero h2{
+  color:#ffffff;
+  font-size:clamp(2rem,4vw,3.3rem);
+  margin-bottom:8px;
+}
+
+.escuela-barrio-hero .subtitulo-barrio{
+  color:#fff7c9;
+  font-size:1.45rem;
+  font-weight:700;
+  margin-bottom:14px;
+}
+
+.escuela-barrio-hero p{
+  max-width:850px;
+  color:#eef8f1;
+  font-size:1.08rem;
+  position:relative;
+  z-index:1;
+}
+
+.barrio-frase{
+  background:#fff9df;
+  border-left:7px solid #d6bb42;
+  color:#063f25;
+  border-radius:16px;
+  padding:20px 24px;
+  font-size:1.35rem;
+  font-weight:800;
+  line-height:1.35;
+  margin:22px 0 30px;
+  box-shadow:0 6px 18px rgba(0,0,0,.06);
+}
+
+.barrios-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:26px;
+  margin:26px 0 34px;
+}
+
+.barrio-card{
+  background:#ffffff;
+  border-radius:20px;
+  overflow:hidden;
+  border:1px solid rgba(0,0,0,.08);
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
+  display:flex;
+  flex-direction:column;
+  transition:transform .22s ease, box-shadow .22s ease;
+}
+
+.barrio-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 14px 34px rgba(0,0,0,.13);
+}
+
+.barrio-img{
+  width:100%;
+  aspect-ratio:4/5;
+  background:#f4f6f4;
+  overflow:hidden;
+  border-bottom:1px solid rgba(0,0,0,.08);
+}
+
+.barrio-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:top center;
+  display:block;
+}
+
+.barrio-body{
+  padding:22px;
+}
+
+.barrio-tag{
+  display:inline-block;
+  background:#e8f3ec;
+  color:#0b5a35;
+  padding:6px 13px;
+  border-radius:999px;
+  font-size:.78rem;
+  font-weight:800;
+  margin-bottom:12px;
+  text-transform:uppercase;
+  letter-spacing:.3px;
+}
+
+.barrio-body h3{
+  color:#063f25;
+  font-size:1.35rem;
+  margin-bottom:10px;
+}
+
+.barrio-body p{
+  color:#4d5a55;
+  line-height:1.75;
+}
+
+.barrio-accordion{
+  margin-top:12px;
+}
+
+@media(max-width:1100px){
+  .barrios-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media(max-width:720px){
+  .escuela-barrio-hero{
+    padding:24px;
+  }
+
+  .barrios-grid{
+    grid-template-columns:1fr;
+  }
+
+  .barrio-frase{
+    font-size:1.12rem;
+  }
+}
+
 </style>
 </head>
 
@@ -397,6 +567,8 @@ details.accordion-card ul{
       <a href="#novedades">Novedades institucionales</a>
       <a href="#recursos">Recursos y documentación</a>
       <a href="#programas">Programas institucionales</a>
+        <a href="#escuela-barrio">La Escuela va al Barrio</a>
+      <a href="#escuela-barrio">La Escuela va al Barrio</a>
       <a href="#multimedia">Multimedia</a>
       <a href="#contacto">Contacto</a>
     </div>
@@ -442,6 +614,7 @@ details.accordion-card ul{
         <a class="quick-card" href="#novedades"><div class="icon">📢</div><h3>Novedades institucionales</h3><p>Avisos, actividades, fechas escolares y comunicaciones importantes.</p></a>
         <a class="quick-card" href="#recursos"><div class="icon">📁</div><h3>Recursos y documentación</h3><p>Documentos, formularios, normativa y enlaces útiles.</p></a>
         <a class="quick-card" href="#programas"><div class="icon">💻</div><h3>Programas institucionales</h3><p>Alfabetización Digital, ABP y proyectos institucionales.</p></a>
+        <a class="quick-card" href="#escuela-barrio"><div class="icon">🤝</div><h3>La Escuela va al Barrio</h3><p>Proyecto institucional de salud, territorio, comunidad y acompañamiento integral.</p></a>
         <a class="quick-card" href="#multimedia"><div class="icon">🎬</div><h3>Multimedia</h3><p>Videos, fotografías, producciones sonoras y memoria escolar.</p></a>
         <a class="quick-card" href="#contacto"><div class="icon">📞</div><h3>Contacto</h3><p>Canales oficiales de comunicación institucional.</p></a>
       </div>
@@ -704,7 +877,108 @@ details.accordion-card ul{
     </section>
 
 
-    <section id="multimedia">
+    
+<section id="escuela-barrio" class="card escuela-barrio-section">
+  <div class="escuela-barrio-hero">
+    <span class="eyebrow">Proyecto institucional</span>
+    <h2>La Escuela va al Barrio</h2>
+    <p class="subtitulo-barrio">“Cuidar el cuerpo, cuidar la vida”</p>
+    <p>
+      Proyecto institucional orientado a fortalecer el vínculo entre la escuela, la comunidad y los barrios,
+      mediante acciones educativas, preventivas y de acompañamiento integral.
+    </p>
+  </div>
+
+  <div class="barrio-frase">
+    “La escuela construye comunidad cuando sale al encuentro de su gente.”
+  </div>
+
+  <div class="barrios-grid">
+    <article class="barrio-card">
+      <div class="barrio-img">
+        <img src="assets/imagenes/la-escuela-va-al-barrio-cohelo.png" alt="La Escuela va al Barrio - Cohelo">
+      </div>
+      <div class="barrio-body">
+        <span class="barrio-tag">Primera salida territorial</span>
+        <h3>Barrio Cohelo</h3>
+        <p>Charla comunitaria sobre cuidado del cuerpo y salud bucal, con participación docente y acompañamiento institucional.</p>
+      </div>
+    </article>
+
+    <article class="barrio-card">
+      <div class="barrio-img">
+        <img src="assets/imagenes/la-escuela-va-al-barrio-el-blanqueado.png" alt="La Escuela va al Barrio - El Blanqueado">
+      </div>
+      <div class="barrio-body">
+        <span class="barrio-tag">Continuidad comunitaria</span>
+        <h3>Barrio El Blanqueado</h3>
+        <p>Encuentro territorial destinado a estudiantes, familias, tutores y comunidad, con eje en salud integral y participación escolar.</p>
+      </div>
+    </article>
+
+    <article class="barrio-card">
+      <div class="barrio-img">
+        <img src="assets/imagenes/la-escuela-va-al-barrio-mendieta.png" alt="La Escuela va al Barrio - Mendieta">
+      </div>
+      <div class="barrio-body">
+        <span class="barrio-tag">Presencia territorial</span>
+        <h3>Barrio Mendieta</h3>
+        <p>Nueva instancia de acercamiento institucional para fortalecer el vínculo entre escuela, barrio, salud y comunidad.</p>
+      </div>
+    </article>
+  </div>
+
+  <div class="accordion-group barrio-accordion">
+    <details class="accordion-card">
+      <summary>Fundamentación del proyecto</summary>
+      <p>
+        La escuela cumple un rol fundamental en la formación integral de los estudiantes, no solo en el desarrollo académico,
+        sino también en la construcción de hábitos saludables, vínculos respetuosos y cuidado del propio cuerpo.
+      </p>
+    </details>
+
+    <details class="accordion-card">
+      <summary>Objetivo general</summary>
+      <p>
+        Promover el cuidado del cuerpo, la salud integral y la construcción de vínculos saludables en los estudiantes,
+        fortaleciendo la relación entre la escuela y la comunidad.
+      </p>
+    </details>
+
+    <details class="accordion-card">
+      <summary>Actividades principales</summary>
+      <ul>
+        <li>Organización con referentes barriales.</li>
+        <li>Charlas-taller comunitarias con docentes y personal de salud.</li>
+        <li>Producción de folletos y materiales educativos.</li>
+        <li>Trabajo pedagógico posterior en distintos espacios curriculares.</li>
+      </ul>
+    </details>
+
+    <details class="accordion-card">
+      <summary>Temáticas abordadas</summary>
+      <ul>
+        <li>Salud bucal.</li>
+        <li>Enfermedades de transmisión sexual.</li>
+        <li>Embarazo no intencional en la adolescencia.</li>
+        <li>Vínculos sanos y convivencia escolar.</li>
+        <li>Asistencia, compromiso y responsabilidad en la trayectoria escolar.</li>
+      </ul>
+    </details>
+
+    <details class="accordion-card">
+      <summary>Evaluación y seguimiento</summary>
+      <p>
+        La evaluación se realiza de manera continua, considerando la participación de los estudiantes,
+        la producción de materiales informativos, el interés generado en las charlas y la articulación entre escuela,
+        centro de salud y comunidad barrial.
+      </p>
+    </details>
+  </div>
+</section>
+
+
+<section id="multimedia">
       <div class="section-title">
         <h2>Galería multimedia e identidad sonora</h2>
         <p>Fotografías, videos, audios y producciones vinculadas con la identidad institucional.</p>
