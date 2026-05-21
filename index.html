@@ -104,12 +104,24 @@
       .news-card img{height:auto}
       .card,.feature-box{padding:24px}
     }
+  
+    .phase-note{background:linear-gradient(135deg,#fff9df,#ffffff);border-left:7px solid var(--amarillo);border-radius:20px;padding:22px;box-shadow:0 7px 20px rgba(0,0,0,.07);margin-top:18px}
+    .pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    .pill{background:var(--verde-claro);color:var(--verde-oscuro);font-weight:800;border-radius:999px;padding:8px 12px;font-size:.9rem}
+    .split-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:start}
+    .mini-card{background:#fff;border-radius:18px;padding:20px;box-shadow:0 7px 18px rgba(0,0,0,.08);border-top:6px solid var(--verde-2)}
+    .mini-card.yellow{border-top-color:var(--amarillo)}
+    .mini-card.red{border-top-color:var(--rojo)}
+    .placeholder-box{background:#f1f6f3;border:2px dashed #b6c9bc;border-radius:20px;padding:24px;text-align:center;color:var(--gris)}
+    @media(max-width:860px){.split-grid{grid-template-columns:1fr}}
+
   </style>
 </head>
+
 <body>
   <div class="topbar">
-    <span>CUE: 300-2566 · Estación Yuquerí, Concordia, Entre Ríos</span>
-    <span><a href="mailto:secundaria31.cd@entrerios.edu.ar">secundaria31.cd@entrerios.edu.ar</a> · <a href="https://www.facebook.com/profile.php?id=100057420641002&mibextid=ZbWKwL" target="_blank" rel="noopener">Facebook institucional</a></span>
+    <span>Escuela Secundaria N.º 31 “Benito Juárez” · Estación Yuquerí</span>
+    <span><a href="tel:+543454949814">3454949814</a> · <a href="mailto:secretaria31benitojuarez@gmail.com">secretaria31benitojuarez@gmail.com</a></span>
   </div>
 
   <nav>
@@ -122,11 +134,14 @@
     </div>
     <div class="nav-links">
       <a href="#inicio">Inicio</a>
-      <a href="#novedades">Novedades</a>
       <a href="#institucion">Institución</a>
-      <a href="#programas">Programas</a>
+      <a href="#historia">Historia</a>
       <a href="#equipo">Equipo</a>
+      <a href="#programas">Programas</a>
       <a href="#recursos">Recursos</a>
+      <a href="#acompanamiento">Acompañamiento</a>
+      <a href="#multimedia">Multimedia</a>
+      <a href="#novedades">Novedades</a>
       <a href="#contacto">Contacto</a>
     </div>
   </nav>
@@ -150,6 +165,12 @@
           <h2>Bienvenidos</h2>
           <p>Este sitio reúne información, novedades, recursos y comunicaciones importantes para estudiantes, familias, docentes y toda la comunidad educativa.</p>
           <p>La página se organiza como un portal institucional vivo, pensado para acompañar la vida escolar, fortalecer la comunicación y visibilizar los proyectos que construyen identidad en Estación Yuquerí.</p>
+          <div class="pill-row">
+            <span class="pill">Identidad institucional</span>
+            <span class="pill">Recursos escolares</span>
+            <span class="pill">Acompañamiento digital</span>
+            <span class="pill">Comunidad educativa</span>
+          </div>
         </div>
         <div class="intro-logo"><img src="assets/imagenes/logo-benito-juarez.png" alt="Escudo institucional"></div>
       </div>
@@ -161,17 +182,71 @@
         <p>Atajos principales para llegar rápidamente a la información institucional más utilizada.</p>
       </div>
       <div class="quick-grid">
-        <a class="quick-card" href="#equipo"><div class="icon">👥</div><h3>Equipo institucional</h3><p>Equipo directivo, pedagógico y acompañamiento digital.</p></a>
-        <a class="quick-card" href="#novedades"><div class="icon">📌</div><h3>Novedades</h3><p>Comunicados, flyers, actos y fechas importantes.</p></a>
-        <a class="quick-card" href="#recursos"><div class="icon">📁</div><h3>Documentación</h3><p>Formularios, normativa, horarios y recursos institucionales.</p></a>
-        <a class="quick-card" href="#programas"><div class="icon">💻</div><h3>Programas</h3><p>Alfabetización Digital, ABP, proyectos y acompañamiento.</p></a>
+        <a class="quick-card" href="#institucion"><div class="icon">🏫</div><h3>Institución</h3><p>Identidad, datos escolares y organización institucional.</p></a>
+        <a class="quick-card" href="#historia"><div class="icon">📜</div><h3>Historia</h3><p>Memoria escolar, 25 años y video histórico.</p></a>
+        <a class="quick-card" href="#equipo"><div class="icon">👥</div><h3>Equipo escolar</h3><p>Equipo directivo, asesoría, preceptoría y tutorías.</p></a>
+        <a class="quick-card" href="#recursos"><div class="icon">📁</div><h3>Recursos</h3><p>Documentos, formularios, normativa y enlaces útiles.</p></a>
+        <a class="quick-card" href="#programas"><div class="icon">💻</div><h3>Programas</h3><p>Alfabetización Digital, ABP y proyectos institucionales.</p></a>
+        <a class="quick-card" href="#contacto"><div class="icon">📞</div><h3>Contacto</h3><p>Canales oficiales de comunicación institucional.</p></a>
+      </div>
+    </section>
+
+    <section id="institucion">
+      <div class="section-title">
+        <h2>Nuestra institución</h2>
+        <p>Identidad, organización y datos centrales de la Escuela Secundaria N.º 31 “Benito Juárez”.</p>
+      </div>
+      <div class="split-grid">
+        <div class="card">
+          <h2>Identidad institucional</h2>
+          <p>La Escuela Secundaria N.º 31 “Benito Juárez”, ubicada en Estación Yuquerí, Concordia, Entre Ríos, es una institución de educación secundaria pública comprometida con el acompañamiento de las trayectorias escolares, la participación comunitaria y la formación integral de sus estudiantes.</p>
+          <p>Su identidad se construye desde la cercanía con las familias, la historia de la comunidad y el trabajo cotidiano de docentes, preceptores, equipos de orientación, estudiantes y actores institucionales.</p>
+          <div class="phase-note">
+            <strong>Propósito del sitio:</strong> ofrecer un espacio institucional claro, actualizado y accesible para comunicar novedades, compartir recursos, visibilizar proyectos y fortalecer el vínculo entre escuela y comunidad.
+          </div>
+        </div>
+        <div class="card">
+          <h2>Datos institucionales</h2>
+          <div class="info-list">
+            <div class="info"><strong>CUE</strong>300-2566</div>
+            <div class="info"><strong>Ubicación</strong>Estación Yuquerí — Concordia, Entre Ríos</div>
+            <div class="info"><strong>Correo institucional</strong><a href="mailto:secundaria31.cd@entrerios.edu.ar">secundaria31.cd@entrerios.edu.ar</a></div>
+            <div class="info"><strong>Secretaría</strong><a href="mailto:secretaria31benitojuarez@gmail.com">secretaria31benitojuarez@gmail.com</a></div>
+            <div class="info"><strong>Celular oficial</strong><a href="tel:+543454949814">3454949814</a></div>
+            <div class="info"><strong>Red institucional</strong><a href="https://www.facebook.com/profile.php?id=100057420641002&mibextid=ZbWKwL" target="_blank" rel="noopener">BJ en Facebook</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="historia">
+      <div class="section-title">
+        <h2>Historia institucional</h2>
+        <p>Memoria, comunidad e identidad escolar en el recorrido de la Escuela Secundaria N.º 31.</p>
+      </div>
+      <details open>
+        <summary>Origen y primeros años</summary>
+        <p>La Escuela Secundaria N.º 31 “Benito Juárez”, ubicada en Estación Yuquerí, Concordia, Entre Ríos, nació alrededor del año 2000 como respuesta a la necesidad de brindar oportunidades educativas a los jóvenes de la comunidad.</p>
+        <p>Desde sus inicios, la institución fue creciendo junto a las familias, construyendo una identidad basada en el compromiso, la cercanía y el acompañamiento de las trayectorias estudiantiles.</p>
+      </details>
+      <details>
+        <summary>La escuela y su comunidad</summary>
+        <p>La historia institucional se vincula profundamente con la vida de Estación Yuquerí. La escuela es un espacio de encuentro, pertenencia y construcción colectiva, donde las voces de estudiantes, familias, egresados y docentes permiten reconocer los cambios y permanencias de la comunidad.</p>
+      </details>
+      <details>
+        <summary>25 años de historia</summary>
+        <p>En 2025, la institución celebró sus 25 años de historia, reafirmando su compromiso con una educación inclusiva, cercana y profundamente vinculada a la identidad de Estación Yuquerí.</p>
+        <p>Este apartado queda preparado para integrar fotografías, entrevistas, producciones estudiantiles y registros del proyecto “Tesoros ocultos de la escuela”.</p>
+      </details>
+      <div class="phase-note">
+        <strong>Video histórico institucional:</strong> este espacio queda reservado para integrar el video histórico de la escuela cuando se confirme el enlace definitivo.
       </div>
     </section>
 
     <section id="equipo">
       <div class="section-title">
-        <h2>Equipo institucional y acompañamiento</h2>
-        <p>Espacio destinado a visibilizar el trabajo del equipo directivo, pedagógico, preceptores, tutores, orientadores y acompañamiento pedagógico-digital.</p>
+        <h2>Equipo escolar</h2>
+        <p>Organización institucional, acompañamiento pedagógico y presencia cotidiana de los equipos de trabajo.</p>
       </div>
 
       <div class="team-grid clean">
@@ -198,6 +273,7 @@
           <div class="info-list">
             <div class="info"><strong>Lunes a viernes</strong>7:20 a 13:00 hs</div>
           </div>
+          <p class="phase-note">Información para preceptores: entrega de planillas de calificaciones a docentes, recepción de planillas y control de carga de notas y asistencia en SAGE.</p>
         </div>
 
         <div class="card">
@@ -225,65 +301,7 @@
             <div class="info"><strong>Viernes</strong>9:25 a 10:45 hs</div>
           </div>
         </div>
-
-        <div class="card">
-          <h2>Acompañamiento pedagógico-digital</h2>
-          <p>Espacio de acompañamiento pedagógico y digital destinado al fortalecimiento de las prácticas educativas institucionales.</p>
-          <p>Orientación y asesoramiento para docentes y estudiantes en alfabetización digital, integración de tecnologías, metodologías activas, Aprendizaje Basado en Proyectos (ABP), recursos digitales e Inteligencia Artificial Generativa aplicada a la educación.</p>
-          <div class="info-list">
-            <div class="info"><strong>Martes</strong>7:30 a 11:40 hs</div>
-            <div class="info"><strong>Jueves</strong>7:30 a 10:00 hs</div>
-          </div>
-        </div>
       </div>
-    </section>
-
-    <section id="novedades">
-      <div class="section-title">
-        <h2>Novedades institucionales</h2>
-        <p>Espacio destinado a comunicaciones recientes, actos, recordatorios y actividades de la vida escolar.</p>
-      </div>
-      <div class="news-grid">
-        <article class="news-card">
-          <img src="assets/imagenes/fechas-institucionales.jpg" alt="Fechas institucionales a tener en cuenta">
-          <div class="news-body"><span class="tag">Calendario escolar</span><h3>Fechas institucionales a tener en cuenta</h3><p>Entrega de planillas de calificaciones, finalización del primer trimestre, carga de notas en SAGE e inicio del segundo trimestre.</p></div>
-        </article>
-        <article class="news-card">
-          <img src="assets/imagenes/informacion-preceptores.jpg" alt="Información para preceptores">
-          <div class="news-body"><span class="tag">Preceptoría</span><h3>Información para preceptores</h3><p>Entrega de planillas de calificaciones a docentes, recepción de planillas y control de carga de notas y asistencia en SAGE.</p></div>
-        </article>
-        <article class="news-card">
-          <img src="assets/imagenes/desfile-25-mayo-2026.jpg" alt="Desfile 25 de Mayo 2026">
-          <div class="news-body"><span class="tag">Acto patrio</span><h3>Desfile 25 de Mayo 2026</h3><p>Participación institucional junto a estudiantes de 6.º año y agentes institucionales.</p></div>
-        </article>
-      </div>
-    </section>
-
-    <section id="institucion">
-      <div class="section-title">
-        <h2>Nuestra institución</h2>
-        <p>Historia, identidad, organización y datos centrales de la Escuela Secundaria N.º 31 “Benito Juárez”.</p>
-      </div>
-      <details open>
-        <summary>Nuestra historia</summary>
-        <p>La Escuela Secundaria N.º 31 “Benito Juárez”, ubicada en Estación Yuquerí, Concordia, Entre Ríos, nació alrededor del año 2000 como respuesta a la necesidad de brindar oportunidades educativas a los jóvenes de la comunidad.</p>
-        <p>Desde sus inicios, la institución fue creciendo junto a las familias, construyendo una identidad basada en el compromiso, la cercanía y el acompañamiento de las trayectorias estudiantiles.</p>
-        <p>En 2025, la institución celebró sus 25 años de historia, reafirmando su compromiso con una educación inclusiva, cercana y profundamente vinculada a la identidad de Estación Yuquerí.</p>
-      </details>
-      <details>
-        <summary>Datos institucionales</summary>
-        <div class="info-list">
-          <div class="info"><strong>CUE</strong>300-2566</div>
-          <div class="info"><strong>Correo institucional</strong><a href="mailto:secundaria31.cd@entrerios.edu.ar">secundaria31.cd@entrerios.edu.ar</a></div>
-          <div class="info"><strong>Asesoría</strong><a href="mailto:asesoriabenitojuarez@gmail.com">asesoriabenitojuarez@gmail.com</a></div>
-          <div class="info"><strong>Red institucional</strong><a href="https://www.facebook.com/profile.php?id=100057420641002&mibextid=ZbWKwL" target="_blank" rel="noopener">BJ en Facebook</a></div>
-        </div>
-      </details>
-      <details>
-        <summary>Equipo directivo</summary>
-        <p><strong>Rector:</strong> Mg. Julio Gallardo.</p>
-        <p><strong>Secretaria:</strong> Prof. Romina Benitti.</p>
-      </details>
     </section>
 
     <section id="programas">
@@ -316,6 +334,11 @@
           <p style="margin-top:18px"><a class="btn btn-primary" href="assets/documentos/tesoros-ocultos-benito-juarez.pdf" target="_blank">Ver proyecto</a></p>
         </div>
       </div>
+      <div class="grilla" style="margin-top:24px">
+        <div class="mini-card"><h3>Convivencia y participación</h3><p>Acciones orientadas a fortalecer el vínculo escolar, la participación estudiantil y el cuidado comunitario.</p></div>
+        <div class="mini-card yellow"><h3>Trayectorias escolares</h3><p>Seguimiento, orientación y acompañamiento para sostener la continuidad educativa de los estudiantes.</p></div>
+        <div class="mini-card red"><h3>Producciones institucionales</h3><p>Espacio para proyectos, muestras, actos, producciones digitales y experiencias educativas significativas.</p></div>
+      </div>
     </section>
 
     <section id="recursos">
@@ -323,63 +346,125 @@
         <h2>Recursos y documentación institucional</h2>
         <p>Documentos, formularios, normativa y enlaces de uso frecuente para la vida institucional.</p>
       </div>
-      <div class="resource-grid">
-        <a class="resource" href="https://drive.google.com/file/d/1g_J0IVwJAOUlnv55YrB1j1mdUpUEwoF-/view?usp=sharing" target="_blank" rel="noopener"><small>Planificación</small><h3>PAI 2026</h3><p>Acceso al Plan/Proyecto Anual Institucional.</p></a>
-        <a class="resource" href="assets/documentos/decreto-5923-00-mgje.pdf" target="_blank"><small>Normativa</small><h3>Decreto 5923/00 MGJE</h3><p>Régimen unificado de licencias e inasistencias.</p></a>
-        <a class="resource" href="https://docs.google.com/document/d/1Hac9q0BO5xQFvbRm2vA1_y_zf0QtnWr9/edit?usp=drive_link&ouid=118410012796974315636&rtpof=true&sd=true" target="_blank" rel="noopener"><small>Formulario</small><h3>FU para editar</h3><p>Documento editable de uso institucional.</p></a>
-        <a class="resource" href="https://drive.google.com/drive/folders/1UB8nHNqdr-Dl7dXP2tjg83pxPJ9J3X0K?usp=drive_link" target="_blank" rel="noopener"><small>Salidas educativas</small><h3>Documentación para salidas</h3><p>Carpeta institucional para salidas escolares.</p></a>
-        <a class="resource" href="https://docs.google.com/document/d/1FAKIkSkxY9-rqCqa3h3C-Be7tBql_aTb/edit?usp=drive_link&ouid=118410012796974315636&rtpof=true&sd=true" target="_blank" rel="noopener"><small>Administrativo</small><h3>Planilla de incompatibilidad</h3><p>Documento editable institucional.</p></a>
-        <a class="resource" href="https://docs.google.com/document/d/1zedTkjB_LKMK-3fiMHPAzxlcJeau2sVC/edit?usp=drive_link&ouid=118410012796974315636&rtpof=true&sd=true" target="_blank" rel="noopener"><small>Modelo</small><h3>Modelo nota 16i</h3><p>Plantilla editable para comunicaciones.</p></a>
-        <a class="resource" href="https://drive.google.com/file/d/1uHC-Qn2n1qIlOuco27R24b8J0cR0xDeZ/view?usp=drive_link" target="_blank" rel="noopener"><small>Organización</small><h3>Horarios ciclo lectivo 2026</h3><p>Acceso al documento de horarios institucionales.</p></a>
-        <a class="resource" href="https://www.facebook.com/profile.php?id=100057420641002&mibextid=ZbWKwL" target="_blank" rel="noopener"><small>Red institucional</small><h3>BJ en Facebook</h3><p>Perfil oficial de la institución.</p></a>
+      <details open>
+        <summary>Recursos para docentes y equipo institucional</summary>
+        <div class="resource-grid">
+          <a class="resource" href="https://drive.google.com/file/d/1g_J0IVwJAOUlnv55YrB1j1mdUpUEwoF-/view?usp=sharing" target="_blank" rel="noopener"><small>Planificación</small><h3>PAI 2026</h3><p>Acceso al Plan/Proyecto Anual Institucional.</p></a>
+          <a class="resource" href="assets/documentos/decreto-5923-00-mgje.pdf" target="_blank"><small>Normativa</small><h3>Decreto 5923/00 MGJE</h3><p>Régimen unificado de licencias e inasistencias.</p></a>
+          <a class="resource" href="https://docs.google.com/document/d/1Hac9q0BO5xQFvbRm2vA1_y_zf0QtnWr9/edit?usp=drive_link&ouid=118410012796974315636&rtpof=true&sd=true" target="_blank" rel="noopener"><small>Formulario</small><h3>FU para editar</h3><p>Documento editable de uso institucional.</p></a>
+          <a class="resource" href="https://drive.google.com/drive/folders/1UB8nHNqdr-Dl7dXP2tjg83pxPJ9J3X0K?usp=drive_link" target="_blank" rel="noopener"><small>Salidas educativas</small><h3>Documentación para salidas</h3><p>Carpeta institucional para salidas escolares.</p></a>
+          <a class="resource" href="https://docs.google.com/document/d/1FAKIkSkxY9-rqCqa3h3C-Be7tBql_aTb/edit?usp=drive_link&ouid=118410012796974315636&rtpof=true&sd=true" target="_blank" rel="noopener"><small>Administrativo</small><h3>Planilla de incompatibilidad</h3><p>Documento editable institucional.</p></a>
+          <a class="resource" href="https://docs.google.com/document/d/1zedTkjB_LKMK-3fiMHPAzxlcJeau2sVC/edit?usp=drive_link&ouid=118410012796974315636&rtpof=true&sd=true" target="_blank" rel="noopener"><small>Modelo</small><h3>Modelo nota 16i</h3><p>Plantilla editable para comunicaciones.</p></a>
+          <a class="resource" href="https://drive.google.com/file/d/1uHC-Qn2n1qIlOuco27R24b8J0cR0xDeZ/view?usp=drive_link" target="_blank" rel="noopener"><small>Organización</small><h3>Horarios ciclo lectivo 2026</h3><p>Acceso al documento de horarios institucionales.</p></a>
+        </div>
+      </details>
+      <details>
+        <summary>Recursos para estudiantes y familias</summary>
+        <p>Este espacio queda preparado para incorporar guías de estudio, comunicados, tutoriales de acceso, orientaciones para familias y materiales de acompañamiento escolar.</p>
+      </details>
+    </section>
+
+    <section id="acompanamiento">
+      <div class="section-title">
+        <h2>Acompañamiento pedagógico-digital</h2>
+        <p>Orientación institucional para fortalecer prácticas pedagógicas, organización escolar y uso significativo de tecnologías.</p>
+      </div>
+      <div class="team-grid clean">
+        <div class="card">
+          <h2>Para estudiantes</h2>
+          <p>Orientaciones para organizar el estudio, acceder a materiales digitales, resolver dificultades técnicas y sostener la continuidad educativa.</p>
+        </div>
+        <div class="card">
+          <h2>Para docentes</h2>
+          <p>Apoyo en el uso de herramientas digitales, recursos institucionales, carga de información, producción de materiales y organización de propuestas pedagógicas.</p>
+        </div>
+        <div class="card">
+          <h2>Para familias</h2>
+          <p>Información clara sobre canales de comunicación, seguimiento escolar y formas de acompañar a los estudiantes desde el hogar.</p>
+        </div>
+      </div>
+      <div class="phase-note">
+        <strong>Rol RTI:</strong> acompañamiento técnico-pedagógico para la integración de tecnologías, organización de recursos digitales y fortalecimiento de la comunicación institucional.
       </div>
     </section>
 
-    <section id="himno" class="card">
-      <h2>Identidad sonora institucional</h2>
-      <p>Producciones musicales vinculadas a la identidad, la memoria y el sentido de pertenencia de la escuela.</p>
-      <div class="audio-box">
-        <h3>Tranquera abierta</h3>
-        <p><strong>Autor:</strong> Alfredo Esquivel · <strong>Fecha:</strong> 02/04/2025</p>
-        <audio controls src="assets/audios/tranquera-abierta.mp3"></audio>
-        <p><a href="assets/documentos/himno-tranquera-abierta.pdf" target="_blank">Ver letra en PDF</a></p>
+    <section id="multimedia">
+      <div class="section-title">
+        <h2>Galería multimedia e identidad sonora</h2>
+        <p>Fotografías, videos, audios y producciones vinculadas con la identidad institucional.</p>
       </div>
-      <div class="audio-box">
-        <h3>Antes que el silencio grite</h3>
-        <audio controls src="assets/audios/antes-que-el-silencio-grite.mp3"></audio>
+      <div class="news-grid">
+        <article class="news-card">
+          <img src="assets/imagenes/frente-escuela.jpg" alt="Frente de la escuela">
+          <div class="news-body"><span class="tag">Institución</span><h3>Frente de la escuela</h3><p>Imagen institucional de referencia de la Escuela Secundaria N.º 31 “Benito Juárez”.</p></div>
+        </article>
+        <article class="news-card">
+          <img src="assets/imagenes/equipo-institucional.jpg" alt="Equipo institucional">
+          <div class="news-body"><span class="tag">Equipo</span><h3>Equipo institucional</h3><p>Registro visual del equipo escolar y del trabajo institucional.</p></div>
+        </article>
+        <article class="news-card">
+          <img src="assets/imagenes/horarios-rti.png" alt="Horarios RTI">
+          <div class="news-body"><span class="tag">Acompañamiento digital</span><h3>Horarios RTI</h3><p>Información de acompañamiento pedagógico-digital y organización institucional.</p></div>
+        </article>
+      </div>
+
+      <section id="himno" class="card" style="margin-top:24px">
+        <h2>Identidad sonora institucional</h2>
+        <p>Producciones musicales vinculadas a la identidad, la memoria y el sentido de pertenencia de la escuela.</p>
+        <div class="audio-box">
+          <h3>Tranquera abierta</h3>
+          <p><strong>Autor:</strong> Alfredo Esquivel · <strong>Fecha:</strong> 02/04/2025</p>
+          <audio controls src="assets/audios/tranquera-abierta.mp3"></audio>
+          <p><a href="assets/documentos/himno-tranquera-abierta.pdf" target="_blank">Ver letra en PDF</a></p>
+        </div>
+        <div class="audio-box">
+          <h3>Antes que el silencio grite</h3>
+          <audio controls src="assets/audios/antes-que-el-silencio-grite.mp3"></audio>
+        </div>
+      </section>
+    </section>
+
+    <section id="novedades">
+      <div class="section-title">
+        <h2>Novedades institucionales</h2>
+        <p>Comunicados recientes, actos, recordatorios y actividades de la vida escolar.</p>
+      </div>
+      <div class="news-grid">
+        <article class="news-card">
+          <img src="assets/imagenes/informacion-preceptores.jpg" alt="Información para preceptores">
+          <div class="news-body"><span class="tag">Preceptoría</span><h3>Información para preceptores</h3><p>Entrega de planillas de calificaciones a docentes, recepción de planillas y control de carga de notas y asistencia en SAGE.</p></div>
+        </article>
+        <article class="news-card">
+          <img src="assets/imagenes/fechas-institucionales.jpg" alt="Fechas institucionales a tener en cuenta">
+          <div class="news-body"><span class="tag">Calendario escolar</span><h3>Fechas institucionales a tener en cuenta</h3><p>Entrega de planillas de calificaciones, finalización del primer trimestre, carga de notas en SAGE e inicio del segundo trimestre.</p></div>
+        </article>
+        <article class="news-card">
+          <img src="assets/imagenes/desfile-25-mayo-2026.jpg" alt="Desfile 25 de Mayo 2026">
+          <div class="news-body"><span class="tag">Acto patrio</span><h3>Desfile 25 de Mayo 2026</h3><p>Participación institucional junto a estudiantes de 6.º año y agentes institucionales.</p></div>
+        </article>
       </div>
     </section>
 
     <section id="contacto" class="card">
       <h2>Contacto institucional</h2>
+      <p>Canales oficiales de comunicación de la Escuela Secundaria N.º 31 “Benito Juárez”.</p>
       <div class="info-list">
         <div class="info"><strong>Escuela</strong>Escuela Secundaria N.º 31 “Benito Juárez”</div>
         <div class="info"><strong>Ubicación</strong>Estación Yuquerí — Concordia, Entre Ríos</div>
+        <div class="info"><strong>Celular oficial</strong><a href="tel:+543454949814">3454949814</a></div>
+        <div class="info"><strong>Secretaría</strong><a href="mailto:secretaria31benitojuarez@gmail.com">secretaria31benitojuarez@gmail.com</a></div>
         <div class="info"><strong>Correo institucional</strong><a href="mailto:secundaria31.cd@entrerios.edu.ar">secundaria31.cd@entrerios.edu.ar</a></div>
         <div class="info"><strong>Asesoría</strong><a href="mailto:asesoriabenitojuarez@gmail.com">asesoriabenitojuarez@gmail.com</a></div>
+        <div class="info"><strong>Facebook</strong><a href="https://www.facebook.com/profile.php?id=100057420641002&mibextid=ZbWKwL" target="_blank" rel="noopener">Perfil institucional</a></div>
       </div>
     </section>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
   </main>
 
   <footer>
     <div class="footer-grid">
       <div><h3>Escuela Secundaria N.º 31</h3><p>“Benito Juárez”</p><p>Estación Yuquerí — Concordia, Entre Ríos</p><p>CUE: 300-2566</p></div>
-      <div><h3>Contacto</h3><a href="mailto:secundaria31.cd@entrerios.edu.ar">secundaria31.cd@entrerios.edu.ar</a><a href="mailto:asesoriabenitojuarez@gmail.com">asesoriabenitojuarez@gmail.com</a><a href="https://www.facebook.com/profile.php?id=100057420641002&mibextid=ZbWKwL" target="_blank" rel="noopener">Facebook institucional</a></div>
-      <div><h3>Accesos rápidos</h3><a href="#novedades">Novedades</a><a href="#programas">Programas institucionales</a><a href="#equipo">Equipo institucional</a><a href="#recursos">Recursos y documentación</a></div>
+      <div><h3>Contacto</h3><a href="tel:+543454949814">3454949814</a><a href="mailto:secretaria31benitojuarez@gmail.com">secretaria31benitojuarez@gmail.com</a><a href="mailto:secundaria31.cd@entrerios.edu.ar">secundaria31.cd@entrerios.edu.ar</a><a href="https://www.facebook.com/profile.php?id=100057420641002&mibextid=ZbWKwL" target="_blank" rel="noopener">Facebook institucional</a></div>
+      <div><h3>Accesos rápidos</h3><a href="#institucion">Institución</a><a href="#historia">Historia</a><a href="#programas">Programas institucionales</a><a href="#recursos">Recursos y documentación</a></div>
     </div>
     <div class="footer-bottom">Sitio institucional educativo desarrollado por Alfredo Esquivel.</div>
   </footer>
