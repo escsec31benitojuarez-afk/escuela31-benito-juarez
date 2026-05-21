@@ -115,13 +115,21 @@
     .placeholder-box{background:#f1f6f3;border:2px dashed #b6c9bc;border-radius:20px;padding:24px;text-align:center;color:var(--gris)}
     @media(max-width:860px){.split-grid{grid-template-columns:1fr}}
 
+
+    .video-historico p{margin:8px 0 16px;color:var(--gris)}
+    .video-responsive{position:relative;width:100%;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:18px;box-shadow:0 10px 24px rgba(0,0,0,.14);background:#000;margin-top:14px}
+    .video-responsive iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+    footer{padding:30px 6%}
+    .footer-grid{gap:20px}
+    .footer-bottom{margin-top:18px;padding-top:14px}
+
   </style>
 </head>
 
 <body>
   <div class="topbar">
     <span>Escuela Secundaria N.º 31 “Benito Juárez” · Estación Yuquerí</span>
-    <span><a href="tel:+543454949814">3454949814</a> · <a href="mailto:secretaria31benitojuarez@gmail.com">secretaria31benitojuarez@gmail.com</a></span>
+    <span><a href="tel:+543454949814">Cel.: +543454949814</a> · <a href="mailto:secundaria31.cd@entrerios.edu.ar">Correo: secundaria31.cd@entrerios.edu.ar</a></span>
   </div>
 
   <nav>
@@ -136,12 +144,9 @@
       <a href="#inicio">Inicio</a>
       <a href="#institucion">Institución</a>
       <a href="#historia">Historia</a>
-      <a href="#equipo">Equipo</a>
-      <a href="#programas">Programas</a>
-      <a href="#recursos">Recursos</a>
-      <a href="#acompanamiento">Acompañamiento</a>
+      <a href="#recursos">Recursos y documentación</a>
+      <a href="#programas">Programas institucionales</a>
       <a href="#multimedia">Multimedia</a>
-      <a href="#novedades">Novedades</a>
       <a href="#contacto">Contacto</a>
     </div>
   </nav>
@@ -151,7 +156,7 @@
       <span class="eyebrow">Portal institucional educativo</span>
       <h1>Escuela Secundaria N.º 31 “Benito Juárez”</h1>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#novedades">Ver novedades</a>
+        <a class="btn btn-primary" href="#recursos">Recursos y documentación</a>
         <a class="btn btn-outline" href="#programas">Programas institucionales</a>
       </div>
     </div>
@@ -182,10 +187,10 @@
       </div>
       <div class="quick-grid">
         <a class="quick-card" href="#institucion"><div class="icon">🏫</div><h3>Institución</h3><p>Identidad, datos escolares y organización institucional.</p></a>
-        <a class="quick-card" href="#historia"><div class="icon">📜</div><h3>Historia</h3><p>Memoria escolar, 25 años y video histórico.</p></a>
-        <a class="quick-card" href="#equipo"><div class="icon">👥</div><h3>Equipo escolar</h3><p>Equipo directivo, asesoría, preceptoría y tutorías.</p></a>
-        <a class="quick-card" href="#recursos"><div class="icon">📁</div><h3>Recursos</h3><p>Documentos, formularios, normativa y enlaces útiles.</p></a>
-        <a class="quick-card" href="#programas"><div class="icon">💻</div><h3>Programas</h3><p>Alfabetización Digital, ABP y proyectos institucionales.</p></a>
+        <a class="quick-card" href="#historia"><div class="icon">📜</div><h3>Historia</h3><p>Memoria escolar, 25 años y video histórico institucional.</p></a>
+        <a class="quick-card" href="#recursos"><div class="icon">📁</div><h3>Recursos y documentación</h3><p>Documentos, formularios, normativa y enlaces útiles.</p></a>
+        <a class="quick-card" href="#programas"><div class="icon">💻</div><h3>Programas institucionales</h3><p>Alfabetización Digital, ABP y proyectos institucionales.</p></a>
+        <a class="quick-card" href="#multimedia"><div class="icon">🎬</div><h3>Multimedia</h3><p>Videos, fotografías, producciones sonoras y memoria escolar.</p></a>
         <a class="quick-card" href="#contacto"><div class="icon">📞</div><h3>Contacto</h3><p>Canales oficiales de comunicación institucional.</p></a>
       </div>
     </section>
@@ -235,8 +240,12 @@
         <p>En 2025, la institución celebró sus 25 años de historia, reafirmando su compromiso con una educación inclusiva, cercana y profundamente vinculada a la identidad de Estación Yuquerí.</p>
         <p>Este apartado queda preparado para integrar fotografías, entrevistas, producciones estudiantiles y registros del proyecto “Tesoros ocultos de la escuela”.</p>
       </details>
-      <div class="phase-note">
-        <strong>Video histórico institucional:</strong> este espacio queda reservado para integrar el video histórico de la escuela cuando se confirme el enlace definitivo.
+      <div class="phase-note video-historico">
+        <strong>Video histórico institucional</strong>
+        <p>Producción audiovisual realizada en el marco de los 25 años de la Escuela Secundaria N.º 31 “Benito Juárez”.</p>
+        <div class="video-responsive">
+          <iframe src="https://www.youtube.com/embed/8AibIO0hHWo" title="25 años en la voz del viento - Escuela Secundaria N.º 31 Benito Juárez" allowfullscreen></iframe>
+        </div>
       </div>
     </section>
 
@@ -425,25 +434,41 @@
       <div class="info-list">
         <div class="info"><strong>Escuela</strong>Escuela Secundaria N.º 31 “Benito Juárez”</div>
         <div class="info"><strong>Ubicación</strong>Estación Yuquerí — Concordia, Entre Ríos</div>
-        <div class="info"><strong>Celular oficial</strong><a href="tel:+543454949814">3454949814</a></div>
-        <div class="info"><strong>Secretaría</strong><a href="mailto:secretaria31benitojuarez@gmail.com">secretaria31benitojuarez@gmail.com</a></div>
+        <div class="info"><strong>CUE</strong>300-2566</div>
+        <div class="info"><strong>Celular oficial</strong><a href="tel:+543454949814">+543454949814</a></div>
         <div class="info"><strong>Correo institucional</strong><a href="mailto:secundaria31.cd@entrerios.edu.ar">secundaria31.cd@entrerios.edu.ar</a></div>
-        <div class="info"><strong>Asesoría</strong><a href="mailto:asesoriabenitojuarez@gmail.com">asesoriabenitojuarez@gmail.com</a></div>
-        <div class="info"><strong>Facebook</strong><a href="https://www.facebook.com/profile.php?id=100057420641002&mibextid=ZbWKwL" target="_blank" rel="noopener">Perfil institucional</a></div>
+        <div class="info"><strong>Secretaría</strong><a href="mailto:secretaria31benitojuarez@gmail.com">secretaria31benitojuarez@gmail.com</a></div>
+        <div class="info"><strong>Facebook institucional</strong><a href="https://www.facebook.com/profile.php?id=100057420641002&mibextid=ZbWKwL" target="_blank" rel="noopener">Ver perfil institucional</a></div>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="footer-grid">
-      <div><h3>Escuela Secundaria N.º 31</h3><p>“Benito Juárez”</p><p>Estación Yuquerí — Concordia, Entre Ríos</p><p>CUE: 300-2566</p></div>
-      <div><h3>Contacto</h3><a href="tel:+543454949814">3454949814</a><a href="mailto:secretaria31benitojuarez@gmail.com">secretaria31benitojuarez@gmail.com</a><a href="mailto:secundaria31.cd@entrerios.edu.ar">secundaria31.cd@entrerios.edu.ar</a><a href="https://www.facebook.com/profile.php?id=100057420641002&mibextid=ZbWKwL" target="_blank" rel="noopener">Facebook institucional</a></div>
-      <div><h3>Accesos rápidos</h3><a href="#institucion">Institución</a><a href="#historia">Historia</a><a href="#programas">Programas institucionales</a><a href="#recursos">Recursos y documentación</a></div>
+      <div>
+        <h3>Escuela Secundaria N.º 31</h3>
+        <p>“Benito Juárez”</p>
+        <p>Estación Yuquerí — Concordia, Entre Ríos</p>
+        <p>CUE: 300-2566</p>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <a href="tel:+543454949814">Cel.: +543454949814</a>
+        <a href="mailto:secundaria31.cd@entrerios.edu.ar">Correo: secundaria31.cd@entrerios.edu.ar</a>
+        <a href="mailto:secretaria31benitojuarez@gmail.com">Secretaría: secretaria31benitojuarez@gmail.com</a>
+        <a href="https://www.facebook.com/profile.php?id=100057420641002&mibextid=ZbWKwL" target="_blank" rel="noopener">Facebook institucional</a>
+      </div>
+      <div>
+        <h3>Accesos rápidos</h3>
+        <a href="#institucion">Institución</a>
+        <a href="#historia">Historia</a>
+        <a href="#recursos">Recursos y documentación</a>
+        <a href="#programas">Programas institucionales</a>
+        <a href="#multimedia">Multimedia</a>
+        <a href="#contacto">Contacto</a>
+      </div>
     </div>
     <div class="footer-bottom">Sitio institucional educativo desarrollado por Alfredo Esquivel.</div>
   </footer>
 </body>
 </html>
-
-<!-- Video Histórico Institucional -->
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8AibIO0hHWo" frameborder="0" allowfullscreen></iframe>
