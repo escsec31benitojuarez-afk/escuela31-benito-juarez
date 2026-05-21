@@ -252,6 +252,122 @@
   }
 }
 
+
+/* ===== DESPLEGABLES UNIFICADOS DEL SITIO ===== */
+
+.accordion-group{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  margin-top:20px;
+}
+
+details.accordion-card{
+  background:#ffffff;
+  border:1px solid rgba(0,0,0,.08);
+  border-radius:18px;
+  box-shadow:0 5px 18px rgba(0,0,0,.05);
+  overflow:hidden;
+  transition:box-shadow .22s ease, transform .22s ease, border-color .22s ease;
+  margin:14px 0;
+}
+
+details.accordion-card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 26px rgba(0,0,0,.09);
+  border-color:rgba(11,90,53,.22);
+}
+
+details.accordion-card[open]{
+  border-color:rgba(11,90,53,.32);
+  box-shadow:0 12px 30px rgba(0,0,0,.10);
+}
+
+details.accordion-card summary{
+  cursor:pointer;
+  list-style:none;
+  padding:18px 22px;
+  font-weight:700;
+  color:#063f25;
+  font-size:1.08rem;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  background:linear-gradient(90deg,#f7fbf8,#ffffff);
+}
+
+details.accordion-card summary::-webkit-details-marker{
+  display:none;
+}
+
+details.accordion-card summary::after{
+  content:"+";
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  background:#e8f3ec;
+  color:#0b5a35;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.25rem;
+  font-weight:700;
+  flex-shrink:0;
+  transition:transform .22s ease, background .22s ease;
+}
+
+details.accordion-card[open] summary::after{
+  content:"–";
+  background:#0b5a35;
+  color:#ffffff;
+}
+
+details.accordion-card p,
+details.accordion-card ul{
+  padding:0 22px 20px 22px;
+  color:#4d5a55;
+  line-height:1.75;
+  font-size:1rem;
+}
+
+details.accordion-card ul{
+  padding-left:44px;
+}
+
+.titulo-interno-seccion{
+  color:#0b5a35;
+  font-size:clamp(1.8rem,3vw,2.7rem);
+  line-height:1.2;
+  margin-bottom:10px;
+}
+
+.bloque-desplegable-interno{
+  margin-top:34px;
+  padding-top:28px;
+  border-top:1px solid rgba(0,0,0,.10);
+}
+
+.bloque-desplegable-interno .section-intro{
+  margin-bottom:10px;
+}
+
+@media(max-width:720px){
+  details.accordion-card summary{
+    padding:16px 18px;
+    font-size:1rem;
+  }
+
+  details.accordion-card p,
+  details.accordion-card ul{
+    padding:0 18px 18px 18px;
+  }
+
+  .titulo-interno-seccion{
+    font-size:2rem;
+  }
+}
+
 </style>
 </head>
 
@@ -357,16 +473,16 @@
         <h2>Historia institucional</h2>
         <p>Memoria, comunidad e identidad escolar en el recorrido de la Escuela Secundaria N.º 31.</p>
       </div>
-      <details open>
+      <details class="accordion-card" open>
         <summary>Origen y primeros años</summary>
         <p>La Escuela Secundaria N.º 31 “Benito Juárez”, ubicada en Estación Yuquerí, Concordia, Entre Ríos, nació alrededor del año 2000 como respuesta a la necesidad de brindar oportunidades educativas a los jóvenes de la comunidad.</p>
         <p>Desde sus inicios, la institución fue creciendo junto a las familias, construyendo una identidad basada en el compromiso, la cercanía y el acompañamiento de las trayectorias estudiantiles.</p>
       </details>
-      <details>
+      <details class="accordion-card">
         <summary>La escuela y su comunidad</summary>
         <p>La historia institucional se vincula profundamente con la vida de Estación Yuquerí. La escuela es un espacio de encuentro, pertenencia y construcción colectiva, donde las voces de estudiantes, familias, egresados y docentes permiten reconocer los cambios y permanencias de la comunidad.</p>
       </details>
-      <details>
+      <details class="accordion-card">
         <summary>25 años de historia</summary>
         <p>En 2025, la institución celebró sus 25 años de historia, reafirmando su compromiso con una educación inclusiva, cercana y profundamente vinculada a la identidad de Estación Yuquerí.</p>
         <p>Este apartado queda preparado para integrar fotografías, entrevistas, producciones estudiantiles y registros del proyecto “Tesoros ocultos de la escuela”.</p>
@@ -441,28 +557,31 @@
         </div>
       </div>
     
-      <div class="subbloque-equipo-final">
-        <div class="section-title">
-        <h3>Acompañamiento pedagógico-digital</h3>
-        <p>Orientación institucional para fortalecer prácticas pedagógicas, organización escolar y uso significativo de tecnologías.</p>
-      </div>
-      <div class="team-grid clean">
-        <div class="card">
-          <h2>Para estudiantes</h2>
-          <p>Orientaciones para organizar el estudio, acceder a materiales digitales, resolver dificultades técnicas y sostener la continuidad educativa.</p>
+      
+      <div class="subbloque-equipo-final bloque-desplegable-interno">
+        <h2 class="titulo-interno-seccion">Acompañamiento pedagógico-digital</h2>
+        <p class="section-intro">
+          Orientación institucional para fortalecer prácticas pedagógicas, organización escolar y uso significativo de tecnologías.
+        </p>
+
+        <div class="accordion-group">
+          <details class="accordion-card">
+            <summary>Para estudiantes</summary>
+            <p>Orientaciones para organizar el estudio, acceder a materiales digitales, resolver dificultades técnicas y sostener la continuidad educativa.</p>
+          </details>
+
+          <details class="accordion-card">
+            <summary>Para docentes</summary>
+            <p>Apoyo en el uso de herramientas digitales, recursos institucionales, carga de información, producción de materiales y organización de propuestas pedagógicas.</p>
+          </details>
+
+          <details class="accordion-card">
+            <summary>Para familias</summary>
+            <p>Información clara sobre canales de comunicación, seguimiento escolar y formas de acompañar a los estudiantes desde el hogar.</p>
+          </details>
         </div>
-        <div class="card">
-          <h2>Para docentes</h2>
-          <p>Apoyo en el uso de herramientas digitales, recursos institucionales, carga de información, producción de materiales y organización de propuestas pedagógicas.</p>
-        </div>
-        <div class="card">
-          <h2>Para familias</h2>
-          <p>Información clara sobre canales de comunicación, seguimiento escolar y formas de acompañar a los estudiantes desde el hogar.</p>
-        </div>
       </div>
-      <div class="phase-note">
-      </div>
-      </div>
+
     </section>
 
 <section id="novedades">
@@ -528,7 +647,7 @@
         <h2>Recursos y documentación institucional</h2>
         <p>Documentos, formularios, normativa y enlaces de uso frecuente para la vida institucional.</p>
       </div>
-      <details open>
+      <details class="accordion-card" open>
         <div class="resource-grid">
           <a class="resource" href="https://drive.google.com/file/d/1g_J0IVwJAOUlnv55YrB1j1mdUpUEwoF-/view?usp=sharing" target="_blank" rel="noopener"><small>Planificación</small><h3>PAI 2026</h3><p>Acceso al Plan/Proyecto Anual Institucional.</p></a>
           <a class="resource" href="assets/documentos/decreto-5923-00-mgje.pdf" target="_blank"><small>Normativa</small><h3>Decreto 5923/00 MGJE</h3><p>Régimen unificado de licencias e inasistencias.</p></a>
@@ -539,7 +658,7 @@
           <a class="resource" href="https://drive.google.com/file/d/1uHC-Qn2n1qIlOuco27R24b8J0cR0xDeZ/view?usp=drive_link" target="_blank" rel="noopener"><small>Organización</small><h3>Horarios ciclo lectivo 2026</h3><p>Acceso al documento de horarios institucionales.</p></a>
         </div>
       </details>
-      <details>
+      <details class="accordion-card">
         <summary>Recursos para estudiantes y familias</summary>
         <p>Este espacio queda preparado para incorporar guías de estudio, comunicados, tutoriales de acceso, orientaciones para familias y materiales de acompañamiento escolar.</p>
       </details>
