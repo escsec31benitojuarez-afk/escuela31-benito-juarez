@@ -648,6 +648,278 @@ details.accordion-card ul{
   margin:8px 22px 24px 22px;
 }
 
+
+/* ===== PORTADA INSTITUCIONAL MEJORADA ===== */
+
+.hero{
+  position:relative;
+  min-height:640px;
+  padding:72px 6% 40px;
+  overflow:hidden;
+  background:
+    linear-gradient(90deg, rgba(6,63,37,.96) 0%, rgba(6,63,37,.82) 42%, rgba(6,63,37,.35) 100%),
+    url("assets/imagenes/frente-escuela.jpg");
+  background-size:cover;
+  background-position:center;
+  color:#ffffff;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 82% 30%, rgba(214,187,66,.20), transparent 28%),
+    linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.22));
+  pointer-events:none;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:1180px;
+  width:100%;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(360px,.85fr);
+  gap:44px;
+  align-items:center;
+}
+
+.hero-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:#f4c400;
+  color:#073f25;
+  padding:12px 20px;
+  border-radius:999px;
+  font-weight:800;
+  box-shadow:0 8px 22px rgba(0,0,0,.20);
+  margin-bottom:24px;
+}
+
+.hero-badge::before{
+  content:"🏫";
+  background:#073f25;
+  color:#ffffff;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero h1{
+  max-width:720px;
+  font-size:clamp(3rem,6vw,5.8rem);
+  line-height:1.05;
+  letter-spacing:-1.5px;
+  font-weight:900;
+  margin:0;
+  text-shadow:0 6px 18px rgba(0,0,0,.25);
+}
+
+.hero h1 span{
+  display:block;
+}
+
+.hero-line{
+  width:min(420px,70%);
+  height:4px;
+  background:linear-gradient(90deg,#f4c400,transparent);
+  border-radius:99px;
+  margin:28px 0 24px;
+  position:relative;
+}
+
+.hero-line::after{
+  content:"";
+  position:absolute;
+  left:48%;
+  top:50%;
+  transform:translateY(-50%);
+  width:10px;
+  height:10px;
+  background:#f4c400;
+  border-radius:50%;
+}
+
+.hero-subtitle{
+  max-width:680px;
+  color:#f3f8f4;
+  font-size:clamp(1.15rem,2vw,1.45rem);
+  line-height:1.7;
+  font-weight:600;
+}
+
+.hero-quote-card{
+  background:rgba(255,255,255,.94);
+  color:#063f25;
+  border-radius:28px;
+  padding:38px 42px;
+  box-shadow:0 18px 42px rgba(0,0,0,.22);
+  border-left:7px solid #d6bb42;
+  position:relative;
+  backdrop-filter:blur(4px);
+}
+
+.hero-quote-card .quote-mark{
+  font-size:5rem;
+  line-height:1;
+  color:rgba(11,90,53,.62);
+  font-weight:900;
+  height:46px;
+}
+
+.hero-quote-card p{
+  font-size:clamp(1.05rem,1.5vw,1.28rem);
+  line-height:1.7;
+  font-weight:800;
+  margin:0;
+}
+
+.hero-values{
+  position:relative;
+  z-index:3;
+  max-width:1180px;
+  width:100%;
+  margin:56px auto 0;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:20px;
+}
+
+.hero-values article{
+  background:rgba(6,63,37,.94);
+  border:1px solid rgba(214,187,66,.34);
+  color:#ffffff;
+  border-radius:20px;
+  padding:22px;
+  display:flex;
+  gap:16px;
+  align-items:flex-start;
+  box-shadow:0 12px 28px rgba(0,0,0,.18);
+}
+
+.value-icon{
+  color:#f4c400;
+  font-size:2rem;
+  line-height:1;
+  flex-shrink:0;
+}
+
+.hero-values h3{
+  color:#ffffff;
+  margin:0 0 4px;
+  font-size:1.12rem;
+}
+
+.hero-values p{
+  color:#eaf5ef;
+  margin:0;
+  line-height:1.5;
+  font-size:.96rem;
+}
+
+.hero-bottom-strip{
+  position:relative;
+  z-index:3;
+  max-width:1180px;
+  width:100%;
+  margin:28px auto 0;
+  background:rgba(255,255,255,.93);
+  color:#063f25;
+  border-radius:22px;
+  padding:18px 24px;
+  display:grid;
+  grid-template-columns:1fr 1.2fr auto;
+  align-items:center;
+  gap:22px;
+  box-shadow:0 12px 32px rgba(0,0,0,.12);
+  border-left:5px solid #d6bb42;
+}
+
+.hero-bottom-strip strong{
+  display:block;
+  font-size:1.05rem;
+  margin-bottom:3px;
+}
+
+.hero-bottom-strip span{
+  color:#5b6762;
+  font-size:.95rem;
+}
+
+.hero-bottom-strip a{
+  background:#0b5a35;
+  color:#ffffff;
+  padding:12px 20px;
+  border-radius:999px;
+  font-weight:800;
+  white-space:nowrap;
+  transition:.2s ease;
+}
+
+.hero-bottom-strip a:hover{
+  background:#063f25;
+  transform:translateY(-2px);
+}
+
+@media(max-width:1050px){
+  .hero{
+    padding-top:56px;
+  }
+
+  .hero-content{
+    grid-template-columns:1fr;
+  }
+
+  .hero-quote-card{
+    max-width:720px;
+  }
+
+  .hero-values{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .hero-bottom-strip{
+    grid-template-columns:1fr;
+  }
+
+  .hero-bottom-strip a{
+    width:fit-content;
+  }
+}
+
+@media(max-width:680px){
+  .hero{
+    min-height:auto;
+    padding:44px 5% 34px;
+  }
+
+  .hero h1{
+    font-size:clamp(2.4rem,13vw,4rem);
+  }
+
+  .hero-quote-card{
+    padding:28px 24px;
+  }
+
+  .hero-values{
+    grid-template-columns:1fr;
+    margin-top:34px;
+  }
+
+  .hero-bottom-strip{
+    padding:18px;
+  }
+}
+
 </style>
 </head>
 
@@ -687,12 +959,6 @@ details.accordion-card ul{
         <a class="btn btn-outline" href="#programas">Programas institucionales</a>
       </div>
     </div>
-  
-<div class="frase-identidad">
-“La Escuela Secundaria N.º 31 “Benito Juárez” es memoria, comunidad y futuro:
-una institución que crece junto a Estación Yuquerí, sosteniendo el derecho a aprender,
-encontrarse y proyectar nuevos caminos.”
-</div>
 </header>
 
 
