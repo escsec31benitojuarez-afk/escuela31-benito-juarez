@@ -135,7 +135,89 @@
       font-size:1.35rem;
     }
 
-  </style>
+  
+/* ===== NOVEDADES INSTITUCIONALES ===== */
+
+.section-intro{
+  margin-bottom:28px;
+  color:#5f6b66;
+}
+
+.novedades-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:28px;
+  align-items:start;
+}
+
+.novedad-card{
+  background:#fff;
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
+  transition:all .25s ease;
+  border:1px solid rgba(0,0,0,.05);
+  display:flex;
+  flex-direction:column;
+  height:100%;
+}
+
+.novedad-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 12px 30px rgba(0,0,0,.12);
+}
+
+.novedad-img{
+  width:100%;
+  background:#f3f5f4;
+}
+
+.novedad-img img{
+  width:100%;
+  display:block;
+  object-fit:cover;
+}
+
+.novedad-body{
+  padding:22px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.categoria{
+  display:inline-block;
+  background:#e7f2eb;
+  color:#0d5b36;
+  padding:6px 14px;
+  border-radius:999px;
+  font-size:.78rem;
+  font-weight:700;
+  width:fit-content;
+  letter-spacing:.4px;
+}
+
+.novedad-body h3{
+  margin:0;
+  color:#0d5b36;
+  font-size:1.5rem;
+  line-height:1.25;
+}
+
+.novedad-body p{
+  margin:0;
+  color:#495652;
+  line-height:1.75;
+  font-size:1rem;
+}
+
+@media(max-width:900px){
+  .novedades-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+</style>
 </head>
 
 <body>
