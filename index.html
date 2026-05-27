@@ -663,7 +663,92 @@
       .portada-cierre { padding:18px; }
       .novedad-body { grid-template-columns:44px 1fr; padding:18px; }
     }
-  </style>
+  
+/* ===== AJUSTES FINALES ===== */
+
+.cargo-destacado{
+display:inline-block;
+background:#eef5f1;
+color:#0b5a35;
+padding:6px 12px;
+border-radius:999px;
+font-size:.78rem;
+font-weight:800;
+margin-bottom:12px;
+text-transform:uppercase;
+}
+
+.cargo-destacado.rojo{
+background:#b3261e;
+color:#fff;
+}
+
+.resource-list{
+padding-left:18px;
+line-height:1.9;
+margin-top:12px;
+}
+
+.contacto-premium{
+background:
+radial-gradient(circle at top right, rgba(179,38,30,.08), transparent 28%),
+linear-gradient(135deg,#ffffff,#f9fbfa);
+}
+
+.contacto-grid{
+display:grid;
+grid-template-columns:1.1fr .95fr .95fr;
+gap:24px;
+}
+
+.contacto-card{
+background:#fff;
+border-radius:24px;
+padding:28px;
+border:1px solid rgba(11,90,53,.08);
+box-shadow:0 10px 24px rgba(0,0,0,.05);
+}
+
+.contacto-card.principal{
+border-left:6px solid #b3261e;
+}
+
+.contacto-card h3{
+margin:10px 0 14px;
+color:#063f25;
+}
+
+.contacto-lista{
+padding-left:18px;
+line-height:2;
+}
+
+.contacto-datos{
+display:grid;
+gap:8px;
+margin-top:18px;
+}
+
+.pdf-programa{
+margin-top:28px;
+padding:24px;
+border-radius:22px;
+background:linear-gradient(135deg,#fff8f8,#f9f5f5);
+border-left:6px solid #b3261e;
+}
+
+.pdf-programa h4{
+margin:10px 0;
+color:#063f25;
+}
+
+@media(max-width:980px){
+.contacto-grid{
+grid-template-columns:1fr;
+}
+}
+
+</style>
 </head>
 
 <body>
@@ -789,23 +874,100 @@
       <details class="accordion-card"><summary>Video histórico institucional</summary><p>Producción audiovisual realizada en el marco de los 25 años de la Escuela Secundaria N.º 31 “Benito Juárez”.</p><div class="video-responsive"><iframe src="https://www.youtube.com/embed/8AibIO0hHWo" title="25 años en la voz del viento - Escuela Secundaria N.º 31 Benito Juárez" allowfullscreen></iframe></div></details>
     </section>
 
-    <section id="equipo" class="card">
-      <h2>Equipo institucional</h2>
-      <p class="section-intro">La organización institucional se sostiene en el trabajo articulado de equipos directivos, docentes, preceptores, secretaría, estudiantes, familias y referentes de acompañamiento.</p>
-      <div class="info-grid">
-        <article class="mini-card"><h3>Equipo directivo</h3><p>Conducción institucional, organización escolar y acompañamiento de las decisiones pedagógicas.</p></article>
-        <article class="mini-card"><h3>Docentes</h3><p>Diseño y desarrollo de propuestas de enseñanza, proyectos institucionales y acompañamiento de trayectorias.</p></article>
-        <article class="mini-card"><h3>Preceptoría</h3><p>Seguimiento cotidiano de asistencia, comunicación escolar, planillas y acompañamiento de estudiantes.</p></article>
-        <article class="mini-card"><h3>Secretaría</h3><p>Gestión administrativa, documentación escolar, comunicación institucional y trámites.</p></article>
-      </div>
-      <div style="margin-top:34px;">
-        <h2>Acompañamiento pedagógico-digital</h2>
-        <p class="section-intro">Orientación institucional para fortalecer prácticas pedagógicas, organización escolar y uso significativo de tecnologías.</p>
-        <details class="accordion-card"><summary>Para estudiantes</summary><p>Orientaciones para organizar el estudio, acceder a materiales digitales, resolver dificultades técnicas y sostener la continuidad educativa.</p></details>
-        <details class="accordion-card"><summary>Para docentes</summary><p>Apoyo en el uso de herramientas digitales, recursos institucionales, carga de información, producción de materiales y organización de propuestas pedagógicas.</p></details>
-        <details class="accordion-card"><summary>Para familias</summary><p>Información clara sobre canales de comunicación, seguimiento escolar y formas de acompañar a los estudiantes desde el hogar.</p></details>
-      </div>
-    </section>
+    
+<section id="equipo" class="card">
+<h2>Equipo institucional</h2>
+
+<p class="section-intro">
+La organización institucional se sostiene en el trabajo articulado de equipos directivos,
+docentes, preceptores, tutores y actores escolares que acompañan diariamente las trayectorias educativas.
+</p>
+
+<div class="info-grid">
+
+<article class="mini-card">
+<span class="cargo-destacado rojo">Conducción institucional</span>
+<h3>Rectoría</h3>
+<p>Coordinación institucional, organización pedagógica y acompañamiento integral de la vida escolar.</p>
+</article>
+
+<article class="mini-card">
+<span class="cargo-destacado">Gestión administrativa</span>
+<h3>Secretaría</h3>
+<p>Gestión documental, certificaciones, comunicación institucional y organización administrativa escolar.</p>
+</article>
+
+<article class="mini-card">
+<span class="cargo-destacado">Acompañamiento pedagógico</span>
+<h3>Asesoría Pedagógica</h3>
+<p>Orientación pedagógica, acompañamiento docente y fortalecimiento de trayectorias educativas.</p>
+</article>
+
+<article class="mini-card">
+<span class="cargo-destacado">Seguimiento cotidiano</span>
+<h3>Preceptoría</h3>
+<p>Seguimiento de asistencia, acompañamiento estudiantil y comunicación con familias.</p>
+</article>
+
+<article class="mini-card">
+<span class="cargo-destacado">Acompañamiento educativo</span>
+<h3>Tutores y docentes</h3>
+<p>Orientación académica, acompañamiento personalizado y fortalecimiento de aprendizajes.</p>
+</article>
+
+<article class="mini-card">
+<span class="cargo-destacado">Integración tecnológica</span>
+<h3>Referente Técnico Institucional</h3>
+<p>Acompañamiento pedagógico-digital, integración tecnológica y alfabetización digital.</p>
+</article>
+
+</div>
+
+<div style="margin-top:40px;">
+
+<h2>Acompañamiento pedagógico-digital</h2>
+
+<p class="section-intro">
+Orientación institucional destinada a fortalecer prácticas pedagógicas,
+organización escolar y uso significativo de tecnologías digitales.
+</p>
+
+<details class="accordion-card" open>
+<summary>Para docentes</summary>
+<ul>
+<li>Uso de SAGE y herramientas institucionales.</li>
+<li>Producción de materiales digitales y recursos pedagógicos.</li>
+<li>Integración de IA, ABP y metodologías activas.</li>
+<li>Organización de información institucional y documentación escolar.</li>
+<li>Acompañamiento técnico-pedagógico permanente.</li>
+</ul>
+</details>
+
+<details class="accordion-card">
+<summary>Para estudiantes</summary>
+<ul>
+<li>Acceso a materiales digitales y recursos escolares.</li>
+<li>Organización del estudio y continuidad educativa.</li>
+<li>Uso responsable y seguro de tecnologías digitales.</li>
+<li>Resolución de dificultades técnicas escolares.</li>
+<li>Ciudadanía digital y fortalecimiento de capacidades tecnológicas.</li>
+</ul>
+</details>
+
+<details class="accordion-card">
+<summary>Para familias</summary>
+<ul>
+<li>Información sobre seguimiento escolar y comunicación institucional.</li>
+<li>Orientaciones para acompañar trayectorias educativas.</li>
+<li>Acceso a canales oficiales y novedades escolares.</li>
+<li>Acompañamiento en herramientas digitales vinculadas a la escuela.</li>
+<li>Fortalecimiento del vínculo entre escuela y comunidad.</li>
+</ul>
+</details>
+
+</div>
+</section>
+
 
     <section id="novedades" class="card">
       <h2>Novedades institucionales</h2>
@@ -817,15 +979,60 @@
       </div>
     </section>
 
-    <section id="recursos" class="card">
-      <h2>Recursos y documentación institucional</h2>
-      <p class="section-intro">Materiales de consulta, documentos institucionales, recursos pedagógicos y orientaciones útiles para estudiantes, familias y docentes.</p>
-      <div class="resource-grid">
-        <article class="resource-card"><h3>Para estudiantes</h3><p>Materiales de estudio, guías de trabajo, organización de tareas y orientaciones para el uso de plataformas.</p></article>
-        <article class="resource-card"><h3>Para docentes</h3><p>Documentos institucionales, planillas, modelos de trabajo, recursos digitales y orientaciones pedagógicas.</p></article>
-        <article class="resource-card"><h3>Para familias</h3><p>Información escolar, fechas importantes, canales de comunicación y acompañamiento de trayectorias.</p></article>
-      </div>
-    </section>
+    
+<section id="recursos" class="card">
+
+<h2>Recursos y documentación institucional</h2>
+
+<p class="section-intro">
+Espacio destinado a compartir recursos pedagógicos, documentación institucional,
+orientaciones escolares y herramientas útiles para docentes, estudiantes y familias.
+</p>
+
+<div class="resource-grid">
+
+<article class="resource-card">
+<span class="cargo-destacado rojo">Organización pedagógica</span>
+<h3>Para docentes</h3>
+
+<ul class="resource-list">
+<li>Planillas institucionales y documentación escolar.</li>
+<li>Orientaciones para carga de notas y asistencia en SAGE.</li>
+<li>Recursos pedagógicos y materiales digitales institucionales.</li>
+<li>Acompañamiento para integración tecnológica y alfabetización digital.</li>
+<li>Proyectos ABP y propuestas interdisciplinarias.</li>
+</ul>
+</article>
+
+<article class="resource-card">
+<span class="cargo-destacado">Trayectorias educativas</span>
+<h3>Para estudiantes</h3>
+
+<ul class="resource-list">
+<li>Materiales de estudio y actividades escolares.</li>
+<li>Organización del estudio y continuidad educativa.</li>
+<li>Acceso a recursos digitales institucionales.</li>
+<li>Uso responsable de tecnologías digitales.</li>
+<li>Espacios de acompañamiento pedagógico y tutorías.</li>
+</ul>
+</article>
+
+<article class="resource-card">
+<span class="cargo-destacado">Acompañamiento familiar</span>
+<h3>Para familias</h3>
+
+<ul class="resource-list">
+<li>Fechas institucionales y comunicaciones escolares.</li>
+<li>Orientaciones para acompañar trayectorias educativas.</li>
+<li>Canales oficiales de comunicación institucional.</li>
+<li>Información sobre asistencia y organización escolar.</li>
+<li>Acceso a proyectos y actividades institucionales.</li>
+</ul>
+</article>
+
+</div>
+</section>
+
 
     <section id="programas" class="card programas-premium">
       <h2>Programas y proyectos institucionales</h2>
@@ -871,6 +1078,22 @@
         <p>La propuesta promueve el desarrollo de competencias vinculadas al uso crítico, responsable y significativo de las tecnologías digitales, favoreciendo la inclusión, la ciudadanía digital y el acceso a nuevas formas de aprender y comunicarse.</p>
         <p>Desde una mirada contextualizada y cercana a la realidad institucional, el programa acompaña trayectorias educativas mediante herramientas digitales, recursos tecnológicos y prácticas pedagógicas que fortalecen la continuidad educativa y la participación activa de los estudiantes.</p>
         <div class="programa-frase-secundaria">“La tecnología educativa cobra sentido cuando acompaña trayectorias reales y contextos concretos.”</div>
+
+<div class="pdf-programa">
+<span class="cargo-destacado rojo">Documento institucional</span>
+
+<h4>Programa Alfabetización Digital Situada 2026</h4>
+
+<p>
+Documento institucional con fundamentos,
+objetivos y líneas de acción vinculadas a la integración tecnológica.
+</p>
+
+<a class="programa-boton" href="#" target="_blank">
+Descargar programa en PDF →
+</a>
+
+</div>
       </article>
     </section>
 
@@ -884,19 +1107,68 @@
       </div>
     </section>
 
-    <section id="contacto" class="card">
-      <h2>Contacto institucional</h2>
-      <p class="section-intro">Canales oficiales de comunicación de la Escuela Secundaria N.º 31 “Benito Juárez”.</p>
-      <div class="info-list">
-        <div class="info"><strong>Escuela</strong>Escuela Secundaria N.º 31 “Benito Juárez”</div>
-        <div class="info"><strong>Ubicación</strong>Ruta Provincial 22 y vías del ferrocarril — Estación Yuquerí, Concordia, Entre Ríos</div>
-        <div class="info"><strong>CUE</strong>3002566</div>
-        <div class="info"><strong>Celular oficial</strong><a href="tel:+543454949814">+543454949814</a></div>
-        <div class="info"><strong>Correo institucional</strong><a href="mailto:secundaria31.cd@entrerios.edu.ar">secundaria31.cd@entrerios.edu.ar</a></div>
-        <div class="info"><strong>Secretaría</strong><a href="mailto:secretaria31benitojuarez@gmail.com">secretaria31benitojuarez@gmail.com</a></div>
-        <div class="info"><strong>Facebook institucional</strong><a href="https://www.facebook.com/profile.php?id=100057420641002&mibextid=ZbWKwL" target="_blank" rel="noopener">Ver perfil institucional</a></div>
-      </div>
-    </section>
+    
+<section id="contacto" class="card contacto-premium">
+
+<span class="eyebrow-section">Comunicación institucional</span>
+
+<h2>Contacto institucional</h2>
+
+<p class="section-intro">
+Canales oficiales de comunicación de la Escuela Secundaria N.º 31 “Benito Juárez”.
+</p>
+
+<div class="contacto-grid">
+
+<article class="contacto-card principal">
+<span class="cargo-destacado rojo">Información principal</span>
+
+<h3>Escuela Secundaria N.º 31 “Benito Juárez”</h3>
+
+<p>
+Ruta Provincial 22 y vías del ferrocarril —
+Estación Yuquerí, Concordia, Entre Ríos.
+</p>
+
+<div class="contacto-datos">
+<div><strong>CUE:</strong> 3002566</div>
+<div><strong>Ámbito:</strong> Rural</div>
+<div><strong>Sector:</strong> Estatal</div>
+</div>
+</article>
+
+<article class="contacto-card">
+<span class="cargo-destacado">Comunicación directa</span>
+
+<h3>Canales oficiales</h3>
+
+<ul class="contacto-lista">
+<li><strong>Celular:</strong> +543454949814</li>
+<li><strong>Correo:</strong> secundaria31.cd@entrerios.edu.ar</li>
+<li><strong>Secretaría:</strong> secretaria31benitojuarez@gmail.com</li>
+</ul>
+</article>
+
+<article class="contacto-card">
+<span class="cargo-destacado">Comunidad digital</span>
+
+<h3>Redes institucionales</h3>
+
+<p>
+Seguimiento de actividades institucionales,
+comunicados, proyectos y vida escolar.
+</p>
+
+<a class="programa-boton" href="https://www.facebook.com/profile.php?id=100057420641002&mibextid=ZbWKwL" target="_blank">
+Facebook institucional →
+</a>
+
+</article>
+
+</div>
+
+</section>
+
   </main>
 
   <footer>
