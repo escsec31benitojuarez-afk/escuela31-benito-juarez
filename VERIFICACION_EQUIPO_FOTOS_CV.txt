@@ -1,0 +1,6 @@
+Actualización quirúrgica realizada sobre versión con galería multimedia.
+- Foto del rector insertada entre nombre y descripción: True
+- Botón CV rector insertado: True
+- PDF CV copiado a assets/documentos/cv-julio-orlando-gallardo.pdf: True
+- Foto de secretaria insertada entre nombre y descripción: True
+- Recursos docentes, identidad sonora y galería multimedia preservados: True
