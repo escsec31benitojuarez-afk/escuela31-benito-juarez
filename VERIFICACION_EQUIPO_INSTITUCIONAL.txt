@@ -1,0 +1,10 @@
+seccion_reemplazada: True
+rector: True
+secretaria: True
+asesora: True
+preceptor_lucas: True
+preceptora_flavia: True
+tutor_acevedo: True
+tutor_velazquez: True
+alfredo: True
+orden_correcto: True
