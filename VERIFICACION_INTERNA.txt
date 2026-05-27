@@ -1,0 +1,22 @@
+VERIFICACIÓN INTERNA - VERSIÓN SUPERAGENTE
+
+Base utilizada: escuela31_ACTUALIZACION_BLOQUES_INSTITUCIONALES.zip
+Logo: assets/imagenes/logo-benito-juarez.png
+Fondo portada: assets/imagenes/frente-escuela.jpg
+Flyer fechas: assets/imagenes/fechas-institucionales.jpg
+Flyer preceptores: assets/imagenes/informacion-preceptores.jpg
+Flyer desfile: assets/imagenes/desfile-25-mayo-2026.jpg
+
+Secciones verificadas:
+- Portada institucional premium: True
+- Nuestra institución: True
+- Historia unificada: True
+- Equipo institucional: True
+- Novedades: True
+- Recursos: True
+- Programas: 1
+- Tesoros ocultos: 1
+- La Escuela va al Barrio: 1
+- Alfabetización Digital Situada 2026: 1
+- Multimedia: True
+- Contacto: True
