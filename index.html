@@ -921,6 +921,119 @@ details.accordion-card ul{
   }
 }
 
+
+/* ===== PROGRAMAS Y PROYECTOS PREMIUM ===== */
+
+.programas-premium{
+  background:
+    radial-gradient(circle at top right, rgba(214,187,66,.10), transparent 26%),
+    linear-gradient(135deg,#ffffff,#f7fbf8);
+}
+
+.programa-card{
+  margin-top:34px;
+  background:#ffffff;
+  border-radius:26px;
+  padding:34px;
+  border:1px solid rgba(11,90,53,.08);
+  box-shadow:0 14px 32px rgba(0,0,0,.06);
+}
+
+.programa-card.destacado{
+  border-left:6px solid #d6bb42;
+}
+
+.programa-header{
+  margin-bottom:24px;
+}
+
+.programa-tag{
+  display:inline-block;
+  background:#e8f4ec;
+  color:#0b5a35;
+  padding:8px 16px;
+  border-radius:999px;
+  font-size:.82rem;
+  font-weight:800;
+  margin-bottom:14px;
+}
+
+.programa-header h3{
+  color:#063f25;
+  font-size:2rem;
+  margin:0;
+}
+
+.programa-subtitulo{
+  color:#6a756f;
+  margin-top:8px;
+  font-style:italic;
+}
+
+.programa-layout{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:34px;
+}
+
+.programa-texto p{
+  line-height:1.85;
+  color:#4e5b56;
+  margin-bottom:18px;
+}
+
+.programa-frase{
+  margin-top:28px;
+  background:linear-gradient(135deg,#0b5a35,#0f6b41);
+  color:#ffffff;
+  padding:24px 28px;
+  border-radius:20px;
+  line-height:1.7;
+  font-weight:700;
+  border-left:5px solid #d6bb42;
+}
+
+.programa-boton{
+  display:inline-flex;
+  margin-top:24px;
+  background:#0b5a35;
+  color:#ffffff;
+  padding:14px 22px;
+  border-radius:999px;
+  font-weight:800;
+  text-decoration:none;
+}
+
+.programa-mini-grid{
+  display:grid;
+  gap:18px;
+}
+
+.programa-mini-grid article{
+  background:#f8fbf9;
+  border-radius:18px;
+  padding:22px;
+}
+
+.programa-mini-grid h4{
+  color:#0b5a35;
+  margin-bottom:10px;
+}
+
+.programa-mini-grid p{
+  margin:0;
+  color:#5f6a65;
+  line-height:1.6;
+}
+
+@media(max-width:900px){
+
+  .programa-layout{
+    grid-template-columns:1fr;
+  }
+
+}
+
 </style>
 </head>
 
@@ -1307,206 +1420,135 @@ details.accordion-card ul{
       </details>
     </section>
 
+<section id="programas" class="card programas-premium">
 
-    <section id="programas">
-      <div class="section-title">
-        <h2>Programas y proyectos institucionales</h2>
-      </div>
-      <div class="program-feature">
-        <div class="feature-box green">
-          <span class="tag">Tecnología educativa</span>
-          <h2>Alfabetización Digital Situada 2026</h2>
-          <p>Programa institucional para fortalecer capacidades digitales en los estudiantes desde un enfoque gradual, crítico, creativo y responsable.</p>
-          <ul>
-            <li>Uso significativo de tecnologías.</li>
-            <li>Producción digital con sentido pedagógico.</li>
-          </ul>
-          <p style="margin-top:18px"><a class="btn btn-primary" href="assets/documentos/programa-alfabetizacion-digital-2026.pdf" target="_blank">Ver programa completo</a></p>
+  <span class="eyebrow-section">Programas y proyectos institucionales</span>
+  <h2>Programas y proyectos institucionales</h2>
+
+  <p class="section-intro">
+    Espacios institucionales que fortalecen la memoria, la participación comunitaria,
+    las trayectorias educativas y la integración de propuestas pedagógicas innovadoras
+    en la Escuela Secundaria N.º 31 “Benito Juárez”.
+  </p>
+
+  <!-- TESOROS OCULTOS -->
+
+  <div class="programa-card destacado">
+
+    <div class="programa-header">
+      <span class="programa-tag">Proyecto institucional ABP</span>
+      <h3>Tesoros ocultos de la escuela</h3>
+    </div>
+
+    <div class="programa-layout">
+
+      <div class="programa-texto">
+        <p>
+          Proyecto institucional de memoria, identidad y construcción comunitaria
+          desarrollado junto a estudiantes de la Escuela Secundaria N.º 31 “Benito Juárez”.
+        </p>
+
+        <p>
+          A través de entrevistas, investigaciones, producciones digitales y registros históricos,
+          la comunidad educativa recupera historias, experiencias y relatos que forman parte
+          de la memoria viva de Estación Yuquerí.
+        </p>
+
+        <div class="programa-frase">
+          “La escuela construye comunidad cuando recupera las historias,
+          las voces y las experiencias de quienes la habitan.”
         </div>
-        <div class="feature-box">
-          <h2>Tesoros ocultos de la escuela</h2>
-          <p>Proyecto ABP orientado a reconstruir la memoria institucional de la Escuela Secundaria N.º 31 “Benito Juárez”, en el marco de su 25.º aniversario.</p>
-          <ul>
-            <li>Investigación histórica escolar y comunitaria.</li>
-            <li>Entrevistas, fotografías y testimonios.</li>
-            <li>Producciones digitales y audiovisuales.</li>
-            <li>Construcción de identidad institucional.</li>
-          </ul>
-          <p style="margin-top:18px"><a class="btn btn-primary" href="assets/documentos/tesoros-ocultos-benito-juarez.pdf" target="_blank">Ver proyecto</a></p>
-        </div>
+
+        <a class="programa-boton" href="https://drive.google.com/drive/folders/1gl5ePQSi47l8qXrMd3jEV1FISUZ3QLZa?usp=drive_link" target="_blank">
+          Explorar producciones →
+        </a>
       </div>
-      <div class="grilla" style="margin-top:24px">
-        <div class="mini-card yellow"><h3>Trayectorias escolares</h3><p>Seguimiento, orientación y acompañamiento para sostener la continuidad educativa de los estudiantes.</p></div>
-        <div class="mini-card red"><h3>Producciones institucionales</h3><p>Espacio para proyectos, muestras, actos, producciones digitales y experiencias educativas significativas.</p></div>
+
+      <div class="programa-mini-grid">
+
+        <article>
+          <h4>Memoria e identidad</h4>
+          <p>Relatos, fotografías y reconstrucción histórica institucional.</p>
+        </article>
+
+        <article>
+          <h4>Participación estudiantil</h4>
+          <p>Los estudiantes se convierten en protagonistas de la historia escolar.</p>
+        </article>
+
+        <article>
+          <h4>Escuela y comunidad</h4>
+          <p>Fortalecimiento de vínculos con familias y actores comunitarios.</p>
+        </article>
+
+        <article>
+          <h4>Producciones institucionales</h4>
+          <p>Videos, entrevistas, relatos y materiales digitales colectivos.</p>
+        </article>
+
       </div>
-    </section>
+
+    </div>
+
+  </div>
+
+  <!-- ESCUELA VA AL BARRIO -->
+
+  <div class="programa-card">
+
+    <div class="programa-header simple">
+      <span class="programa-tag">Proyecto institucional</span>
+      <h3>La Escuela va al Barrio</h3>
+      <p class="programa-subtitulo">“Cuidar el cuerpo, cuidar la vida”</p>
+    </div>
+
+    <p>
+      Proyecto institucional orientado al acompañamiento comunitario,
+      la promoción de la salud, la prevención y el fortalecimiento de vínculos
+      entre escuela, familias y territorio.
+    </p>
+
+    <p>
+      A través de actividades territoriales, talleres y acciones comunitarias,
+      la propuesta busca acercar la escuela a los barrios,
+      fortaleciendo la participación y el compromiso colectivo.
+    </p>
+
+  </div>
+
+  <!-- ALFABETIZACIÓN DIGITAL -->
+
+  <div class="programa-card">
+
+    <div class="programa-header simple">
+      <span class="programa-tag">Tecnología educativa</span>
+      <h3>Alfabetización Digital Situada 2026</h3>
+    </div>
+
+    <p>
+      Programa institucional orientado al fortalecimiento de capacidades digitales,
+      integración tecnológica y acompañamiento pedagógico en contextos educativos situados.
+    </p>
+
+    <p>
+      La propuesta articula herramientas digitales, cultura tecnológica,
+      ciudadanía digital y prácticas pedagógicas contextualizadas,
+      promoviendo trayectorias educativas más inclusivas y significativas.
+    </p>
+
+  </div>
+
+</section>
+
+
 
 
     
-<section id="escuela-barrio" class="card escuela-barrio-section">
-  <div class="escuela-barrio-hero">
-    <span class="eyebrow">Proyecto institucional</span>
-    <h2>La Escuela va al Barrio</h2>
-    <p class="subtitulo-barrio">“Cuidar el cuerpo, cuidar la vida”</p>
-    <p>
-      Proyecto institucional orientado a fortalecer el vínculo entre la escuela, la comunidad y los barrios,
-      mediante acciones educativas, preventivas y de acompañamiento integral.
-    </p>
-  </div>
 
-  <div class="barrio-frase">
-    “La escuela construye comunidad cuando sale al encuentro de su gente.”
-  </div>
 
-  <div class="barrios-grid">
-    <article class="barrio-card">
-      <div class="barrio-img">
-        <img src="assets/imagenes/la-escuela-va-al-barrio-cohelo.png" alt="La Escuela va al Barrio - Cohelo">
-      </div>
-      <div class="barrio-body">
-        <span class="barrio-tag">Primera salida territorial</span>
-        <h3>Barrio Cohelo</h3>
-        <p>Charla comunitaria sobre cuidado del cuerpo y salud bucal, con participación docente y acompañamiento institucional.</p>
-      </div>
-    </article>
+    
 
-    <article class="barrio-card">
-      <div class="barrio-img">
-        <img src="assets/imagenes/la-escuela-va-al-barrio-el-blanqueado.png" alt="La Escuela va al Barrio - El Blanqueado">
-      </div>
-      <div class="barrio-body">
-        <span class="barrio-tag">Continuidad comunitaria</span>
-        <h3>Barrio El Blanqueado</h3>
-        <p>Encuentro territorial destinado a estudiantes, familias, tutores y comunidad, con eje en salud integral y participación escolar.</p>
-      </div>
-    </article>
 
-    <article class="barrio-card">
-      <div class="barrio-img">
-        <img src="assets/imagenes/la-escuela-va-al-barrio-mendieta.png" alt="La Escuela va al Barrio - Mendieta">
-      </div>
-      <div class="barrio-body">
-        <span class="barrio-tag">Presencia territorial</span>
-        <h3>Barrio Mendieta</h3>
-        <p>Nueva instancia de acercamiento institucional para fortalecer el vínculo entre escuela, barrio, salud y comunidad.</p>
-      </div>
-    </article>
-  </div>
-
-  <div class="accordion-group barrio-accordion">
-    <details class="accordion-card">
-      <summary>Fundamentación del proyecto</summary>
-      <p>
-        La escuela cumple un rol fundamental en la formación integral de los estudiantes, no solo en el desarrollo académico,
-        sino también en la construcción de hábitos saludables, vínculos respetuosos y cuidado del propio cuerpo.
-      </p>
-    </details>
-
-    <details class="accordion-card">
-      <summary>Objetivo general</summary>
-      <p>
-        Promover el cuidado del cuerpo, la salud integral y la construcción de vínculos saludables en los estudiantes,
-        fortaleciendo la relación entre la escuela y la comunidad.
-      </p>
-    </details>
-
-    <details class="accordion-card">
-      <summary>Actividades principales</summary>
-      <ul>
-        <li>Organización con referentes barriales.</li>
-        <li>Charlas-taller comunitarias con docentes y personal de salud.</li>
-        <li>Producción de folletos y materiales educativos.</li>
-        <li>Trabajo pedagógico posterior en distintos espacios curriculares.</li>
-      </ul>
-    </details>
-
-    <details class="accordion-card">
-      <summary>Temáticas abordadas</summary>
-      <ul>
-        <li>Salud bucal.</li>
-        <li>Enfermedades de transmisión sexual.</li>
-        <li>Embarazo no intencional en la adolescencia.</li>
-        <li>Vínculos sanos y convivencia escolar.</li>
-        <li>Asistencia, compromiso y responsabilidad en la trayectoria escolar.</li>
-      </ul>
-    </details>
-
-    <details class="accordion-card">
-      <summary>Evaluación y seguimiento</summary>
-      <p>
-        La evaluación se realiza de manera continua, considerando la participación de los estudiantes,
-        la producción de materiales informativos, el interés generado en las charlas y la articulación entre escuela,
-        centro de salud y comunidad barrial.
-      </p>
-    </details>
-  </div>
-</section>
-<section id="tesoros-ocultos" class="card tesoros-section">
-  <span class="eyebrow-section">Proyecto institucional ABP</span>
-  <h2>Tesoros ocultos de la escuela</h2>
-
-  <p class="section-intro">
-    Proyecto institucional de memoria, identidad y construcción comunitaria desarrollado por estudiantes de la Escuela Secundaria N.º 31 “Benito Juárez”.
-  </p>
-
-  <div class="tesoros-grid">
-
-    <div class="tesoros-texto">
-      <h3>Una escuela que recupera su historia</h3>
-
-      <p>
-        “Tesoros ocultos de la escuela” busca recuperar memorias, experiencias,
-        relatos y huellas que forman parte de la identidad institucional y comunitaria
-        de Estación Yuquerí.
-      </p>
-
-      <p>
-        A través de entrevistas, investigaciones, producciones digitales,
-        fotografías históricas y actividades colectivas, estudiantes y docentes
-        reconstruyen la historia viva de la escuela y de su comunidad.
-      </p>
-
-      <p>
-        El proyecto fortalece el sentido de pertenencia, la participación estudiantil,
-        la memoria institucional y el vínculo entre generaciones.
-      </p>
-
-      <div class="tesoros-frase">
-        “La escuela construye comunidad cuando recupera las historias,
-        las voces y las experiencias de quienes la habitan.”
-      </div>
-    </div>
-
-    <div class="tesoros-bloques">
-      <article>
-        <h4>Memoria e identidad</h4>
-        <p>Recuperación de relatos, fotografías y acontecimientos significativos de la vida institucional.</p>
-      </article>
-
-      <article>
-        <h4>Participación estudiantil</h4>
-        <p>Los estudiantes se convierten en protagonistas y narradores de la historia de su escuela.</p>
-      </article>
-
-      <article>
-        <h4>Escuela y comunidad</h4>
-        <p>Fortalecimiento de vínculos con familias, ex estudiantes y vecinos de Estación Yuquerí.</p>
-      </article>
-
-      <article>
-        <h4>Producciones institucionales</h4>
-        <p>Entrevistas, galerías, relatos, videos y materiales digitales desarrollados durante el proyecto.</p>
-      </article>
-    </div>
-
-  </div>
-
-  <div class="tesoros-footer">
-    <a href="https://drive.google.com/drive/folders/1gl5ePQSi47l8qXrMd3jEV1FISUZ3QLZa?usp=drive_link" target="_blank">
-      Explorar producciones del proyecto →
-    </a>
-  </div>
-</section>
 
 
 
