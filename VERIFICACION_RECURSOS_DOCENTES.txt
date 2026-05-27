@@ -1,0 +1,1 @@
+Actualización quirúrgica aplicada solo sobre la sección #recursos. Bloque docente reorganizado en acordeones. Resto del sitio preservado desde el index.html base cargado por Alfredo.

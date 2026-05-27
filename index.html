@@ -1262,6 +1262,99 @@ grid-template-columns:1fr;
 @media(max-width:1180px){.equipo-top-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.equipo-bottom-grid{grid-template-columns:1fr;}}
 @media(max-width:820px){.equipo-top-grid{grid-template-columns:1fr;}.tutores-grid{grid-template-columns:1fr;}.tutor-box{border-right:none;border-bottom:1px solid rgba(11,90,53,.14);padding-bottom:18px;}.tutor-box:last-child{border-bottom:none;}.equipo-rti-horarios{grid-template-columns:1fr;}}
 
+
+
+/* ===== RECURSOS DOCENTES - ACTUALIZACIÓN QUIRÚRGICA ===== */
+.docente-premium{
+  text-align:left !important;
+}
+
+.docente-premium > h3,
+.docente-premium > p,
+.docente-premium > .cargo-destacado{
+  text-align:center;
+}
+
+.docente-premium > p{
+  color:#4f5b56;
+  line-height:1.75;
+  margin:10px auto 18px;
+  max-width:94%;
+}
+
+.docente-acordeon{
+  background:#ffffff;
+  border:1px solid rgba(11,90,53,.12);
+  border-radius:18px;
+  overflow:hidden;
+  margin:14px 0;
+  box-shadow:0 6px 18px rgba(0,0,0,.04);
+}
+
+.docente-acordeon summary{
+  cursor:pointer;
+  list-style:none;
+  padding:16px 18px;
+  font-weight:900;
+  color:var(--verde-oscuro);
+  background:linear-gradient(90deg,#fff5f4,#f8fbf9);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.docente-acordeon summary::-webkit-details-marker{display:none;}
+
+.docente-acordeon summary::after{
+  content:"+";
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  background:var(--rojo);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+
+.docente-acordeon[open] summary::after{
+  content:"–";
+  background:var(--amarillo);
+  color:var(--verde-oscuro);
+}
+
+.docente-recursos-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:10px;
+  padding:16px;
+}
+
+.docente-recursos-grid a{
+  display:block;
+  background:#f8fbf9;
+  border:1px solid rgba(11,90,53,.12);
+  border-radius:14px;
+  padding:12px 14px;
+  color:var(--verde);
+  font-weight:800;
+  line-height:1.45;
+  transition:.2s ease;
+}
+
+.docente-recursos-grid a:hover{
+  background:#fff5f4;
+  color:var(--rojo);
+  transform:translateX(3px);
+}
+
+.docente-lista-simple{
+  padding:16px 28px 18px 34px !important;
+  margin:0 !important;
+}
+
 </style>
 </head>
 
@@ -1518,21 +1611,55 @@ grid-template-columns:1fr;
 
   <div class="resource-grid">
 
-    <article class="resource-card recurso-docente">
+    <article class="resource-card recurso-docente docente-premium">
       <span class="cargo-destacado rojo">Para docentes</span>
-      <h3>Gestión pedagógica e institucional</h3>
-      <ul class="resource-list">
-        <li><a href="https://sage.entrerios.gov.ar/" target="_blank" rel="noopener">Ingreso a SAGE</a> para gestión educativa institucional.</li>
-        <li><a href="https://sage.entrerios.gov.ar/solicitarUsuario/index.php" target="_blank" rel="noopener">Solicitud de usuario SAGE</a> para agente, estudiante o madre/padre/tutor.</li>
-        <li>Constancia de antigüedad de SAGE y certificación actualizada de concepto para concursos docentes.</li>
-        <li>Carga de notas en SAGE, control de planillas de calificaciones y actualización de asistencia en LUA SAGE.</li>
-        <li>Entrega de planillas a docentes, recepción de planillas y control de cierre trimestral.</li>
-        <li><a href="https://cge.entrerios.gov.ar/" target="_blank" rel="noopener">Convocatorias y comunicaciones del CGE</a> vinculadas a horas cátedra, cargos y normativa vigente.</li>
-        <li>Programa Alfabetización Digital Situada 2026 y acompañamiento para materiales digitales institucionales.</li>
-      </ul>
-      <div class="recurso-alerta">
-        Información prioritaria: revisar fechas institucionales, cierres de trimestre, carga de notas y asistencia en SAGE/LUA SAGE.
-      </div>
+      <h3>Documentación y gestión institucional</h3>
+      <p>
+        Acceso organizado a documentación institucional de uso docente, horarios, salidas educativas
+        y recursos pedagógico-digitales. Los enlaces se presentan sin mostrar direcciones extensas para
+        mantener una navegación clara desde celular y computadora.
+      </p>
+
+      <details class="docente-acordeon" open>
+        <summary>📁 Gestión institucional</summary>
+        <div class="docente-recursos-grid">
+          <a href="https://drive.google.com/file/d/1g_JOlVwJAOUInv55YrB1j1mdUpUEwoF-/view?usp=sharing" target="_blank" rel="noopener">📄 Abrir PAI 2026</a>
+          <a href="https://drive.google.com/file/d/14sK2_ZHlgibzi94HKP0dqDBjwONtb1kp/view?usp=drive_link" target="_blank" rel="noopener">📄 Ver Decreto 5923/00 MGJE</a>
+          <a href="https://docs.google.com/document/d/1Hac9q0BO5xQFvbRm2vA1_y_zf0QtnWr9/edit?usp=drive_link&amp;ouid=118410012796974315636&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">📄 Abrir FU para editar</a>
+          <a href="https://docs.google.com/document/d/1FAKIkSkxY9-rqCqa3h3C-Be7tBql_aTb/edit?usp=drive_link&amp;ouid=118410012796974315636&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">📄 Abrir planilla de incompatibilidad</a>
+          <a href="https://docs.google.com/document/d/1zedTkjB_LKMK-3fiMHPAzxIcJeau2sVC/edit?usp=drive_link&amp;ouid=118410012796974315636&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">📄 Abrir modelo Nota 16i</a>
+        </div>
+      </details>
+
+      <details class="docente-acordeon">
+        <summary>🕒 Horarios y organización escolar</summary>
+        <div class="docente-recursos-grid">
+          <a href="https://drive.google.com/file/d/1uHC-Qn2n1qIlOuco27R24b8J0cR0xDeZ/view?usp=drive_link" target="_blank" rel="noopener">🕒 Ver horarios del ciclo lectivo 2026</a>
+          <a href="https://drive.google.com/file/d/1-8nuTR5tG2alH8ItK50iuB80WuOvh6oc/view?usp=drive_link" target="_blank" rel="noopener">🕒 Ver horario del Equipo Pedagógico</a>
+          <a href="https://sage.entrerios.gov.ar/" target="_blank" rel="noopener">💻 Ingresar a SAGE</a>
+          <a href="https://sage.entrerios.gov.ar/solicitarUsuario/index.php" target="_blank" rel="noopener">🔐 Solicitar usuario SAGE</a>
+        </div>
+        <div class="recurso-alerta">
+          Información prioritaria: revisar fechas institucionales, cierres de trimestre, carga de notas y asistencia en SAGE/LUA SAGE.
+        </div>
+      </details>
+
+      <details class="docente-acordeon">
+        <summary>📂 Salidas educativas y documentación</summary>
+        <div class="docente-recursos-grid">
+          <a href="https://drive.google.com/drive/folders/1UB8nHNqdr-DI7dXP2tjg83pxPJJJ3XOK?usp=drive_link" target="_blank" rel="noopener">📂 Ver carpeta de documentación para salidas educativas</a>
+        </div>
+      </details>
+
+      <details class="docente-acordeon">
+        <summary>💻 Recursos pedagógicos y digitales</summary>
+        <ul class="resource-list docente-lista-simple">
+          <li>Programa Alfabetización Digital Situada 2026 y acompañamiento para materiales digitales institucionales.</li>
+          <li>Orientación para uso pedagógico de herramientas digitales, producción de recursos y organización de propuestas institucionales.</li>
+          <li>Apoyo para proyectos ABP, gamificación, recursos TIC e integración responsable de inteligencia artificial en propuestas educativas.</li>
+          <li><a href="https://cge.entrerios.gov.ar/" target="_blank" rel="noopener">Consultar convocatorias y comunicaciones del CGE</a> vinculadas a normativa vigente, cargos y horas cátedra.</li>
+        </ul>
+      </details>
     </article>
 
     <article class="resource-card recurso-estudiante">
