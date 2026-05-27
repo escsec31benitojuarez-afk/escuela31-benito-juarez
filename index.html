@@ -1263,96 +1263,70 @@ grid-template-columns:1fr;
 @media(max-width:820px){.equipo-top-grid{grid-template-columns:1fr;}.tutores-grid{grid-template-columns:1fr;}.tutor-box{border-right:none;border-bottom:1px solid rgba(11,90,53,.14);padding-bottom:18px;}.tutor-box:last-child{border-bottom:none;}.equipo-rti-horarios{grid-template-columns:1fr;}}
 
 
-
-/* ===== RECURSOS DOCENTES - ACTUALIZACIÓN QUIRÚRGICA ===== */
-.docente-premium{
-  text-align:left !important;
+/* ===== IDENTIDAD SONORA INSTITUCIONAL ===== */
+.identidad-sonora-card{
+  grid-column:span 1;
 }
 
-.docente-premium > h3,
-.docente-premium > p,
-.docente-premium > .cargo-destacado{
-  text-align:center;
-}
-
-.docente-premium > p{
-  color:#4f5b56;
-  line-height:1.75;
-  margin:10px auto 18px;
-  max-width:94%;
-}
-
-.docente-acordeon{
-  background:#ffffff;
-  border:1px solid rgba(11,90,53,.12);
-  border-radius:18px;
-  overflow:hidden;
-  margin:14px 0;
-  box-shadow:0 6px 18px rgba(0,0,0,.04);
-}
-
-.docente-acordeon summary{
-  cursor:pointer;
-  list-style:none;
-  padding:16px 18px;
-  font-weight:900;
-  color:var(--verde-oscuro);
-  background:linear-gradient(90deg,#fff5f4,#f8fbf9);
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:12px;
-}
-
-.docente-acordeon summary::-webkit-details-marker{display:none;}
-
-.docente-acordeon summary::after{
-  content:"+";
-  width:28px;
-  height:28px;
-  border-radius:50%;
-  background:var(--rojo);
-  color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-shrink:0;
-}
-
-.docente-acordeon[open] summary::after{
-  content:"–";
-  background:var(--amarillo);
-  color:var(--verde-oscuro);
-}
-
-.docente-recursos-grid{
+.sonora-lista{
   display:grid;
-  grid-template-columns:1fr;
-  gap:10px;
+  gap:16px;
+  margin-top:18px;
+}
+
+.sonora-item{
+  background:#f8fbf9;
+  border:1px solid rgba(11,90,53,.12);
+  border-left:5px solid var(--amarillo);
+  border-radius:16px;
   padding:16px;
 }
 
-.docente-recursos-grid a{
+.sonora-item strong{
   display:block;
-  background:#f8fbf9;
-  border:1px solid rgba(11,90,53,.12);
-  border-radius:14px;
-  padding:12px 14px;
+  color:var(--verde-oscuro);
+  margin-bottom:8px;
+  line-height:1.45;
+}
+
+.sonora-item p{
+  color:#4e5b56;
+  line-height:1.65;
+  margin-bottom:12px;
+}
+
+.sonora-item audio{
+  width:100%;
+  margin-top:4px;
+}
+
+.sonora-link{
+  display:inline-flex;
+  margin-top:10px;
   color:var(--verde);
   font-weight:800;
-  line-height:1.45;
-  transition:.2s ease;
+  border-bottom:1px solid rgba(11,90,53,.25);
 }
 
-.docente-recursos-grid a:hover{
-  background:#fff5f4;
+.sonora-link:hover{
   color:var(--rojo);
-  transform:translateX(3px);
+  border-bottom-color:var(--rojo);
 }
 
-.docente-lista-simple{
-  padding:16px 28px 18px 34px !important;
-  margin:0 !important;
+.sonora-autoria{
+  margin-top:18px;
+  padding:16px;
+  border-radius:16px;
+  background:linear-gradient(135deg,#fff8f7,#f8fbf9);
+  border-left:5px solid var(--rojo);
+  color:#42504a;
+  line-height:1.7;
+}
+
+@media(min-width:900px){
+  .identidad-sonora-card{
+    grid-column:span 1;
+  }
 }
 
 </style>
@@ -1611,55 +1585,21 @@ grid-template-columns:1fr;
 
   <div class="resource-grid">
 
-    <article class="resource-card recurso-docente docente-premium">
+    <article class="resource-card recurso-docente">
       <span class="cargo-destacado rojo">Para docentes</span>
-      <h3>Documentación y gestión institucional</h3>
-      <p>
-        Acceso organizado a documentación institucional de uso docente, horarios, salidas educativas
-        y recursos pedagógico-digitales. Los enlaces se presentan sin mostrar direcciones extensas para
-        mantener una navegación clara desde celular y computadora.
-      </p>
-
-      <details class="docente-acordeon" open>
-        <summary>📁 Gestión institucional</summary>
-        <div class="docente-recursos-grid">
-          <a href="https://drive.google.com/file/d/1g_JOlVwJAOUInv55YrB1j1mdUpUEwoF-/view?usp=sharing" target="_blank" rel="noopener">📄 Abrir PAI 2026</a>
-          <a href="https://drive.google.com/file/d/14sK2_ZHlgibzi94HKP0dqDBjwONtb1kp/view?usp=drive_link" target="_blank" rel="noopener">📄 Ver Decreto 5923/00 MGJE</a>
-          <a href="https://docs.google.com/document/d/1Hac9q0BO5xQFvbRm2vA1_y_zf0QtnWr9/edit?usp=drive_link&amp;ouid=118410012796974315636&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">📄 Abrir FU para editar</a>
-          <a href="https://docs.google.com/document/d/1FAKIkSkxY9-rqCqa3h3C-Be7tBql_aTb/edit?usp=drive_link&amp;ouid=118410012796974315636&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">📄 Abrir planilla de incompatibilidad</a>
-          <a href="https://docs.google.com/document/d/1zedTkjB_LKMK-3fiMHPAzxIcJeau2sVC/edit?usp=drive_link&amp;ouid=118410012796974315636&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">📄 Abrir modelo Nota 16i</a>
-        </div>
-      </details>
-
-      <details class="docente-acordeon">
-        <summary>🕒 Horarios y organización escolar</summary>
-        <div class="docente-recursos-grid">
-          <a href="https://drive.google.com/file/d/1uHC-Qn2n1qIlOuco27R24b8J0cR0xDeZ/view?usp=drive_link" target="_blank" rel="noopener">🕒 Ver horarios del ciclo lectivo 2026</a>
-          <a href="https://drive.google.com/file/d/1-8nuTR5tG2alH8ItK50iuB80WuOvh6oc/view?usp=drive_link" target="_blank" rel="noopener">🕒 Ver horario del Equipo Pedagógico</a>
-          <a href="https://sage.entrerios.gov.ar/" target="_blank" rel="noopener">💻 Ingresar a SAGE</a>
-          <a href="https://sage.entrerios.gov.ar/solicitarUsuario/index.php" target="_blank" rel="noopener">🔐 Solicitar usuario SAGE</a>
-        </div>
-        <div class="recurso-alerta">
-          Información prioritaria: revisar fechas institucionales, cierres de trimestre, carga de notas y asistencia en SAGE/LUA SAGE.
-        </div>
-      </details>
-
-      <details class="docente-acordeon">
-        <summary>📂 Salidas educativas y documentación</summary>
-        <div class="docente-recursos-grid">
-          <a href="https://drive.google.com/drive/folders/1UB8nHNqdr-DI7dXP2tjg83pxPJJJ3XOK?usp=drive_link" target="_blank" rel="noopener">📂 Ver carpeta de documentación para salidas educativas</a>
-        </div>
-      </details>
-
-      <details class="docente-acordeon">
-        <summary>💻 Recursos pedagógicos y digitales</summary>
-        <ul class="resource-list docente-lista-simple">
-          <li>Programa Alfabetización Digital Situada 2026 y acompañamiento para materiales digitales institucionales.</li>
-          <li>Orientación para uso pedagógico de herramientas digitales, producción de recursos y organización de propuestas institucionales.</li>
-          <li>Apoyo para proyectos ABP, gamificación, recursos TIC e integración responsable de inteligencia artificial en propuestas educativas.</li>
-          <li><a href="https://cge.entrerios.gov.ar/" target="_blank" rel="noopener">Consultar convocatorias y comunicaciones del CGE</a> vinculadas a normativa vigente, cargos y horas cátedra.</li>
-        </ul>
-      </details>
+      <h3>Gestión pedagógica e institucional</h3>
+      <ul class="resource-list">
+        <li><a href="https://sage.entrerios.gov.ar/" target="_blank" rel="noopener">Ingreso a SAGE</a> para gestión educativa institucional.</li>
+        <li><a href="https://sage.entrerios.gov.ar/solicitarUsuario/index.php" target="_blank" rel="noopener">Solicitud de usuario SAGE</a> para agente, estudiante o madre/padre/tutor.</li>
+        <li>Constancia de antigüedad de SAGE y certificación actualizada de concepto para concursos docentes.</li>
+        <li>Carga de notas en SAGE, control de planillas de calificaciones y actualización de asistencia en LUA SAGE.</li>
+        <li>Entrega de planillas a docentes, recepción de planillas y control de cierre trimestral.</li>
+        <li><a href="https://cge.entrerios.gov.ar/" target="_blank" rel="noopener">Convocatorias y comunicaciones del CGE</a> vinculadas a horas cátedra, cargos y normativa vigente.</li>
+        <li>Programa Alfabetización Digital Situada 2026 y acompañamiento para materiales digitales institucionales.</li>
+      </ul>
+      <div class="recurso-alerta">
+        Información prioritaria: revisar fechas institucionales, cierres de trimestre, carga de notas y asistencia en SAGE/LUA SAGE.
+      </div>
     </article>
 
     <article class="resource-card recurso-estudiante">
@@ -1785,7 +1725,50 @@ objetivos y líneas de acción vinculadas a la integración tecnológica.
       <div class="info-grid">
         <article class="mini-card"><h3>Galería fotográfica</h3><p>Imágenes de actividades, proyectos, aniversarios y momentos significativos de la vida escolar.</p></article>
         <article class="mini-card"><h3>Videos institucionales</h3><p>Videos históricos, producciones escolares y registros audiovisuales.</p></article>
-        <article class="mini-card"><h3>Identidad sonora institucional</h3><p>Canciones, himnos, producciones musicales y materiales sonoros vinculados con la identidad escolar.</p></article>
+        <article class="mini-card identidad-sonora-card">
+          <h3>Identidad sonora institucional</h3>
+          <p>
+            La Escuela Secundaria N.º 31 “Benito Juárez” también construye su identidad
+            a través de producciones musicales y sonoras que recuperan la memoria,
+            la historia y el sentido de pertenencia de Estación Yuquerí.
+          </p>
+
+          <div class="sonora-lista">
+            <div class="sonora-item">
+              <strong>🎵 Himno institucional: <em>“Tranquera abierta… Escuela querida”</em></strong>
+              <p>Composición original creada para la escuela y presentada en el marco de los 25 años institucionales.</p>
+              <audio controls preload="metadata">
+                <source src="assets/audio/tranquera-abierta-escuela-querida.mp3" type="audio/mpeg">
+                Tu navegador no permite reproducir este audio.
+              </audio>
+              <a class="sonora-link" href="assets/documentos/tranquera-abierta-escuela-querida.pdf" target="_blank" rel="noopener">Ver letra del himno →</a>
+            </div>
+
+            <div class="sonora-item">
+              <strong>🎶 “25 años en la voz del viento”</strong>
+              <p>Canción realizada especialmente para el video oficial del acto aniversario de los 25 años de la institución.</p>
+              <audio controls preload="metadata">
+                <source src="assets/audio/25-anios-en-la-voz-del-viento.mp3" type="audio/mpeg">
+                Tu navegador no permite reproducir este audio.
+              </audio>
+            </div>
+
+            <div class="sonora-item">
+              <strong>🎼 “Antes que el silencio grite…”</strong>
+              <p>Producción musical vinculada a la identidad, la memoria y las voces de la comunidad educativa.</p>
+              <audio controls preload="metadata">
+                <source src="assets/audio/antes-que-el-silencio-grite.mp3" type="audio/mpeg">
+                Tu navegador no permite reproducir este audio.
+              </audio>
+            </div>
+          </div>
+
+          <p class="sonora-autoria">
+            Todas las producciones musicales y composiciones fueron realizadas por
+            <strong>Alfredo Esquivel</strong> como parte del trabajo institucional,
+            cultural y pedagógico desarrollado junto a la comunidad educativa.
+          </p>
+        </article>
       </div>
     </section>
 
@@ -1865,7 +1848,7 @@ realizar consultas, seguir novedades y acompañar la vida escolar.
         <a href="#contacto">Contacto</a>
       </div>
     </div>
-    <div class="footer-bottom">Sitio institucional educativo desarrollado por Alfredo Esquivel.</div>
+    <div class="footer-bottom">Sitio institucional educativo diseñado, desarrollado y acompañado pedagógicamente por Alfredo Esquivel.</div>
   </footer>
 </body>
 </html>
