@@ -890,50 +890,312 @@ grid-template-columns:1fr;
 }
 
 
-/* ===== AJUSTE DEFINITIVO PORTADA SIN SUPERPOSICIÓN ===== */
+/* ===== BUILD INTEGRAL REAL - EQUIPO, RECURSOS Y PORTADA ===== */
+
 .portada-contenido{
-  grid-template-columns:minmax(0,1.35fr) minmax(320px,.65fr) !important;
-  gap:34px !important;
+  grid-template-columns:minmax(0,1.42fr) minmax(300px,.58fr) !important;
+  gap:28px !important;
   align-items:center !important;
 }
+
 .titulo-portada-dos-lineas{
-  max-width:820px !important;
-  font-size:clamp(2.55rem,3.9vw,4.65rem) !important;
+  max-width:900px !important;
+  font-size:clamp(2.45rem,3.65vw,4.35rem) !important;
   line-height:1.08 !important;
-  letter-spacing:-1.2px !important;
+  letter-spacing:-1.05px !important;
 }
+
 .titulo-portada-dos-lineas .linea-escuela,
 .titulo-portada-dos-lineas .linea-benito{
   display:block !important;
   white-space:nowrap !important;
 }
+
 .portada-frase{
-  max-width:430px !important;
-  padding:28px 30px !important;
+  max-width:405px !important;
+  padding:26px 28px !important;
   justify-self:end !important;
   border-left:6px solid var(--amarillo) !important;
 }
+
 .portada-frase .comillas{
-  font-size:4.2rem !important;
-  height:34px !important;
+  font-size:3.8rem !important;
+  height:30px !important;
 }
+
 .portada-frase p{
   text-align:center !important;
-  font-size:clamp(.96rem,1.05vw,1.08rem) !important;
-  line-height:1.65 !important;
+  font-size:clamp(.92rem,1vw,1.02rem) !important;
+  line-height:1.58 !important;
 }
-.portada-subtitulo{ max-width:650px !important; }
+
+.portada-subtitulo{
+  max-width:680px !important;
+}
+
+.cargo-destacado{
+  display:inline-block;
+  background:#eef5f1;
+  color:var(--verde);
+  padding:7px 13px;
+  border-radius:999px;
+  font-size:.76rem;
+  font-weight:800;
+  margin-bottom:12px;
+  text-transform:uppercase;
+  letter-spacing:.35px;
+}
+
+.cargo-destacado.rojo{ background:var(--rojo); color:#fff; }
+.cargo-destacado.amarillo{ background:var(--amarillo); color:var(--verde-oscuro); }
+.cargo-destacado.verde{ background:var(--verde); color:#fff; }
+
+.equipo-real .section-intro strong,
+.recursos-reales .section-intro strong{
+  color:var(--rojo);
+}
+
+.equipo-jerarquia{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(255px,1fr));
+  gap:22px;
+}
+
+.equipo-card{
+  background:#fff;
+  border-radius:22px;
+  padding:24px;
+  border:1px solid rgba(11,90,53,.10);
+  box-shadow:0 10px 24px rgba(0,0,0,.05);
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.equipo-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:6px;
+  background:var(--verde);
+}
+
+.equipo-card.rojo::before{ background:var(--rojo); }
+.equipo-card.amarillo::before{ background:var(--amarillo); }
+.equipo-card.verde::before{ background:var(--verde); }
+
+.equipo-card h3{
+  color:var(--verde-oscuro);
+  margin-bottom:8px;
+  font-size:1.32rem;
+}
+
+.equipo-nombre{
+  color:var(--rojo);
+  font-weight:900;
+  font-size:1.08rem;
+  margin-bottom:10px;
+}
+
+.equipo-card p{
+  color:#4f5b56;
+  line-height:1.72;
+}
+
+.equipo-nota{
+  margin-top:22px;
+  padding:18px 22px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#fff8f7,#f8fbf9);
+  border-left:5px solid var(--rojo);
+  color:#43514b;
+  line-height:1.7;
+}
+
+.acompanamiento-digital{
+  margin-top:42px;
+  padding-top:30px;
+  border-top:1px solid rgba(11,90,53,.14);
+}
+
+.recursos-reales .resource-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+
+.recursos-reales .resource-card{
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.recurso-docente{ border-top:6px solid var(--rojo); }
+.recurso-estudiante{ border-top:6px solid var(--amarillo); }
+.recurso-familia{ border-top:6px solid var(--verde); }
+
+.resource-list{
+  padding-left:18px;
+  line-height:1.85;
+  margin:16px auto 0;
+  max-width:96%;
+  text-align:left;
+  color:#46534e;
+}
+
+.resource-list li{
+  margin-bottom:9px;
+}
+
+.resource-list a{
+  color:var(--verde);
+  font-weight:800;
+  border-bottom:1px solid rgba(11,90,53,.25);
+}
+
+.resource-list a:hover{
+  color:var(--rojo);
+  border-bottom-color:var(--rojo);
+}
+
+.recurso-alerta{
+  margin-top:18px;
+  padding:15px 17px;
+  border-radius:16px;
+  background:#fff8f7;
+  border-left:5px solid var(--rojo);
+  text-align:left;
+  color:#4b5550;
+  line-height:1.65;
+}
+
+.tesoros-frase,
+.programa-frase-secundaria,
+.barrio-frase{
+  text-align:center !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  min-height:92px !important;
+}
+
+.programa-frase-secundaria{
+  background:linear-gradient(135deg,var(--verde),#0f6b41) !important;
+}
+
+.pdf-programa{
+  margin-top:28px;
+  padding:24px;
+  border-radius:22px;
+  background:linear-gradient(135deg,#fff8f8,#f9f5f5);
+  border-left:6px solid var(--rojo);
+}
+
+.pdf-programa h4{
+  margin:10px 0;
+  color:var(--verde-oscuro);
+  font-size:1.25rem;
+}
+
+.barrio-responsables{
+  margin-top:26px;
+  padding:24px;
+  border-radius:22px;
+  background:linear-gradient(135deg,#f8fbf9,#fff);
+  border:1px solid rgba(11,90,53,.10);
+  box-shadow:0 8px 22px rgba(0,0,0,.04);
+}
+
+.barrio-responsables h4{
+  color:var(--verde-oscuro);
+  margin-bottom:12px;
+  font-size:1.25rem;
+}
+
+.responsables-lista{
+  columns:2;
+  padding-left:18px;
+  color:#44514c;
+  line-height:1.8;
+}
+
+.contacto-premium{
+  background:
+    radial-gradient(circle at top right, rgba(179,38,30,.08), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(214,187,66,.13), transparent 28%),
+    linear-gradient(135deg,#ffffff,#f9fbfa);
+}
+
+.contacto-grid{
+  display:grid;
+  grid-template-columns:1.1fr .95fr .95fr;
+  gap:24px;
+}
+
+.contacto-card{
+  background:#fff;
+  border-radius:24px;
+  padding:28px;
+  border:1px solid rgba(11,90,53,.08);
+  box-shadow:0 10px 24px rgba(0,0,0,.05);
+  text-align:center;
+}
+
+.contacto-card.principal{
+  border-left:6px solid var(--rojo);
+  background:linear-gradient(135deg,#fff,#fff8f7);
+}
+
+.contacto-card:nth-child(2){ border-top:6px solid var(--amarillo); }
+.contacto-card:nth-child(3){ border-top:6px solid var(--verde); }
+
+.contacto-card h3{
+  margin:10px 0 14px;
+  color:var(--verde-oscuro);
+}
+
+.contacto-lista{
+  padding-left:18px;
+  line-height:2;
+  text-align:left;
+}
+
+.contacto-datos{
+  text-align:left;
+  background:#f8fbf9;
+  padding:16px;
+  border-radius:16px;
+  border:1px solid rgba(11,90,53,.10);
+  display:grid;
+  gap:8px;
+  margin-top:18px;
+}
 
 @media(max-width:1180px){
   .portada-contenido{ grid-template-columns:1fr !important; }
   .portada-frase{ max-width:720px !important; justify-self:start !important; }
-  .titulo-portada-dos-lineas{ font-size:clamp(2.55rem,6vw,4.4rem) !important; }
+  .titulo-portada-dos-lineas{
+    font-size:clamp(2.55rem,6vw,4.4rem) !important;
+  }
 }
+
+@media(max-width:980px){
+  .recursos-reales .resource-grid,
+  .contacto-grid{
+    grid-template-columns:1fr;
+  }
+}
+
 @media(max-width:760px){
   .titulo-portada-dos-lineas .linea-escuela,
-  .titulo-portada-dos-lineas .linea-benito{ white-space:normal !important; }
-  .titulo-portada-dos-lineas{ font-size:clamp(2.25rem,11vw,3.6rem) !important; }
+  .titulo-portada-dos-lineas .linea-benito{
+    white-space:normal !important;
+  }
+  .titulo-portada-dos-lineas{
+    font-size:clamp(2.25rem,11vw,3.6rem) !important;
+  }
   .portada-frase{ padding:24px 22px !important; }
+  .responsables-lista{ columns:1; }
 }
 
 </style>
@@ -1064,118 +1326,129 @@ grid-template-columns:1fr;
 
     
 
+
 <section id="equipo" class="card equipo-real">
   <h2>Equipo institucional</h2>
 
   <p class="section-intro">
-    La organización institucional se sostiene en el trabajo articulado de conducción,
-    secretaría, asesoría pedagógica, preceptoría, tutores, docentes y acompañamiento
-    pedagógico-digital. Cada rol cumple una función clave para sostener la vida escolar,
-    la comunicación con las familias y las trayectorias educativas.
+    La organización institucional se sostiene en una red de trabajo que articula
+    <strong>conducción, secretaría, asesoría pedagógica, preceptoría, docencia, tutorías y acompañamiento técnico-pedagógico</strong>.
+    Cada área cumple una función concreta para sostener la vida escolar, la comunicación con las familias y las trayectorias educativas.
   </p>
 
   <div class="equipo-jerarquia">
 
-    <article class="equipo-card prioridad">
+    <article class="equipo-card rojo">
       <span class="cargo-destacado rojo">Conducción institucional</span>
       <h3>Rectoría</h3>
+      <div class="equipo-nombre">Mg. Julio Gallardo</div>
       <p>
-        Coordina la organización institucional, acompaña la toma de decisiones pedagógicas,
-        fortalece el vínculo con la comunidad y orienta las líneas de trabajo escolar.
+        Conduce la organización institucional, convoca y certifica actos administrativos,
+        coordina decisiones pedagógicas y representa a la escuela ante organismos y comunidad.
       </p>
     </article>
 
-    <article class="equipo-card">
+    <article class="equipo-card amarillo">
       <span class="cargo-destacado amarillo">Gestión administrativa</span>
       <h3>Secretaría</h3>
+      <div class="equipo-nombre">Secretaría institucional</div>
       <p>
-        Gestiona documentación, legajos, certificaciones, comunicaciones oficiales,
-        trámites institucionales y organización administrativa de la escuela.
+        Organiza documentación, legajos, certificaciones, correos oficiales, trámites,
+        comunicaciones administrativas y registros institucionales.
       </p>
     </article>
 
-    <article class="equipo-card">
+    <article class="equipo-card verde">
       <span class="cargo-destacado verde">Acompañamiento pedagógico</span>
       <h3>Asesoría Pedagógica</h3>
+      <div class="equipo-nombre">Asesoría pedagógica</div>
       <p>
-        Acompaña los procesos de enseñanza, orienta propuestas pedagógicas,
-        colabora en el seguimiento de trayectorias y articula acciones institucionales.
+        Acompaña la planificación, el seguimiento de trayectorias, la revisión de propuestas
+        de enseñanza y la articulación de proyectos institucionales.
       </p>
     </article>
 
-    <article class="equipo-card">
+    <article class="equipo-card rojo">
       <span class="cargo-destacado rojo">Seguimiento cotidiano</span>
       <h3>Preceptoría</h3>
+      <div class="equipo-nombre">Equipo de preceptores</div>
       <p>
-        Realiza el seguimiento diario de asistencia, convivencia, comunicación con familias,
-        organización de planillas y acompañamiento cercano de los estudiantes.
+        Realiza seguimiento de asistencia, convivencia, comunicación con familias,
+        recepción de planillas, control de carga en SAGE y actualización de asistencia en LUA SAGE.
       </p>
     </article>
 
-    <article class="equipo-card">
-      <span class="cargo-destacado amarillo">Acompañamiento educativo</span>
+    <article class="equipo-card amarillo">
+      <span class="cargo-destacado amarillo">Trayectorias educativas</span>
       <h3>Tutores y docentes</h3>
+      <div class="equipo-nombre">Equipo docente institucional</div>
       <p>
-        Acompañan aprendizajes, promueven la participación, orientan el estudio,
-        desarrollan proyectos institucionales y sostienen el vínculo pedagógico cotidiano.
+        Acompaña aprendizajes, promueve la participación, desarrolla proyectos,
+        sostiene propuestas interdisciplinarias y fortalece el vínculo pedagógico cotidiano.
       </p>
     </article>
 
-    <article class="equipo-card">
+    <article class="equipo-card verde">
       <span class="cargo-destacado verde">Tecnología educativa</span>
       <h3>Referente Técnico Institucional</h3>
+      <div class="equipo-nombre">Alfredo Esquivel</div>
       <p>
-        Acompaña la integración tecnológica, la alfabetización digital, la producción
-        de recursos y el uso significativo de herramientas digitales para enseñar, aprender
-        y comunicar.
+        Acompaña la integración tecnológica, alfabetización digital, producción de recursos,
+        sitio institucional, proyectos ABP y uso pedagógico de herramientas digitales.
       </p>
     </article>
 
+  </div>
+
+  <div class="equipo-nota">
+    La escuela articula sus tareas institucionales con docentes, estudiantes, familias,
+    centro de salud, referentes barriales y organismos del sistema educativo para sostener
+    una propuesta situada en Estación Yuquerí.
   </div>
 
   <div class="acompanamiento-digital">
     <h2>Acompañamiento pedagógico-digital</h2>
 
     <p class="section-intro">
-      Orientación institucional situada para fortalecer prácticas pedagógicas,
-      organización escolar y uso significativo de tecnologías digitales según las
-      necesidades reales de docentes, estudiantes y familias.
+      Espacio de orientación situado para resolver necesidades concretas de organización escolar,
+      producción pedagógica, comunicación institucional y uso significativo de tecnologías.
     </p>
 
     <details class="accordion-card" open>
       <summary>Para docentes</summary>
       <ul>
-        <li>Apoyo en el uso de SAGE, LUA SAGE, correo institucional y recursos digitales escolares.</li>
-        <li>Asesoramiento para elaborar materiales, guías, presentaciones, formularios y recursos de aula.</li>
-        <li>Acompañamiento en propuestas ABP, gamificación, inteligencia artificial y alfabetización digital.</li>
-        <li>Organización de información institucional, planillas, registros y documentación pedagógica.</li>
-        <li>Resolución de dificultades técnicas vinculadas al trabajo escolar cotidiano.</li>
+        <li>Uso de SAGE y LUA SAGE para carga de notas, asistencia, legajos, constancias y registros institucionales.</li>
+        <li>Apoyo en planillas de calificaciones, cierres de trimestre, documentación escolar y seguimiento de carga.</li>
+        <li>Producción de guías, presentaciones, formularios, recursos digitales y materiales para propuestas de aula.</li>
+        <li>Integración de ABP, gamificación, inteligencia artificial y alfabetización digital situada.</li>
+        <li>Acompañamiento técnico-pedagógico en proyectos institucionales y comunicación digital.</li>
       </ul>
     </details>
 
     <details class="accordion-card">
       <summary>Para estudiantes</summary>
       <ul>
-        <li>Orientación para acceder a materiales digitales, actividades y recursos institucionales.</li>
-        <li>Acompañamiento en organización del estudio, producción de trabajos y continuidad educativa.</li>
-        <li>Uso responsable, seguro y crítico de celulares, computadoras, internet e inteligencia artificial.</li>
+        <li>Acceso a materiales digitales, actividades, producciones institucionales y recursos de estudio.</li>
+        <li>Orientación para organizar trabajos, consultar materiales, producir contenidos y sostener continuidad educativa.</li>
+        <li>Uso responsable de celulares, computadoras, internet e inteligencia artificial para aprender.</li>
         <li>Apoyo ante dificultades técnicas que impidan completar actividades escolares.</li>
-        <li>Fortalecimiento progresivo de habilidades digitales para aprender, comunicarse y producir.</li>
+        <li>Fortalecimiento de habilidades digitales para comunicarse, investigar y producir.</li>
       </ul>
     </details>
 
     <details class="accordion-card">
       <summary>Para familias</summary>
       <ul>
-        <li>Información clara sobre canales oficiales de comunicación y seguimiento escolar.</li>
-        <li>Orientaciones para acompañar el estudio, la asistencia y la continuidad educativa desde el hogar.</li>
-        <li>Apoyo para comprender el uso de recursos digitales, comunicaciones y documentación escolar.</li>
-        <li>Acceso ordenado a novedades, proyectos institucionales y materiales de consulta.</li>
-        <li>Fortalecimiento del vínculo escuela-familia-comunidad en un contexto territorial rural.</li>
+        <li>Orientación sobre canales oficiales: celular, correos institucionales y Facebook de la escuela.</li>
+        <li>Acompañamiento para seguir asistencia, comunicaciones, actividades y continuidad escolar.</li>
+        <li>Información para crear o usar usuario SAGE como madre, padre o tutor.</li>
+        <li>Acceso claro a novedades, proyectos institucionales, fechas importantes y recursos de consulta.</li>
+        <li>Fortalecimiento del vínculo escuela-familia-comunidad en un contexto rural.</li>
       </ul>
     </details>
   </div>
 </section>
+
 
 
 
@@ -1191,13 +1464,13 @@ grid-template-columns:1fr;
 
     
 
+
 <section id="recursos" class="card recursos-reales">
   <h2>Recursos y documentación institucional</h2>
 
   <p class="section-intro">
-    Espacio de consulta rápida para organizar información escolar, acompañar trayectorias
-    y facilitar el acceso a recursos institucionales según las necesidades de docentes,
-    estudiantes y familias.
+    Espacio de acceso directo a <strong>recursos reales de gestión, acompañamiento y comunicación</strong>.
+    La información se organiza por destinatarios para facilitar el uso cotidiano del sitio.
   </p>
 
   <div class="resource-grid">
@@ -1206,23 +1479,29 @@ grid-template-columns:1fr;
       <span class="cargo-destacado rojo">Para docentes</span>
       <h3>Gestión pedagógica e institucional</h3>
       <ul class="resource-list">
-        <li>Calendario escolar, fechas institucionales, cierres de trimestre y carga de calificaciones.</li>
-        <li>Entrega, recepción y control de planillas de calificaciones y asistencia.</li>
-        <li>Orientaciones para uso de SAGE y LUA SAGE en tareas escolares habituales.</li>
-        <li>Modelos de materiales digitales, guías de trabajo, recursos para clase y propuestas interdisciplinarias.</li>
-        <li>Acompañamiento para proyectos institucionales: Tesoros ocultos, La Escuela va al Barrio y Alfabetización Digital Situada.</li>
+        <li><a href="https://sage.entrerios.gov.ar/" target="_blank" rel="noopener">Ingreso a SAGE</a> para gestión educativa institucional.</li>
+        <li><a href="https://sage.entrerios.gov.ar/solicitarUsuario/index.php" target="_blank" rel="noopener">Solicitud de usuario SAGE</a> para agente, estudiante o madre/padre/tutor.</li>
+        <li>Constancia de antigüedad de SAGE y certificación actualizada de concepto para concursos docentes.</li>
+        <li>Carga de notas en SAGE, control de planillas de calificaciones y actualización de asistencia en LUA SAGE.</li>
+        <li>Entrega de planillas a docentes, recepción de planillas y control de cierre trimestral.</li>
+        <li><a href="https://cge.entrerios.gov.ar/" target="_blank" rel="noopener">Convocatorias y comunicaciones del CGE</a> vinculadas a horas cátedra, cargos y normativa vigente.</li>
+        <li>Programa Alfabetización Digital Situada 2026 y acompañamiento para materiales digitales institucionales.</li>
       </ul>
+      <div class="recurso-alerta">
+        Información prioritaria: revisar fechas institucionales, cierres de trimestre, carga de notas y asistencia en SAGE/LUA SAGE.
+      </div>
     </article>
 
     <article class="resource-card recurso-estudiante">
       <span class="cargo-destacado amarillo">Para estudiantes</span>
       <h3>Estudio, participación y continuidad educativa</h3>
       <ul class="resource-list">
-        <li>Materiales de estudio, actividades escolares y producciones compartidas por la institución.</li>
-        <li>Orientaciones para organizar tiempos de estudio, trabajos prácticos y consultas.</li>
-        <li>Acceso a propuestas institucionales, proyectos, efemérides y recursos digitales.</li>
-        <li>Uso responsable de tecnologías, internet, celulares e inteligencia artificial para aprender.</li>
-        <li>Acompañamiento pedagógico y digital para sostener la asistencia, la participación y la continuidad escolar.</li>
+        <li><a href="https://sites.google.com/view/espaciovirtual-escuela31/inicio" target="_blank" rel="noopener">Espacio Virtual Escolar</a> con cursos, materiales, actividades, efemérides y notificaciones.</li>
+        <li>Materiales y producciones vinculadas a proyectos institucionales: Tesoros ocultos, La Escuela va al Barrio y Alfabetización Digital Situada.</li>
+        <li><a href="https://drive.google.com/drive/folders/1gl5ePQSi47l8qXrMd3jEV1FISUZ3QLZa?usp=drive_link" target="_blank" rel="noopener">Producciones del proyecto Tesoros ocultos de la escuela</a>.</li>
+        <li><a href="https://youtu.be/8AibIO0hHWo" target="_blank" rel="noopener">Video histórico institucional por los 25 años</a>.</li>
+        <li>Orientaciones para organizar el estudio, completar actividades, consultar recursos y sostener la asistencia.</li>
+        <li>Uso responsable de internet, celulares, inteligencia artificial y herramientas digitales para aprender y producir.</li>
       </ul>
     </article>
 
@@ -1230,16 +1509,21 @@ grid-template-columns:1fr;
       <span class="cargo-destacado verde">Para familias</span>
       <h3>Comunicación, seguimiento y acompañamiento</h3>
       <ul class="resource-list">
-        <li>Canales oficiales de comunicación: celular institucional, correos y Facebook institucional.</li>
-        <li>Información sobre fechas importantes, actividades, reuniones, actos y comunicados escolares.</li>
-        <li>Orientaciones para acompañar asistencia, estudio, organización familiar y continuidad educativa.</li>
-        <li>Consulta de proyectos institucionales y producciones escolares de la comunidad educativa.</li>
-        <li>Apoyo para comprender herramientas digitales y modos de comunicación con la escuela.</li>
+        <li><a href="https://sage.entrerios.gov.ar/solicitarUsuario/index.php" target="_blank" rel="noopener">Crear o solicitar usuario SAGE</a> como madre, padre o tutor.</li>
+        <li><a href="https://www.youtube.com/watch?v=ChuebIbs2mc" target="_blank" rel="noopener">Tutorial: generación de usuario en SAGE</a>.</li>
+        <li>Actualización y validación de datos de estudiantes a través de SAGE cuando sea solicitado institucionalmente.</li>
+        <li>Seguimiento de comunicaciones por celular oficial, correo institucional, secretaría y Facebook de la escuela.</li>
+        <li>Consulta de actividades, actos, proyectos institucionales y novedades escolares.</li>
+        <li>Información territorial relevante: transporte escolar, asistencia, continuidad educativa y acompañamiento comunitario.</li>
       </ul>
+      <div class="recurso-alerta">
+        Canal prioritario: ante dudas sobre seguimiento escolar o comunicación institucional, utilizar los contactos oficiales de la escuela.
+      </div>
     </article>
 
   </div>
 </section>
+
 
 
 
@@ -1269,10 +1553,31 @@ grid-template-columns:1fr;
 
       <article id="escuela-barrio" class="programa-card programa-simple">
         <div class="programa-header"><span class="programa-tag">Proyecto institucional</span><h3>La Escuela va al Barrio</h3><p class="programa-subtitulo">“Cuidar el cuerpo, cuidar la vida”</p></div>
-        <p>Proyecto institucional orientado al acompañamiento comunitario, la promoción de la salud, la prevención y el fortalecimiento de vínculos entre escuela, familias y territorio.</p>
-        <p>La propuesta busca acercar la escuela a distintos barrios y espacios comunitarios, promoviendo acciones vinculadas al cuidado integral, la educación para la salud, la escucha, la participación y la construcción colectiva de redes de acompañamiento.</p>
-        <p>A través de talleres, actividades territoriales, campañas de concientización y encuentros comunitarios, la institución fortalece su presencia territorial, consolidando una escuela cercana, comprometida y activa en la vida de su comunidad.</p>
+        <p>Proyecto institucional destinado a estudiantes de la Escuela Secundaria N.º 31 y a la comunidad barrial de Estación Yuquerí. Articula escuela, Centro de Salud de Estación Yuquerí y referentes barriales para promover cuidado del cuerpo, salud integral y vínculos saludables.</p>
+        <p>La propuesta aborda salud bucal, enfermedades de transmisión sexual, embarazo no intencional en la adolescencia, vínculos sanos, convivencia escolar, asistencia, compromiso y responsabilidad en la trayectoria educativa.</p>
+        <p>Los estudiantes producen folletos y materiales informativos, trabajan lectura comprensiva, producción escrita, síntesis de información y comunicación de mensajes preventivos para la comunidad.</p>
         <div class="programa-frase-secundaria">“La escuela fortalece trayectorias cuando sale al encuentro de su comunidad.”</div>
+
+
+        <div class="barrio-responsables">
+          <span class="cargo-destacado rojo">Equipo responsable del proyecto</span>
+          <h4>Docentes responsables</h4>
+          <ul class="responsables-lista">
+            <li>Acevedo Maximiliano</li>
+            <li>Batistella Lucía</li>
+            <li>Bechet Marisa</li>
+            <li>Dubs Norma</li>
+            <li>Esquivel Alfredo</li>
+            <li>Flores Delia</li>
+            <li>Fornes Sabina</li>
+            <li>Gallo Natalia</li>
+            <li>Gómez Laura</li>
+            <li>González Itatí</li>
+            <li>Grantile Mara</li>
+            <li>Mattiassi Alejandra</li>
+            <li>Primitivo Emmanuel</li>
+          </ul>
+        </div>
 
         <div class="barrios-grid">
           <article class="barrio-card"><div class="barrio-img"><img src="assets/imagenes/la-escuela-va-al-barrio-cohelo.png" alt="La Escuela va al Barrio - Cohelo"></div><div class="barrio-body"><span class="barrio-tag">Primera salida territorial</span><h3>Barrio Cohelo</h3><p>Charla comunitaria sobre cuidado del cuerpo y salud bucal, con participación docente y acompañamiento institucional.</p></div></article>
@@ -1298,7 +1603,7 @@ Documento institucional con fundamentos,
 objetivos y líneas de acción vinculadas a la integración tecnológica.
 </p>
 
-<a class="programa-boton" href="assets/documentos/programa-alfabetizacion-digital-2026.pdf" target="_blank" rel="noopener">Descargar programa en PDF →</a>
+<a class="programa-boton" href="assets/documentos/programa-alfabetizacion-digital-2026.pdf" target="_blank" rel="noopener">Descargar programa institucional en PDF →</a>
 
 </div>
       </article>
@@ -1315,6 +1620,7 @@ objetivos y líneas de acción vinculadas a la integración tecnológica.
     </section>
 
     
+
 <section id="contacto" class="card contacto-premium">
 
 <span class="eyebrow-section">Comunicación institucional</span>
@@ -1322,59 +1628,44 @@ objetivos y líneas de acción vinculadas a la integración tecnológica.
 <h2>Contacto institucional</h2>
 
 <p class="section-intro">
-Canales oficiales de comunicación de la Escuela Secundaria N.º 31 “Benito Juárez”.
+Canales oficiales para comunicarse con la Escuela Secundaria N.º 31 “Benito Juárez”,
+realizar consultas, seguir novedades y acompañar la vida escolar.
 </p>
 
 <div class="contacto-grid">
 
 <article class="contacto-card principal">
 <span class="cargo-destacado rojo">Información principal</span>
-
 <h3>Escuela Secundaria N.º 31 “Benito Juárez”</h3>
-
-<p>
-Ruta Provincial 22 y vías del ferrocarril —
-Estación Yuquerí, Concordia, Entre Ríos.
-</p>
-
+<p>Ruta Provincial 22 y vías del ferrocarril — Estación Yuquerí, Concordia, Entre Ríos.</p>
 <div class="contacto-datos">
 <div><strong>CUE:</strong> 3002566</div>
 <div><strong>Ámbito:</strong> Rural</div>
 <div><strong>Sector:</strong> Estatal</div>
+<div><strong>Nivel:</strong> Educación secundaria común</div>
 </div>
 </article>
 
 <article class="contacto-card">
-<span class="cargo-destacado">Comunicación directa</span>
-
+<span class="cargo-destacado amarillo">Comunicación directa</span>
 <h3>Canales oficiales</h3>
-
 <ul class="contacto-lista">
-<li><strong>Celular:</strong> +543454949814</li>
-<li><strong>Correo:</strong> secundaria31.cd@entrerios.edu.ar</li>
-<li><strong>Secretaría:</strong> secretaria31benitojuarez@gmail.com</li>
+<li><strong>Celular:</strong> <a href="tel:+543454949814">+543454949814</a></li>
+<li><strong>Correo institucional:</strong> <a href="mailto:secundaria31.cd@entrerios.edu.ar">secundaria31.cd@entrerios.edu.ar</a></li>
+<li><strong>Secretaría:</strong> <a href="mailto:secretaria31benitojuarez@gmail.com">secretaria31benitojuarez@gmail.com</a></li>
 </ul>
 </article>
 
 <article class="contacto-card">
-<span class="cargo-destacado">Comunidad digital</span>
-
-<h3>Redes institucionales</h3>
-
-<p>
-Seguimiento de actividades institucionales,
-comunicados, proyectos y vida escolar.
-</p>
-
-<a class="programa-boton" href="https://www.facebook.com/profile.php?id=100057420641002&mibextid=ZbWKwL" target="_blank">
-Facebook institucional →
-</a>
-
+<span class="cargo-destacado verde">Comunidad digital</span>
+<h3>Redes y novedades</h3>
+<p>Seguimiento de actividades institucionales, proyectos, comunicados, imágenes y vida escolar.</p>
+<a class="programa-boton" href="https://www.facebook.com/profile.php?id=100057420641002&mibextid=ZbWKwL" target="_blank" rel="noopener">Facebook institucional →</a>
 </article>
 
 </div>
-
 </section>
+
 
   </main>
 
