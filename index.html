@@ -3,164 +3,1742 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sitio institucional de la Escuela Secundaria N.º 31 Benito Juárez, Estación Yuquerí, Concordia, Entre Ríos." />
   <title>Escuela Secundaria N.º 31 “Benito Juárez”</title>
-  <link rel="stylesheet" href="assets/styles.css" />
-</head>
-<body>
-  <header class="site-header" id="inicio">
-    <nav class="navbar">
-      <a href="#inicio" class="brand">
-        <img src="logo-benito-juarez.png" alt="Logo Escuela Secundaria N.º 31 Benito Juárez" />
-        <span>Escuela Secundaria N.º 31<br><strong>“Benito Juárez”</strong></span>
-      </a>
-      <div class="nav-links">
-        <a href="#institucion">Institución</a>
-        <a href="#recursos">Recursos</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#contacto">Contacto</a>
-      </div>
-    </nav>
 
-    <section class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">Estación Yuquerí · Concordia · Entre Ríos</p>
-        <h1>Escuela Secundaria N.º 31 “Benito Juárez”</h1>
-        <p class="hero-text">Un espacio educativo público, situado y comprometido con las trayectorias escolares, la identidad comunitaria y el acompañamiento pedagógico-digital.</p>
-        <div class="hero-actions">
-          <a href="#recursos" class="btn primary">Ver recursos institucionales</a>
-          <a href="#institucion" class="btn secondary">Conocer la institución</a>
+  <style>
+    :root {
+      --verde-oscuro:#063f25;
+      --verde:#0b5a35;
+      --verde-medio:#1f6f43;
+      --verde-suave:#e8f4ec;
+      --amarillo:#d6bb42;
+      --amarillo-vivo:#f4c400;
+      --rojo:#b3261e;
+      --fondo:#f5f8f6;
+      --texto:#26302c;
+      --gris:#58655f;
+      --borde:rgba(11,90,53,.12);
+      --sombra:0 14px 34px rgba(0,0,0,.08);
+      --radio:24px;
+    }
+
+    * { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:var(--fondo);
+      color:var(--texto);
+      line-height:1.65;
+    }
+    a { color:inherit; text-decoration:none; }
+    img { max-width:100%; display:block; }
+
+    .topbar {
+      background:var(--verde-oscuro);
+      color:#fff;
+      padding:8px 6%;
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+      font-size:.92rem;
+      border-bottom:1px solid rgba(214,187,66,.55);
+    }
+
+    .site-header {
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(6,63,37,.97);
+      color:#fff;
+      box-shadow:0 8px 24px rgba(0,0,0,.18);
+    }
+
+    .header-inner {
+      padding:18px 6%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+
+    .brand {
+      display:flex;
+      align-items:center;
+      gap:14px;
+      min-width:280px;
+    }
+
+    .brand img {
+      width:66px;
+      height:66px;
+      object-fit:contain;
+      background:#fff;
+      border-radius:50%;
+      padding:4px;
+      box-shadow:0 4px 12px rgba(0,0,0,.18);
+    }
+
+    .brand strong { display:block; font-size:1.08rem; line-height:1.2; }
+    .brand span { display:block; font-size:.88rem; opacity:.9; margin-top:3px; }
+
+    .nav-links {
+      display:flex;
+      justify-content:flex-end;
+      flex-wrap:wrap;
+      gap:10px 20px;
+      font-weight:700;
+      font-size:.94rem;
+    }
+
+    .nav-links a {
+      padding:8px 0;
+      border-bottom:3px solid transparent;
+      transition:.2s ease;
+    }
+
+    .nav-links a:hover {
+      color:#fff6bf;
+      border-bottom-color:var(--amarillo);
+    }
+
+    .portada-institucional {
+      position:relative;
+      min-height:720px;
+      padding:78px 6% 42px;
+      overflow:hidden;
+      color:#fff;
+      background:
+        linear-gradient(90deg, rgba(6,63,37,.96) 0%, rgba(6,63,37,.84) 42%, rgba(6,63,37,.35) 100%),
+        url("assets/imagenes/frente-escuela.jpg");
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .portada-institucional::before {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at 82% 30%,rgba(214,187,66,.24),transparent 28%),
+        linear-gradient(180deg,rgba(0,0,0,.03),rgba(0,0,0,.22));
+      pointer-events:none;
+    }
+
+    .portada-contenido {
+      position:relative;
+      z-index:2;
+      max-width:1180px;
+      width:100%;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:minmax(0,1.12fr) minmax(360px,.88fr);
+      gap:48px;
+      align-items:center;
+    }
+
+    .portada-badge {
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      background:var(--amarillo-vivo);
+      color:var(--verde-oscuro);
+      padding:12px 20px;
+      border-radius:999px;
+      font-weight:800;
+      box-shadow:0 8px 22px rgba(0,0,0,.22);
+      margin-bottom:26px;
+    }
+
+    .portada-badge::before {
+      content:"🏫";
+      background:var(--verde-oscuro);
+      color:#fff;
+      width:34px;
+      height:34px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .portada-texto h1 {
+      margin:0;
+      max-width:760px;
+      font-size:clamp(3rem,5.1vw,5.4rem);
+      line-height:1.08;
+      letter-spacing:-1.4px;
+      font-weight:900;
+      text-shadow:0 6px 18px rgba(0,0,0,.25);
+    }
+
+    .portada-texto h1 span { display:block; }
+
+    .portada-linea {
+      width:min(420px,70%);
+      height:4px;
+      background:linear-gradient(90deg,var(--amarillo-vivo),transparent);
+      border-radius:99px;
+      margin:28px 0 24px;
+    }
+
+    .portada-subtitulo {
+      max-width:680px;
+      color:#f3f8f4;
+      font-size:clamp(1.1rem,1.8vw,1.38rem);
+      line-height:1.72;
+      font-weight:600;
+    }
+
+    .portada-frase {
+      background:rgba(255,255,255,.94);
+      color:var(--verde-oscuro);
+      border-radius:30px;
+      padding:38px 42px;
+      box-shadow:0 18px 42px rgba(0,0,0,.24);
+      border-left:7px solid var(--amarillo);
+      max-width:520px;
+      justify-self:end;
+    }
+
+    .portada-frase .comillas {
+      font-size:5rem;
+      line-height:.8;
+      color:rgba(11,90,53,.62);
+      font-weight:900;
+      height:44px;
+    }
+
+    .portada-frase p {
+      font-size:clamp(1.05rem,1.35vw,1.25rem);
+      line-height:1.72;
+      font-weight:800;
+    }
+
+    .portada-valores {
+      position:relative;
+      z-index:3;
+      max-width:1180px;
+      width:100%;
+      margin:56px auto 0;
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:20px;
+    }
+
+    .portada-valores article {
+      background:rgba(6,63,37,.94);
+      border:1px solid rgba(214,187,66,.34);
+      border-radius:20px;
+      padding:22px;
+      display:flex;
+      gap:16px;
+      box-shadow:0 12px 28px rgba(0,0,0,.18);
+    }
+
+    .portada-valores article > span { color:var(--amarillo-vivo); font-size:2rem; line-height:1; }
+    .portada-valores h3 { color:#fff; margin-bottom:4px; font-size:1.12rem; }
+    .portada-valores p { color:#eaf5ef; margin:0; line-height:1.5; font-size:.96rem; }
+
+    .portada-cierre {
+      position:relative;
+      z-index:3;
+      max-width:1180px;
+      width:100%;
+      margin:28px auto 0;
+      background:rgba(255,255,255,.94);
+      color:var(--verde-oscuro);
+      border-radius:22px;
+      padding:18px 24px;
+      display:grid;
+      grid-template-columns:1fr 1.2fr auto;
+      align-items:center;
+      gap:22px;
+      box-shadow:0 12px 32px rgba(0,0,0,.12);
+      border-left:5px solid var(--amarillo);
+    }
+
+    .portada-cierre strong { display:block; font-size:1.05rem; margin-bottom:3px; }
+    .portada-cierre span { display:block; color:#5b6762; font-size:.95rem; }
+    .portada-cierre a {
+      background:var(--verde);
+      color:#fff;
+      padding:12px 20px;
+      border-radius:999px;
+      font-weight:800;
+      white-space:nowrap;
+    }
+
+    main {
+      width:min(1180px,88%);
+      margin:42px auto;
+    }
+
+    section { scroll-margin-top:120px; margin:42px 0; }
+
+    .card {
+      background:#fff;
+      border-radius:var(--radio);
+      padding:36px;
+      border:1px solid var(--borde);
+      box-shadow:var(--sombra);
+    }
+
+    .card h2 {
+      color:var(--verde);
+      font-size:clamp(1.85rem,3vw,2.75rem);
+      line-height:1.2;
+      margin-bottom:12px;
+    }
+
+    .section-intro {
+      color:var(--gris);
+      font-size:1.08rem;
+      line-height:1.8;
+      margin-bottom:26px;
+    }
+
+    .eyebrow-section, .programa-tag, .barrio-tag {
+      display:inline-block;
+      background:var(--verde-suave);
+      color:var(--verde);
+      padding:8px 16px;
+      border-radius:999px;
+      font-size:.82rem;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.4px;
+      margin-bottom:14px;
+    }
+
+    .quick-grid, .info-grid, .resource-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:22px;
+    }
+
+    .quick-card, .mini-card, .resource-card, .info {
+      background:#fff;
+      border:1px solid var(--borde);
+      border-radius:18px;
+      padding:22px;
+      box-shadow:0 6px 20px rgba(0,0,0,.05);
+      transition:.22s ease;
+    }
+
+    .quick-card:hover, .mini-card:hover, .resource-card:hover {
+      transform:translateY(-4px);
+      box-shadow:var(--sombra);
+    }
+
+    .quick-card .icon {
+      width:48px;
+      height:48px;
+      border-radius:50%;
+      background:var(--verde-suave);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:1.4rem;
+      margin-bottom:12px;
+    }
+
+    .quick-card h3, .mini-card h3, .resource-card h3, .info strong {
+      color:var(--verde);
+      margin-bottom:8px;
+      display:block;
+    }
+
+    .split-grid {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+    }
+
+    .identidad-card {
+      border-left:6px solid var(--verde);
+      background:linear-gradient(135deg,#fff,#f5faf7);
+    }
+
+    .identidad-card p, .datos-card p {
+      color:#44514c;
+      line-height:1.76;
+      margin-bottom:12px;
+    }
+
+    details.accordion-card {
+      background:linear-gradient(135deg,#eef7f1,#f8fbf9);
+      border:1px solid rgba(11,90,53,.18);
+      border-left:6px solid var(--verde);
+      border-radius:18px;
+      box-shadow:0 5px 18px rgba(0,0,0,.05);
+      overflow:hidden;
+      margin:14px 0;
+    }
+
+    details.accordion-card summary {
+      cursor:pointer;
+      list-style:none;
+      padding:18px 22px;
+      font-weight:800;
+      color:var(--verde-oscuro);
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      background:linear-gradient(90deg,#dfeee5,#f5faf7);
+    }
+
+    details.accordion-card summary::-webkit-details-marker { display:none; }
+    details.accordion-card summary::after {
+      content:"+";
+      width:32px;
+      height:32px;
+      border-radius:50%;
+      background:var(--verde);
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-shrink:0;
+    }
+
+    details.accordion-card[open] summary::after {
+      content:"–";
+      background:var(--amarillo);
+      color:var(--verde-oscuro);
+    }
+
+    details.accordion-card p, details.accordion-card ul {
+      padding:0 22px 20px 22px;
+      color:#45524d;
+      line-height:1.78;
+    }
+
+    details.accordion-card ul { padding-left:46px; }
+
+    .video-responsive {
+      position:relative;
+      width:100%;
+      padding-bottom:56.25%;
+      height:0;
+      overflow:hidden;
+      border-radius:20px;
+      background:#000;
+      box-shadow:var(--sombra);
+      margin-top:16px;
+    }
+
+    .video-responsive iframe {
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      border:0;
+    }
+
+    .programas-premium {
+      background:
+        radial-gradient(circle at top right, rgba(214,187,66,.10), transparent 26%),
+        linear-gradient(135deg,#ffffff,#f7fbf8);
+    }
+
+    .programa-card {
+      margin-top:34px;
+      background:#fff;
+      border-radius:26px;
+      padding:34px;
+      border:1px solid rgba(11,90,53,.08);
+      box-shadow:0 14px 32px rgba(0,0,0,.06);
+    }
+
+    .tesoros-restaurado {
+      border-left:6px solid var(--amarillo);
+      background:
+        radial-gradient(circle at top right, rgba(214,187,66,.10), transparent 28%),
+        linear-gradient(135deg,#ffffff,#f7fbf8);
+    }
+
+    .programa-header h3 {
+      color:var(--verde-oscuro);
+      font-size:2rem;
+      line-height:1.2;
+      margin-bottom:6px;
+    }
+
+    .programa-subtitulo { color:#6a756f; font-style:italic; font-weight:700; }
+
+    .tesoros-grid, .programa-layout {
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:34px;
+    }
+
+    .tesoros-texto h3 {
+      color:var(--verde);
+      font-size:1.85rem;
+      margin-bottom:18px;
+    }
+
+    .tesoros-texto p, .programa-simple p {
+      line-height:1.85;
+      color:#4e5b56;
+      margin-bottom:18px;
+    }
+
+    .tesoros-frase, .programa-frase-secundaria, .barrio-frase {
+      margin-top:24px;
+      background:linear-gradient(135deg,var(--verde),#0f6b41);
+      color:#fff;
+      padding:24px 28px;
+      border-radius:20px;
+      line-height:1.7;
+      font-weight:800;
+      border-left:5px solid var(--amarillo);
+    }
+
+    .tesoros-bloques, .programa-mini-grid {
+      display:grid;
+      gap:18px;
+    }
+
+    .tesoros-bloques article, .programa-mini-grid article {
+      background:#f8fbf9;
+      border-radius:18px;
+      padding:22px;
+      border:1px solid rgba(11,90,53,.08);
+    }
+
+    .tesoros-bloques h4, .programa-mini-grid h4 {
+      color:var(--verde);
+      margin-bottom:10px;
+    }
+
+    .tesoros-footer a, .programa-boton, .tesoros-footer a {
+      display:inline-flex;
+      margin-top:24px;
+      background:var(--verde);
+      color:#fff;
+      padding:14px 22px;
+      border-radius:999px;
+      font-weight:800;
+      text-decoration:none;
+    }
+
+    .barrios-grid {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:24px;
+      margin:28px 0;
+    }
+
+    .barrio-card {
+      background:#fff;
+      border-radius:20px;
+      overflow:hidden;
+      border:1px solid var(--borde);
+      box-shadow:var(--sombra);
+    }
+
+    .barrio-img {
+      aspect-ratio:4/5;
+      background:#f4f6f4;
+      overflow:hidden;
+    }
+
+    .barrio-img img {
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:top center;
+    }
+
+    .barrio-body { padding:22px; }
+    .barrio-body h3 { color:var(--verde-oscuro); font-size:1.35rem; margin-bottom:10px; }
+
+    .novedades-grid {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:28px;
+      align-items:stretch;
+    }
+
+    .novedad-card {
+      background:#fff;
+      border-radius:20px;
+      overflow:hidden;
+      border:1px solid var(--borde);
+      box-shadow:var(--sombra);
+      display:flex;
+      flex-direction:column;
+    }
+
+    .novedad-img {
+      aspect-ratio:4/5;
+      background:#f4f6f4;
+      overflow:hidden;
+    }
+
+    .novedad-img img {
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:top center;
+    }
+
+    .novedad-body {
+      display:grid;
+      grid-template-columns:52px 1fr;
+      gap:16px;
+      padding:22px;
+    }
+
+    .novedad-icono {
+      width:48px;
+      height:48px;
+      border-radius:50%;
+      background:var(--verde-suave);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:1.35rem;
+    }
+
+    .novedad-body h3 { color:var(--verde-oscuro); font-size:1.22rem; margin-bottom:10px; }
+
+    .info-list {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:16px;
+    }
+
+    footer {
+      background:var(--verde-oscuro);
+      color:#fff;
+      padding:34px 6%;
+      margin-top:48px;
+      border-top:4px solid var(--amarillo);
+    }
+
+    .footer-grid {
+      max-width:1180px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:24px;
+    }
+
+    footer h3 { color:#fff9c9; margin-bottom:10px; }
+    footer a, footer p { display:block; color:#eef8f1; margin:6px 0; }
+    .footer-bottom {
+      max-width:1180px;
+      margin:22px auto 0;
+      padding-top:16px;
+      border-top:1px solid rgba(255,255,255,.18);
+      color:#eef8f1;
+    }
+
+    @media(max-width:1050px) {
+      .header-inner { flex-direction:column; align-items:flex-start; }
+      .nav-links { justify-content:flex-start; }
+      .portada-institucional { min-height:auto; padding-top:56px; }
+      .portada-contenido { grid-template-columns:1fr; }
+      .portada-frase { max-width:720px; justify-self:start; }
+      .portada-valores, .novedades-grid, .barrios-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .portada-cierre { grid-template-columns:1fr; }
+      .split-grid, .tesoros-grid, .programa-layout { grid-template-columns:1fr; }
+    }
+
+    @media(max-width:720px) {
+      main { width:92%; }
+      .card { padding:24px; }
+      .brand { min-width:auto; }
+      .portada-institucional { padding:44px 5% 34px; }
+      .portada-texto h1 { font-size:clamp(2.35rem,12vw,3.7rem); letter-spacing:-.7px; }
+      .portada-frase { padding:28px 24px; }
+      .portada-valores, .novedades-grid, .barrios-grid { grid-template-columns:1fr; }
+      .portada-cierre { padding:18px; }
+      .novedad-body { grid-template-columns:44px 1fr; padding:18px; }
+    }
+  
+/* ===== AJUSTES FINALES ===== */
+
+.cargo-destacado{
+display:inline-block;
+background:#eef5f1;
+color:#0b5a35;
+padding:6px 12px;
+border-radius:999px;
+font-size:.78rem;
+font-weight:800;
+margin-bottom:12px;
+text-transform:uppercase;
+}
+
+.cargo-destacado.rojo{
+background:#b3261e;
+color:#fff;
+}
+
+.resource-list{
+padding-left:18px;
+line-height:1.9;
+margin-top:12px;
+}
+
+.contacto-premium{
+background:
+radial-gradient(circle at top right, rgba(179,38,30,.08), transparent 28%),
+linear-gradient(135deg,#ffffff,#f9fbfa);
+}
+
+.contacto-grid{
+display:grid;
+grid-template-columns:1.1fr .95fr .95fr;
+gap:24px;
+}
+
+.contacto-card{
+background:#fff;
+border-radius:24px;
+padding:28px;
+border:1px solid rgba(11,90,53,.08);
+box-shadow:0 10px 24px rgba(0,0,0,.05);
+}
+
+.contacto-card.principal{
+border-left:6px solid #b3261e;
+}
+
+.contacto-card h3{
+margin:10px 0 14px;
+color:#063f25;
+}
+
+.contacto-lista{
+padding-left:18px;
+line-height:2;
+}
+
+.contacto-datos{
+display:grid;
+gap:8px;
+margin-top:18px;
+}
+
+.pdf-programa{
+margin-top:28px;
+padding:24px;
+border-radius:22px;
+background:linear-gradient(135deg,#fff8f8,#f9f5f5);
+border-left:6px solid #b3261e;
+}
+
+.pdf-programa h4{
+margin:10px 0;
+color:#063f25;
+}
+
+@media(max-width:980px){
+.contacto-grid{
+grid-template-columns:1fr;
+}
+}
+
+
+/* ===== MEJORAS VISUALES FINALES COLOR Y CENTRADO ===== */
+
+:root{
+  --rojo:#b3261e;
+  --amarillo:#d6bb42;
+  --verde:#0b5a35;
+  --verde-oscuro:#063f25;
+}
+
+.titulo-portada-dos-lineas{
+  font-size:clamp(2.65rem,4.55vw,5.05rem) !important;
+  line-height:1.06 !important;
+  max-width:820px !important;
+}
+
+.titulo-portada-dos-lineas .linea-escuela{
+  white-space:nowrap;
+}
+
+.portada-frase{
+  max-width:470px !important;
+  padding:30px 34px !important;
+}
+
+.portada-frase p{
+  text-align:center;
+  font-size:clamp(1rem,1.22vw,1.16rem) !important;
+}
+
+.tesoros-frase,
+.programa-frase-secundaria,
+.barrio-frase{
+  text-align:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:92px;
+}
+
+.cargo-destacado.amarillo{
+  background:var(--amarillo);
+  color:var(--verde-oscuro);
+}
+
+.cargo-destacado.verde{
+  background:var(--verde);
+  color:#ffffff;
+}
+
+.equipo-jerarquia{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(255px,1fr));
+  gap:22px;
+}
+
+.equipo-card{
+  background:#ffffff;
+  border-radius:22px;
+  padding:24px;
+  border:1px solid rgba(11,90,53,.10);
+  box-shadow:0 10px 24px rgba(0,0,0,.05);
+  text-align:center;
+}
+
+.equipo-card.prioridad{
+  border-top:6px solid var(--rojo);
+}
+
+.equipo-card h3{
+  color:var(--verde-oscuro);
+  margin-bottom:10px;
+}
+
+.equipo-card p{
+  color:#4f5b56;
+  line-height:1.75;
+}
+
+.acompanamiento-digital{
+  margin-top:42px;
+  padding-top:30px;
+  border-top:1px solid rgba(11,90,53,.14);
+}
+
+.recursos-reales .resource-card{
+  text-align:center;
+}
+
+.recursos-reales .resource-list{
+  text-align:left;
+  margin:16px auto 0;
+  max-width:95%;
+}
+
+.recurso-docente{
+  border-top:6px solid var(--rojo);
+}
+
+.recurso-estudiante{
+  border-top:6px solid var(--amarillo);
+}
+
+.recurso-familia{
+  border-top:6px solid var(--verde);
+}
+
+.contacto-card{
+  text-align:center;
+}
+
+.contacto-lista{
+  text-align:left;
+}
+
+.contacto-datos{
+  text-align:left;
+  background:#f8fbf9;
+  padding:16px;
+  border-radius:16px;
+  border:1px solid rgba(11,90,53,.10);
+}
+
+.contacto-card.principal{
+  background:linear-gradient(135deg,#fff,#fff8f7);
+}
+
+.contacto-card:nth-child(2){
+  border-top:6px solid var(--amarillo);
+}
+
+.contacto-card:nth-child(3){
+  border-top:6px solid var(--verde);
+}
+
+@media(max-width:760px){
+  .titulo-portada-dos-lineas .linea-escuela{
+    white-space:normal;
+  }
+}
+
+
+/* ===== BUILD INTEGRAL REAL - EQUIPO, RECURSOS Y PORTADA ===== */
+
+.portada-contenido{
+  grid-template-columns:minmax(0,1.42fr) minmax(300px,.58fr) !important;
+  gap:28px !important;
+  align-items:center !important;
+}
+
+.titulo-portada-dos-lineas{
+  max-width:900px !important;
+  font-size:clamp(2.45rem,3.65vw,4.35rem) !important;
+  line-height:1.08 !important;
+  letter-spacing:-1.05px !important;
+}
+
+.titulo-portada-dos-lineas .linea-escuela,
+.titulo-portada-dos-lineas .linea-benito{
+  display:block !important;
+  white-space:nowrap !important;
+}
+
+.portada-frase{
+  max-width:405px !important;
+  padding:26px 28px !important;
+  justify-self:end !important;
+  border-left:6px solid var(--amarillo) !important;
+}
+
+.portada-frase .comillas{
+  font-size:3.8rem !important;
+  height:30px !important;
+}
+
+.portada-frase p{
+  text-align:center !important;
+  font-size:clamp(.92rem,1vw,1.02rem) !important;
+  line-height:1.58 !important;
+}
+
+.portada-subtitulo{
+  max-width:680px !important;
+}
+
+.cargo-destacado{
+  display:inline-block;
+  background:#eef5f1;
+  color:var(--verde);
+  padding:7px 13px;
+  border-radius:999px;
+  font-size:.76rem;
+  font-weight:800;
+  margin-bottom:12px;
+  text-transform:uppercase;
+  letter-spacing:.35px;
+}
+
+.cargo-destacado.rojo{ background:var(--rojo); color:#fff; }
+.cargo-destacado.amarillo{ background:var(--amarillo); color:var(--verde-oscuro); }
+.cargo-destacado.verde{ background:var(--verde); color:#fff; }
+
+.equipo-real .section-intro strong,
+.recursos-reales .section-intro strong{
+  color:var(--rojo);
+}
+
+.equipo-jerarquia{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(255px,1fr));
+  gap:22px;
+}
+
+.equipo-card{
+  background:#fff;
+  border-radius:22px;
+  padding:24px;
+  border:1px solid rgba(11,90,53,.10);
+  box-shadow:0 10px 24px rgba(0,0,0,.05);
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.equipo-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:6px;
+  background:var(--verde);
+}
+
+.equipo-card.rojo::before{ background:var(--rojo); }
+.equipo-card.amarillo::before{ background:var(--amarillo); }
+.equipo-card.verde::before{ background:var(--verde); }
+
+.equipo-card h3{
+  color:var(--verde-oscuro);
+  margin-bottom:8px;
+  font-size:1.32rem;
+}
+
+.equipo-nombre{
+  color:var(--rojo);
+  font-weight:900;
+  font-size:1.08rem;
+  margin-bottom:10px;
+}
+
+.equipo-card p{
+  color:#4f5b56;
+  line-height:1.72;
+}
+
+.equipo-nota{
+  margin-top:22px;
+  padding:18px 22px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#fff8f7,#f8fbf9);
+  border-left:5px solid var(--rojo);
+  color:#43514b;
+  line-height:1.7;
+}
+
+.acompanamiento-digital{
+  margin-top:42px;
+  padding-top:30px;
+  border-top:1px solid rgba(11,90,53,.14);
+}
+
+.recursos-reales .resource-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+
+.recursos-reales .resource-card{
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.recurso-docente{ border-top:6px solid var(--rojo); }
+.recurso-estudiante{ border-top:6px solid var(--amarillo); }
+.recurso-familia{ border-top:6px solid var(--verde); }
+
+.resource-list{
+  padding-left:18px;
+  line-height:1.85;
+  margin:16px auto 0;
+  max-width:96%;
+  text-align:left;
+  color:#46534e;
+}
+
+.resource-list li{
+  margin-bottom:9px;
+}
+
+.resource-list a{
+  color:var(--verde);
+  font-weight:800;
+  border-bottom:1px solid rgba(11,90,53,.25);
+}
+
+.resource-list a:hover{
+  color:var(--rojo);
+  border-bottom-color:var(--rojo);
+}
+
+.recurso-alerta{
+  margin-top:18px;
+  padding:15px 17px;
+  border-radius:16px;
+  background:#fff8f7;
+  border-left:5px solid var(--rojo);
+  text-align:left;
+  color:#4b5550;
+  line-height:1.65;
+}
+
+.tesoros-frase,
+.programa-frase-secundaria,
+.barrio-frase{
+  text-align:center !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  min-height:92px !important;
+}
+
+.programa-frase-secundaria{
+  background:linear-gradient(135deg,var(--verde),#0f6b41) !important;
+}
+
+.pdf-programa{
+  margin-top:28px;
+  padding:24px;
+  border-radius:22px;
+  background:linear-gradient(135deg,#fff8f8,#f9f5f5);
+  border-left:6px solid var(--rojo);
+}
+
+.pdf-programa h4{
+  margin:10px 0;
+  color:var(--verde-oscuro);
+  font-size:1.25rem;
+}
+
+.barrio-responsables{
+  margin-top:26px;
+  padding:24px;
+  border-radius:22px;
+  background:linear-gradient(135deg,#f8fbf9,#fff);
+  border:1px solid rgba(11,90,53,.10);
+  box-shadow:0 8px 22px rgba(0,0,0,.04);
+}
+
+.barrio-responsables h4{
+  color:var(--verde-oscuro);
+  margin-bottom:12px;
+  font-size:1.25rem;
+}
+
+.responsables-lista{
+  columns:2;
+  padding-left:18px;
+  color:#44514c;
+  line-height:1.8;
+}
+
+.contacto-premium{
+  background:
+    radial-gradient(circle at top right, rgba(179,38,30,.08), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(214,187,66,.13), transparent 28%),
+    linear-gradient(135deg,#ffffff,#f9fbfa);
+}
+
+.contacto-grid{
+  display:grid;
+  grid-template-columns:1.1fr .95fr .95fr;
+  gap:24px;
+}
+
+.contacto-card{
+  background:#fff;
+  border-radius:24px;
+  padding:28px;
+  border:1px solid rgba(11,90,53,.08);
+  box-shadow:0 10px 24px rgba(0,0,0,.05);
+  text-align:center;
+}
+
+.contacto-card.principal{
+  border-left:6px solid var(--rojo);
+  background:linear-gradient(135deg,#fff,#fff8f7);
+}
+
+.contacto-card:nth-child(2){ border-top:6px solid var(--amarillo); }
+.contacto-card:nth-child(3){ border-top:6px solid var(--verde); }
+
+.contacto-card h3{
+  margin:10px 0 14px;
+  color:var(--verde-oscuro);
+}
+
+.contacto-lista{
+  padding-left:18px;
+  line-height:2;
+  text-align:left;
+}
+
+.contacto-datos{
+  text-align:left;
+  background:#f8fbf9;
+  padding:16px;
+  border-radius:16px;
+  border:1px solid rgba(11,90,53,.10);
+  display:grid;
+  gap:8px;
+  margin-top:18px;
+}
+
+@media(max-width:1180px){
+  .portada-contenido{ grid-template-columns:1fr !important; }
+  .portada-frase{ max-width:720px !important; justify-self:start !important; }
+  .titulo-portada-dos-lineas{
+    font-size:clamp(2.55rem,6vw,4.4rem) !important;
+  }
+}
+
+@media(max-width:980px){
+  .recursos-reales .resource-grid,
+  .contacto-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:760px){
+  .titulo-portada-dos-lineas .linea-escuela,
+  .titulo-portada-dos-lineas .linea-benito{
+    white-space:normal !important;
+  }
+  .titulo-portada-dos-lineas{
+    font-size:clamp(2.25rem,11vw,3.6rem) !important;
+  }
+  .portada-frase{ padding:24px 22px !important; }
+  .responsables-lista{ columns:1; }
+}
+
+
+/* ===== EQUIPO INSTITUCIONAL ACTUALIZADO ===== */
+
+.equipo-horarios{
+  margin-top:14px;
+  padding-left:0;
+  list-style:none;
+  color:#44514c;
+  line-height:1.75;
+  font-weight:600;
+}
+
+.equipo-horarios li{
+  background:#f8fbf9;
+  border:1px solid rgba(11,90,53,.10);
+  border-radius:12px;
+  padding:8px 10px;
+  margin-bottom:8px;
+}
+
+.tutor-separado{
+  margin-top:18px;
+}
+
+
+/* ===== EQUIPO INSTITUCIONAL VISUAL FINAL ===== */
+.equipo-premium-final{background:radial-gradient(circle at top right,rgba(214,187,66,.10),transparent 28%),linear-gradient(135deg,#fff,#f9fbfa);}
+.equipo-top-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:32px;}
+.equipo-bottom-grid{display:grid;grid-template-columns:1.35fr .95fr;gap:24px;margin-top:24px;align-items:stretch;}
+.equipo-card-premium{background:#fff;border-radius:22px;padding:26px;border:1px solid rgba(11,90,53,.10);box-shadow:0 12px 28px rgba(0,0,0,.06);position:relative;overflow:hidden;text-align:center;}
+.equipo-card-premium::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:var(--verde);}
+.equipo-card-premium.borde-rojo::before{background:var(--rojo);}
+.equipo-card-premium.borde-amarillo::before{background:var(--amarillo);}
+.equipo-card-premium.borde-verde::before{background:var(--verde);}
+.equipo-card-head{display:flex;align-items:center;justify-content:flex-start;gap:14px;text-align:left;margin-bottom:18px;}
+.equipo-icon{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.55rem;color:#fff;flex-shrink:0;box-shadow:0 8px 18px rgba(0,0,0,.12);}
+.icon-rojo{background:var(--rojo);}
+.icon-amarillo{background:var(--amarillo);color:var(--verde-oscuro);}
+.icon-verde{background:var(--verde);}
+.equipo-label{display:inline-block;padding:8px 14px;border-radius:999px;font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:.35px;line-height:1.45;}
+.label-rojo{color:var(--rojo);background:#fff1f0;}
+.label-amarillo{color:#836b00;background:#fff7d0;}
+.label-verde{color:var(--verde);background:#e8f4ec;}
+.equipo-separador{height:1px;background:rgba(11,90,53,.14);margin:6px 0 18px;}
+.equipo-card-premium h3{color:var(--verde-oscuro);font-size:1.35rem;margin-bottom:8px;}
+.equipo-nombre{color:var(--rojo);font-weight:900;font-size:1.08rem;line-height:1.4;margin-bottom:8px;}
+.equipo-subnombre{color:var(--rojo);font-weight:700;font-size:.95rem;margin-top:-4px;margin-bottom:10px;}
+.equipo-card-premium p{color:#42504a;line-height:1.7;margin:12px auto 0;max-width:92%;}
+.equipo-chip-list{list-style:none;padding:0;margin:16px auto 0;display:grid;gap:8px;}
+.equipo-chip-list li{background:#f4faf6;border:1px solid rgba(11,90,53,.12);border-radius:12px;padding:8px 11px;color:#24332d;font-weight:700;line-height:1.45;}
+.chip-rojo li{background:#fff5f4;border-color:rgba(179,38,30,.18);color:var(--rojo);}
+.chip-amarillo li{background:#fff9df;border-color:rgba(214,187,66,.45);}
+.chip-verde li{background:#edf7f1;border-color:rgba(11,90,53,.16);}
+.equipo-tutores{padding:24px 26px;}
+.tutores-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:10px;}
+.tutor-box{text-align:center;padding:0 14px;border-right:1px solid rgba(11,90,53,.14);}
+.tutor-box:last-child{border-right:none;}
+.equipo-rti{display:flex;flex-direction:column;justify-content:center;}
+.equipo-rti-horarios{grid-template-columns:1fr 1fr;gap:14px;max-width:100%;}
+.equipo-cierre{margin-top:24px;background:linear-gradient(90deg,#eaf4ef,#f8fbf9);border-radius:18px;padding:16px 22px;display:flex;align-items:center;justify-content:center;gap:14px;color:var(--verde-oscuro);text-align:center;}
+.equipo-cierre span{font-size:1.7rem;}
+@media(max-width:1180px){.equipo-top-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.equipo-bottom-grid{grid-template-columns:1fr;}}
+@media(max-width:820px){.equipo-top-grid{grid-template-columns:1fr;}.tutores-grid{grid-template-columns:1fr;}.tutor-box{border-right:none;border-bottom:1px solid rgba(11,90,53,.14);padding-bottom:18px;}.tutor-box:last-child{border-bottom:none;}.equipo-rti-horarios{grid-template-columns:1fr;}}
+
+</style>
+</head>
+
+<body>
+  <div class="topbar">
+    <span><a href="tel:+543454949814">Cel.: +543454949814</a></span>
+    <span><a href="mailto:secundaria31.cd@entrerios.edu.ar">Correo: secundaria31.cd@entrerios.edu.ar</a></span>
+    <span><a href="https://www.facebook.com/profile.php?id=100057420641002&mibextid=ZbWKwL" target="_blank" rel="noopener">Facebook institucional</a></span>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#inicio">
+        <img src="assets/imagenes/logo-benito-juarez.png" alt="Escudo Escuela Secundaria N.º 31 Benito Juárez">
+        <div>
+          <strong>Escuela Secundaria N.º 31</strong>
+          <span>“Benito Juárez” — Estación Yuquerí</span>
         </div>
-      </div>
-    </section>
+      </a>
+
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#institucion">Institución</a>
+        <a href="#historia">Historia</a>
+        <a href="#novedades">Novedades</a>
+        <a href="#recursos">Recursos</a>
+        <a href="#programas">Programas</a>
+        <a href="#multimedia">Multimedia</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section id="institucion" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">Nuestra institución</p>
-        <h2>Identidad, historia y comunidad</h2>
-        <p>La Escuela Secundaria N.º 31 “Benito Juárez” acompaña a estudiantes y familias desde una mirada educativa integral, cercana y comprometida con el contexto de Estación Yuquerí.</p>
+  <section id="inicio" class="portada-institucional">
+    <div class="portada-contenido">
+      <div class="portada-texto">
+        <span class="portada-badge">Portal institucional educativo</span>
+        <h1 class="titulo-portada-dos-lineas">
+          <span class="linea-escuela">Escuela Secundaria N.º&nbsp;31</span>
+          <span class="linea-benito">“Benito Juárez”</span>
+        </h1>
+        <div class="portada-linea"></div>
+        <p class="portada-subtitulo">
+          Educamos en comunidad, construimos futuro, acompañamos trayectorias
+          y fortalecemos la identidad de Estación Yuquerí.
+        </p>
       </div>
-      <div class="cards-grid three">
-        <article class="info-card">
-          <h3>Identidad institucional</h3>
-          <p>Construimos una escuela abierta, participativa y vinculada con su comunidad.</p>
-        </article>
-        <article class="info-card">
-          <h3>Acompañamiento</h3>
-          <p>Promovemos el seguimiento de trayectorias, la continuidad educativa y el trabajo articulado entre equipos.</p>
-        </article>
-        <article class="info-card">
-          <h3>Innovación situada</h3>
-          <p>Integramos tecnologías digitales con sentido pedagógico, según las necesidades reales de estudiantes, docentes y familias.</p>
-        </article>
+
+      <div class="portada-frase">
+        <div class="comillas">“</div>
+        <p>
+          La Escuela Secundaria N.º 31 “Benito Juárez” es memoria, comunidad y futuro:
+          una institución que crece junto a Estación Yuquerí, sosteniendo el derecho
+          a aprender, encontrarse y proyectar nuevos caminos.
+        </p>
+      </div>
+    </div>
+
+    <div class="portada-valores">
+      <article><span>👥</span><div><h3>Comunidad</h3><p>Construimos vínculos y fortalecemos la convivencia.</p></div></article>
+      <article><span>📖</span><div><h3>Educación</h3><p>Acompañamos el aprendizaje y las trayectorias.</p></div></article>
+      <article><span>💛</span><div><h3>Compromiso</h3><p>Trabajamos cada día por una escuela inclusiva y humana.</p></div></article>
+      <article><span>🌱</span><div><h3>Futuro</h3><p>Formamos jóvenes para transformar su presente y su entorno.</p></div></article>
+    </div>
+
+    <div class="portada-cierre">
+      <div><strong>25 años de historia</strong><span>Creciendo junto a Estación Yuquerí y su gente.</span></div>
+      <div><strong>Escuela pública, rural y comunitaria</strong><span>Comprometida con el derecho a la educación.</span></div>
+      <a href="#historia">Conocé nuestra historia →</a>
+    </div>
+  </section>
+
+  <main>
+    <section class="card" aria-label="Accesos rápidos">
+      <h2>Accesos rápidos</h2>
+      <p class="section-intro">Ingreso directo a las principales secciones del sitio institucional.</p>
+      <div class="quick-grid">
+        <a class="quick-card" href="#institucion"><div class="icon">🏫</div><h3>Institución</h3><p>Identidad, datos escolares y organización institucional.</p></a>
+        <a class="quick-card" href="#historia"><div class="icon">📜</div><h3>Historia</h3><p>Memoria escolar, 25 años y video histórico institucional.</p></a>
+        <a class="quick-card" href="#novedades"><div class="icon">📢</div><h3>Novedades</h3><p>Avisos, actividades, fechas escolares y comunicaciones importantes.</p></a>
+        <a class="quick-card" href="#recursos"><div class="icon">📁</div><h3>Recursos</h3><p>Documentos, formularios, normativa y enlaces útiles.</p></a>
+        <a class="quick-card" href="#programas"><div class="icon">💻</div><h3>Programas</h3><p>Proyectos institucionales, ABP, territorio y tecnología educativa.</p></a>
+        <a class="quick-card" href="#multimedia"><div class="icon">🎬</div><h3>Multimedia</h3><p>Videos, fotografías, producciones sonoras y memoria escolar.</p></a>
+        <a class="quick-card" href="#contacto"><div class="icon">📞</div><h3>Contacto</h3><p>Canales oficiales de comunicación institucional.</p></a>
       </div>
     </section>
 
-    <section id="recursos" class="section section-soft">
-      <div class="section-heading">
-        <p class="eyebrow">Recursos y documentación institucional</p>
-        <h2>Accesos organizados para la comunidad educativa</h2>
-        <p>Materiales institucionales organizados por destinatarios y necesidades de uso. Esta versión incluye el bloque docente actualizado.</p>
-      </div>
-
-      <div class="resource-layout">
-        <aside class="resource-aside">
-          <h3>Docentes</h3>
-          <p>Documentación y recursos específicos para la gestión pedagógica, administrativa y organizativa del trabajo docente.</p>
-        </aside>
-
-        <div class="accordion-group" aria-label="Recursos para docentes">
-          <details class="accordion-card" open>
-            <summary>
-              <span>Gestión institucional</span>
-              <small>Documentación administrativa y normativa de uso frecuente.</small>
-            </summary>
-            <div class="accordion-content">
-              <a class="resource-link" href="https://drive.google.com/file/d/1g_JOlVwJAOUInv55YrB1j1mdUpUEwoF-/view?usp=sharing" target="_blank" rel="noopener">Abrir PAI 2026</a>
-              <a class="resource-link" href="https://drive.google.com/file/d/14sK2_ZHlgibzi94HKP0dqDBjwONtb1kp/view?usp=drive_link" target="_blank" rel="noopener">Ver Decreto 5923/00 MGJE</a>
-              <a class="resource-link" href="https://docs.google.com/document/d/1Hac9q0BO5xQFvbRm2vA1_y_zf0QtnWr9/edit?usp=drive_link&ouid=118410012796974315636&rtpof=true&sd=true" target="_blank" rel="noopener">Abrir FU para editar</a>
-              <a class="resource-link" href="https://docs.google.com/document/d/1FAKIkSkxY9-rqCqa3h3C-Be7tBql_aTb/edit?usp=drive_link&ouid=118410012796974315636&rtpof=true&sd=true" target="_blank" rel="noopener">Abrir planilla de incompatibilidad</a>
-              <a class="resource-link" href="https://docs.google.com/document/d/1zedTkjB_LKMK-3fiMHPAzxIcJeau2sVC/edit?usp=drive_link&ouid=118410012796974315636&rtpof=true&sd=true" target="_blank" rel="noopener">Abrir modelo Nota 16i</a>
-            </div>
-          </details>
-
-          <details class="accordion-card">
-            <summary>
-              <span>Horarios y organización escolar</span>
-              <small>Información organizativa para el funcionamiento institucional.</small>
-            </summary>
-            <div class="accordion-content">
-              <a class="resource-link" href="https://drive.google.com/file/d/1uHC-Qn2n1qIlOuco27R24b8J0cR0xDeZ/view?usp=drive_link" target="_blank" rel="noopener">Ver horarios del ciclo lectivo 2026</a>
-              <a class="resource-link" href="https://drive.google.com/file/d/1-8nuTR5tG2alH8ItK50iuB8OWuOvh6oc/view?usp=drive_link" target="_blank" rel="noopener">Ver horario del Equipo Pedagógico</a>
-            </div>
-          </details>
-
-          <details class="accordion-card">
-            <summary>
-              <span>Salidas educativas y documentación</span>
-              <small>Recursos para planificar y gestionar actividades educativas fuera de la institución.</small>
-            </summary>
-            <div class="accordion-content">
-              <a class="resource-link" href="https://drive.google.com/drive/folders/1UB8nHNqdr-DI7dXP2tjg83pxPJJJ3XOK?usp=drive_link" target="_blank" rel="noopener">Ver carpeta de documentación para salidas educativas</a>
-            </div>
-          </details>
-
-          <details class="accordion-card">
-            <summary>
-              <span>Recursos pedagógicos y digitales</span>
-              <small>Herramientas para fortalecer prácticas docentes y el uso pedagógico de tecnologías.</small>
-            </summary>
-            <div class="accordion-content muted-list">
-              <div class="resource-pending">Tutoriales SAGE <span>Próximamente</span></div>
-              <div class="resource-pending">Tutoriales LUA SAGE <span>Próximamente</span></div>
-              <div class="resource-pending">Recursos TIC institucionales <span>Próximamente</span></div>
-              <div class="resource-pending">IA aplicada a la educación <span>Próximamente</span></div>
-              <div class="resource-pending">Recursos para ABP y gamificación <span>Próximamente</span></div>
-              <div class="resource-pending">Formularios y materiales institucionales <span>Próximamente</span></div>
-            </div>
-          </details>
+    <section id="institucion" class="card">
+      <h2>Nuestra institución</h2>
+      <p class="section-intro">
+        La Escuela Secundaria N.º 31 “Benito Juárez” constituye un espacio educativo de referencia para Estación Yuquerí y su comunidad.
+      </p>
+      <div class="split-grid">
+        <div class="card identidad-card">
+          <h2>Identidad institucional</h2>
+          <p>La Escuela Secundaria N.º 31 “Benito Juárez” construye su identidad desde la cercanía con las familias, la historia de la comunidad y el compromiso cotidiano con las trayectorias de sus estudiantes.</p>
+          <p>A lo largo de su recorrido, la institución se consolidó como un espacio de encuentro, pertenencia y acompañamiento, donde docentes, preceptores, equipos de orientación, estudiantes y actores institucionales participan en la construcción de una escuela abierta a la comunidad.</p>
+          <p>Esta identidad se fortalece en el trabajo colectivo, la presencia territorial y la convicción de que educar también implica escuchar, contener, orientar y construir oportunidades compartidas.</p>
+        </div>
+        <div class="card datos-card">
+          <h2>Datos institucionales</h2>
+          <p><strong>Nombre:</strong> Escuela Secundaria N.º 31 “Benito Juárez”.</p>
+          <p><strong>CUE:</strong> 3002566.</p>
+          <p><strong>Ubicación:</strong> Ruta Provincial 22 y vías del ferrocarril, Estación Yuquerí, Concordia, Entre Ríos.</p>
+          <p><strong>Sector:</strong> Estatal.</p>
+          <p><strong>Ámbito:</strong> Rural.</p>
+          <p><strong>Nivel:</strong> Educación secundaria común.</p>
         </div>
       </div>
     </section>
 
-    <section id="proyectos" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">Programas y proyectos</p>
-        <h2>Acompañamiento pedagógico-digital</h2>
-        <p>Orientación institucional para fortalecer prácticas pedagógicas, organización escolar y uso significativo de tecnologías.</p>
+    <section id="historia" class="card">
+      <span class="eyebrow-section">Memoria viva institucional</span>
+      <h2>Historia, identidad y comunidad</h2>
+      <p class="section-intro">La Escuela Secundaria N.º 31 “Benito Juárez”, ubicada en Estación Yuquerí, Concordia, Entre Ríos, forma parte de la historia viva de su comunidad. Desde fines de la década de 1990 y comienzos de los años 2000, la institución nació como respuesta a la necesidad de garantizar oportunidades educativas para los jóvenes de la zona, sosteniendo el derecho a la educación secundaria en un contexto rural y territorialmente complejo.</p>
+      <p class="section-intro">A lo largo de su recorrido, la escuela creció junto a las familias, construyendo una identidad basada en la cercanía, el compromiso comunitario y el acompañamiento de las trayectorias estudiantiles. Su historia se encuentra vinculada al esfuerzo colectivo de docentes, estudiantes, directivos, preceptores, familias y actores institucionales.</p>
+      <p class="section-intro">Hoy, luego de más de 25 años de trayectoria, la Escuela Secundaria N.º 31 continúa fortaleciendo proyectos institucionales, propuestas pedagógicas, acompañamiento territorial y procesos de innovación educativa.</p>
+
+      <details class="accordion-card" open><summary>Origen y primeros años</summary><p>La creación de la escuela representó un paso fundamental para garantizar el acceso a la educación secundaria en Estación Yuquerí y zonas cercanas. En sus comienzos, la institución funcionó en condiciones limitadas, atravesando desafíos vinculados al contexto rural, las distancias y la necesidad de consolidar recursos materiales y humanos.</p><p>El acompañamiento de la comunidad permitió que la escuela creciera progresivamente y se transformara en un espacio de referencia para generaciones de estudiantes y familias.</p></details>
+      <details class="accordion-card"><summary>La escuela y su comunidad</summary><p>La Escuela Secundaria N.º 31 se consolidó como un espacio de encuentro, pertenencia y construcción colectiva. Su identidad se construye diariamente a partir del vínculo cercano con las familias, el acompañamiento de las trayectorias escolares y la participación activa de la comunidad educativa.</p></details>
+      <details class="accordion-card"><summary>25 años de historia</summary><p>En el año 2025, la institución celebró sus 25 años de trayectoria educativa, reafirmando su compromiso con la educación pública, la comunidad y las nuevas generaciones.</p></details>
+      <details class="accordion-card"><summary>Territorio y acceso educativo</summary><p>En un contexto donde las distancias forman parte de la vida cotidiana, garantizar el acceso y permanencia escolar constituye una tarea fundamental. La institución acompaña activamente las trayectorias educativas y fortalece el derecho a la educación.</p></details>
+      <details class="accordion-card"><summary>Espacio virtual escolar</summary><p>La institución cuenta con antecedentes de organización digital mediante espacios virtuales destinados a compartir materiales, actividades y comunicaciones con estudiantes y familias.</p></details>
+      <details class="accordion-card"><summary>Video histórico institucional</summary><p>Producción audiovisual realizada en el marco de los 25 años de la Escuela Secundaria N.º 31 “Benito Juárez”.</p><div class="video-responsive"><iframe src="https://www.youtube.com/embed/8AibIO0hHWo" title="25 años en la voz del viento - Escuela Secundaria N.º 31 Benito Juárez" allowfullscreen></iframe></div></details>
+    </section>
+
+    
+
+
+
+
+<section id="equipo" class="card equipo-real equipo-premium-final">
+  <span class="eyebrow-section">Organización institucional</span>
+  <h2>Equipo institucional</h2>
+  <p class="section-intro">
+    La Escuela Secundaria N.º 31 “Benito Juárez” sostiene su organización institucional desde el trabajo articulado entre conducción, gestión administrativa, asesoramiento pedagógico, preceptoría, tutorías y acompañamiento tecnológico-pedagógico, fortaleciendo las trayectorias educativas y el vínculo con la comunidad de Estación Yuquerí.
+  </p>
+
+  <div class="equipo-top-grid">
+    <article class="equipo-card-premium borde-rojo">
+      <div class="equipo-card-head"><div class="equipo-icon icon-rojo">👤</div><span class="equipo-label label-rojo">Conducción institucional</span></div>
+      <div class="equipo-separador"></div>
+      <h3>Rector</h3>
+      <div class="equipo-nombre">Mg. Julio Gallardo</div>
+      <p>Responsable de la conducción general de la institución, organización escolar, articulación pedagógica y representación institucional.</p>
+    </article>
+
+    <article class="equipo-card-premium borde-amarillo">
+      <div class="equipo-card-head"><div class="equipo-icon icon-amarillo">📋</div><span class="equipo-label label-amarillo">Gestión administrativa</span></div>
+      <div class="equipo-separador"></div>
+      <h3>Secretaría</h3>
+      <div class="equipo-nombre">Prof. Romina Benitti</div>
+      <p>Organización administrativa, documentación institucional, certificaciones, comunicaciones y seguimiento de registros escolares.</p>
+    </article>
+
+    <article class="equipo-card-premium borde-verde">
+      <div class="equipo-card-head"><div class="equipo-icon icon-verde">🎓</div><span class="equipo-label label-verde">Asesoramiento pedagógico</span></div>
+      <div class="equipo-separador"></div>
+      <h3>Asesora pedagógica</h3>
+      <div class="equipo-nombre">Prof. Daiana Mohr</div>
+      <p>Acompañamiento pedagógico institucional y seguimiento de trayectorias educativas.</p>
+      <ul class="equipo-chip-list">
+        <li>📅 Lunes: 8:00 a 11:00 hs</li>
+        <li>📅 Miércoles: 8:00 a 11:00 hs</li>
+        <li>📅 Viernes: 8:00 a 10:00 hs</li>
+      </ul>
+    </article>
+
+    <article class="equipo-card-premium borde-rojo">
+      <div class="equipo-card-head"><div class="equipo-icon icon-rojo">👥</div><span class="equipo-label label-rojo">Preceptoría institucional</span></div>
+      <div class="equipo-separador"></div>
+      <h3>Preceptores</h3>
+      <div class="equipo-nombre">Lucas Gastón Acosta</div>
+      <div class="equipo-nombre">Flavia Romani</div>
+      <p>Seguimiento de asistencia, convivencia escolar, comunicación con familias y organización institucional cotidiana.</p>
+      <ul class="equipo-chip-list chip-rojo"><li>📅 Lunes a viernes: 7:20 a 13:00 hs</li></ul>
+    </article>
+  </div>
+
+  <div class="equipo-bottom-grid">
+    <article class="equipo-card-premium equipo-tutores borde-amarillo">
+      <div class="equipo-card-head"><div class="equipo-icon icon-amarillo">👥</div><span class="equipo-label label-amarillo">Tutorías institucionales</span></div>
+      <div class="tutores-grid">
+        <div class="tutor-box">
+          <h3>Tutor</h3>
+          <div class="equipo-nombre">Prof. Maximiliano Acevedo</div>
+          <ul class="equipo-chip-list chip-amarillo">
+            <li>📅 Lunes: 10:40 a 12:50 hs</li>
+            <li>📅 Miércoles: 12:15 a 12:50 hs</li>
+            <li>📌 4.º año</li>
+          </ul>
+        </div>
+        <div class="tutor-box">
+          <h3>Tutor</h3>
+          <div class="equipo-nombre">Prof. Mahler Julián</div>
+          <div class="equipo-subnombre">(Orientador educacional)</div>
+          <ul class="equipo-chip-list chip-amarillo">
+            <li>📅 Lunes: 11:40 a 12:50 hs</li>
+            <li>📅 Miércoles: 11:40 a 12:50 hs</li>
+            <li>📅 Jueves: 7:20 a 12:50 hs</li>
+          </ul>
+        </div>
+        <div class="tutor-box">
+          <h3>Tutor</h3>
+          <div class="equipo-nombre">Prof. Luciano Velázquez</div>
+          <ul class="equipo-chip-list chip-amarillo">
+            <li>📅 Viernes: 11:40 a 12:50 hs</li>
+            <li>📌 5.º año</li>
+          </ul>
+        </div>
       </div>
-      <div class="cards-grid three">
-        <article class="info-card">
-          <h3>Para estudiantes</h3>
-          <p>Orientaciones para organizar el estudio, acceder a materiales digitales, resolver dificultades técnicas y sostener la continuidad educativa.</p>
-        </article>
-        <article class="info-card">
-          <h3>Para docentes</h3>
-          <p>Apoyo en el uso de herramientas digitales, producción de materiales, carga de información y organización de propuestas pedagógicas.</p>
-        </article>
-        <article class="info-card">
-          <h3>Para familias</h3>
-          <p>Información clara sobre canales de comunicación, seguimiento escolar y formas de acompañar a los estudiantes desde el hogar.</p>
-        </article>
+    </article>
+
+    <article class="equipo-card-premium equipo-rti borde-verde">
+      <div class="equipo-card-head"><div class="equipo-icon icon-verde">💻</div><span class="equipo-label label-verde">Tecnología educativa</span></div>
+      <h3>RTI – Tecnología educativa</h3>
+      <div class="equipo-nombre">Alfredo Esquivel</div>
+      <p>Acompañamiento pedagógico-digital, alfabetización digital situada, integración tecnológica, producción de recursos institucionales y desarrollo de proyectos ABP y gamificación.</p>
+      <ul class="equipo-chip-list chip-verde equipo-rti-horarios">
+        <li>📅 Martes: 7:30 a 11:40 hs</li>
+        <li>📅 Jueves: 7:30 a 10:00 hs</li>
+      </ul>
+    </article>
+  </div>
+
+  <div class="equipo-cierre"><span>🤝</span><strong>El trabajo articulado del equipo institucional es clave para acompañar cada trayectoria educativa y fortalecer nuestra comunidad.</strong></div>
+</section>
+
+
+
+
+
+
+    <section id="novedades" class="card">
+      <h2>Novedades institucionales</h2>
+      <p class="section-intro">Comunicados recientes, actos, recordatorios y actividades de la vida escolar.</p>
+      <div class="novedades-grid">
+        <article class="novedad-card"><div class="novedad-img"><img src="assets/imagenes/fechas-institucionales.jpg" alt="Fechas institucionales"></div><div class="novedad-body"><div class="novedad-icono">📅</div><div><h3>Fechas institucionales</h3><p>Entrega de planillas de calificaciones por parte de los preceptores, finalización del primer trimestre, carga de notas en SAGE e inicio del segundo trimestre.</p></div></div></article>
+        <article class="novedad-card"><div class="novedad-img"><img src="assets/imagenes/informacion-preceptores.jpg" alt="Información para preceptores"></div><div class="novedad-body"><div class="novedad-icono">👥</div><div><h3>Información para preceptores</h3><p>Entrega de planillas de calificaciones a docentes, fecha tope para recibir las planillas, control de carga de notas y actualización de asistencia en LUA SAGE.</p></div></div></article>
+        <article class="novedad-card"><div class="novedad-img"><img src="assets/imagenes/desfile-25-mayo-2026.jpg" alt="Desfile 25 de Mayo 2026"></div><div class="novedad-body"><div class="novedad-icono">🎖️</div><div><h3>Desfile 25 de Mayo 2026</h3><p>Invitación a la comunidad educativa para acompañar a nuestros estudiantes en el acto patrio.</p></div></div></article>
       </div>
     </section>
 
-    <section id="contacto" class="section contact-section">
-      <div class="section-heading">
-        <p class="eyebrow">Contacto institucional</p>
-        <h2>Canales oficiales</h2>
-        <p>Información de contacto disponible para la comunidad educativa.</p>
+    
+
+
+<section id="recursos" class="card recursos-reales">
+  <h2>Recursos y documentación institucional</h2>
+
+  <p class="section-intro">
+    Espacio de acceso directo a <strong>recursos reales de gestión, acompañamiento y comunicación</strong>.
+    La información se organiza por destinatarios para facilitar el uso cotidiano del sitio.
+  </p>
+
+  <div class="resource-grid">
+
+    <article class="resource-card recurso-docente">
+      <span class="cargo-destacado rojo">Para docentes</span>
+      <h3>Gestión pedagógica e institucional</h3>
+      <ul class="resource-list">
+        <li><a href="https://sage.entrerios.gov.ar/" target="_blank" rel="noopener">Ingreso a SAGE</a> para gestión educativa institucional.</li>
+        <li><a href="https://sage.entrerios.gov.ar/solicitarUsuario/index.php" target="_blank" rel="noopener">Solicitud de usuario SAGE</a> para agente, estudiante o madre/padre/tutor.</li>
+        <li>Constancia de antigüedad de SAGE y certificación actualizada de concepto para concursos docentes.</li>
+        <li>Carga de notas en SAGE, control de planillas de calificaciones y actualización de asistencia en LUA SAGE.</li>
+        <li>Entrega de planillas a docentes, recepción de planillas y control de cierre trimestral.</li>
+        <li><a href="https://cge.entrerios.gov.ar/" target="_blank" rel="noopener">Convocatorias y comunicaciones del CGE</a> vinculadas a horas cátedra, cargos y normativa vigente.</li>
+        <li>Programa Alfabetización Digital Situada 2026 y acompañamiento para materiales digitales institucionales.</li>
+      </ul>
+      <div class="recurso-alerta">
+        Información prioritaria: revisar fechas institucionales, cierres de trimestre, carga de notas y asistencia en SAGE/LUA SAGE.
       </div>
-      <div class="contact-card">
-        <p><strong>Celular oficial:</strong> 3454949814</p>
-        <p><strong>Secretaría:</strong> secretaria31benitojuarez@gmail.com</p>
+    </article>
+
+    <article class="resource-card recurso-estudiante">
+      <span class="cargo-destacado amarillo">Para estudiantes</span>
+      <h3>Estudio, participación y continuidad educativa</h3>
+      <ul class="resource-list">
+        <li><a href="https://sites.google.com/view/espaciovirtual-escuela31/inicio" target="_blank" rel="noopener">Espacio Virtual Escolar</a> con cursos, materiales, actividades, efemérides y notificaciones.</li>
+        <li>Materiales y producciones vinculadas a proyectos institucionales: Tesoros ocultos, La Escuela va al Barrio y Alfabetización Digital Situada.</li>
+        <li><a href="https://drive.google.com/drive/folders/1gl5ePQSi47l8qXrMd3jEV1FISUZ3QLZa?usp=drive_link" target="_blank" rel="noopener">Producciones del proyecto Tesoros ocultos de la escuela</a>.</li>
+        <li><a href="https://youtu.be/8AibIO0hHWo" target="_blank" rel="noopener">Video histórico institucional por los 25 años</a>.</li>
+        <li>Orientaciones para organizar el estudio, completar actividades, consultar recursos y sostener la asistencia.</li>
+        <li>Uso responsable de internet, celulares, inteligencia artificial y herramientas digitales para aprender y producir.</li>
+      </ul>
+    </article>
+
+    <article class="resource-card recurso-familia">
+      <span class="cargo-destacado verde">Para familias</span>
+      <h3>Comunicación, seguimiento y acompañamiento</h3>
+      <ul class="resource-list">
+        <li><a href="https://sage.entrerios.gov.ar/solicitarUsuario/index.php" target="_blank" rel="noopener">Crear o solicitar usuario SAGE</a> como madre, padre o tutor.</li>
+        <li><a href="https://www.youtube.com/watch?v=ChuebIbs2mc" target="_blank" rel="noopener">Tutorial: generación de usuario en SAGE</a>.</li>
+        <li>Actualización y validación de datos de estudiantes a través de SAGE cuando sea solicitado institucionalmente.</li>
+        <li>Seguimiento de comunicaciones por celular oficial, correo institucional, secretaría y Facebook de la escuela.</li>
+        <li>Consulta de actividades, actos, proyectos institucionales y novedades escolares.</li>
+        <li>Información territorial relevante: transporte escolar, asistencia, continuidad educativa y acompañamiento comunitario.</li>
+      </ul>
+      <div class="recurso-alerta">
+        Canal prioritario: ante dudas sobre seguimiento escolar o comunicación institucional, utilizar los contactos oficiales de la escuela.
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+
+
+    <section id="programas" class="card programas-premium">
+      <h2>Programas y proyectos institucionales</h2>
+      <p class="section-intro">Espacios institucionales que fortalecen la memoria, la participación comunitaria, las trayectorias educativas y la integración de propuestas pedagógicas innovadoras.</p>
+
+      <article id="tesoros-ocultos" class="programa-card tesoros-restaurado">
+        <div class="programa-header"><span class="programa-tag">Proyecto institucional ABP</span><h3>Tesoros ocultos de la escuela</h3></div>
+        <div class="tesoros-grid">
+          <div class="tesoros-texto">
+            <h3>Una escuela que recupera su historia</h3>
+            <p>“Tesoros ocultos de la escuela” nace como una propuesta destinada a recuperar memorias, experiencias, relatos y huellas que forman parte de la identidad institucional de la Escuela Secundaria N.º 31 “Benito Juárez”.</p>
+            <p>A través de entrevistas, investigaciones, producciones digitales, registros históricos y actividades comunitarias, estudiantes y docentes reconstruyen colectivamente la historia viva de la institución y de Estación Yuquerí.</p>
+            <p>El proyecto fortalece el sentido de pertenencia, la participación estudiantil, el vínculo con las familias y la valoración de la escuela como espacio de encuentro, memoria y construcción comunitaria.</p>
+            <div class="tesoros-frase">“La escuela construye comunidad cuando recupera las historias, las voces y las experiencias de quienes la habitan.”</div>
+            <div class="tesoros-footer"><a href="https://drive.google.com/drive/folders/1gl5ePQSi47l8qXrMd3jEV1FISUZ3QLZa?usp=drive_link" target="_blank" rel="noopener">Explorar producciones del proyecto →</a></div>
+          </div>
+          <div class="tesoros-bloques">
+            <article><h4>Memoria e identidad</h4><p>Recuperación de relatos, fotografías, experiencias y acontecimientos significativos de la vida institucional.</p></article>
+            <article><h4>Participación estudiantil</h4><p>Los estudiantes se convierten en protagonistas, investigadores y narradores de la historia de su escuela y comunidad.</p></article>
+            <article><h4>Escuela y comunidad</h4><p>El proyecto fortalece vínculos con familias, ex estudiantes, vecinos y actores históricos de Estación Yuquerí.</p></article>
+            <article><h4>Producciones institucionales</h4><p>Galerías, entrevistas, videos, relatos y materiales digitales construidos colectivamente durante el proyecto.</p></article>
+          </div>
+        </div>
+      </article>
+
+      <article id="escuela-barrio" class="programa-card programa-simple">
+        <div class="programa-header"><span class="programa-tag">Proyecto institucional</span><h3>La Escuela va al Barrio</h3><p class="programa-subtitulo">“Cuidar el cuerpo, cuidar la vida”</p></div>
+        <p>Proyecto institucional destinado a estudiantes de la Escuela Secundaria N.º 31 y a la comunidad barrial de Estación Yuquerí. Articula escuela, Centro de Salud de Estación Yuquerí y referentes barriales para promover cuidado del cuerpo, salud integral y vínculos saludables.</p>
+        <p>La propuesta aborda salud bucal, enfermedades de transmisión sexual, embarazo no intencional en la adolescencia, vínculos sanos, convivencia escolar, asistencia, compromiso y responsabilidad en la trayectoria educativa.</p>
+        <p>Los estudiantes producen folletos y materiales informativos, trabajan lectura comprensiva, producción escrita, síntesis de información y comunicación de mensajes preventivos para la comunidad.</p>
+        <div class="programa-frase-secundaria">“La escuela fortalece trayectorias cuando sale al encuentro de su comunidad.”</div>
+
+
+        <div class="barrio-responsables">
+          <span class="cargo-destacado rojo">Equipo responsable del proyecto</span>
+          <h4>Docentes responsables</h4>
+          <ul class="responsables-lista">
+            <li>Acevedo Maximiliano</li>
+            <li>Batistella Lucía</li>
+            <li>Bechet Marisa</li>
+            <li>Dubs Norma</li>
+            <li>Esquivel Alfredo</li>
+            <li>Flores Delia</li>
+            <li>Fornes Sabina</li>
+            <li>Gallo Natalia</li>
+            <li>Gómez Laura</li>
+            <li>González Itatí</li>
+            <li>Grantile Mara</li>
+            <li>Mattiassi Alejandra</li>
+            <li>Primitivo Emmanuel</li>
+          </ul>
+        </div>
+
+        <div class="barrios-grid">
+          <article class="barrio-card"><div class="barrio-img"><img src="assets/imagenes/la-escuela-va-al-barrio-cohelo.png" alt="La Escuela va al Barrio - Cohelo"></div><div class="barrio-body"><span class="barrio-tag">Primera salida territorial</span><h3>Barrio Cohelo</h3><p>Charla comunitaria sobre cuidado del cuerpo y salud bucal, con participación docente y acompañamiento institucional.</p></div></article>
+          <article class="barrio-card"><div class="barrio-img"><img src="assets/imagenes/la-escuela-va-al-barrio-el-blanqueado.png" alt="La Escuela va al Barrio - El Blanqueado"></div><div class="barrio-body"><span class="barrio-tag">Continuidad comunitaria</span><h3>Barrio El Blanqueado</h3><p>Encuentro territorial destinado a estudiantes, familias, tutores y comunidad, con eje en salud integral y participación escolar.</p></div></article>
+          <article class="barrio-card"><div class="barrio-img"><img src="assets/imagenes/la-escuela-va-al-barrio-mendieta.png" alt="La Escuela va al Barrio - Mendieta"></div><div class="barrio-body"><span class="barrio-tag">Presencia territorial</span><h3>Barrio Mendieta</h3><p>Nueva instancia de acercamiento institucional para fortalecer el vínculo entre escuela, barrio, salud y comunidad.</p></div></article>
+        </div>
+      </article>
+
+      <article id="alfabetizacion-digital" class="programa-card programa-simple">
+        <div class="programa-header"><span class="programa-tag">Tecnología educativa</span><h3>Alfabetización Digital Situada 2026</h3></div>
+        <p>Programa institucional orientado al fortalecimiento de capacidades digitales, integración tecnológica y acompañamiento pedagógico en contextos educativos situados.</p>
+        <p>La propuesta promueve el desarrollo de competencias vinculadas al uso crítico, responsable y significativo de las tecnologías digitales, favoreciendo la inclusión, la ciudadanía digital y el acceso a nuevas formas de aprender y comunicarse.</p>
+        <p>Desde una mirada contextualizada y cercana a la realidad institucional, el programa acompaña trayectorias educativas mediante herramientas digitales, recursos tecnológicos y prácticas pedagógicas que fortalecen la continuidad educativa y la participación activa de los estudiantes.</p>
+        <div class="programa-frase-secundaria">“La tecnología educativa cobra sentido cuando acompaña trayectorias reales y contextos concretos.”</div>
+
+<div class="pdf-programa">
+<span class="cargo-destacado rojo">Documento institucional</span>
+
+<h4>Programa Alfabetización Digital Situada 2026</h4>
+
+<p>
+Documento institucional con fundamentos,
+objetivos y líneas de acción vinculadas a la integración tecnológica.
+</p>
+
+<a class="programa-boton" href="assets/documentos/programa-alfabetizacion-digital-2026.pdf" target="_blank" rel="noopener">Descargar programa institucional en PDF →</a>
+
+</div>
+      </article>
+    </section>
+
+    <section id="multimedia" class="card">
+      <h2>Galería multimedia e identidad sonora</h2>
+      <p class="section-intro">Espacio para integrar fotografías, videos, producciones estudiantiles, canciones institucionales, podcasts, entrevistas y registros de actividades escolares.</p>
+      <div class="info-grid">
+        <article class="mini-card"><h3>Galería fotográfica</h3><p>Imágenes de actividades, proyectos, aniversarios y momentos significativos de la vida escolar.</p></article>
+        <article class="mini-card"><h3>Videos institucionales</h3><p>Videos históricos, producciones escolares y registros audiovisuales.</p></article>
+        <article class="mini-card"><h3>Identidad sonora institucional</h3><p>Canciones, himnos, producciones musicales y materiales sonoros vinculados con la identidad escolar.</p></article>
       </div>
     </section>
+
+    
+
+<section id="contacto" class="card contacto-premium">
+
+<span class="eyebrow-section">Comunicación institucional</span>
+
+<h2>Contacto institucional</h2>
+
+<p class="section-intro">
+Canales oficiales para comunicarse con la Escuela Secundaria N.º 31 “Benito Juárez”,
+realizar consultas, seguir novedades y acompañar la vida escolar.
+</p>
+
+<div class="contacto-grid">
+
+<article class="contacto-card principal">
+<span class="cargo-destacado rojo">Información principal</span>
+<h3>Escuela Secundaria N.º 31 “Benito Juárez”</h3>
+<p>Ruta Provincial 22 y vías del ferrocarril — Estación Yuquerí, Concordia, Entre Ríos.</p>
+<div class="contacto-datos">
+<div><strong>CUE:</strong> 3002566</div>
+<div><strong>Ámbito:</strong> Rural</div>
+<div><strong>Sector:</strong> Estatal</div>
+<div><strong>Nivel:</strong> Educación secundaria común</div>
+</div>
+</article>
+
+<article class="contacto-card">
+<span class="cargo-destacado amarillo">Comunicación directa</span>
+<h3>Canales oficiales</h3>
+<ul class="contacto-lista">
+<li><strong>Celular:</strong> <a href="tel:+543454949814">+543454949814</a></li>
+<li><strong>Correo institucional:</strong> <a href="mailto:secundaria31.cd@entrerios.edu.ar">secundaria31.cd@entrerios.edu.ar</a></li>
+<li><strong>Secretaría:</strong> <a href="mailto:secretaria31benitojuarez@gmail.com">secretaria31benitojuarez@gmail.com</a></li>
+</ul>
+</article>
+
+<article class="contacto-card">
+<span class="cargo-destacado verde">Comunidad digital</span>
+<h3>Redes y novedades</h3>
+<p>Seguimiento de actividades institucionales, proyectos, comunicados, imágenes y vida escolar.</p>
+<a class="programa-boton" href="https://www.facebook.com/profile.php?id=100057420641002&mibextid=ZbWKwL" target="_blank" rel="noopener">Facebook institucional →</a>
+</article>
+
+</div>
+</section>
+
+
   </main>
 
-  <footer class="footer">
-    <p>Escuela Secundaria N.º 31 “Benito Juárez” · Estación Yuquerí</p>
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h3>Escuela Secundaria N.º 31</h3>
+        <p>“Benito Juárez”</p>
+        <p>Estación Yuquerí — Concordia, Entre Ríos</p>
+        <p>CUE: 3002566</p>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <a href="tel:+543454949814">Cel.: +543454949814</a>
+        <a href="mailto:secundaria31.cd@entrerios.edu.ar">Correo: secundaria31.cd@entrerios.edu.ar</a>
+        <a href="mailto:secretaria31benitojuarez@gmail.com">Secretaría: secretaria31benitojuarez@gmail.com</a>
+        <a href="https://www.facebook.com/profile.php?id=100057420641002&mibextid=ZbWKwL" target="_blank" rel="noopener">Facebook institucional</a>
+      </div>
+      <div>
+        <h3>Accesos rápidos</h3>
+        <a href="#institucion">Institución</a>
+        <a href="#historia">Historia</a>
+        <a href="#novedades">Novedades</a>
+        <a href="#recursos">Recursos</a>
+        <a href="#programas">Programas</a>
+        <a href="#multimedia">Multimedia</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+    <div class="footer-bottom">Sitio institucional educativo desarrollado por Alfredo Esquivel.</div>
   </footer>
 </body>
 </html>
