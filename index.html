@@ -1329,6 +1329,132 @@ grid-template-columns:1fr;
   }
 }
 
+
+
+/* ===== GALERÍA FOTOGRÁFICA INSTITUCIONAL ===== */
+.multimedia-premium{
+  background:
+    radial-gradient(circle at top right, rgba(214,187,66,.10), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(11,90,53,.08), transparent 30%),
+    linear-gradient(135deg,#ffffff,#f9fbfa);
+}
+
+.galeria-institucional{
+  margin-top:28px;
+}
+
+.galeria-header{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:22px;
+  margin-bottom:22px;
+}
+
+.galeria-header h3{
+  color:var(--verde-oscuro);
+  font-size:1.7rem;
+  line-height:1.2;
+  margin:0;
+}
+
+.galeria-header p{
+  color:#4e5b56;
+  max-width:720px;
+  line-height:1.72;
+  margin-top:8px;
+}
+
+.galeria-chip{
+  background:var(--verde-suave);
+  color:var(--verde);
+  padding:10px 16px;
+  border-radius:999px;
+  font-size:.82rem;
+  font-weight:900;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+.galeria-grid{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:16px;
+}
+
+.galeria-item{
+  position:relative;
+  border-radius:18px;
+  overflow:hidden;
+  min-height:190px;
+  background:#eef4f0;
+  border:1px solid rgba(11,90,53,.10);
+  box-shadow:0 10px 24px rgba(0,0,0,.06);
+}
+
+.galeria-item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  aspect-ratio:1/1;
+  transition:transform .35s ease, filter .35s ease;
+}
+
+.galeria-item:hover img{
+  transform:scale(1.06);
+  filter:saturate(1.08);
+}
+
+.galeria-caption{
+  position:absolute;
+  inset:auto 0 0 0;
+  padding:34px 14px 14px;
+  color:#fff;
+  background:linear-gradient(180deg,transparent,rgba(6,63,37,.88));
+  font-weight:900;
+  font-size:.95rem;
+  line-height:1.35;
+}
+
+.galeria-item.destacada{
+  grid-column:span 2;
+  grid-row:span 2;
+}
+
+.galeria-item.destacada img{
+  aspect-ratio:1/1;
+}
+
+.multimedia-grid-final{
+  display:grid;
+  grid-template-columns:.95fr 1.05fr;
+  gap:24px;
+  margin-top:32px;
+}
+
+.multimedia-grid-final .mini-card{
+  height:100%;
+}
+
+.identidad-sonora-card{
+  grid-column:auto;
+}
+
+@media(max-width:1180px){
+  .galeria-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
+}
+
+@media(max-width:900px){
+  .galeria-header{align-items:flex-start;flex-direction:column;}
+  .multimedia-grid-final{grid-template-columns:1fr;}
+}
+
+@media(max-width:680px){
+  .galeria-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+  .galeria-item.destacada{grid-column:span 2;grid-row:span 1;}
+  .galeria-caption{font-size:.86rem;padding:28px 10px 10px;}
+}
+
 /* ===== RECURSOS DOCENTES - ACTUALIZACIÓN QUIRÚRGICA ===== */
 .docente-premium{
   text-align:left !important;
@@ -1844,12 +1970,80 @@ objetivos y líneas de acción vinculadas a la integración tecnológica.
       </article>
     </section>
 
-    <section id="multimedia" class="card">
+    <section id="multimedia" class="card multimedia-premium">
+      <span class="eyebrow-section">Memoria visual y sonora</span>
       <h2>Galería multimedia e identidad sonora</h2>
-      <p class="section-intro">Espacio para integrar fotografías, videos, producciones estudiantiles, canciones institucionales, podcasts, entrevistas y registros de actividades escolares.</p>
-      <div class="info-grid">
-        <article class="mini-card"><h3>Galería fotográfica</h3><p>Imágenes de actividades, proyectos, aniversarios y momentos significativos de la vida escolar.</p></article>
-        <article class="mini-card"><h3>Videos institucionales</h3><p>Videos históricos, producciones escolares y registros audiovisuales.</p></article>
+      <p class="section-intro">
+        Espacio destinado a compartir fotografías, videos, producciones estudiantiles, canciones institucionales,
+        entrevistas y registros que reflejan la vida cotidiana de la Escuela Secundaria N.º 31 “Benito Juárez”.
+      </p>
+
+      <div class="galeria-institucional">
+        <div class="galeria-header">
+          <div>
+            <h3>📸 Vida institucional y comunidad educativa</h3>
+            <p>
+              Imágenes que recuperan actos, encuentros, jornadas, proyectos, participación estudiantil,
+              celebraciones y experiencias compartidas por la comunidad educativa de Estación Yuquerí.
+            </p>
+          </div>
+          <span class="galeria-chip">Galería institucional</span>
+        </div>
+
+        <div class="galeria-grid">
+          <figure class="galeria-item destacada">
+            <img src="assets/imagenes/galeria/vida-institucional-01.jpg" alt="Estudiantes representando a la escuela con bandera argentina y escudo institucional">
+            <figcaption class="galeria-caption">Participación estudiantil e identidad escolar</figcaption>
+          </figure>
+          <figure class="galeria-item">
+            <img src="assets/imagenes/galeria/vida-institucional-02.jpg" alt="Representantes institucionales en acto o desfile patrio">
+            <figcaption class="galeria-caption">Representación institucional</figcaption>
+          </figure>
+          <figure class="galeria-item">
+            <img src="assets/imagenes/galeria/vida-institucional-03.jpg" alt="Grupo de estudiantes frente al edificio escolar">
+            <figcaption class="galeria-caption">Estudiantes y comunidad</figcaption>
+          </figure>
+          <figure class="galeria-item">
+            <img src="assets/imagenes/galeria/vida-institucional-04.jpg" alt="Equipo docente e institucional de la escuela">
+            <figcaption class="galeria-caption">Equipo institucional</figcaption>
+          </figure>
+          <figure class="galeria-item">
+            <img src="assets/imagenes/galeria/vida-institucional-05.jpg" alt="Encuentro institucional con docentes y comunidad educativa">
+            <figcaption class="galeria-caption">Encuentros y jornadas</figcaption>
+          </figure>
+          <figure class="galeria-item">
+            <img src="assets/imagenes/galeria/vida-institucional-06.jpg" alt="Acto escolar con estudiantes y comunidad educativa reunida">
+            <figcaption class="galeria-caption">Actos escolares</figcaption>
+          </figure>
+          <figure class="galeria-item">
+            <img src="assets/imagenes/galeria/vida-institucional-07.jpg" alt="Grupo de estudiantes en actividad recreativa institucional">
+            <figcaption class="galeria-caption">Convivencia y recreación</figcaption>
+          </figure>
+          <figure class="galeria-item">
+            <img src="assets/imagenes/galeria/vida-institucional-08.jpg" alt="Estudiantes compartiendo una actividad comunitaria en la escuela">
+            <figcaption class="galeria-caption">Actividades compartidas</figcaption>
+          </figure>
+          <figure class="galeria-item">
+            <img src="assets/imagenes/galeria/vida-institucional-09.jpg" alt="Estudiantes de la promoción 2026 en marco fotográfico institucional">
+            <figcaption class="galeria-caption">Promo 2026</figcaption>
+          </figure>
+          <figure class="galeria-item">
+            <img src="assets/imagenes/galeria/vida-institucional-10.jpg" alt="Estudiantes de la promoción 2026 en actividad institucional">
+            <figcaption class="galeria-caption">Vida estudiantil</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="multimedia-grid-final">
+        <article class="mini-card">
+          <h3>Videos institucionales</h3>
+          <p>
+            Registros audiovisuales de actividades, actos, proyectos escolares, entrevistas,
+            producciones estudiantiles y memoria institucional.
+          </p>
+          <a class="programa-boton" href="https://youtu.be/8AibIO0hHWo" target="_blank" rel="noopener">Ver video histórico 25 años →</a>
+        </article>
+
         <article class="mini-card identidad-sonora-card">
           <h3>Identidad sonora institucional</h3>
           <p>

@@ -1,0 +1,6 @@
+galeria_css: True
+galeria_section: True
+10_images: True
+identidad_sonora: True
+recursos_docentes: True
+firma_actualizada: True
