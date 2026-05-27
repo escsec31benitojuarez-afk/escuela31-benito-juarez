@@ -1,0 +1,11 @@
+identidad_sonora_actualizada: True
+audio_tranquera: True
+audio_voz_viento: True
+audio_silencio: True
+firma_actualizada: True
+docente_acordeon: True
+PAI_2026: True
+salidas_educativas: True
+estudiantes: True
+familias: True
+css_docentes: True
