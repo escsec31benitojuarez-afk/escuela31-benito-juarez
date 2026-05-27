@@ -748,6 +748,147 @@ grid-template-columns:1fr;
 }
 }
 
+
+/* ===== MEJORAS VISUALES FINALES COLOR Y CENTRADO ===== */
+
+:root{
+  --rojo:#b3261e;
+  --amarillo:#d6bb42;
+  --verde:#0b5a35;
+  --verde-oscuro:#063f25;
+}
+
+.titulo-portada-dos-lineas{
+  font-size:clamp(2.65rem,4.55vw,5.05rem) !important;
+  line-height:1.06 !important;
+  max-width:820px !important;
+}
+
+.titulo-portada-dos-lineas .linea-escuela{
+  white-space:nowrap;
+}
+
+.portada-frase{
+  max-width:470px !important;
+  padding:30px 34px !important;
+}
+
+.portada-frase p{
+  text-align:center;
+  font-size:clamp(1rem,1.22vw,1.16rem) !important;
+}
+
+.tesoros-frase,
+.programa-frase-secundaria,
+.barrio-frase{
+  text-align:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:92px;
+}
+
+.cargo-destacado.amarillo{
+  background:var(--amarillo);
+  color:var(--verde-oscuro);
+}
+
+.cargo-destacado.verde{
+  background:var(--verde);
+  color:#ffffff;
+}
+
+.equipo-jerarquia{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(255px,1fr));
+  gap:22px;
+}
+
+.equipo-card{
+  background:#ffffff;
+  border-radius:22px;
+  padding:24px;
+  border:1px solid rgba(11,90,53,.10);
+  box-shadow:0 10px 24px rgba(0,0,0,.05);
+  text-align:center;
+}
+
+.equipo-card.prioridad{
+  border-top:6px solid var(--rojo);
+}
+
+.equipo-card h3{
+  color:var(--verde-oscuro);
+  margin-bottom:10px;
+}
+
+.equipo-card p{
+  color:#4f5b56;
+  line-height:1.75;
+}
+
+.acompanamiento-digital{
+  margin-top:42px;
+  padding-top:30px;
+  border-top:1px solid rgba(11,90,53,.14);
+}
+
+.recursos-reales .resource-card{
+  text-align:center;
+}
+
+.recursos-reales .resource-list{
+  text-align:left;
+  margin:16px auto 0;
+  max-width:95%;
+}
+
+.recurso-docente{
+  border-top:6px solid var(--rojo);
+}
+
+.recurso-estudiante{
+  border-top:6px solid var(--amarillo);
+}
+
+.recurso-familia{
+  border-top:6px solid var(--verde);
+}
+
+.contacto-card{
+  text-align:center;
+}
+
+.contacto-lista{
+  text-align:left;
+}
+
+.contacto-datos{
+  text-align:left;
+  background:#f8fbf9;
+  padding:16px;
+  border-radius:16px;
+  border:1px solid rgba(11,90,53,.10);
+}
+
+.contacto-card.principal{
+  background:linear-gradient(135deg,#fff,#fff8f7);
+}
+
+.contacto-card:nth-child(2){
+  border-top:6px solid var(--amarillo);
+}
+
+.contacto-card:nth-child(3){
+  border-top:6px solid var(--verde);
+}
+
+@media(max-width:760px){
+  .titulo-portada-dos-lineas .linea-escuela{
+    white-space:normal;
+  }
+}
+
 </style>
 </head>
 
@@ -785,9 +926,9 @@ grid-template-columns:1fr;
     <div class="portada-contenido">
       <div class="portada-texto">
         <span class="portada-badge">Portal institucional educativo</span>
-        <h1>
-          <span>Escuela Secundaria N.º 31</span>
-          <span>“Benito Juárez”</span>
+        <h1 class="titulo-portada-dos-lineas">
+          <span class="linea-escuela">Escuela Secundaria N.º&nbsp;31</span>
+          <span class="linea-benito">“Benito Juárez”</span>
         </h1>
         <div class="portada-linea"></div>
         <p class="portada-subtitulo">
@@ -875,98 +1016,120 @@ grid-template-columns:1fr;
     </section>
 
     
-<section id="equipo" class="card">
-<h2>Equipo institucional</h2>
 
-<p class="section-intro">
-La organización institucional se sostiene en el trabajo articulado de equipos directivos,
-docentes, preceptores, tutores y actores escolares que acompañan diariamente las trayectorias educativas.
-</p>
+<section id="equipo" class="card equipo-real">
+  <h2>Equipo institucional</h2>
 
-<div class="info-grid">
+  <p class="section-intro">
+    La organización institucional se sostiene en el trabajo articulado de conducción,
+    secretaría, asesoría pedagógica, preceptoría, tutores, docentes y acompañamiento
+    pedagógico-digital. Cada rol cumple una función clave para sostener la vida escolar,
+    la comunicación con las familias y las trayectorias educativas.
+  </p>
 
-<article class="mini-card">
-<span class="cargo-destacado rojo">Conducción institucional</span>
-<h3>Rectoría</h3>
-<p>Coordinación institucional, organización pedagógica y acompañamiento integral de la vida escolar.</p>
-</article>
+  <div class="equipo-jerarquia">
 
-<article class="mini-card">
-<span class="cargo-destacado">Gestión administrativa</span>
-<h3>Secretaría</h3>
-<p>Gestión documental, certificaciones, comunicación institucional y organización administrativa escolar.</p>
-</article>
+    <article class="equipo-card prioridad">
+      <span class="cargo-destacado rojo">Conducción institucional</span>
+      <h3>Rectoría</h3>
+      <p>
+        Coordina la organización institucional, acompaña la toma de decisiones pedagógicas,
+        fortalece el vínculo con la comunidad y orienta las líneas de trabajo escolar.
+      </p>
+    </article>
 
-<article class="mini-card">
-<span class="cargo-destacado">Acompañamiento pedagógico</span>
-<h3>Asesoría Pedagógica</h3>
-<p>Orientación pedagógica, acompañamiento docente y fortalecimiento de trayectorias educativas.</p>
-</article>
+    <article class="equipo-card">
+      <span class="cargo-destacado amarillo">Gestión administrativa</span>
+      <h3>Secretaría</h3>
+      <p>
+        Gestiona documentación, legajos, certificaciones, comunicaciones oficiales,
+        trámites institucionales y organización administrativa de la escuela.
+      </p>
+    </article>
 
-<article class="mini-card">
-<span class="cargo-destacado">Seguimiento cotidiano</span>
-<h3>Preceptoría</h3>
-<p>Seguimiento de asistencia, acompañamiento estudiantil y comunicación con familias.</p>
-</article>
+    <article class="equipo-card">
+      <span class="cargo-destacado verde">Acompañamiento pedagógico</span>
+      <h3>Asesoría Pedagógica</h3>
+      <p>
+        Acompaña los procesos de enseñanza, orienta propuestas pedagógicas,
+        colabora en el seguimiento de trayectorias y articula acciones institucionales.
+      </p>
+    </article>
 
-<article class="mini-card">
-<span class="cargo-destacado">Acompañamiento educativo</span>
-<h3>Tutores y docentes</h3>
-<p>Orientación académica, acompañamiento personalizado y fortalecimiento de aprendizajes.</p>
-</article>
+    <article class="equipo-card">
+      <span class="cargo-destacado rojo">Seguimiento cotidiano</span>
+      <h3>Preceptoría</h3>
+      <p>
+        Realiza el seguimiento diario de asistencia, convivencia, comunicación con familias,
+        organización de planillas y acompañamiento cercano de los estudiantes.
+      </p>
+    </article>
 
-<article class="mini-card">
-<span class="cargo-destacado">Integración tecnológica</span>
-<h3>Referente Técnico Institucional</h3>
-<p>Acompañamiento pedagógico-digital, integración tecnológica y alfabetización digital.</p>
-</article>
+    <article class="equipo-card">
+      <span class="cargo-destacado amarillo">Acompañamiento educativo</span>
+      <h3>Tutores y docentes</h3>
+      <p>
+        Acompañan aprendizajes, promueven la participación, orientan el estudio,
+        desarrollan proyectos institucionales y sostienen el vínculo pedagógico cotidiano.
+      </p>
+    </article>
 
-</div>
+    <article class="equipo-card">
+      <span class="cargo-destacado verde">Tecnología educativa</span>
+      <h3>Referente Técnico Institucional</h3>
+      <p>
+        Acompaña la integración tecnológica, la alfabetización digital, la producción
+        de recursos y el uso significativo de herramientas digitales para enseñar, aprender
+        y comunicar.
+      </p>
+    </article>
 
-<div style="margin-top:40px;">
+  </div>
 
-<h2>Acompañamiento pedagógico-digital</h2>
+  <div class="acompanamiento-digital">
+    <h2>Acompañamiento pedagógico-digital</h2>
 
-<p class="section-intro">
-Orientación institucional destinada a fortalecer prácticas pedagógicas,
-organización escolar y uso significativo de tecnologías digitales.
-</p>
+    <p class="section-intro">
+      Orientación institucional situada para fortalecer prácticas pedagógicas,
+      organización escolar y uso significativo de tecnologías digitales según las
+      necesidades reales de docentes, estudiantes y familias.
+    </p>
 
-<details class="accordion-card" open>
-<summary>Para docentes</summary>
-<ul>
-<li>Uso de SAGE y herramientas institucionales.</li>
-<li>Producción de materiales digitales y recursos pedagógicos.</li>
-<li>Integración de IA, ABP y metodologías activas.</li>
-<li>Organización de información institucional y documentación escolar.</li>
-<li>Acompañamiento técnico-pedagógico permanente.</li>
-</ul>
-</details>
+    <details class="accordion-card" open>
+      <summary>Para docentes</summary>
+      <ul>
+        <li>Apoyo en el uso de SAGE, LUA SAGE, correo institucional y recursos digitales escolares.</li>
+        <li>Asesoramiento para elaborar materiales, guías, presentaciones, formularios y recursos de aula.</li>
+        <li>Acompañamiento en propuestas ABP, gamificación, inteligencia artificial y alfabetización digital.</li>
+        <li>Organización de información institucional, planillas, registros y documentación pedagógica.</li>
+        <li>Resolución de dificultades técnicas vinculadas al trabajo escolar cotidiano.</li>
+      </ul>
+    </details>
 
-<details class="accordion-card">
-<summary>Para estudiantes</summary>
-<ul>
-<li>Acceso a materiales digitales y recursos escolares.</li>
-<li>Organización del estudio y continuidad educativa.</li>
-<li>Uso responsable y seguro de tecnologías digitales.</li>
-<li>Resolución de dificultades técnicas escolares.</li>
-<li>Ciudadanía digital y fortalecimiento de capacidades tecnológicas.</li>
-</ul>
-</details>
+    <details class="accordion-card">
+      <summary>Para estudiantes</summary>
+      <ul>
+        <li>Orientación para acceder a materiales digitales, actividades y recursos institucionales.</li>
+        <li>Acompañamiento en organización del estudio, producción de trabajos y continuidad educativa.</li>
+        <li>Uso responsable, seguro y crítico de celulares, computadoras, internet e inteligencia artificial.</li>
+        <li>Apoyo ante dificultades técnicas que impidan completar actividades escolares.</li>
+        <li>Fortalecimiento progresivo de habilidades digitales para aprender, comunicarse y producir.</li>
+      </ul>
+    </details>
 
-<details class="accordion-card">
-<summary>Para familias</summary>
-<ul>
-<li>Información sobre seguimiento escolar y comunicación institucional.</li>
-<li>Orientaciones para acompañar trayectorias educativas.</li>
-<li>Acceso a canales oficiales y novedades escolares.</li>
-<li>Acompañamiento en herramientas digitales vinculadas a la escuela.</li>
-<li>Fortalecimiento del vínculo entre escuela y comunidad.</li>
-</ul>
-</details>
-
-</div>
+    <details class="accordion-card">
+      <summary>Para familias</summary>
+      <ul>
+        <li>Información clara sobre canales oficiales de comunicación y seguimiento escolar.</li>
+        <li>Orientaciones para acompañar el estudio, la asistencia y la continuidad educativa desde el hogar.</li>
+        <li>Apoyo para comprender el uso de recursos digitales, comunicaciones y documentación escolar.</li>
+        <li>Acceso ordenado a novedades, proyectos institucionales y materiales de consulta.</li>
+        <li>Fortalecimiento del vínculo escuela-familia-comunidad en un contexto territorial rural.</li>
+      </ul>
+    </details>
+  </div>
 </section>
+
 
 
     <section id="novedades" class="card">
@@ -980,58 +1143,57 @@ organización escolar y uso significativo de tecnologías digitales.
     </section>
 
     
-<section id="recursos" class="card">
 
-<h2>Recursos y documentación institucional</h2>
+<section id="recursos" class="card recursos-reales">
+  <h2>Recursos y documentación institucional</h2>
 
-<p class="section-intro">
-Espacio destinado a compartir recursos pedagógicos, documentación institucional,
-orientaciones escolares y herramientas útiles para docentes, estudiantes y familias.
-</p>
+  <p class="section-intro">
+    Espacio de consulta rápida para organizar información escolar, acompañar trayectorias
+    y facilitar el acceso a recursos institucionales según las necesidades de docentes,
+    estudiantes y familias.
+  </p>
 
-<div class="resource-grid">
+  <div class="resource-grid">
 
-<article class="resource-card">
-<span class="cargo-destacado rojo">Organización pedagógica</span>
-<h3>Para docentes</h3>
+    <article class="resource-card recurso-docente">
+      <span class="cargo-destacado rojo">Para docentes</span>
+      <h3>Gestión pedagógica e institucional</h3>
+      <ul class="resource-list">
+        <li>Calendario escolar, fechas institucionales, cierres de trimestre y carga de calificaciones.</li>
+        <li>Entrega, recepción y control de planillas de calificaciones y asistencia.</li>
+        <li>Orientaciones para uso de SAGE y LUA SAGE en tareas escolares habituales.</li>
+        <li>Modelos de materiales digitales, guías de trabajo, recursos para clase y propuestas interdisciplinarias.</li>
+        <li>Acompañamiento para proyectos institucionales: Tesoros ocultos, La Escuela va al Barrio y Alfabetización Digital Situada.</li>
+      </ul>
+    </article>
 
-<ul class="resource-list">
-<li>Planillas institucionales y documentación escolar.</li>
-<li>Orientaciones para carga de notas y asistencia en SAGE.</li>
-<li>Recursos pedagógicos y materiales digitales institucionales.</li>
-<li>Acompañamiento para integración tecnológica y alfabetización digital.</li>
-<li>Proyectos ABP y propuestas interdisciplinarias.</li>
-</ul>
-</article>
+    <article class="resource-card recurso-estudiante">
+      <span class="cargo-destacado amarillo">Para estudiantes</span>
+      <h3>Estudio, participación y continuidad educativa</h3>
+      <ul class="resource-list">
+        <li>Materiales de estudio, actividades escolares y producciones compartidas por la institución.</li>
+        <li>Orientaciones para organizar tiempos de estudio, trabajos prácticos y consultas.</li>
+        <li>Acceso a propuestas institucionales, proyectos, efemérides y recursos digitales.</li>
+        <li>Uso responsable de tecnologías, internet, celulares e inteligencia artificial para aprender.</li>
+        <li>Acompañamiento pedagógico y digital para sostener la asistencia, la participación y la continuidad escolar.</li>
+      </ul>
+    </article>
 
-<article class="resource-card">
-<span class="cargo-destacado">Trayectorias educativas</span>
-<h3>Para estudiantes</h3>
+    <article class="resource-card recurso-familia">
+      <span class="cargo-destacado verde">Para familias</span>
+      <h3>Comunicación, seguimiento y acompañamiento</h3>
+      <ul class="resource-list">
+        <li>Canales oficiales de comunicación: celular institucional, correos y Facebook institucional.</li>
+        <li>Información sobre fechas importantes, actividades, reuniones, actos y comunicados escolares.</li>
+        <li>Orientaciones para acompañar asistencia, estudio, organización familiar y continuidad educativa.</li>
+        <li>Consulta de proyectos institucionales y producciones escolares de la comunidad educativa.</li>
+        <li>Apoyo para comprender herramientas digitales y modos de comunicación con la escuela.</li>
+      </ul>
+    </article>
 
-<ul class="resource-list">
-<li>Materiales de estudio y actividades escolares.</li>
-<li>Organización del estudio y continuidad educativa.</li>
-<li>Acceso a recursos digitales institucionales.</li>
-<li>Uso responsable de tecnologías digitales.</li>
-<li>Espacios de acompañamiento pedagógico y tutorías.</li>
-</ul>
-</article>
-
-<article class="resource-card">
-<span class="cargo-destacado">Acompañamiento familiar</span>
-<h3>Para familias</h3>
-
-<ul class="resource-list">
-<li>Fechas institucionales y comunicaciones escolares.</li>
-<li>Orientaciones para acompañar trayectorias educativas.</li>
-<li>Canales oficiales de comunicación institucional.</li>
-<li>Información sobre asistencia y organización escolar.</li>
-<li>Acceso a proyectos y actividades institucionales.</li>
-</ul>
-</article>
-
-</div>
+  </div>
 </section>
+
 
 
     <section id="programas" class="card programas-premium">
@@ -1089,9 +1251,7 @@ Documento institucional con fundamentos,
 objetivos y líneas de acción vinculadas a la integración tecnológica.
 </p>
 
-<a class="programa-boton" href="#" target="_blank">
-Descargar programa en PDF →
-</a>
+<a class="programa-boton" href="assets/documentos/programa-alfabetizacion-digital-2026.pdf" target="_blank" rel="noopener">Descargar programa en PDF →</a>
 
 </div>
       </article>

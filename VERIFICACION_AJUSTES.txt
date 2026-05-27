@@ -1,0 +1,1 @@
+{'linea_escuela_nbsp': True, 'equipo_real': True, 'recursos_docentes_primero': True, 'pdf_link': 'assets/documentos/programa-alfabetizacion-digital-2026.pdf', 'contacto_premium': True}
