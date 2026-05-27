@@ -1034,6 +1034,58 @@ details.accordion-card ul{
 
 }
 
+
+/* ===== PROGRAMAS Y PROYECTOS - AJUSTE SEGURO ===== */
+
+.programas-ajuste-seguro > h2{
+  margin-bottom:18px;
+}
+
+.programa-card{
+  margin-top:34px;
+  background:#ffffff;
+  border-radius:26px;
+  padding:34px;
+  border:1px solid rgba(11,90,53,.08);
+  box-shadow:0 14px 32px rgba(0,0,0,.06);
+}
+
+.tesoros-restaurado{
+  border-left:6px solid #d6bb42;
+  background:
+    radial-gradient(circle at top right, rgba(214,187,66,.10), transparent 28%),
+    linear-gradient(135deg,#ffffff,#f7fbf8);
+}
+
+.tesoros-restaurado .programa-header h3{
+  font-size:2.25rem;
+  color:#063f25;
+}
+
+.tesoros-restaurado .tesoros-texto h3{
+  color:#0b5a35;
+  font-size:1.85rem;
+  margin-bottom:18px;
+}
+
+.programa-simple{
+  padding:30px 34px;
+}
+
+.programa-simple .programa-header{
+  margin-bottom:16px;
+}
+
+.programa-simple p{
+  line-height:1.8;
+  color:#56625d;
+  margin-bottom:14px;
+}
+
+.programa-simple p:last-child{
+  margin-bottom:0;
+}
+
 </style>
 </head>
 
@@ -1420,9 +1472,9 @@ details.accordion-card ul{
       </details>
     </section>
 
-<section id="programas" class="card programas-premium">
 
-  <span class="eyebrow-section">Programas y proyectos institucionales</span>
+<section id="programas" class="card programas-premium programas-ajuste-seguro">
+
   <h2>Programas y proyectos institucionales</h2>
 
   <p class="section-intro">
@@ -1431,71 +1483,83 @@ details.accordion-card ul{
     en la Escuela Secundaria N.º 31 “Benito Juárez”.
   </p>
 
-  <!-- TESOROS OCULTOS -->
-
-  <div class="programa-card destacado">
-
+  <article id="tesoros-ocultos" class="programa-card tesoros-restaurado">
     <div class="programa-header">
       <span class="programa-tag">Proyecto institucional ABP</span>
       <h3>Tesoros ocultos de la escuela</h3>
     </div>
 
-    <div class="programa-layout">
+    <div class="tesoros-grid">
+      <div class="tesoros-texto">
+        <h3>Una escuela que recupera su historia</h3>
 
-      <div class="programa-texto">
         <p>
-          Proyecto institucional de memoria, identidad y construcción comunitaria
-          desarrollado junto a estudiantes de la Escuela Secundaria N.º 31 “Benito Juárez”.
+          “Tesoros ocultos de la escuela” nace como una propuesta destinada a recuperar
+          memorias, experiencias, relatos y huellas que forman parte de la identidad
+          institucional de la Escuela Secundaria N.º 31 “Benito Juárez”.
         </p>
 
         <p>
-          A través de entrevistas, investigaciones, producciones digitales y registros históricos,
-          la comunidad educativa recupera historias, experiencias y relatos que forman parte
-          de la memoria viva de Estación Yuquerí.
+          A través de entrevistas, investigaciones, producciones digitales, registros
+          históricos y actividades comunitarias, estudiantes y docentes reconstruyen
+          colectivamente la historia viva de la institución y de Estación Yuquerí.
         </p>
 
-        <div class="programa-frase">
+        <p>
+          El proyecto fortalece el sentido de pertenencia, la participación estudiantil,
+          el vínculo con las familias y la valoración de la escuela como espacio de encuentro,
+          memoria y construcción comunitaria.
+        </p>
+
+        <div class="tesoros-frase">
           “La escuela construye comunidad cuando recupera las historias,
           las voces y las experiencias de quienes la habitan.”
         </div>
 
-        <a class="programa-boton" href="https://drive.google.com/drive/folders/1gl5ePQSi47l8qXrMd3jEV1FISUZ3QLZa?usp=drive_link" target="_blank">
-          Explorar producciones →
-        </a>
+        <div class="tesoros-footer">
+          <a href="https://drive.google.com/drive/folders/1gl5ePQSi47l8qXrMd3jEV1FISUZ3QLZa?usp=drive_link" target="_blank" rel="noopener">
+            Explorar producciones del proyecto →
+          </a>
+        </div>
       </div>
 
-      <div class="programa-mini-grid">
-
+      <div class="tesoros-bloques">
         <article>
           <h4>Memoria e identidad</h4>
-          <p>Relatos, fotografías y reconstrucción histórica institucional.</p>
+          <p>
+            Recuperación de relatos, fotografías, experiencias y acontecimientos
+            significativos de la vida institucional.
+          </p>
         </article>
 
         <article>
           <h4>Participación estudiantil</h4>
-          <p>Los estudiantes se convierten en protagonistas de la historia escolar.</p>
+          <p>
+            Los estudiantes se convierten en protagonistas, investigadores y narradores
+            de la historia de su escuela y comunidad.
+          </p>
         </article>
 
         <article>
           <h4>Escuela y comunidad</h4>
-          <p>Fortalecimiento de vínculos con familias y actores comunitarios.</p>
+          <p>
+            El proyecto fortalece vínculos con familias, ex estudiantes,
+            vecinos y actores históricos de Estación Yuquerí.
+          </p>
         </article>
 
         <article>
           <h4>Producciones institucionales</h4>
-          <p>Videos, entrevistas, relatos y materiales digitales colectivos.</p>
+          <p>
+            Galerías, entrevistas, videos, relatos y materiales digitales construidos
+            colectivamente durante el proyecto.
+          </p>
         </article>
-
       </div>
-
     </div>
+  </article>
 
-  </div>
-
-  <!-- ESCUELA VA AL BARRIO -->
-
-  <div class="programa-card">
-
+  <article id="escuela-barrio" class="programa-card programa-simple barrio-simple">
     <div class="programa-header simple">
       <span class="programa-tag">Proyecto institucional</span>
       <h3>La Escuela va al Barrio</h3>
@@ -1510,16 +1574,12 @@ details.accordion-card ul{
 
     <p>
       A través de actividades territoriales, talleres y acciones comunitarias,
-      la propuesta busca acercar la escuela a los barrios,
-      fortaleciendo la participación y el compromiso colectivo.
+      la propuesta acerca la escuela a los barrios, fortaleciendo la participación,
+      el cuidado del cuerpo y el compromiso colectivo.
     </p>
+  </article>
 
-  </div>
-
-  <!-- ALFABETIZACIÓN DIGITAL -->
-
-  <div class="programa-card">
-
+  <article id="alfabetizacion-digital" class="programa-card programa-simple alfabetizacion-simple">
     <div class="programa-header simple">
       <span class="programa-tag">Tecnología educativa</span>
       <h3>Alfabetización Digital Situada 2026</h3>
@@ -1535,10 +1595,11 @@ details.accordion-card ul{
       ciudadanía digital y prácticas pedagógicas contextualizadas,
       promoviendo trayectorias educativas más inclusivas y significativas.
     </p>
-
-  </div>
+  </article>
 
 </section>
+
+
 
 
 
