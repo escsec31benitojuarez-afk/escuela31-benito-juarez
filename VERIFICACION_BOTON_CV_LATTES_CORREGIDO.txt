@@ -1,0 +1,4 @@
+VERIFICACIÓN BOTÓN CV LATTES CORREGIDO
+buscatextual eliminado: True
+enlace Lattes correcto: True
+botón compacto Ver CV conservado: True
