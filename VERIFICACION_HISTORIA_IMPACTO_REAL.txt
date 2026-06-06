@@ -1,0 +1,10 @@
+index_root_modificado: True
+enlace_facebook_nombre: True
+imposicion_nombre: True
+video_25_youtube_conservado: True
+equipo_conservado: True
+cv_lattes_correcto: True
+buscatextual_no_aparece: True
+recursos_docentes_conservados: True
+galeria_conservada: True
+identidad_sonora_conservada: True
