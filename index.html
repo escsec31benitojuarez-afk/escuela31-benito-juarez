@@ -51,7 +51,7 @@
         <blockquote>“Libre, y para mí sagrado, es el derecho de pensar... La educación es fundamental para la felicidad social; es el principio en el que descansan la libertad y el engrandecimiento de los pueblos.”</blockquote>
         <p><strong>Benito Juárez</strong></p>
       </div>
-      <a href="assets/imagenes/institucion/placa-benito-juarez.jpeg" target="_blank" rel="noopener" class="identity-plaque">
+      <a href="assets/imagenes/institucion/placa-benito-juarez.jpeg" class="identity-plaque" data-lightbox="institucional" data-caption="Placa institucional con frase de Benito Juárez">
         <img src="assets/imagenes/institucion/placa-benito-juarez.jpeg" alt="Placa institucional con frase de Benito Juárez">
         <span>Ver placa institucional</span>
       </a>
@@ -114,5 +114,64 @@
     </div>
     <div class="footer-bottom">Sitio institucional educativo diseñado, desarrollado y acompañado pedagógicamente por Alfredo Esquivel.</div>
   </footer>
+
+  <div class="lightbox-modal" id="lightboxModal" aria-hidden="true" role="dialog" aria-label="Visor de imágenes institucionales">
+    <div class="lightbox-content">
+      <button class="lightbox-close" type="button" aria-label="Cerrar imagen">×</button>
+      <button class="lightbox-prev" type="button" aria-label="Imagen anterior">‹</button>
+      <img id="lightboxImage" src="" alt="">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+      <button class="lightbox-next" type="button" aria-label="Imagen siguiente">›</button>
+    </div>
+  </div>
+  <script>
+    (function(){
+      const items = Array.from(document.querySelectorAll('[data-lightbox="institucional"]'));
+      if(!items.length) return;
+      const modal = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImage');
+      const caption = document.getElementById('lightboxCaption');
+      const closeBtn = modal.querySelector('.lightbox-close');
+      const prevBtn = modal.querySelector('.lightbox-prev');
+      const nextBtn = modal.querySelector('.lightbox-next');
+      let current = 0;
+      function show(index){
+        current = (index + items.length) % items.length;
+        const item = items[current];
+        img.src = item.getAttribute('href');
+        img.alt = item.querySelector('img')?.alt || item.getAttribute('aria-label') || 'Imagen institucional';
+        caption.textContent = item.dataset.caption || item.querySelector('span')?.textContent || img.alt;
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden','false');
+        document.body.style.overflow = 'hidden';
+      }
+      function close(){
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden','true');
+        img.src = '';
+        document.body.style.overflow = '';
+      }
+      items.forEach((item,index)=>{
+        item.classList.add('lightbox-enabled');
+        item.addEventListener('click', function(event){
+          event.preventDefault();
+          show(index);
+        });
+      });
+      closeBtn.addEventListener('click', close);
+      prevBtn.addEventListener('click', ()=>show(current-1));
+      nextBtn.addEventListener('click', ()=>show(current+1));
+      modal.addEventListener('click', function(event){
+        if(event.target === modal) close();
+      });
+      document.addEventListener('keydown', function(event){
+        if(!modal.classList.contains('open')) return;
+        if(event.key === 'Escape') close();
+        if(event.key === 'ArrowLeft') show(current-1);
+        if(event.key === 'ArrowRight') show(current+1);
+      });
+    })();
+  </script>
+
 </body>
 </html>

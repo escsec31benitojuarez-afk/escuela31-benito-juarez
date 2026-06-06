@@ -50,34 +50,34 @@
         <div class="gallery-section">
           <h3>Actos y representaciones</h3>
           <div class="gallery-grid">
-            <a href="assets/imagenes/galeria/vida-institucional-01.jpg" target="_blank" class="gallery-item"><img src="assets/imagenes/galeria/vida-institucional-01.jpg" alt="Estudiantes con banderas y escudo institucional"><span>Identidad y pertenencia</span></a>
-            <a href="assets/imagenes/galeria/vida-institucional-02.jpg" target="_blank" class="gallery-item"><img src="assets/imagenes/galeria/vida-institucional-02.jpg" alt="Representación institucional en acto"><span>Representación institucional</span></a>
+            <a href="assets/imagenes/galeria/vida-institucional-01.jpg" class="gallery-item" data-lightbox="institucional"><img src="assets/imagenes/galeria/vida-institucional-01.jpg" alt="Estudiantes con banderas y escudo institucional"><span>Identidad y pertenencia</span></a>
+            <a href="assets/imagenes/galeria/vida-institucional-02.jpg" class="gallery-item" data-lightbox="institucional"><img src="assets/imagenes/galeria/vida-institucional-02.jpg" alt="Representación institucional en acto"><span>Representación institucional</span></a>
           </div>
         </div>
 
         <div class="gallery-section">
           <h3>Nuestra escuela y comunidad</h3>
           <div class="gallery-grid">
-            <a href="assets/imagenes/galeria/vida-institucional-03.jpg" target="_blank" class="gallery-item"><img src="assets/imagenes/galeria/vida-institucional-03.jpg" alt="Grupo de estudiantes frente a la escuela"><span>Estudiantes y comunidad</span></a>
-            <a href="assets/imagenes/galeria/vida-institucional-06.jpg" target="_blank" class="gallery-item"><img src="assets/imagenes/galeria/vida-institucional-06.jpg" alt="Actividad institucional con estudiantes"><span>Vida escolar cotidiana</span></a>
+            <a href="assets/imagenes/galeria/vida-institucional-03.jpg" class="gallery-item" data-lightbox="institucional"><img src="assets/imagenes/galeria/vida-institucional-03.jpg" alt="Grupo de estudiantes frente a la escuela"><span>Estudiantes y comunidad</span></a>
+            <a href="assets/imagenes/galeria/vida-institucional-06.jpg" class="gallery-item" data-lightbox="institucional"><img src="assets/imagenes/galeria/vida-institucional-06.jpg" alt="Actividad institucional con estudiantes"><span>Vida escolar cotidiana</span></a>
           </div>
         </div>
 
         <div class="gallery-section">
           <h3>Equipo docente e institucional</h3>
           <div class="gallery-grid">
-            <a href="assets/imagenes/galeria/vida-institucional-04.jpg" target="_blank" class="gallery-item"><img src="assets/imagenes/galeria/vida-institucional-04.jpg" alt="Equipo institucional"><span>Equipo institucional</span></a>
-            <a href="assets/imagenes/galeria/vida-institucional-05.jpg" target="_blank" class="gallery-item"><img src="assets/imagenes/galeria/vida-institucional-05.jpg" alt="Jornada institucional"><span>Jornadas institucionales</span></a>
+            <a href="assets/imagenes/galeria/vida-institucional-04.jpg" class="gallery-item" data-lightbox="institucional"><img src="assets/imagenes/galeria/vida-institucional-04.jpg" alt="Equipo institucional"><span>Equipo institucional</span></a>
+            <a href="assets/imagenes/galeria/vida-institucional-05.jpg" class="gallery-item" data-lightbox="institucional"><img src="assets/imagenes/galeria/vida-institucional-05.jpg" alt="Jornada institucional"><span>Jornadas institucionales</span></a>
           </div>
         </div>
 
         <div class="gallery-section">
           <h3>Convivencia, participación y Promo 2026</h3>
           <div class="gallery-grid">
-            <a href="assets/imagenes/galeria/vida-institucional-07.jpg" target="_blank" class="gallery-item"><img src="assets/imagenes/galeria/vida-institucional-07.jpg" alt="Actividad recreativa de estudiantes"><span>Convivencia y recreación</span></a>
-            <a href="assets/imagenes/galeria/vida-institucional-08.jpg" target="_blank" class="gallery-item"><img src="assets/imagenes/galeria/vida-institucional-08.jpg" alt="Encuentro compartido en la escuela"><span>Encuentros compartidos</span></a>
-            <a href="assets/imagenes/galeria/vida-institucional-09.jpg" target="_blank" class="gallery-item"><img src="assets/imagenes/galeria/vida-institucional-09.jpg" alt="Promoción 2026"><span>Promo 2026</span></a>
-            <a href="assets/imagenes/galeria/vida-institucional-10.jpg" target="_blank" class="gallery-item"><img src="assets/imagenes/galeria/vida-institucional-10.jpg" alt="Estudiantes de la promoción 2026"><span>Vida estudiantil</span></a>
+            <a href="assets/imagenes/galeria/vida-institucional-07.jpg" class="gallery-item" data-lightbox="institucional"><img src="assets/imagenes/galeria/vida-institucional-07.jpg" alt="Actividad recreativa de estudiantes"><span>Convivencia y recreación</span></a>
+            <a href="assets/imagenes/galeria/vida-institucional-08.jpg" class="gallery-item" data-lightbox="institucional"><img src="assets/imagenes/galeria/vida-institucional-08.jpg" alt="Encuentro compartido en la escuela"><span>Encuentros compartidos</span></a>
+            <a href="assets/imagenes/galeria/vida-institucional-09.jpg" class="gallery-item" data-lightbox="institucional"><img src="assets/imagenes/galeria/vida-institucional-09.jpg" alt="Promoción 2026"><span>Promo 2026</span></a>
+            <a href="assets/imagenes/galeria/vida-institucional-10.jpg" class="gallery-item" data-lightbox="institucional"><img src="assets/imagenes/galeria/vida-institucional-10.jpg" alt="Estudiantes de la promoción 2026"><span>Vida estudiantil</span></a>
           </div>
         </div>
       </section>
@@ -134,5 +134,64 @@
     </div>
     <div class="footer-bottom">Sitio institucional educativo diseñado, desarrollado y acompañado pedagógicamente por Alfredo Esquivel.</div>
   </footer>
+
+  <div class="lightbox-modal" id="lightboxModal" aria-hidden="true" role="dialog" aria-label="Visor de imágenes institucionales">
+    <div class="lightbox-content">
+      <button class="lightbox-close" type="button" aria-label="Cerrar imagen">×</button>
+      <button class="lightbox-prev" type="button" aria-label="Imagen anterior">‹</button>
+      <img id="lightboxImage" src="" alt="">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+      <button class="lightbox-next" type="button" aria-label="Imagen siguiente">›</button>
+    </div>
+  </div>
+  <script>
+    (function(){
+      const items = Array.from(document.querySelectorAll('[data-lightbox="institucional"]'));
+      if(!items.length) return;
+      const modal = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImage');
+      const caption = document.getElementById('lightboxCaption');
+      const closeBtn = modal.querySelector('.lightbox-close');
+      const prevBtn = modal.querySelector('.lightbox-prev');
+      const nextBtn = modal.querySelector('.lightbox-next');
+      let current = 0;
+      function show(index){
+        current = (index + items.length) % items.length;
+        const item = items[current];
+        img.src = item.getAttribute('href');
+        img.alt = item.querySelector('img')?.alt || item.getAttribute('aria-label') || 'Imagen institucional';
+        caption.textContent = item.dataset.caption || item.querySelector('span')?.textContent || img.alt;
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden','false');
+        document.body.style.overflow = 'hidden';
+      }
+      function close(){
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden','true');
+        img.src = '';
+        document.body.style.overflow = '';
+      }
+      items.forEach((item,index)=>{
+        item.classList.add('lightbox-enabled');
+        item.addEventListener('click', function(event){
+          event.preventDefault();
+          show(index);
+        });
+      });
+      closeBtn.addEventListener('click', close);
+      prevBtn.addEventListener('click', ()=>show(current-1));
+      nextBtn.addEventListener('click', ()=>show(current+1));
+      modal.addEventListener('click', function(event){
+        if(event.target === modal) close();
+      });
+      document.addEventListener('keydown', function(event){
+        if(!modal.classList.contains('open')) return;
+        if(event.key === 'Escape') close();
+        if(event.key === 'ArrowLeft') show(current-1);
+        if(event.key === 'ArrowRight') show(current+1);
+      });
+    })();
+  </script>
+
 </body>
 </html>
