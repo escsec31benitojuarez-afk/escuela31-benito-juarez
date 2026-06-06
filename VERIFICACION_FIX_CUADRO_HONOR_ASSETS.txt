@@ -1,0 +1,11 @@
+FIX CUADRO DE HONOR - ASSETS
+
+Archivos incluidos:
+- assets/imagenes/cuadro-honor-ciclo-basico-2026.png
+- assets/imagenes/cuadro-honor-ciclo-orientado-2026.png
+
+Causa del error 404:
+El index.html publicado ya apunta a estos archivos, pero los PNG no se encuentran publicados en esa ruta dentro de GitHub Pages.
+
+Acción requerida:
+Copiar la carpeta assets incluida en este ZIP dentro del repositorio local escuela31-benito-juarez, aceptar combinar/reemplazar, luego hacer commit y push desde GitHub Desktop.
