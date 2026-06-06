@@ -1,0 +1,20 @@
+VERIFICACIÓN REAL - AJUSTE VISUAL Y CENTRO DE ESTUDIANTES
+
+Archivo base trabajado: index.html raíz compartido por Alfredo.
+
+Cambios verificados:
+- Títulos principales de bloque con mayor tamaño: True
+- Tipografía diferenciada en títulos principales: Georgia / serif: True
+- Línea visual inferior en títulos para marcar inicio de cada bloque: True
+- Navegación superior incluye Centro de Estudiantes: True
+- Accesos rápidos incluye Centro de Estudiantes: True
+- Nueva sección #centro-estudiantes incorporada: True
+- Footer incluye Centro de Estudiantes: True
+- Modalidad Ciencias Naturales conservada: True
+- Escritura Nº sin punto conservada: True
+- Secretaria sin fotografía conservada: True
+- CV Lattes correcto del Rector conservado: True
+- Enlace buscatextual incorrecto ausente: True
+
+IMPORTANTE PARA IMPACTO EN GITHUB:
+Reemplazar únicamente el archivo index.html real ubicado dentro de la carpeta del repositorio escuela31-benito-juarez. No guardar como index (1).html ni como index_ACTUALIZADO.html.
