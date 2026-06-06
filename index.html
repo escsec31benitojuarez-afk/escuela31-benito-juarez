@@ -1736,6 +1736,150 @@ grid-template-columns:1fr;
   .historia-boton-video{width:100%;}
 }
 
+
+
+/* ===== AJUSTE VISUAL DIRECTIVO: TÍTULOS DE BLOQUE Y CENTRO DE ESTUDIANTES ===== */
+.card > h2,
+.equipo-real > h2,
+.programas-premium > h2,
+.multimedia-premium > h2,
+.contacto-premium > h2{
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size:clamp(2.25rem,4.1vw,3.55rem) !important;
+  line-height:1.08 !important;
+  letter-spacing:-.9px;
+  color:var(--verde-oscuro) !important;
+  padding-bottom:14px;
+  margin-bottom:18px !important;
+  border-bottom:4px solid rgba(214,187,66,.75);
+  position:relative;
+}
+
+.card > h2::after,
+.equipo-real > h2::after,
+.programas-premium > h2::after,
+.multimedia-premium > h2::after,
+.contacto-premium > h2::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:120px;
+  height:4px;
+  background:var(--rojo);
+  border-radius:99px;
+}
+
+.identidad-card h2,
+.datos-card h2{
+  font-family:Georgia, 'Times New Roman', serif;
+  font-size:clamp(1.65rem,2.5vw,2.2rem) !important;
+  color:var(--verde-oscuro) !important;
+}
+
+.centro-estudiantes-premium{
+  background:
+    radial-gradient(circle at top right, rgba(214,187,66,.13), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(179,38,30,.08), transparent 30%),
+    linear-gradient(135deg,#ffffff,#f9fbfa);
+}
+
+.centro-grid{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:28px;
+  align-items:stretch;
+  margin-top:28px;
+}
+
+.centro-card-principal,
+.centro-card-secundaria{
+  background:#fff;
+  border-radius:24px;
+  padding:28px;
+  border:1px solid rgba(11,90,53,.10);
+  box-shadow:0 10px 24px rgba(0,0,0,.05);
+}
+
+.centro-card-principal{
+  border-left:6px solid var(--rojo);
+}
+
+.centro-card-secundaria{
+  border-top:6px solid var(--amarillo);
+}
+
+.centro-card-principal h3,
+.centro-card-secundaria h3{
+  color:var(--verde-oscuro);
+  font-size:1.45rem;
+  margin-bottom:12px;
+}
+
+.centro-card-principal p,
+.centro-card-secundaria p{
+  color:#46534e;
+  line-height:1.78;
+  margin-bottom:14px;
+}
+
+.centro-pasos{
+  display:grid;
+  gap:12px;
+  margin-top:18px;
+}
+
+.centro-pasos article{
+  display:grid;
+  grid-template-columns:42px 1fr;
+  gap:12px;
+  align-items:start;
+  background:#f8fbf9;
+  border:1px solid rgba(11,90,53,.12);
+  border-radius:16px;
+  padding:14px;
+}
+
+.centro-pasos span{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:var(--verde);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:900;
+}
+
+.centro-pasos strong{
+  display:block;
+  color:var(--verde-oscuro);
+  margin-bottom:3px;
+}
+
+.centro-nota{
+  margin-top:24px;
+  padding:18px 22px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#fff8f7,#f8fbf9);
+  border-left:5px solid var(--rojo);
+  color:#43514b;
+  line-height:1.7;
+  font-weight:700;
+}
+
+@media(max-width:900px){
+  .centro-grid{grid-template-columns:1fr;}
+  .card > h2,
+  .equipo-real > h2,
+  .programas-premium > h2,
+  .multimedia-premium > h2,
+  .contacto-premium > h2{
+    font-size:clamp(2rem,8.5vw,2.8rem) !important;
+  }
+}
+
 </style>
 </head>
 
@@ -1763,6 +1907,7 @@ grid-template-columns:1fr;
         <a href="#novedades">Novedades</a>
         <a href="#recursos">Recursos</a>
         <a href="#programas">Programas</a>
+        <a href="#centro-estudiantes">Centro de Estudiantes</a>
         <a href="#multimedia">Multimedia</a>
         <a href="#contacto">Contacto</a>
       </nav>
@@ -1818,6 +1963,7 @@ grid-template-columns:1fr;
         <a class="quick-card" href="#novedades"><div class="icon">📢</div><h3>Novedades</h3><p>Avisos, actividades, fechas escolares y comunicaciones importantes.</p></a>
         <a class="quick-card" href="#recursos"><div class="icon">📁</div><h3>Recursos</h3><p>Documentos, formularios, normativa y enlaces útiles.</p></a>
         <a class="quick-card" href="#programas"><div class="icon">💻</div><h3>Programas</h3><p>Proyectos institucionales, ABP, territorio y tecnología educativa.</p></a>
+        <a class="quick-card" href="#centro-estudiantes"><div class="icon">🗳️</div><h3>Centro de Estudiantes</h3><p>Participación estudiantil, ciudadanía democrática y vida escolar.</p></a>
         <a class="quick-card" href="#multimedia"><div class="icon">🎬</div><h3>Multimedia</h3><p>Videos, fotografías, producciones sonoras y memoria escolar.</p></a>
         <a class="quick-card" href="#contacto"><div class="icon">📞</div><h3>Contacto</h3><p>Canales oficiales de comunicación institucional.</p></a>
       </div>
@@ -2231,6 +2377,46 @@ objetivos y líneas de acción vinculadas a la integración tecnológica.
       </article>
     </section>
 
+    <section id="centro-estudiantes" class="card centro-estudiantes-premium">
+      <span class="eyebrow-section">Participación estudiantil</span>
+      <h2>Centro de Estudiantes</h2>
+      <p class="section-intro">
+        La Escuela Secundaria Nº 31 “Benito Juárez” avanza hacia la conformación de su primer Centro de Estudiantes,
+        un espacio democrático de participación, representación y construcción colectiva de la vida escolar.
+      </p>
+
+      <div class="centro-grid">
+        <article class="centro-card-principal">
+          <span class="cargo-destacado rojo">En construcción institucional</span>
+          <h3>Un nuevo espacio para la voz estudiantil</h3>
+          <p>
+            El Centro de Estudiantes será un ámbito de organización y participación donde las y los estudiantes podrán
+            expresar ideas, proponer iniciativas, fortalecer la convivencia y colaborar activamente en proyectos escolares.
+          </p>
+          <p>
+            Su creación representa un paso importante para promover ciudadanía democrática, responsabilidad, diálogo,
+            compromiso comunitario y sentido de pertenencia institucional.
+          </p>
+          <div class="centro-nota">
+            Este bloque será actualizado progresivamente a medida que la institución avance en la organización, elección
+            y puesta en marcha del primer Centro de Estudiantes.
+          </div>
+        </article>
+
+        <article class="centro-card-secundaria">
+          <span class="cargo-destacado amarillo">Próximas etapas</span>
+          <h3>Proceso de organización</h3>
+          <div class="centro-pasos">
+            <article><span>1</span><div><strong>Información y sensibilización</strong><p>Presentación de la propuesta a estudiantes y comunidad educativa.</p></div></article>
+            <article><span>2</span><div><strong>Participación y propuestas</strong><p>Construcción de ideas, acuerdos y líneas de acción estudiantil.</p></div></article>
+            <article><span>3</span><div><strong>Organización democrática</strong><p>Definición de representantes, roles y formas de participación.</p></div></article>
+            <article><span>4</span><div><strong>Puesta en marcha</strong><p>Inicio del funcionamiento del Centro de Estudiantes como espacio institucional.</p></div></article>
+          </div>
+        </article>
+      </div>
+    </section>
+
+
     <section id="multimedia" class="card multimedia-premium">
       <span class="eyebrow-section">Memoria visual y sonora</span>
       <h2>Galería multimedia e identidad sonora</h2>
@@ -2425,6 +2611,7 @@ realizar consultas, seguir novedades y acompañar la vida escolar.
         <a href="#novedades">Novedades</a>
         <a href="#recursos">Recursos</a>
         <a href="#programas">Programas</a>
+        <a href="#centro-estudiantes">Centro de Estudiantes</a>
         <a href="#multimedia">Multimedia</a>
         <a href="#contacto">Contacto</a>
       </div>
