@@ -1,0 +1,17 @@
+VERIFICACIÓN AJUSTES FINALES - CUADRO DE HONOR, FOOTER Y CABECERA
+index_exists: True
+assets_folder_exists: True
+honor_basico_asset: True
+honor_orientado_asset: True
+cuadro_honor_html: True
+boton_basico_html: True
+boton_orientado_html: True
+footer_dos_listas: True
+cabecera_yuqueri_fix_css: True
+modalidad_portada_no_agregada: True
+centro_estudiantes_conservado: True
+secretaria_sin_foto: True
+cv_lattes_correcto: True
+
+Archivo impactado: index.html raíz.
+Assets incluidos: assets/imagenes/cuadro-honor-ciclo-basico-2026.png y assets/imagenes/cuadro-honor-ciclo-orientado-2026.png.

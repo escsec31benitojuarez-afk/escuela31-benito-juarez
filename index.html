@@ -1880,6 +1880,88 @@ grid-template-columns:1fr;
   }
 }
 
+
+
+/* ===== AJUSTE FINAL: CABECERA, CUADRO DE HONOR Y FOOTER ===== */
+.header-inner{
+  align-items:center;
+}
+.brand{
+  min-width:360px;
+  flex:0 0 auto;
+}
+.brand strong{
+  font-size:1.05rem;
+}
+.brand span{
+  white-space:nowrap;
+  line-height:1.35;
+}
+.nav-links{
+  gap:10px 16px;
+}
+
+.honor-acordeon{
+  margin-top:30px !important;
+  border-left-color:var(--amarillo) !important;
+  background:linear-gradient(135deg,#fffdf4,#f8fbf9) !important;
+}
+.honor-acordeon summary{
+  background:linear-gradient(90deg,#fff7d0,#f8fbf9) !important;
+}
+.honor-contenido{
+  padding:0 22px 24px 22px;
+}
+.honor-contenido p{
+  padding:0 !important;
+  margin:0 0 18px;
+  color:#45524d;
+  line-height:1.75;
+}
+.honor-botones{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+}
+.honor-boton{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  background:var(--verde);
+  color:#fff;
+  padding:13px 20px;
+  border-radius:999px;
+  font-weight:900;
+  box-shadow:0 8px 18px rgba(0,0,0,.10);
+  transition:.22s ease;
+}
+.honor-boton:hover{
+  background:var(--rojo);
+  transform:translateY(-2px);
+}
+.footer-links-dobles{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px 28px;
+}
+.footer-links-dobles h4{
+  color:#fff9c9;
+  margin:0 0 8px;
+  font-size:1rem;
+}
+.footer-links-dobles a{
+  margin:5px 0;
+}
+@media(max-width:980px){
+  .brand{min-width:auto;}
+  .brand span{white-space:normal;}
+}
+@media(max-width:680px){
+  .honor-boton{width:100%;}
+  .footer-links-dobles{grid-template-columns:1fr;}
+}
+
 </style>
 </head>
 
@@ -2194,6 +2276,21 @@ grid-template-columns:1fr;
         <article class="novedad-card"><div class="novedad-img"><img src="assets/imagenes/informacion-preceptores.jpg" alt="Información para preceptores"></div><div class="novedad-body"><div class="novedad-icono">👥</div><div><h3>Información para preceptores</h3><p>Entrega de planillas de calificaciones a docentes, fecha tope para recibir las planillas, control de carga de notas y actualización de asistencia en LUA SAGE.</p></div></div></article>
         <article class="novedad-card"><div class="novedad-img"><img src="assets/imagenes/desfile-25-mayo-2026.jpg" alt="Desfile 25 de Mayo 2026"></div><div class="novedad-body"><div class="novedad-icono">🎖️</div><div><h3>Desfile 25 de Mayo 2026</h3><p>Invitación a la comunidad educativa para acompañar a nuestros estudiantes en el acto patrio.</p></div></div></article>
       </div>
+
+      <details class="accordion-card honor-acordeon">
+        <summary>🏅 Cuadro de Honor Institucional</summary>
+        <div class="honor-contenido">
+          <p>
+            Reconocimiento a estudiantes destacados por su desempeño académico durante el Primer Trimestre 2026.
+            Este espacio visibiliza el compromiso, la constancia y el esfuerzo sostenido de nuestros estudiantes.
+          </p>
+          <div class="honor-botones">
+            <a class="honor-boton" href="assets/imagenes/cuadro-honor-ciclo-basico-2026.png" target="_blank" rel="noopener">📘 Ciclo Básico Común</a>
+            <a class="honor-boton" href="assets/imagenes/cuadro-honor-ciclo-orientado-2026.png" target="_blank" rel="noopener">📗 Ciclo Orientado – Ciencias Naturales</a>
+          </div>
+        </div>
+      </details>
+
     </section>
 
     
@@ -2606,14 +2703,22 @@ realizar consultas, seguir novedades y acompañar la vida escolar.
       </div>
       <div>
         <h3>Accesos rápidos</h3>
-        <a href="#institucion">Institución</a>
-        <a href="#historia">Historia</a>
-        <a href="#novedades">Novedades</a>
-        <a href="#recursos">Recursos</a>
-        <a href="#programas">Programas</a>
-        <a href="#centro-estudiantes">Centro de Estudiantes</a>
-        <a href="#multimedia">Multimedia</a>
-        <a href="#contacto">Contacto</a>
+        <div class="footer-links-dobles">
+          <div>
+            <h4>Información institucional</h4>
+            <a href="#institucion">Institución</a>
+            <a href="#historia">Historia</a>
+            <a href="#novedades">Novedades</a>
+            <a href="#programas">Programas</a>
+          </div>
+          <div>
+            <h4>Comunidad educativa</h4>
+            <a href="#recursos">Recursos</a>
+            <a href="#centro-estudiantes">Centro de Estudiantes</a>
+            <a href="#multimedia">Multimedia</a>
+            <a href="#contacto">Contacto</a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">Sitio institucional educativo diseñado, desarrollado y acompañado pedagógicamente por Alfredo Esquivel.</div>
