@@ -1,0 +1,19 @@
+VERIFICACIÓN ACTUALIZACIÓN TOTAL - SITIO ESCUELA Nº 31
+
+index_html_en_raiz: True
+assets_incluido: True
+centro_estudiantes_nav: True
+centro_estudiantes_seccion: True
+titulos_bloque_grandes: True
+tipografia_titulos_georgia: True
+secretaria_sin_foto: True
+modalidad_ciencias_naturales: True
+sin_N_punto: True
+cv_lattes_correcto: True
+cv_erroneo_ausente: True
+assets_imagen_frente: True
+assets_logo: True
+assets_himno_pdf: True
+assets_himno_audio: True
+
+Instrucción: reemplazar la carpeta completa del repositorio local por el contenido de este ZIP, o copiar todo su contenido dentro de escuela31-benito-juarez aceptando reemplazar archivos existentes.
