@@ -31,3 +31,171 @@ section{scroll-margin-top:120px;margin:34px 0}.card{background:#fff;border-radiu
 details.accordion{background:linear-gradient(135deg,#eef7f1,#f8fbf9);border:1px solid rgba(11,90,53,.18);border-left:6px solid var(--verde);border-radius:18px;box-shadow:0 5px 18px rgba(0,0,0,.05);overflow:hidden;margin:14px 0}details.accordion summary{cursor:pointer;list-style:none;padding:18px 22px;font-weight:900;color:var(--verde-oscuro);display:flex;justify-content:space-between;gap:14px;background:linear-gradient(90deg,#dfeee5,#f5faf7)}details.accordion summary::-webkit-details-marker{display:none}details.accordion summary::after{content:"+";width:32px;height:32px;border-radius:50%;background:var(--verde);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0}details.accordion[open] summary::after{content:"–";background:var(--amarillo);color:var(--verde-oscuro)}details.accordion p,details.accordion ul{padding:0 22px 20px 22px;color:#45524d;line-height:1.78}details.accordion ul{padding-left:46px}.video-responsive{position:relative;width:100%;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:20px;background:#000;box-shadow:var(--sombra);margin-top:16px}.video-responsive iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.resource-list{padding-left:18px;line-height:1.85;margin:16px auto 0;max-width:96%;text-align:left;color:#46534e}.resource-list li{margin-bottom:9px}.resource-list a{color:var(--verde);font-weight:900;border-bottom:1px solid rgba(11,90,53,.25)}.docente-acordeon{background:#fff;border:1px solid rgba(11,90,53,.12);border-radius:18px;overflow:hidden;margin:14px 0;box-shadow:0 6px 18px rgba(0,0,0,.04)}.docente-acordeon summary{cursor:pointer;list-style:none;padding:16px 18px;font-weight:900;color:var(--verde-oscuro);background:linear-gradient(90deg,#fff5f4,#f8fbf9);display:flex;align-items:center;justify-content:space-between;gap:12px}.docente-recursos-grid{display:grid;gap:10px;padding:16px}.docente-recursos-grid a{display:block;background:#f8fbf9;border:1px solid rgba(11,90,53,.12);border-radius:14px;padding:12px 14px;color:var(--verde);font-weight:900}.honor-box{background:linear-gradient(135deg,#fff8f7,#f8fbf9);border-left:6px solid var(--rojo);border-radius:22px;padding:26px;margin-top:26px}.honor-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px}.audio-card{background:#f8fbf9;border:1px solid rgba(11,90,53,.12);border-left:5px solid var(--amarillo);border-radius:16px;padding:16px;margin:14px 0}.audio-card strong{display:block;color:var(--verde-oscuro);margin-bottom:8px}.audio-card audio{width:100%;margin-top:6px}.note{margin-top:22px;padding:18px 22px;border-radius:18px;background:linear-gradient(90deg,#eaf4ef,#fff);border-left:5px solid var(--amarillo);color:var(--verde-oscuro);line-height:1.7;font-weight:800}.footer{background:var(--verde-oscuro);color:#fff;padding:34px 6%;margin-top:48px;border-top:4px solid var(--amarillo)}.footer-grid{max-width:1180px;margin:auto;display:grid;grid-template-columns:1.1fr 1.1fr 1fr 1fr;gap:24px}.footer h3{color:#fff9c9;margin-bottom:10px}.footer a,.footer p{display:block;color:#eef8f1;margin:6px 0}.footer-bottom{max-width:1180px;margin:22px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.18);color:#eef8f1}.footer-links-two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 @media(max-width:1100px){.hero-content,.module-shell,.split-grid,.two-grid,.team-bottom{grid-template-columns:1fr}.side-menu{position:static}.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.footer-grid{grid-template-columns:1fr 1fr}.hero-card{justify-self:start;max-width:720px}.brand{min-width:auto}.header-inner{flex-direction:column;align-items:flex-start}.nav-links{justify-content:flex-start}}
 @media(max-width:760px){main{width:92%}.hero{min-height:auto;padding:50px 5% 42px}.hero h1{font-size:clamp(2.25rem,11vw,3.8rem)}.card,.page-title{padding:24px}.team-grid,.three-grid,.footer-grid,.footer-links-two{grid-template-columns:1fr}.tutores-grid{grid-template-columns:1fr}.tutor-box{border-right:none;border-bottom:1px solid rgba(11,90,53,.14);padding-bottom:18px}.tutor-box:last-child{border-bottom:none}.nav-links{font-size:.88rem;gap:8px 12px}}
+
+
+/* ===== AJUSTES VISUALES PORTAL MODULAR - ETAPA 2 ===== */
+/* Cabecera más compacta: reduce altura visible y deja más espacio para los módulos. */
+.topbar{
+  padding:5px 6% !important;
+  font-size:.85rem !important;
+}
+.header-inner{
+  padding:10px 6% !important;
+  gap:18px !important;
+}
+.brand{
+  min-width:380px !important;
+  gap:12px !important;
+}
+.brand img{
+  width:56px !important;
+  height:56px !important;
+}
+.brand strong{
+  font-size:1rem !important;
+}
+.brand span{
+  font-size:.84rem !important;
+}
+.brand small{
+  font-size:.76rem !important;
+  white-space:nowrap;
+}
+.nav-links{
+  gap:7px 15px !important;
+  font-size:.9rem !important;
+}
+.nav-links a{
+  padding:6px 0 !important;
+}
+
+/* Portada más baja y más funcional: conserva identidad, pero permite ver antes los módulos. */
+.hero{
+  min-height:500px !important;
+  padding:52px 6% 38px !important;
+}
+.hero-content{
+  grid-template-columns:1.38fr .62fr !important;
+  gap:30px !important;
+}
+.badge{
+  padding:10px 18px !important;
+  margin-bottom:18px !important;
+}
+.badge::before{
+  width:30px !important;
+  height:30px !important;
+}
+.hero h1{
+  max-width:760px !important;
+  font-size:clamp(2.35rem,4.35vw,4.35rem) !important;
+  line-height:1.04 !important;
+}
+.hero-line{
+  margin:20px 0 18px !important;
+}
+.hero-subtitle{
+  max-width:680px !important;
+  font-size:clamp(1rem,1.45vw,1.18rem) !important;
+  line-height:1.65 !important;
+}
+.hero-actions{
+  margin-top:22px !important;
+}
+.hero-card{
+  max-width:400px !important;
+  padding:26px 28px !important;
+}
+.hero-card p{
+  font-size:.98rem !important;
+  line-height:1.62 !important;
+}
+main{
+  margin-top:34px !important;
+}
+
+/* Novedades destacadas: el Cuadro de Honor pasa a ser el destacado principal. */
+.featured-news-grid{
+  grid-template-columns:1.25fr .9fr .9fr !important;
+  align-items:stretch;
+}
+.news-card.news-featured{
+  border-left:7px solid var(--rojo);
+  background:
+    radial-gradient(circle at top right, rgba(214,187,66,.16), transparent 30%),
+    linear-gradient(135deg,#fff8f7,#ffffff);
+}
+.news-card.news-featured h3{
+  font-size:1.55rem;
+}
+.news-card.news-featured .btn{
+  background:var(--rojo);
+}
+.news-card.news-featured .btn:hover{
+  background:var(--verde);
+}
+
+/* Footer: más equilibrado y sin cortes innecesarios en datos institucionales. */
+.footer{
+  padding:30px 6% 28px !important;
+}
+.footer-grid{
+  grid-template-columns:1.35fr 1.35fr 1fr 1fr !important;
+  gap:28px !important;
+}
+.footer-location{
+  white-space:nowrap;
+}
+.footer h3{
+  font-size:1.08rem;
+}
+.footer a,.footer p{
+  line-height:1.55;
+}
+
+@media(max-width:1100px){
+  .hero-content{
+    grid-template-columns:1fr !important;
+  }
+  .featured-news-grid{
+    grid-template-columns:1fr !important;
+  }
+  .brand{
+    min-width:auto !important;
+  }
+  .footer-grid{
+    grid-template-columns:1fr 1fr !important;
+  }
+  .footer-location{
+    white-space:normal;
+  }
+}
+
+@media(max-width:760px){
+  .topbar{
+    font-size:.78rem !important;
+  }
+  .header-inner{
+    padding:10px 5% !important;
+  }
+  .brand img{
+    width:50px !important;
+    height:50px !important;
+  }
+  .brand small{
+    white-space:normal;
+  }
+  .hero{
+    padding:42px 5% 36px !important;
+  }
+  .hero h1{
+    font-size:clamp(2.05rem,10vw,3.2rem) !important;
+  }
+  .hero-card{
+    max-width:100% !important;
+    padding:22px !important;
+  }
+  .footer-grid{
+    grid-template-columns:1fr !important;
+  }
+}
