@@ -1,3 +1,0 @@
-boton_cv_lattes: True
-texto_boton: 🌐 Ver CV
-pdf_cv_local_eliminado: True

@@ -1,4 +1,0 @@
-seccion_reemplazada: True
-Mahler: True
-tres_tutores: True
-RTI: True
