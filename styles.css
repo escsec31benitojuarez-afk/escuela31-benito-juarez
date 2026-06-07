@@ -333,10 +333,10 @@ main{
   gap:12px;
 }
 .lightbox-content img{
+  width:min(92vw,1150px);
+  height:82vh;
   max-width:100%;
   max-height:82vh;
-  width:auto;
-  height:auto;
   object-fit:contain;
   border-radius:14px;
   box-shadow:0 18px 48px rgba(0,0,0,.38);
@@ -378,7 +378,7 @@ main{
 .lightbox-close:hover,.lightbox-prev:hover,.lightbox-next:hover{background:var(--amarillo-vivo);color:var(--verde-oscuro)}
 @media(max-width:760px){
   .lightbox-modal{padding:16px}
-  .lightbox-content img{max-height:76vh}
+  .lightbox-content img{width:92vw;height:76vh;max-height:76vh}
   .lightbox-prev,.lightbox-next{top:auto;bottom:42px;transform:none;width:44px;height:44px;border-radius:50%;font-size:1.5rem}
   .lightbox-prev{left:18px}
   .lightbox-next{right:18px}
@@ -418,3 +418,20 @@ main{
 .destaque-principal{border:1px solid rgba(212,175,55,.45);box-shadow:0 18px 45px rgba(0,61,36,.12)}
 .destaque-principal .campaign-card{align-items:center}
 .destaque-principal .campaign-card img{max-height:520px;object-fit:contain;background:#063d24}
+
+
+/* ===== LIGHTBOX GLOBAL: IMÁGENES CLICKEABLES EN TODO EL PORTAL ===== */
+a[data-lightbox="institucional"] img{
+  cursor:zoom-in;
+}
+.visual-card > a,
+.honor-preview > a,
+.campaign-card > a,
+.subblock > a[data-lightbox="institucional"]{
+  display:block;
+}
+.visual-card > a img,
+.honor-preview > a img,
+.campaign-card > a img{
+  display:block;
+}

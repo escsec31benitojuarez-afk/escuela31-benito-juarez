@@ -59,5 +59,67 @@
     </div>
     <div class="footer-bottom">Sitio institucional educativo diseñado, desarrollado y acompañado pedagógicamente por Alfredo Esquivel.</div>
   </footer>
+
+  <div class="lightbox-modal" id="lightboxModal" aria-hidden="true" role="dialog" aria-label="Visor de imágenes institucionales">
+    <div class="lightbox-content">
+      <button class="lightbox-close" type="button" aria-label="Cerrar imagen">×</button>
+      <button class="lightbox-prev" type="button" aria-label="Imagen anterior">‹</button>
+      <img id="lightboxImage" src="" alt="">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+      <button class="lightbox-next" type="button" aria-label="Imagen siguiente">›</button>
+    </div>
+  </div>
+  <script>
+    (function(){
+      const items = Array.from(document.querySelectorAll('[data-lightbox="institucional"]'));
+      if(!items.length) return;
+      const modal = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImage');
+      const caption = document.getElementById('lightboxCaption');
+      const closeBtn = modal.querySelector('.lightbox-close');
+      const prevBtn = modal.querySelector('.lightbox-prev');
+      const nextBtn = modal.querySelector('.lightbox-next');
+      let current = 0;
+      function openAt(index){
+        current = index;
+        const item = items[current];
+        img.src = item.getAttribute('href');
+        const innerImg = item.querySelector('img');
+        img.alt = (innerImg && innerImg.getAttribute('alt')) || item.getAttribute('data-caption') || 'Imagen institucional ampliada';
+        caption.textContent = item.getAttribute('data-caption') || (innerImg && innerImg.getAttribute('alt')) || '';
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden','false');
+        document.body.style.overflow = 'hidden';
+      }
+      function close(){
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden','true');
+        img.src = '';
+        document.body.style.overflow = '';
+      }
+      function move(step){ openAt((current + step + items.length) % items.length); }
+      items.forEach((item,index)=>{
+        item.classList.add('lightbox-enabled');
+        item.removeAttribute('target');
+        item.addEventListener('click', function(event){
+          event.preventDefault();
+          openAt(index);
+        });
+      });
+      closeBtn.addEventListener('click', close);
+      prevBtn.addEventListener('click', ()=>move(-1));
+      nextBtn.addEventListener('click', ()=>move(1));
+      modal.addEventListener('click', function(event){
+        if(event.target === modal) close();
+      });
+      document.addEventListener('keydown', function(event){
+        if(!modal.classList.contains('open')) return;
+        if(event.key === 'Escape') close();
+        if(event.key === 'ArrowLeft') move(-1);
+        if(event.key === 'ArrowRight') move(1);
+      });
+    })();
+  </script>
+
 </body>
 </html>

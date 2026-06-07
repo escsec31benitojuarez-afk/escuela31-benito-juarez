@@ -136,12 +136,13 @@
       const prevBtn = modal.querySelector('.lightbox-prev');
       const nextBtn = modal.querySelector('.lightbox-next');
       let current = 0;
-      function show(index){
-        current = (index + items.length) % items.length;
+      function openAt(index){
+        current = index;
         const item = items[current];
         img.src = item.getAttribute('href');
-        img.alt = item.querySelector('img')?.alt || item.getAttribute('aria-label') || 'Imagen institucional';
-        caption.textContent = item.dataset.caption || item.querySelector('span')?.textContent || img.alt;
+        const innerImg = item.querySelector('img');
+        img.alt = (innerImg && innerImg.getAttribute('alt')) || item.getAttribute('data-caption') || 'Imagen institucional ampliada';
+        caption.textContent = item.getAttribute('data-caption') || (innerImg && innerImg.getAttribute('alt')) || '';
         modal.classList.add('open');
         modal.setAttribute('aria-hidden','false');
         document.body.style.overflow = 'hidden';
@@ -152,24 +153,26 @@
         img.src = '';
         document.body.style.overflow = '';
       }
+      function move(step){ openAt((current + step + items.length) % items.length); }
       items.forEach((item,index)=>{
         item.classList.add('lightbox-enabled');
+        item.removeAttribute('target');
         item.addEventListener('click', function(event){
           event.preventDefault();
-          show(index);
+          openAt(index);
         });
       });
       closeBtn.addEventListener('click', close);
-      prevBtn.addEventListener('click', ()=>show(current-1));
-      nextBtn.addEventListener('click', ()=>show(current+1));
+      prevBtn.addEventListener('click', ()=>move(-1));
+      nextBtn.addEventListener('click', ()=>move(1));
       modal.addEventListener('click', function(event){
         if(event.target === modal) close();
       });
       document.addEventListener('keydown', function(event){
         if(!modal.classList.contains('open')) return;
         if(event.key === 'Escape') close();
-        if(event.key === 'ArrowLeft') show(current-1);
-        if(event.key === 'ArrowRight') show(current+1);
+        if(event.key === 'ArrowLeft') move(-1);
+        if(event.key === 'ArrowRight') move(1);
       });
     })();
   </script>

@@ -68,9 +68,9 @@
 
         <div class="subblock-grid">
           <article class="subblock"><h3>Presentación</h3><p>La escuela sale al encuentro de su comunidad para fortalecer vínculos, prevención, salud integral y participación educativa.</p></article>
-          <article class="subblock"><h3>Barrio Cohelo</h3><p>Primera salida territorial con eje en cuidado del cuerpo y salud bucal.</p><a class="btn small" href="assets/imagenes/proyectos/escuela-barrio-cohelo.png" target="_blank" rel="noopener">Ver flyer</a></article>
-          <article class="subblock"><h3>Barrio El Blanqueado</h3><p>Continuidad del proyecto territorial con estudiantes, familias, tutores y comunidad.</p><a class="btn small" href="assets/imagenes/proyectos/escuela-barrio-el-blanqueado.png" target="_blank" rel="noopener">Ver flyer</a></article>
-          <article class="subblock"><h3>Barrio Mendieta</h3><p>Nueva instancia de presencia territorial y acompañamiento comunitario.</p><a class="btn small" href="assets/imagenes/proyectos/escuela-barrio-mendieta.png" target="_blank" rel="noopener">Ver flyer</a></article>
+          <article class="subblock"><h3>Barrio Cohelo</h3><p>Primera salida territorial con eje en cuidado del cuerpo y salud bucal.</p><a data-lightbox="institucional" data-caption="Imagen institucional ampliada" class="btn small" href="assets/imagenes/proyectos/escuela-barrio-cohelo.png" rel="noopener">Ver flyer</a></article>
+          <article class="subblock"><h3>Barrio El Blanqueado</h3><p>Continuidad del proyecto territorial con estudiantes, familias, tutores y comunidad.</p><a data-lightbox="institucional" data-caption="Imagen institucional ampliada" class="btn small" href="assets/imagenes/proyectos/escuela-barrio-el-blanqueado.png" rel="noopener">Ver flyer</a></article>
+          <article class="subblock"><h3>Barrio Mendieta</h3><p>Nueva instancia de presencia territorial y acompañamiento comunitario.</p><a data-lightbox="institucional" data-caption="Imagen institucional ampliada" class="btn small" href="assets/imagenes/proyectos/escuela-barrio-mendieta.png" rel="noopener">Ver flyer</a></article>
         </div>
 
         <details class="accordion"><summary>Equipo responsable del proyecto</summary><ul><li>Acevedo Maximiliano</li><li>Batistella Lucía</li><li>Bechet Marisa</li><li>Dubs Norma</li><li>Esquivel Alfredo</li><li>Flores Delia</li><li>Fornes Sabina</li><li>Gallo Natalia</li><li>Gómez Laura</li><li>González Itatí</li><li>Grantile Mara</li><li>Mattiassi Alejandra</li><li>Primitivo Emmanuel</li></ul></details>
@@ -127,5 +127,67 @@
     </div>
     <div class="footer-bottom">Sitio institucional educativo diseñado, desarrollado y acompañado pedagógicamente por Alfredo Esquivel.</div>
   </footer>
+
+  <div class="lightbox-modal" id="lightboxModal" aria-hidden="true" role="dialog" aria-label="Visor de imágenes institucionales">
+    <div class="lightbox-content">
+      <button class="lightbox-close" type="button" aria-label="Cerrar imagen">×</button>
+      <button class="lightbox-prev" type="button" aria-label="Imagen anterior">‹</button>
+      <img id="lightboxImage" src="" alt="">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+      <button class="lightbox-next" type="button" aria-label="Imagen siguiente">›</button>
+    </div>
+  </div>
+  <script>
+    (function(){
+      const items = Array.from(document.querySelectorAll('[data-lightbox="institucional"]'));
+      if(!items.length) return;
+      const modal = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImage');
+      const caption = document.getElementById('lightboxCaption');
+      const closeBtn = modal.querySelector('.lightbox-close');
+      const prevBtn = modal.querySelector('.lightbox-prev');
+      const nextBtn = modal.querySelector('.lightbox-next');
+      let current = 0;
+      function openAt(index){
+        current = index;
+        const item = items[current];
+        img.src = item.getAttribute('href');
+        const innerImg = item.querySelector('img');
+        img.alt = (innerImg && innerImg.getAttribute('alt')) || item.getAttribute('data-caption') || 'Imagen institucional ampliada';
+        caption.textContent = item.getAttribute('data-caption') || (innerImg && innerImg.getAttribute('alt')) || '';
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden','false');
+        document.body.style.overflow = 'hidden';
+      }
+      function close(){
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden','true');
+        img.src = '';
+        document.body.style.overflow = '';
+      }
+      function move(step){ openAt((current + step + items.length) % items.length); }
+      items.forEach((item,index)=>{
+        item.classList.add('lightbox-enabled');
+        item.removeAttribute('target');
+        item.addEventListener('click', function(event){
+          event.preventDefault();
+          openAt(index);
+        });
+      });
+      closeBtn.addEventListener('click', close);
+      prevBtn.addEventListener('click', ()=>move(-1));
+      nextBtn.addEventListener('click', ()=>move(1));
+      modal.addEventListener('click', function(event){
+        if(event.target === modal) close();
+      });
+      document.addEventListener('keydown', function(event){
+        if(!modal.classList.contains('open')) return;
+        if(event.key === 'Escape') close();
+        if(event.key === 'ArrowLeft') move(-1);
+        if(event.key === 'ArrowRight') move(1);
+      });
+    })();
+  </script>
+
 </body>
 </html>
