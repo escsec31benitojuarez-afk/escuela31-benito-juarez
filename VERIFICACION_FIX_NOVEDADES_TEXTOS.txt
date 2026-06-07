@@ -1,0 +1,16 @@
+VERIFICACIÓN DE ACTUALIZACIÓN - NOVEDADES INSTITUCIONALES
+
+Archivo actualizado: vida-escolar.html
+
+Cambios aplicados:
+1. Tarjeta "Fechas institucionales"
+   - Categoría: Organización escolar
+   - Descripción corregida:
+     Calendario institucional con fechas relevantes para docentes, estudiantes y familias. Incluye entrega de planillas, finalización del primer trimestre, carga de calificaciones e inicio del segundo trimestre.
+
+2. Tarjeta "Información para preceptores"
+   - Categoría: Información para preceptoría
+   - Descripción corregida:
+     Orientaciones y recordatorios para el trabajo de preceptoría. Incluye entrega y recepción de planillas de calificaciones, control de carga de notas y asistencia en SAGE, y seguimiento de tareas administrativas vinculadas al cierre del trimestre.
+
+Se mantiene la estructura modular del portal, assets completos y correcciones previas.
