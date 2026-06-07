@@ -135,33 +135,75 @@
     <div class="footer-bottom">Sitio institucional educativo diseñado, desarrollado y acompañado pedagógicamente por Alfredo Esquivel.</div>
   </footer>
 
-  <div class="lightbox-modal" id="lightboxModal" aria-hidden="true" role="dialog" aria-label="Visor de imágenes institucionales">
-    <div class="lightbox-content">
-      <button class="lightbox-close" type="button" aria-label="Cerrar imagen">×</button>
-      <button class="lightbox-prev" type="button" aria-label="Imagen anterior">‹</button>
-      <img id="lightboxImage" src="" alt="">
-      <div class="lightbox-caption" id="lightboxCaption"></div>
-      <button class="lightbox-next" type="button" aria-label="Imagen siguiente">›</button>
+  <div class="lightbox-modal" id="lightboxModal" aria-hidden="true" role="dialog" aria-label="Visor de imágenes institucionales con zoom">
+    <div class="lightbox-stage" id="lightboxStage">
+      <img id="lightboxImage" src="" alt="Imagen institucional ampliada" draggable="false">
     </div>
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+    <div class="lightbox-toolbar" aria-label="Controles del visor">
+      <button class="lightbox-zoom-out" type="button" aria-label="Alejar imagen">−</button>
+      <button class="lightbox-zoom-reset" type="button" aria-label="Restablecer zoom">100%</button>
+      <button class="lightbox-zoom-in" type="button" aria-label="Acercar imagen">+</button>
+    </div>
+    <button class="lightbox-close" type="button" aria-label="Cerrar imagen">×</button>
+    <button class="lightbox-prev" type="button" aria-label="Imagen anterior">‹</button>
+    <button class="lightbox-next" type="button" aria-label="Imagen siguiente">›</button>
   </div>
   <script>
     (function(){
       const items = Array.from(document.querySelectorAll('[data-lightbox="institucional"]'));
       if(!items.length) return;
       const modal = document.getElementById('lightboxModal');
+      const stage = document.getElementById('lightboxStage');
       const img = document.getElementById('lightboxImage');
       const caption = document.getElementById('lightboxCaption');
       const closeBtn = modal.querySelector('.lightbox-close');
       const prevBtn = modal.querySelector('.lightbox-prev');
       const nextBtn = modal.querySelector('.lightbox-next');
+      const zoomInBtn = modal.querySelector('.lightbox-zoom-in');
+      const zoomOutBtn = modal.querySelector('.lightbox-zoom-out');
+      const zoomResetBtn = modal.querySelector('.lightbox-zoom-reset');
       let current = 0;
+      let scale = 1;
+      let translateX = 0;
+      let translateY = 0;
+      let dragging = false;
+      let dragStartX = 0;
+      let dragStartY = 0;
+      let baseX = 0;
+      let baseY = 0;
+      const pointers = new Map();
+      let pinchStartDistance = 0;
+      let pinchStartScale = 1;
+
+      function clamp(value, min, max){ return Math.min(max, Math.max(min, value)); }
+      function updateTransform(){
+        img.style.transform = `translate(-50%, -50%) translate(${translateX}px, ${translateY}px) scale(${scale})`;
+        modal.classList.toggle('is-zoomed', scale > 1.02);
+        zoomResetBtn.textContent = Math.round(scale * 100) + '%';
+      }
+      function resetZoom(){
+        scale = 1;
+        translateX = 0;
+        translateY = 0;
+        updateTransform();
+      }
+      function setZoom(nextScale){
+        scale = clamp(nextScale, 1, 5);
+        if(scale === 1){ translateX = 0; translateY = 0; }
+        updateTransform();
+      }
+      function getHref(item){
+        return item.getAttribute('href') || item.dataset.src || (item.querySelector('img') && item.querySelector('img').src) || '';
+      }
       function openAt(index){
         current = index;
         const item = items[current];
-        img.src = item.getAttribute('href');
         const innerImg = item.querySelector('img');
+        img.src = getHref(item);
         img.alt = (innerImg && innerImg.getAttribute('alt')) || item.getAttribute('data-caption') || 'Imagen institucional ampliada';
         caption.textContent = item.getAttribute('data-caption') || (innerImg && innerImg.getAttribute('alt')) || '';
+        resetZoom();
         modal.classList.add('open');
         modal.setAttribute('aria-hidden','false');
         document.body.style.overflow = 'hidden';
@@ -171,8 +213,11 @@
         modal.setAttribute('aria-hidden','true');
         img.src = '';
         document.body.style.overflow = '';
+        pointers.clear();
+        resetZoom();
       }
       function move(step){ openAt((current + step + items.length) % items.length); }
+
       items.forEach((item,index)=>{
         item.classList.add('lightbox-enabled');
         item.removeAttribute('target');
@@ -181,9 +226,64 @@
           openAt(index);
         });
       });
+
+      zoomInBtn.addEventListener('click', ()=>setZoom(scale + 0.35));
+      zoomOutBtn.addEventListener('click', ()=>setZoom(scale - 0.35));
+      zoomResetBtn.addEventListener('click', resetZoom);
       closeBtn.addEventListener('click', close);
       prevBtn.addEventListener('click', ()=>move(-1));
       nextBtn.addEventListener('click', ()=>move(1));
+
+      stage.addEventListener('dblclick', function(event){
+        event.preventDefault();
+        setZoom(scale > 1.05 ? 1 : 2.3);
+      });
+      stage.addEventListener('wheel', function(event){
+        event.preventDefault();
+        const delta = event.deltaY < 0 ? 0.18 : -0.18;
+        setZoom(scale + delta);
+      }, {passive:false});
+
+      stage.addEventListener('pointerdown', function(event){
+        pointers.set(event.pointerId, {x:event.clientX, y:event.clientY});
+        stage.setPointerCapture(event.pointerId);
+        if(pointers.size === 1 && scale > 1.02){
+          dragging = true;
+          dragStartX = event.clientX;
+          dragStartY = event.clientY;
+          baseX = translateX;
+          baseY = translateY;
+        }
+        if(pointers.size === 2){
+          const pts = Array.from(pointers.values());
+          pinchStartDistance = Math.hypot(pts[0].x - pts[1].x, pts[0].y - pts[1].y);
+          pinchStartScale = scale;
+          dragging = false;
+        }
+      });
+      stage.addEventListener('pointermove', function(event){
+        if(!pointers.has(event.pointerId)) return;
+        pointers.set(event.pointerId, {x:event.clientX, y:event.clientY});
+        if(pointers.size === 2){
+          const pts = Array.from(pointers.values());
+          const distance = Math.hypot(pts[0].x - pts[1].x, pts[0].y - pts[1].y);
+          if(pinchStartDistance){ setZoom(pinchStartScale * (distance / pinchStartDistance)); }
+          return;
+        }
+        if(dragging && scale > 1.02){
+          translateX = baseX + (event.clientX - dragStartX);
+          translateY = baseY + (event.clientY - dragStartY);
+          updateTransform();
+        }
+      });
+      function endPointer(event){
+        pointers.delete(event.pointerId);
+        dragging = false;
+      }
+      stage.addEventListener('pointerup', endPointer);
+      stage.addEventListener('pointercancel', endPointer);
+      stage.addEventListener('pointerleave', function(event){ if(event.pointerType === 'mouse') dragging = false; });
+
       modal.addEventListener('click', function(event){
         if(event.target === modal) close();
       });
@@ -192,6 +292,9 @@
         if(event.key === 'Escape') close();
         if(event.key === 'ArrowLeft') move(-1);
         if(event.key === 'ArrowRight') move(1);
+        if(event.key === '+' || event.key === '=') setZoom(scale + 0.35);
+        if(event.key === '-' || event.key === '_') setZoom(scale - 0.35);
+        if(event.key === '0') resetZoom();
       });
     })();
   </script>
