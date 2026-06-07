@@ -159,7 +159,7 @@
 
       function clamp(value, min, max){ return Math.min(max, Math.max(min, value)); }
       function updateTransform(){
-        img.style.transform = `translate(-50%, -50%) translate(${translateX}px, ${translateY}px) scale(${scale})`;
+        img.style.transform = `translate3d(${translateX}px, ${translateY}px, 0) scale(${scale})`;
         modal.classList.toggle('is-zoomed', scale > 1.02);
         zoomResetBtn.textContent = Math.round(scale * 100) + '%';
       }
@@ -170,8 +170,8 @@
         updateTransform();
       }
       function setZoom(nextScale){
-        scale = clamp(nextScale, 1, 5);
-        if(scale === 1){ translateX = 0; translateY = 0; }
+        scale = clamp(nextScale, 1, 6);
+        if(scale <= 1.01){ scale = 1; translateX = 0; translateY = 0; }
         updateTransform();
       }
       function getHref(item){
@@ -181,6 +181,7 @@
         current = index;
         const item = items[current];
         const innerImg = item.querySelector('img');
+        img.onload = resetZoom;
         img.src = getHref(item);
         img.alt = (innerImg && innerImg.getAttribute('alt')) || item.getAttribute('data-caption') || 'Imagen institucional ampliada';
         caption.textContent = item.getAttribute('data-caption') || (innerImg && innerImg.getAttribute('alt')) || '';
@@ -217,7 +218,7 @@
 
       stage.addEventListener('dblclick', function(event){
         event.preventDefault();
-        setZoom(scale > 1.05 ? 1 : 2.3);
+        setZoom(scale > 1.05 ? 1 : 2.25);
       });
       stage.addEventListener('wheel', function(event){
         event.preventDefault();
