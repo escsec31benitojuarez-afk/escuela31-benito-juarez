@@ -683,3 +683,15 @@ a[data-lightbox="institucional"] img{cursor:zoom-in;}
 .team-grid{
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 }
+
+/* ===== AJUSTE PROMO 2026: ACCESO DIRECTO A GALERÍA ===== */
+.subblock-gallery-entry{
+  border-top-color:var(--amarillo);
+  background:linear-gradient(135deg,#ffffff,#fffdf1);
+}
+.subblock-gallery-entry .btn{
+  margin-top:14px;
+}
+#galeria-promo{
+  scroll-margin-top:120px;
+}
