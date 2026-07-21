@@ -5,3 +5,5 @@ Actualización realizada:
 - Galería de 7 fotografías optimizadas con Lightbox.
 - Video de YouTube incrustado mediante youtube-nocookie.
 - Se evitó duplicar el proyecto en Multimedia o Aula Digital.
+
+- Docente responsable incorporada: Alejandra Martínez.
