@@ -700,3 +700,25 @@ a[data-lightbox="institucional"] img{cursor:zoom-in;}
 .docente-programas-pendiente{padding:20px}.docente-programas-pendiente h3{color:var(--verde-oscuro);margin-bottom:8px}.docente-programas-pendiente p{color:#4c5b55;line-height:1.7;margin-bottom:14px}.docente-programas-pendiente small{display:block;color:#65736d;margin-top:12px;font-weight:700}.btn.disabled{display:inline-flex;opacity:.72;cursor:not-allowed;background:#d8dedb!important;color:#48534e!important;box-shadow:none!important;pointer-events:none}.featured-production{border-top:7px solid var(--verde)}.production-heading{display:grid;grid-template-columns:1.5fr .8fr;gap:24px;align-items:start}.production-meta{display:grid;gap:10px;background:#f4faf6;border:1px solid rgba(11,90,53,.12);border-radius:18px;padding:18px}.production-meta span{color:#42514b;line-height:1.45}.production-meta strong{display:block;color:var(--verde-oscuro)}.production-cover{display:grid;grid-template-columns:1.2fr .8fr;gap:26px;align-items:center;margin-top:26px}.production-cover>a{display:block;border-radius:22px;overflow:hidden;box-shadow:var(--sombra);background:#eef4f0}.production-cover img{width:100%;max-height:620px;object-fit:cover;display:block}.production-cover h3,.production-video h3{color:var(--verde-oscuro);font-size:1.45rem;margin-bottom:10px}.production-cover p,.production-video p{color:#4c5b55;line-height:1.75}.production-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}.production-gallery .gallery-item{min-height:235px}.production-video{margin-top:32px;padding-top:28px;border-top:1px solid var(--borde)}.external-video{margin-top:16px}.area-card a{display:inline-block;margin-top:12px;color:var(--verde);font-weight:900;border-bottom:1px solid rgba(11,90,53,.28)}
 @media(max-width:900px){.production-heading,.production-cover{grid-template-columns:1fr}.production-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.production-gallery{grid-template-columns:1fr}.production-gallery .gallery-item{min-height:240px}}
+
+/* ===== VIDA ESCOLAR: ARQUITECTURA 2026 ===== */
+.life-section{scroll-margin-top:150px}
+.life-section>h2{margin-bottom:10px}
+.recognition-block{margin-top:26px;padding:24px;border-radius:22px;background:linear-gradient(135deg,#f8fbf9,#fff);border:1px solid rgba(11,90,53,.13)}
+.recognition-block+.recognition-block{margin-top:28px}
+.recognition-heading h3,.honor-block>h3{color:var(--verde-oscuro);font-size:1.55rem;margin:10px 0 8px}
+.recognition-heading p,.honor-block>p{color:#4c5b55;line-height:1.7}
+.solidario-grid{display:grid;grid-template-columns:.7fr 1fr 1.1fr;gap:24px;align-items:center;margin-top:22px}
+.student-photo-placeholder{min-height:330px;border:2px dashed rgba(11,90,53,.34);border-radius:22px;background:linear-gradient(145deg,#eef7f1,#fff);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;color:var(--verde-oscuro)}
+.student-photo-placeholder strong{font-size:1.08rem;margin-top:10px}
+.student-photo-placeholder small{margin-top:6px;color:#68756f;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.student-photo-icon{width:90px;height:90px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--verde-suave);font-size:2.7rem;border:1px solid rgba(11,90,53,.16)}
+.solidario-plaque{display:block;border-radius:20px;overflow:hidden;background:#063d24;box-shadow:0 12px 28px rgba(0,0,0,.12)}
+.solidario-plaque img{display:block;width:100%;height:330px;object-fit:contain}
+.solidario-copy h3{color:var(--verde-oscuro);font-size:1.65rem;margin-bottom:10px}
+.solidario-copy p{color:#4c5b55;line-height:1.75;margin-bottom:16px}
+.honor-block{border-left:6px solid var(--amarillo)}
+.honor-block .honor-preview-grid{margin-top:20px}
+#comunicaciones .visual-news-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:1050px){.solidario-grid{grid-template-columns:1fr 1fr}.solidario-copy{grid-column:1/-1}.student-photo-placeholder,.solidario-plaque img{min-height:300px;height:300px}}
+@media(max-width:760px){.solidario-grid,#comunicaciones .visual-news-grid{grid-template-columns:1fr}.student-photo-placeholder,.solidario-plaque img{min-height:280px;height:280px}.recognition-block{padding:18px}}
