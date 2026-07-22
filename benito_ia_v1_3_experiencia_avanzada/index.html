@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vista previa · Benito IA v1.3</title>
+<style>
+:root{--verde:#0b5a35;--oscuro:#06452b;--dorado:#f4c430}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#28352f;background:#f4f8f5}
+header{background:linear-gradient(135deg,var(--oscuro),var(--verde));color:#fff;padding:34px 7vw}
+header h1{margin:0 0 8px;font-size:clamp(1.6rem,4vw,2.5rem)}
+header p{margin:0;opacity:.85}
+main{max-width:1120px;margin:auto;padding:44px 7vw 90px}
+.hero{background:#fff;border-radius:28px;padding:38px;box-shadow:0 14px 42px rgba(0,0,0,.075)}
+.hero h2{color:var(--oscuro);font-size:clamp(1.5rem,3vw,2.2rem);margin-top:0}
+.hero>p{line-height:1.65}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:25px}
+.card{background:#fff;border:1px solid rgba(11,90,53,.13);border-top:6px solid var(--verde);border-radius:18px;padding:20px}
+.card strong{color:var(--oscuro)}
+.hint{margin-top:26px;padding:18px;border-radius:16px;background:#fff8d9;border-left:5px solid var(--dorado);line-height:1.55}
+.test{margin-top:30px;padding:22px;background:#eef7f1;border-radius:20px}
+.test h3{margin-top:0;color:var(--oscuro)}
+.test code{display:block;padding:8px 10px;background:#fff;border-radius:8px;margin:7px 0;font-family:Consolas,monospace}
+</style>
+<link rel="stylesheet" href="benito-ia/benito-ia.css">
+</head>
+<body>
+<header>
+  <h1>Escuela Secundaria N.º 31 “Benito Juárez”</h1>
+  <p>Entorno privado de prueba · Benito IA v1.3</p>
+</header>
+
+<main>
+  <section class="hero">
+    <h2>Experiencia conversacional avanzada</h2>
+    <p>Esta versión incorpora tarjetas visuales, recorridos paso a paso, horarios de mensajes, estados de actividad, accesos frecuentes y un primer modo de acompañamiento al estudio.</p>
+
+    <div class="grid">
+      <div class="card"><strong>Tarjetas enriquecidas</strong><p>Respuestas con títulos, iconos, listas y acciones.</p></div>
+      <div class="card"><strong>Modo guía</strong><p>Recorridos paso a paso para encontrar recursos o estudiar.</p></div>
+      <div class="card"><strong>Accesos frecuentes</strong><p>Benito recuerda localmente las consultas más utilizadas.</p></div>
+      <div class="card"><strong>Acompañamiento educativo</strong><p>Incluye un plan breve de estudio y técnicas activas.</p></div>
+    </div>
+
+    <div class="test">
+      <h3>Pruebas recomendadas</h3>
+      <code>Necesito estudiar</code>
+      <code>Armar un plan de 30 minutos</code>
+      <code>¿Hay videos?</code>
+      <code>auladijital</code>
+      <code>progresar</code>
+      <code>preseptor</code>
+      <p>Después de varias consultas, usá el botón <strong>▥</strong> de la cabecera para ver los accesos frecuentes.</p>
+    </div>
+
+    <div class="hint"><strong>Importante:</strong> esta es una demostración independiente. No modifica ni reemplaza el sitio público.</div>
+  </section>
+</main>
+
+<script src="benito-ia/config.js"></script>
+<script src="benito-ia/conocimiento.js"></script>
+<script src="benito-ia/benito-ia.js"></script>
+</body>
+</html>
