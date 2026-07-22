@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Auditoría · Benito IA</title>
+<style>
+body{margin:0;font-family:Arial;background:#f3f7f4;color:#26372f}header{padding:30px 5vw;background:#06452b;color:white}
+main{max-width:1100px;margin:auto;padding:30px 5vw}.panel{background:white;padding:22px;border-radius:18px;margin-bottom:16px}
+button,a{display:inline-block;padding:10px 13px;border:0;border-radius:10px;background:#0b5a35;color:white;text-decoration:none;font-weight:700;cursor:pointer;margin:4px}
+table{width:100%;border-collapse:collapse;font-size:.8rem}th,td{text-align:left;padding:9px;border-bottom:1px solid #e7ece9;vertical-align:top}
+.empty{padding:25px;text-align:center;color:#68746d}
+</style>
+</head>
+<body>
+<header><h1>Registro técnico auditable</h1><p>Consultas anonimizadas, proveedor, confianza y citas</p></header>
+<main>
+<section class="panel">
+<button id="refresh">Actualizar</button><button id="export">Exportar registro</button><button id="clear">Borrar registro local</button><a href="index.html">Volver</a>
+</section>
+<section class="panel"><div id="content"></div></section>
+</main>
+<script src="benito-ia/logging/audit-log.js"></script>
+<script>
+const c=document.querySelector('#content');
+function render(){const data=BenitoAuditLog.list().slice().reverse();if(!data.length){c.innerHTML='<div class="empty">Todavía no hay interacciones registradas.</div>';return}c.innerHTML='<table><thead><tr><th>Fecha</th><th>Consulta</th><th>Proveedor</th><th>Confianza</th><th>Estado</th></tr></thead><tbody>'+data.map(x=>`<tr><td>${x.at}</td><td>${x.query}</td><td>${x.provider||'—'}</td><td>${x.confidence==null?'—':Math.round(x.confidence*100)+'%'}</td><td>${x.status}</td></tr>`).join('')+'</tbody></table>'}
+document.querySelector('#refresh').onclick=render;
+document.querySelector('#clear').onclick=()=>{if(confirm('¿Borrar el registro local?')){BenitoAuditLog.clear();render()}};
+document.querySelector('#export').onclick=()=>{const blob=new Blob([JSON.stringify(BenitoAuditLog.exportData(),null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='benito-ia-auditoria.json';a.click()};
+render();
+</script>
+</body>
+</html>
