@@ -1,0 +1,1 @@
+window.BenitoRecommendationEngine={related(e,s){const KB=window.BENITO_KNOWLEDGE||[];return((e&&e.related)||[]).map(id=>KB.find(x=>x.id===id)).filter(Boolean).slice(0,3)}};

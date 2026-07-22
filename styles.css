@@ -722,3 +722,11 @@ a[data-lightbox="institucional"] img{cursor:zoom-in;}
 #comunicaciones .visual-news-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media(max-width:1050px){.solidario-grid{grid-template-columns:1fr 1fr}.solidario-copy{grid-column:1/-1}.student-photo-placeholder,.solidario-plaque img{min-height:300px;height:300px}}
 @media(max-width:760px){.solidario-grid,#comunicaciones .visual-news-grid{grid-template-columns:1fr}.student-photo-placeholder,.solidario-plaque img{min-height:280px;height:280px}.recognition-block{padding:18px}}
+
+/* Integración Benito IA */
+.nav-links .nav-private{background:#0b5a35;color:#fff;border-radius:999px;padding:.55rem .85rem;font-weight:700;white-space:nowrap}
+.nav-links .nav-private:hover,.nav-links .nav-private:focus{background:#073e26;color:#fff}
+.portal-card.private-card{border:2px solid #0b5a35;background:linear-gradient(180deg,#f7fbf8,#edf7f1)}
+.footer-private-access{max-width:1200px;margin:1rem auto 0;padding:0 1rem 1rem;text-align:center}
+.footer-private-access a{color:inherit;font-weight:700;text-decoration:none}
+.footer-private-access a:hover{text-decoration:underline}
