@@ -722,31 +722,3 @@ a[data-lightbox="institucional"] img{cursor:zoom-in;}
 #comunicaciones .visual-news-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media(max-width:1050px){.solidario-grid{grid-template-columns:1fr 1fr}.solidario-copy{grid-column:1/-1}.student-photo-placeholder,.solidario-plaque img{min-height:300px;height:300px}}
 @media(max-width:760px){.solidario-grid,#comunicaciones .visual-news-grid{grid-template-columns:1fr}.student-photo-placeholder,.solidario-plaque img{min-height:280px;height:280px}.recognition-block{padding:18px}}
-
-/* ===== BENITO IA · ASISTENTE PEDAGÓGICO Y DIGITAL ===== */
-.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
-.benito-ia-widget{position:fixed;right:22px;bottom:22px;z-index:9998;font-family:inherit}
-.benito-ia-launcher{display:flex;align-items:center;gap:10px;border:0;border-radius:999px;background:linear-gradient(135deg,#06452b,#0b5a35);color:#fff;padding:10px 16px 10px 10px;box-shadow:0 14px 34px rgba(0,0,0,.24);cursor:pointer;font:inherit;font-weight:900;transition:transform .2s ease,box-shadow .2s ease}
-.benito-ia-launcher:hover{transform:translateY(-2px);box-shadow:0 18px 38px rgba(0,0,0,.28)}
-.benito-ia-launcher:focus-visible,.benito-ia-close:focus-visible,.benito-ia-chip:focus-visible,.benito-ia-form input:focus-visible,.benito-ia-form button:focus-visible{outline:3px solid #f4c430;outline-offset:3px}
-.benito-ia-launcher-icon,.benito-ia-avatar{display:flex;align-items:center;justify-content:center;border-radius:50%;background:#f4c430;color:#06452b;font-weight:1000;letter-spacing:-.04em}
-.benito-ia-launcher-icon{width:42px;height:42px;border:2px solid rgba(255,255,255,.78)}
-.benito-ia-launcher-label{white-space:nowrap}
-.benito-ia-status-dot{width:9px;height:9px;border-radius:50%;background:#7ee787;box-shadow:0 0 0 4px rgba(126,231,135,.16)}
-.benito-ia-panel{position:absolute;right:0;bottom:72px;width:min(390px,calc(100vw - 28px));height:min(620px,calc(100vh - 110px));display:grid;grid-template-rows:auto 1fr auto auto auto;background:#fff;border:1px solid rgba(11,90,53,.16);border-radius:24px;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.28);opacity:0;visibility:hidden;transform:translateY(16px) scale(.97);transform-origin:bottom right;transition:opacity .2s ease,transform .2s ease,visibility .2s ease}
-.benito-ia-panel.is-open{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
-.benito-ia-header{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;padding:16px 16px;background:linear-gradient(135deg,#06452b,#0b5a35);color:#fff}
-.benito-ia-avatar{width:46px;height:46px;border:2px solid rgba(255,255,255,.82)}
-.benito-ia-header strong{display:block;font-size:1.05rem}.benito-ia-header span{display:block;margin-top:2px;font-size:.78rem;color:#d9eee1}
-.benito-ia-close{border:0;background:rgba(255,255,255,.12);color:#fff;width:36px;height:36px;border-radius:50%;font-size:1.6rem;line-height:1;cursor:pointer}
-.benito-ia-messages{overflow-y:auto;padding:18px;background:linear-gradient(#f7fbf8,#fff);scrollbar-width:thin}
-.benito-ia-message{display:flex;margin-bottom:12px}.benito-ia-message.user{justify-content:flex-end}.benito-ia-bubble{max-width:86%;padding:12px 14px;border-radius:17px;line-height:1.55;font-size:.94rem;box-shadow:0 4px 13px rgba(0,0,0,.05)}
-.benito-ia-message.assistant .benito-ia-bubble{background:#fff;border:1px solid rgba(11,90,53,.14);border-bottom-left-radius:5px;color:#34433d}
-.benito-ia-message.user .benito-ia-bubble{background:#0b5a35;color:#fff;border-bottom-right-radius:5px}
-.benito-ia-bubble a{color:#0b5a35;font-weight:900;text-decoration:underline;text-underline-offset:2px}.benito-ia-message.user .benito-ia-bubble a{color:#fff}
-.benito-ia-quick{display:flex;gap:8px;overflow-x:auto;padding:0 14px 12px;background:#fff;scrollbar-width:none}.benito-ia-quick::-webkit-scrollbar{display:none}.benito-ia-chip{flex:0 0 auto;max-width:230px;border:1px solid rgba(11,90,53,.22);background:#f3faf5;color:#06452b;border-radius:999px;padding:8px 12px;font:inherit;font-size:.8rem;font-weight:800;cursor:pointer}
-.benito-ia-form{display:grid;grid-template-columns:1fr auto;gap:8px;padding:12px 14px;border-top:1px solid rgba(11,90,53,.11);background:#fff}.benito-ia-form input{min-width:0;border:1px solid #cfdad3;border-radius:14px;padding:12px 13px;font:inherit;color:#26352f}.benito-ia-form button{width:45px;border:0;border-radius:14px;background:#f4c430;color:#06452b;font-size:1.05rem;font-weight:1000;cursor:pointer}
-.benito-ia-note{margin:0;padding:0 16px 12px;background:#fff;color:#6b7772;font-size:.7rem;line-height:1.35;text-align:center}
-.benito-ia-message.typing .benito-ia-bubble{display:flex;gap:5px;align-items:center;min-width:56px}.benito-ia-message.typing span{width:7px;height:7px;border-radius:50%;background:#6e8178;animation:benitoTyping 1s infinite ease-in-out}.benito-ia-message.typing span:nth-child(2){animation-delay:.15s}.benito-ia-message.typing span:nth-child(3){animation-delay:.3s}@keyframes benitoTyping{0%,80%,100%{transform:translateY(0);opacity:.4}40%{transform:translateY(-4px);opacity:1}}
-@media(max-width:600px){.benito-ia-widget{right:12px;bottom:12px}.benito-ia-launcher{padding-right:12px}.benito-ia-launcher-label{display:none}.benito-ia-panel{position:fixed;left:10px;right:10px;bottom:76px;width:auto;height:min(72vh,620px);transform-origin:bottom center}.benito-ia-bubble{max-width:92%}}
-@media(prefers-reduced-motion:reduce){.benito-ia-launcher,.benito-ia-panel,.benito-ia-message.typing span{transition:none;animation:none}}
