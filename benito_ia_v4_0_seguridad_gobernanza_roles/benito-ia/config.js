@@ -1,0 +1,54 @@
+window.BENITO_IA_CONFIG={
+ version:'4.0.0-seguridad-gobernanza-roles',
+ assistantName:'Benito IA',
+ assistantSubtitle:'Asistente pedagógico y digital',
+ schoolName:'Escuela Secundaria N.º 31 “Benito Juárez”',
+ storageKey:'benitoIA_v2_state',
+ typingDelay:420,maxHistory:40,fuzzyThreshold:.68,provider:'cognitive',
+ security:{enabled:true,environment:'staging',authMode:'local-demo',sessionTimeoutMinutes:20,maxFailedAttempts:5,auditEnabled:true,requireAuthenticationForPrivate:true,productionReady:false},
+cognitive:{
+  enabled:true,
+  orchestration:true,
+  planning:true,
+  authorizedMemory:true,
+  multiagent:true,
+  maxAgentsPerTask:4,
+  maxPlanSteps:8
+ },
+ pilot:{
+  enabled:true,
+  environment:'staging',
+  allowedProfiles:['estudiante','familia','docente','visitante'],
+  dailyInteractionLimit:50,
+  feedbackEnabled:true,
+  telemetryEnabled:true,
+  offlineFallback:true,
+  showPilotBadge:true
+ },
+ iag:{
+  enabled:false,
+  mode:'simulation',
+  endpoint:'',
+  model:'institutional-provider',
+  timeoutMs:15000,
+  maxContextChunks:5,
+  minimumRagConfidence:48,
+  sendPersonalData:false
+ },
+ drives:{
+  '1A':'https://drive.google.com/drive/folders/1GE2AULDtGoTl5LD3pB_NPHKIQ-OJeu2i?usp=sharing',
+  '1B':'https://drive.google.com/drive/folders/1Y-FL9tGLNdAIZTEgpWvhGFEqSC1dqb3B?usp=sharing',
+  '2A':'https://drive.google.com/drive/folders/1Jibq7SqqrnxAo56xE7IIwSg3BTpvRpZv?usp=sharing',
+  '2B':'https://drive.google.com/drive/folders/1odPjWQ4YFyiYJCwJS-GIQAMBomgGN2_j?usp=sharing',
+  '3':'https://drive.google.com/drive/folders/19dNH2PGVW27QyGeTHpK9BiPegCziAzZs?usp=sharing',
+  '4':'https://drive.google.com/drive/folders/1sAlEO7mq-fhoRD0ediFmQIYvYcnKD5Wf?usp=sharing',
+  '5':'https://drive.google.com/drive/folders/1Et7h5kwBIJd19L0VW_y3uS8cSVNFeVDU?usp=sharing',
+  '6':'https://drive.google.com/drive/folders/1gAc-6ZfTB8FTzx2nz7u5hVyW2WGmxhsQ?usp=sharing'
+ },
+ profiles:{
+  estudiante:{label:'Estudiante',icon:'🎓'},
+  familia:{label:'Familia',icon:'👨‍👩‍👧'},
+  docente:{label:'Docente',icon:'👩‍🏫'},
+  visitante:{label:'Visitante',icon:'👥'}
+ }
+};
