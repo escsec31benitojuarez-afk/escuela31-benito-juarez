@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es-AR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Panel del piloto · Benito IA</title>
+<style>
+:root{--v:#0b5a35;--vo:#06452b;--bg:#f3f7f4}*{box-sizing:border-box}
+body{margin:0;font-family:Arial;background:var(--bg);color:#26372f}header{padding:30px 5vw;background:linear-gradient(135deg,var(--vo),var(--v));color:#fff}
+main{max-width:1150px;margin:auto;padding:30px 5vw 80px}.panel{background:#fff;padding:22px;border-radius:18px;margin-bottom:17px;box-shadow:0 8px 24px #0000000d}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}.stat{padding:18px;border-radius:15px;background:#f6faf7}.stat strong{display:block;font-size:1.8rem;color:var(--vo)}
+button,a{display:inline-block;border:0;border-radius:10px;background:var(--v);color:#fff;padding:10px 13px;font-weight:700;text-decoration:none;cursor:pointer;margin:3px}
+table{width:100%;border-collapse:collapse;font-size:.78rem}th,td{padding:8px;border-bottom:1px solid #e6ece8;text-align:left}.empty{text-align:center;padding:25px;color:#6c776f}
+</style></head><body>
+<header><h1>Panel del piloto institucional</h1><p>Uso local anonimizado, calidad y retroalimentación</p></header>
+<main>
+<section class="panel"><div class="stats">
+<div class="stat"><strong id="queries">0</strong><span>consultas</span></div>
+<div class="stat"><strong id="success">0%</strong><span>respuestas exitosas</span></div>
+<div class="stat"><strong id="latency">0 ms</strong><span>latencia media</span></div>
+<div class="stat"><strong id="confidence">0%</strong><span>confianza media</span></div>
+<div class="stat"><strong id="positive">0</strong><span>valoraciones positivas</span></div>
+<div class="stat"><strong id="negative">0</strong><span>valoraciones negativas</span></div>
+</div></section>
+<section class="panel">
+<button id="refresh">Actualizar</button><button id="export">Exportar telemetría</button><button id="clear">Borrar datos locales</button><a href="index.html">Volver al asistente</a><a href="pilot-settings.html">Configurar piloto</a>
+</section>
+<section class="panel"><h2>Últimos eventos</h2><div id="events"></div></section>
+</main>
+<script src="benito-ia/telemetry/telemetry.js"></script>
+<script>
+function render(){const s=BenitoTelemetry.summary(),rows=BenitoTelemetry.list().slice().reverse().slice(0,40);
+document.querySelector('#queries').textContent=s.queries;
+document.querySelector('#success').textContent=s.queries?Math.round(s.successful/s.queries*100)+'%':'0%';
+document.querySelector('#latency').textContent=s.avgLatency+' ms';
+document.querySelector('#confidence').textContent=s.avgConfidence+'%';
+document.querySelector('#positive').textContent=s.positiveFeedback;
+document.querySelector('#negative').textContent=s.negativeFeedback;
+document.querySelector('#events').innerHTML=rows.length?'<table><thead><tr><th>Fecha</th><th>Tipo</th><th>Consulta</th><th>Proveedor</th><th>Resultado</th></tr></thead><tbody>'+rows.map(x=>`<tr><td>${x.at}</td><td>${x.type}</td><td>${x.query||'—'}</td><td>${x.provider||'—'}</td><td>${x.feedback||((x.success?'Correcto':'Revisar'))}</td></tr>`).join('')+'</tbody></table>':'<div class="empty">No hay eventos registrados.</div>'}
+document.querySelector('#refresh').onclick=render;
+document.querySelector('#clear').onclick=()=>{if(confirm('¿Borrar la telemetría local?')){BenitoTelemetry.clear();render()}};
+document.querySelector('#export').onclick=()=>{const blob=new Blob([JSON.stringify({generatedAt:new Date().toISOString(),events:BenitoTelemetry.list()},null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='benito-ia-telemetria-piloto.json';a.click()};
+render();
+</script></body></html>
