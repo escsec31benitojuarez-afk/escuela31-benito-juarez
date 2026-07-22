@@ -1,0 +1,59 @@
+<!doctype html><html lang="es-AR"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Motor Predictivo Responsable · Benito IA</title>
+<style>
+:root{--v:#0b5a35;--vo:#06452b;--bg:#f3f7f4;--line:#dce8e1;--red:#a72d27;--orange:#b86d13;--blue:#2e6699}
+*{box-sizing:border-box}body{margin:0;font-family:Arial;background:var(--bg);color:#26372f}
+header{padding:26px 5vw;background:linear-gradient(135deg,var(--vo),var(--v));color:#fff}
+main{max-width:1250px;margin:auto;padding:24px 4vw}.notice{background:#fff4cb;border-left:6px solid #f4c430;padding:14px;border-radius:12px;margin-bottom:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}.panel{background:#fff;border-radius:17px;padding:18px;margin:14px 0;box-shadow:0 8px 24px #0000000b}
+.card{border:1px solid var(--line);border-radius:13px;padding:14px;margin:9px 0}.worsening{border-left:6px solid var(--red)}.improving{border-left:6px solid #2b7d4d}.stable{border-left:6px solid var(--blue)}
+.metric{display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:.87rem}.factor{padding:8px;background:#f1f6f3;border-radius:9px;margin:6px 0}
+button,a,select,input{padding:10px 12px;border-radius:9px;border:1px solid var(--line);font:inherit}button,a{background:var(--v);color:#fff;text-decoration:none;font-weight:700;cursor:pointer;border:0;margin:3px}
+small{line-height:1.4}.tag{display:inline-block;padding:4px 7px;border-radius:999px;background:#eaf3ee;font-size:.72rem}
+</style></head><body>
+<header><h1>Motor Predictivo Responsable y Explicable</h1><p>Proyecciones institucionales, escenarios y recomendaciones con revisión humana obligatoria</p></header>
+<main>
+<div class="notice"><strong>Advertencia metodológica:</strong> las proyecciones son demostrativas, se basan en datos sintéticos y no predicen conductas individuales ni determinan decisiones.</div>
+
+<section class="panel"><h2>Proyección de tendencias por curso</h2><div id="forecastList"></div></section>
+
+<section class="grid">
+ <div class="panel"><h2>Simulador de escenarios</h2>
+  <label>Curso</label><select id="course"></select>
+  <label>Intervención</label><select id="intervention"></select>
+  <label>Intensidad</label><input id="intensity" type="range" min=".25" max="1.5" step=".25" value="1">
+  <p><button id="simulate">Simular escenario</button></p><div id="scenario"></div>
+ </div>
+ <div class="panel"><h2>Evaluación descriptiva de impacto</h2><div id="impact"></div></div>
+</section>
+
+<section class="panel"><h2>Principios de uso responsable</h2>
+<ul><li>No se realizan predicciones nominales.</li><li>No se automatizan decisiones.</li><li>Cada resultado incluye explicación y limitaciones.</li><li>Las recomendaciones deben ser revisadas por equipos profesionales.</li><li>No se infiere causalidad a partir de una simple correlación.</li></ul>
+<a href="private-dashboard.html">Volver al área privada</a>
+</section>
+</main>
+
+<script src="benito-ia/config.js"></script><script src="benito-ia/governance/roles.js"></script><script src="benito-ia/governance/data-classification.js"></script><script src="benito-ia/auth/demo-users.js"></script><script src="benito-ia/audit/security-audit.js"></script><script src="benito-ia/auth/auth-manager.js"></script><script src="benito-ia/access/access-control.js"></script>
+<script src="benito-ia/predictive/data/synthetic-predictive-data.js"></script><script src="benito-ia/predictive/models/trend-model.js"></script><script src="benito-ia/predictive/explainability/explainer.js"></script><script src="benito-ia/predictive/scenarios/scenario-engine.js"></script><script src="benito-ia/predictive/recommendations/pedagogical-recommender.js"></script><script src="benito-ia/predictive/impact/impact-evaluator.js"></script>
+<script>
+BenitoAccess.requirePage({permission:'view:trajectories',level:'reserved',resource:'predictive-dashboard'});
+const cfg=BENITO_IA_CONFIG.predictive,data=BENITO_PREDICTIVE_DATA;
+const forecasts=BenitoTrendModel.forecastAll(data,cfg.horizonPeriods);
+forecasts.forEach(f=>{
+ const e=BenitoExplainer.trendExplanation(f),r=BenitoPedagogicalRecommender.recommend(f);
+ forecastList.innerHTML+=`<article class="card ${f.direction}"><span class="tag">Confianza ${(f.confidence*100).toFixed(0)}%</span><h3>${e.summary}</h3>
+ <div class="metric"><span>Asistencia proyectada</span><strong>${f.forecast.attendance.toFixed(1)}%</strong><span>Desaprobación proyectada</span><strong>${f.forecast.failure_rate.toFixed(1)}%</strong><span>Participación proyectada</span><strong>${f.forecast.engagement.toFixed(1)}%</strong><span>Uso digital proyectado</span><strong>${f.forecast.digital_use.toFixed(1)}%</strong></div>
+ <h4>Factores explicativos</h4>${e.factors.map(x=>`<div class="factor">${x.factor}: ${x.effect}</div>`).join('')}
+ <h4>Acciones sugeridas</h4>${r.map(x=>`<div class="factor"><strong>${x.action}</strong><br><small>${x.reason}</small></div>`).join('')}
+ <small>${e.limitations.join(' ')}</small></article>`;
+});
+const groups=BenitoTrendModel.groupByCourse(data.series);
+Object.keys(groups).forEach(c=>course.innerHTML+=`<option>${c}</option>`);
+Object.entries(BenitoScenarioEngine.interventions).forEach(([id,x])=>intervention.innerHTML+=`<option value="${id}">${x.label}</option>`);
+simulate.onclick=()=>{
+ const rows=groups[course.value],base=rows[rows.length-1],s=BenitoScenarioEngine.simulate(base,intervention.value,intensity.value),x=BenitoExplainer.scenarioExplanation(s);
+ scenario.innerHTML=`<h3>${s.label}</h3><div class="metric"><span>Asistencia</span><strong>${s.base.attendance}% → ${s.result.attendance.toFixed(1)}%</strong><span>Desaprobación</span><strong>${s.base.failure_rate}% → ${s.result.failure_rate.toFixed(1)}%</strong><span>Participación</span><strong>${s.base.engagement}% → ${s.result.engagement.toFixed(1)}%</strong><span>Uso digital</span><strong>${s.base.digital_use}% → ${s.result.digital_use.toFixed(1)}%</strong></div><h4>Supuestos</h4><ul>${x.assumptions.map(a=>`<li>${a}</li>`).join('')}</ul><p>${x.mechanism}</p><small>${x.warning}</small>`;
+ BenitoSecurityAudit.log('scenario_simulated',{userId:BenitoAuth.getSession()?.userId,profile:BenitoAuth.getSession()?.activeProfile,resource:course.value,level:'reserved'});
+};
+BenitoImpactEvaluator.evaluateAll(data).forEach(x=>impact.innerHTML+=`<article class="card"><h3>${x.name}</h3><p>${x.target} · ${x.assessment}</p><div class="metric"><span>Asistencia</span><strong>${x.changes.attendance>0?'+':''}${x.changes.attendance}</strong><span>Desaprobación</span><strong>${x.changes.failure_rate}</strong><span>Participación</span><strong>${x.changes.engagement>0?'+':''}${x.changes.engagement}</strong></div><small>${x.caveats.join(' ')}</small></article>`);
+</script></body></html>

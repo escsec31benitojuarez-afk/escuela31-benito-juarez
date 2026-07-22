@@ -1,0 +1,615 @@
+{
+  "meta": {
+    "version": "2.2.0",
+    "institution": "Escuela Secundaria N.º 31 “Benito Juárez”",
+    "updated": "2026-07-22",
+    "status": "prototipo privado",
+    "language": "es-AR",
+    "ragMode": "local lexical retrieval"
+  },
+  "entities": [
+    {
+      "id": "institucion",
+      "module": "institucion",
+      "title": "Institución",
+      "icon": "🏛️",
+      "summary": "Información general, autoridades, modalidad y organización escolar.",
+      "audiences": [
+        "familia",
+        "visitante",
+        "docente"
+      ],
+      "keywords": [
+        "institución",
+        "autoridades",
+        "rector",
+        "secretaría",
+        "asesoría pedagógica"
+      ],
+      "actions": [
+        {
+          "label": "Ver Institución",
+          "href": "institucion.html"
+        }
+      ],
+      "related": [
+        "historia",
+        "contacto",
+        "vida-escolar"
+      ],
+      "sources": [
+        {
+          "type": "web",
+          "label": "Sección Institución",
+          "location": "institucion.html"
+        }
+      ],
+      "validation": {
+        "status": "pendiente",
+        "reviewedBy": "",
+        "reviewedAt": ""
+      },
+      "sensitivity": "public",
+      "expiresAt": "",
+      "answerPolicy": "direct",
+      "sourcePriority": 1
+    },
+    {
+      "id": "historia",
+      "module": "institucion",
+      "title": "Historia e identidad",
+      "icon": "📜",
+      "summary": "Historia de la escuela e identidad institucional vinculada a Benito Juárez.",
+      "audiences": [
+        "visitante",
+        "familia",
+        "estudiante"
+      ],
+      "keywords": [
+        "historia",
+        "Benito Juárez",
+        "identidad institucional"
+      ],
+      "actions": [
+        {
+          "label": "Ver historia",
+          "href": "historia.html"
+        }
+      ],
+      "related": [
+        "institucion",
+        "vida-escolar"
+      ],
+      "sources": [
+        {
+          "type": "web",
+          "label": "Sección Historia",
+          "location": "historia.html"
+        }
+      ],
+      "validation": {
+        "status": "pendiente",
+        "reviewedBy": "",
+        "reviewedAt": ""
+      },
+      "sensitivity": "public",
+      "expiresAt": "",
+      "answerPolicy": "direct",
+      "sourcePriority": 1
+    },
+    {
+      "id": "contacto",
+      "module": "institucion",
+      "title": "Contacto institucional",
+      "icon": "📍",
+      "summary": "Escuela Secundaria N.º 31, Estación Yuquerí, Concordia, Entre Ríos.",
+      "details": [
+        "Teléfono: +54 345 4949814",
+        "Correo: secundaria31.cd@entrerios.edu.ar"
+      ],
+      "audiences": [
+        "familia",
+        "visitante",
+        "docente",
+        "estudiante"
+      ],
+      "keywords": [
+        "contacto",
+        "teléfono",
+        "correo",
+        "dirección",
+        "preceptor"
+      ],
+      "actions": [
+        {
+          "label": "Llamar",
+          "href": "tel:+543454949814"
+        },
+        {
+          "label": "Enviar correo",
+          "href": "mailto:secundaria31.cd@entrerios.edu.ar"
+        },
+        {
+          "label": "Ver contacto",
+          "href": "contacto.html"
+        }
+      ],
+      "related": [
+        "institucion",
+        "recursos"
+      ],
+      "sources": [
+        {
+          "type": "web",
+          "label": "Sección Contacto",
+          "location": "contacto.html"
+        }
+      ],
+      "validation": {
+        "status": "validado",
+        "reviewedBy": "Equipo del proyecto",
+        "reviewedAt": "2026-07-22"
+      },
+      "sensitivity": "public",
+      "expiresAt": "",
+      "answerPolicy": "direct",
+      "sourcePriority": 2
+    },
+    {
+      "id": "aula-digital",
+      "module": "aula",
+      "title": "Aula Digital",
+      "icon": "📚",
+      "summary": "Repositorio Digital Multiformato organizado por cursos.",
+      "details": [
+        "Materiales de estudio",
+        "Actividades",
+        "Producciones estudiantiles",
+        "Recursos multiformato"
+      ],
+      "audiences": [
+        "estudiante",
+        "docente"
+      ],
+      "keywords": [
+        "Aula Digital",
+        "repositorio",
+        "materiales por curso",
+        "Drive"
+      ],
+      "actions": [
+        {
+          "label": "Abrir Aula Digital",
+          "href": "aula-digital.html"
+        }
+      ],
+      "related": [
+        "aprender",
+        "actividades",
+        "curso-1a",
+        "curso-1b",
+        "curso-2a",
+        "curso-2b",
+        "curso-3",
+        "curso-4",
+        "curso-5",
+        "curso-6"
+      ],
+      "sources": [
+        {
+          "type": "web",
+          "label": "Sección Aula Digital",
+          "location": "aula-digital.html"
+        }
+      ],
+      "validation": {
+        "status": "validado",
+        "reviewedBy": "Equipo del proyecto",
+        "reviewedAt": "2026-07-22"
+      },
+      "sensitivity": "public",
+      "expiresAt": "",
+      "answerPolicy": "direct",
+      "sourcePriority": 2
+    },
+    {
+      "id": "aprender",
+      "module": "aprendizaje",
+      "title": "Aprender a Aprender",
+      "icon": "🧠",
+      "summary": "Repositorio institucional de técnicas de estudio y autonomía.",
+      "details": [
+        "Taller PDF",
+        "Infografía",
+        "Video",
+        "Futuros podcasts, plantillas y actividades"
+      ],
+      "audiences": [
+        "estudiante",
+        "docente"
+      ],
+      "keywords": [
+        "aprender a aprender",
+        "técnicas de estudio",
+        "autonomía",
+        "estudiar mejor"
+      ],
+      "actions": [
+        {
+          "label": "Abrir recurso",
+          "href": "recursos.html#aprender-a-aprender"
+        }
+      ],
+      "related": [
+        "plan30",
+        "recuperacion",
+        "cornell",
+        "concentracion",
+        "aula-digital"
+      ],
+      "sources": [
+        {
+          "type": "web",
+          "label": "Recursos",
+          "location": "recursos.html#aprender-a-aprender"
+        }
+      ],
+      "validation": {
+        "status": "validado",
+        "reviewedBy": "Equipo del proyecto",
+        "reviewedAt": "2026-07-22"
+      },
+      "sensitivity": "public",
+      "expiresAt": "",
+      "answerPolicy": "direct",
+      "sourcePriority": 2
+    },
+    {
+      "id": "plan30",
+      "module": "aprendizaje",
+      "title": "Plan de estudio de 30 minutos",
+      "icon": "⏱️",
+      "summary": "Recorrido breve para estudiar activamente.",
+      "steps": [
+        "5 minutos: definí el tema y la meta.",
+        "15 minutos: estudiá activamente.",
+        "7 minutos: recuperá la información sin mirar.",
+        "3 minutos: corregí errores y anotá qué revisar."
+      ],
+      "audiences": [
+        "estudiante"
+      ],
+      "keywords": [
+        "plan de estudio",
+        "30 minutos",
+        "organizarme",
+        "estudiar"
+      ],
+      "related": [
+        "recuperacion",
+        "concentracion"
+      ],
+      "sources": [
+        {
+          "type": "pedagogical",
+          "label": "Módulo Aprender a Aprender",
+          "location": "interno"
+        }
+      ],
+      "validation": {
+        "status": "validado",
+        "reviewedBy": "Equipo del proyecto",
+        "reviewedAt": "2026-07-22"
+      },
+      "sensitivity": "public",
+      "expiresAt": "",
+      "answerPolicy": "direct",
+      "sourcePriority": 2
+    },
+    {
+      "id": "becas",
+      "module": "servicios",
+      "title": "Becas y acompañamiento",
+      "icon": "🎒",
+      "summary": "Información y accesos vinculados con becas para estudiantes.",
+      "audiences": [
+        "estudiante",
+        "familia"
+      ],
+      "keywords": [
+        "becas",
+        "Progresar",
+        "Instituto Becario",
+        "ayuda económica"
+      ],
+      "actions": [
+        {
+          "label": "Ver becas y recursos",
+          "href": "recursos.html"
+        }
+      ],
+      "related": [
+        "contacto",
+        "aula-digital"
+      ],
+      "sources": [
+        {
+          "type": "web",
+          "label": "Sección Recursos",
+          "location": "recursos.html"
+        }
+      ],
+      "validation": {
+        "status": "pendiente",
+        "reviewedBy": "",
+        "reviewedAt": ""
+      },
+      "sensitivity": "public",
+      "expiresAt": "",
+      "answerPolicy": "direct",
+      "sourcePriority": 1
+    },
+    {
+      "id": "sage",
+      "module": "servicios",
+      "title": "SAGE y seguimiento escolar",
+      "icon": "📊",
+      "summary": "Acceso a calificaciones, boletines e información de seguimiento.",
+      "audiences": [
+        "familia",
+        "estudiante"
+      ],
+      "keywords": [
+        "SAGE",
+        "calificaciones",
+        "boletín",
+        "notas",
+        "inasistencias"
+      ],
+      "actions": [
+        {
+          "label": "Ir a Recursos",
+          "href": "recursos.html"
+        },
+        {
+          "label": "Contactar",
+          "href": "contacto.html"
+        }
+      ],
+      "related": [
+        "contacto",
+        "recursos"
+      ],
+      "sources": [
+        {
+          "type": "web",
+          "label": "Sección Recursos",
+          "location": "recursos.html"
+        }
+      ],
+      "validation": {
+        "status": "pendiente",
+        "reviewedBy": "",
+        "reviewedAt": ""
+      },
+      "sensitivity": "public",
+      "expiresAt": "",
+      "answerPolicy": "direct",
+      "sourcePriority": 1
+    },
+    {
+      "id": "programas",
+      "module": "servicios",
+      "title": "Programas y proyectos",
+      "icon": "📘",
+      "summary": "Programas de estudio y proyectos institucionales.",
+      "audiences": [
+        "docente"
+      ],
+      "keywords": [
+        "programas de estudio",
+        "proyectos institucionales",
+        "docentes"
+      ],
+      "actions": [
+        {
+          "label": "Ver programas",
+          "href": "programas.html"
+        }
+      ],
+      "related": [
+        "recursos",
+        "aula-digital"
+      ],
+      "sources": [
+        {
+          "type": "web",
+          "label": "Sección Programas",
+          "location": "programas.html"
+        }
+      ],
+      "validation": {
+        "status": "pendiente",
+        "reviewedBy": "",
+        "reviewedAt": ""
+      },
+      "sensitivity": "public",
+      "expiresAt": "",
+      "answerPolicy": "direct",
+      "sourcePriority": 1
+    },
+    {
+      "id": "vida-escolar",
+      "module": "vida",
+      "title": "Vida Escolar",
+      "icon": "🏫",
+      "summary": "Reconocimientos, participación, identidad y comunicaciones institucionales.",
+      "audiences": [
+        "estudiante",
+        "familia",
+        "docente",
+        "visitante"
+      ],
+      "keywords": [
+        "vida escolar",
+        "reconocimientos",
+        "participación estudiantil"
+      ],
+      "actions": [
+        {
+          "label": "Ir a Vida Escolar",
+          "href": "vida-escolar.html"
+        }
+      ],
+      "related": [
+        "solidario",
+        "honor",
+        "centro",
+        "promo"
+      ],
+      "sources": [
+        {
+          "type": "web",
+          "label": "Sección Vida Escolar",
+          "location": "vida-escolar.html"
+        }
+      ],
+      "validation": {
+        "status": "validado",
+        "reviewedBy": "Equipo del proyecto",
+        "reviewedAt": "2026-07-22"
+      },
+      "sensitivity": "public",
+      "expiresAt": "",
+      "answerPolicy": "direct",
+      "sourcePriority": 2
+    },
+    {
+      "id": "recuperacion",
+      "module": "aprendizaje",
+      "title": "Recuperación activa",
+      "icon": "🔁",
+      "summary": "Técnica que consiste en cerrar el material e intentar explicar, escribir o responder sin mirar.",
+      "details": [
+        "Permite comprobar qué información se recuerda realmente.",
+        "Después se compara la respuesta con los apuntes para detectar vacíos y corregir errores."
+      ],
+      "audiences": [
+        "estudiante",
+        "docente"
+      ],
+      "keywords": [
+        "recuperación activa",
+        "recordar sin mirar",
+        "comprobar aprendizaje",
+        "repaso activo"
+      ],
+      "related": [
+        "plan30",
+        "cornell",
+        "aprender"
+      ],
+      "sources": [
+        {
+          "type": "pedagogical",
+          "label": "Módulo Aprender a Aprender",
+          "location": "interno"
+        }
+      ],
+      "validation": {
+        "status": "validado",
+        "reviewedBy": "Equipo del proyecto",
+        "reviewedAt": "2026-07-22"
+      },
+      "sensitivity": "public",
+      "expiresAt": "",
+      "answerPolicy": "direct",
+      "sourcePriority": 2
+    },
+    {
+      "id": "cornell",
+      "module": "aprendizaje",
+      "title": "Método Cornell",
+      "icon": "📝",
+      "summary": "Método de toma de apuntes que organiza la hoja en preguntas, notas principales y síntesis final.",
+      "details": [
+        "Las preguntas o palabras clave se ubican en una columna lateral.",
+        "Las notas principales se escriben en el área central.",
+        "La síntesis final permite recuperar las ideas principales."
+      ],
+      "audiences": [
+        "estudiante",
+        "docente"
+      ],
+      "keywords": [
+        "Cornell",
+        "método Cornell",
+        "tomar apuntes",
+        "organizar notas"
+      ],
+      "related": [
+        "recuperacion",
+        "aprender"
+      ],
+      "sources": [
+        {
+          "type": "pedagogical",
+          "label": "Módulo Aprender a Aprender",
+          "location": "interno"
+        }
+      ],
+      "validation": {
+        "status": "validado",
+        "reviewedBy": "Equipo del proyecto",
+        "reviewedAt": "2026-07-22"
+      },
+      "sensitivity": "public",
+      "expiresAt": "",
+      "answerPolicy": "direct",
+      "sourcePriority": 2
+    },
+    {
+      "id": "concentracion",
+      "module": "aprendizaje",
+      "title": "Bloque de concentración",
+      "icon": "🎯",
+      "summary": "Secuencia breve de trabajo para reducir distracciones y sostener la atención.",
+      "steps": [
+        "Elegí una tarea pequeña y concreta.",
+        "Silenciá notificaciones.",
+        "Trabajá durante 25 minutos sin cambiar de tarea.",
+        "Descansá 5 minutos."
+      ],
+      "audiences": [
+        "estudiante"
+      ],
+      "keywords": [
+        "concentración",
+        "distracciones",
+        "Pomodoro",
+        "25 minutos",
+        "organizar estudio"
+      ],
+      "related": [
+        "plan30",
+        "aprender"
+      ],
+      "sources": [
+        {
+          "type": "pedagogical",
+          "label": "Módulo Aprender a Aprender",
+          "location": "interno"
+        }
+      ],
+      "validation": {
+        "status": "validado",
+        "reviewedBy": "Equipo del proyecto",
+        "reviewedAt": "2026-07-22"
+      },
+      "sensitivity": "public",
+      "expiresAt": "",
+      "answerPolicy": "direct",
+      "sourcePriority": 2
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+<!doctype html><html lang="es-AR"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Benito RTI · Aplicación operativa</title>
+<style>
+:root{--g:#0b5a35;--gd:#06452b;--bg:#f3f7f4;--line:#dbe7df;--red:#a63028;--amber:#b36a12}
+*{box-sizing:border-box}body{margin:0;font-family:Arial;background:var(--bg);color:#26372f}
+header{background:linear-gradient(135deg,var(--gd),var(--g));color:#fff;padding:22px 4vw;position:sticky;top:0;z-index:3}
+header h1{margin:0 0 5px}.layout{display:grid;grid-template-columns:240px 1fr;min-height:calc(100vh - 90px)}
+nav{background:#fff;border-right:1px solid var(--line);padding:18px;position:sticky;top:90px;height:calc(100vh - 90px)}
+nav button{width:100%;text-align:left;margin:4px 0;background:#edf5f0;color:#174a31}
+main{padding:22px;max-width:1400px}.view{display:none}.view.active{display:block}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:13px}
+.panel,.card{background:#fff;border-radius:16px;padding:17px;box-shadow:0 7px 22px #0000000c;margin-bottom:13px}.card{border:1px solid var(--line);box-shadow:none}
+.kpi{font-size:2rem;font-weight:800;color:var(--g)}button,a,select,input,textarea{font:inherit;padding:10px;border-radius:9px;border:1px solid var(--line)}
+button,a.btn{background:var(--g);color:#fff;border:0;text-decoration:none;font-weight:700;cursor:pointer}.high{border-left:6px solid var(--red)}.medium{border-left:6px solid var(--amber)}.stable{border-left:6px solid #2b7d4d}.critical{border-left:6px solid var(--red)}.warning{border-left:6px solid var(--amber)}
+.progress{height:10px;background:#e8efea;border-radius:99px;overflow:hidden}.progress i{display:block;height:100%;background:var(--g)}
+textarea{width:100%;min-height:310px}.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.muted{color:#66776e;font-size:.9rem}.badge{display:inline-block;padding:4px 7px;border-radius:99px;background:#edf4ef;font-size:.75rem}
+@media(max-width:800px){.layout{grid-template-columns:1fr}nav{position:static;height:auto;border-right:0;display:flex;overflow:auto}nav button{min-width:170px}header{position:static}}
+</style></head><body>
+<header><h1>Benito RTI</h1><div>Aplicación operativa de acompañamiento pedagógico y digital · v5.0 Alfa</div></header>
+<div class="layout"><nav>
+<button data-view="home">Inicio RTI</button><button data-view="courses">Cursos</button><button data-view="teachers">Acompañamiento docente</button><button data-view="agenda">Agenda y tareas</button><button data-view="projects">Proyectos</button><button data-view="research">Investigación-acción</button><button data-view="documents">Documentos</button><button data-view="memory">Memoria institucional</button><a class="btn" href="private-dashboard.html">Área privada</a>
+</nav><main>
+<section id="home" class="view active"><h2>Inicio RTI</h2><div id="brief" class="panel"></div><div id="kpis" class="grid"></div><div class="grid"><div class="panel"><h3>Tareas próximas</h3><div id="homeTasks"></div></div><div class="panel"><h3>Cursos priorizados</h3><div id="homeCourses"></div></div></div></section>
+<section id="courses" class="view"><h2>Seguimiento por curso</h2><div id="courseCards" class="grid"></div></section>
+<section id="teachers" class="view"><h2>Acompañamiento docente</h2><p class="muted">Finalidad de acompañamiento pedagógico y digital. No constituye evaluación de desempeño.</p><div id="teacherCards" class="grid"></div></section>
+<section id="agenda" class="view"><h2>Agenda y tareas</h2><div class="grid"><div class="panel"><h3>Tareas</h3><div id="taskCards"></div></div><div class="panel"><h3>Reuniones</h3><div id="meetingCards"></div></div></div></section>
+<section id="projects" class="view"><h2>Proyectos activos</h2><div id="projectCards" class="grid"></div></section>
+<section id="research" class="view"><h2>Investigación-acción</h2><div id="researchCards"></div></section>
+<section id="documents" class="view"><h2>Generador documental</h2><div class="panel"><div class="row"><select id="docType"><option value="executive">Informe ejecutivo RTI</option><option value="course">Informe por curso</option><option value="teacher">Registro de acompañamiento docente</option></select><select id="docTarget"></select><button id="generateDoc">Generar</button><button id="downloadDoc">Descargar TXT</button></div><textarea id="documentOutput" placeholder="El documento generado aparecerá aquí."></textarea></div></section>
+<section id="memory" class="view"><h2>Memoria institucional inteligente</h2><div class="panel"><div class="row"><input id="memoryQuery" placeholder="Buscar acuerdos, proyectos o recursos"><button id="searchMemory">Buscar</button></div><div id="memoryResults"></div></div><div class="panel"><h3>Agregar registro</h3><input id="memoryTitle" placeholder="Título"><input id="memoryType" placeholder="Tipo"><textarea id="memoryDetail" placeholder="Detalle" style="min-height:100px"></textarea><button id="addMemory">Guardar en memoria local</button></div></section>
+</main></div>
+<script src="benito-ia/config.js"></script><script src="benito-ia/governance/roles.js"></script><script src="benito-ia/governance/data-classification.js"></script><script src="benito-ia/auth/demo-users.js"></script><script src="benito-ia/audit/security-audit.js"></script><script src="benito-ia/auth/auth-manager.js"></script><script src="benito-ia/access/access-control.js"></script>
+<script src="benito-ia/apps/rti/data/rti-synthetic-data.js"></script><script src="benito-ia/apps/rti/modules/rti-store.js"></script><script src="benito-ia/apps/rti/documents/rti-document-generator.js"></script><script src="benito-ia/apps/rti/memory/institutional-memory.js"></script><script src="benito-ia/apps/rti/workflows/rti-workflow.js"></script>
+<script>
+BenitoAccess.requirePage({permission:'view:institutional',level:'institutional',resource:'rti-app'});
+let state=BenitoRTIStore.load(),currentDoc='';
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));document.getElementById(b.dataset.view).classList.add('active')});
+function render(){
+ const brief=BenitoRTIWorkflow.dailyBrief(state);document.getElementById('brief').innerHTML=`<h3>${brief.headline}</h3><p>${brief.recommendation}</p>`;
+ const s=state.summary;document.getElementById('kpis').innerHTML=[
+ ['Proyectos activos',s.activeProjects],['Tareas pendientes',state.tasks.filter(t=>t.status!=='done').length],['Cursos priorizados',state.courses.filter(c=>c.status!=='stable').length],['Reuniones próximas',s.upcomingMeetings],['Documentos del mes',s.documentsThisMonth]
+ ].map(x=>`<div class="panel"><div class="kpi">${x[1]}</div><strong>${x[0]}</strong></div>`).join('');
+ document.getElementById('homeTasks').innerHTML=brief.nextTasks.map(t=>`<div class="card ${t.priority}"><strong>${t.title}</strong><div class="muted">${t.area} · ${t.due}</div></div>`).join('');
+ document.getElementById('homeCourses').innerHTML=brief.priorityCourses.map(c=>`<div class="card ${c.status}"><strong>${c.course}</strong><div class="muted">Asistencia ${c.attendance}% · Desaprobación ${c.failure_rate}%</div></div>`).join('');
+ document.getElementById('courseCards').innerHTML=state.courses.map(c=>`<article class="card ${c.status}"><span class="badge">${c.cycle}</span><h3>${c.course}</h3><p>Asistencia: <strong>${c.attendance}%</strong><br>Desaprobación: <strong>${c.failure_rate}%</strong></p><h4>Acciones</h4><ul>${c.actions.map(a=>`<li>${a}</li>`).join('')}</ul><p class="muted">${c.owner}</p></article>`).join('');
+ document.getElementById('teacherCards').innerHTML=state.teachers.map(d=>`<article class="card"><h3>${d.alias}</h3><p>${d.area}</p><h4>Necesidades</h4><ul>${d.needs.map(x=>`<li>${x}</li>`).join('')}</ul><h4>Acuerdos</h4><ul>${d.agreements.map(x=>`<li>${x}</li>`).join('')}</ul><p class="muted">Próxima revisión: ${d.nextReview}</p></article>`).join('');
+ document.getElementById('taskCards').innerHTML=state.tasks.map(t=>`<div class="card ${t.priority}"><strong>${t.title}</strong><div class="muted">${t.area} · ${t.due}</div><button onclick="toggleTask('${t.id}','${t.status}')">${t.status==='done'?'Reabrir':'Completar'}</button></div>`).join('');
+ document.getElementById('meetingCards').innerHTML=state.meetings.map(m=>`<div class="card"><strong>${m.title}</strong><p>${m.date} · ${m.time}</p><div class="muted">${m.purpose}</div></div>`).join('');
+ document.getElementById('projectCards').innerHTML=state.projects.map(p=>`<article class="card"><h3>${p.name}</h3><div class="progress"><i style="width:${p.progress}%"></i></div><p>${p.progress}% · ${p.lead}</p><div class="muted">Próximo hito: ${p.nextMilestone}</div></article>`).join('');
+ document.getElementById('researchCards').innerHTML=state.researchCycles.map(r=>`<article class="panel"><span class="badge">${r.stage}</span><h3>${r.title}</h3><p><strong>Diagnóstico:</strong> ${r.diagnosis}</p><p><strong>Acción:</strong> ${r.action}</p><p><strong>Evidencias:</strong> ${r.evidence.join(', ')}</p><p><strong>Próximo paso:</strong> ${r.next}</p></article>`).join('');
+ updateDocTargets();showMemory(state.memory);
+}
+window.toggleTask=(id,status)=>{state=BenitoRTIStore.updateTask(id,status==='done'?'pending':'done');render();BenitoSecurityAudit.log('rti_task_updated',{resource:id,level:'institutional'})};
+function updateDocTargets(){const type=docType.value;docTarget.innerHTML='';if(type==='course')state.courses.forEach(c=>docTarget.innerHTML+=`<option>${c.course}</option>`);else if(type==='teacher')state.teachers.forEach(d=>docTarget.innerHTML+=`<option value="${d.id}">${d.alias} · ${d.area}</option>`);else docTarget.innerHTML='<option>Rectoría y equipo directivo</option>'}
+docType.onchange=updateDocTargets;
+generateDoc.onclick=()=>{currentDoc=docType.value==='executive'?BenitoRTIDocuments.executive(state):docType.value==='course'?BenitoRTIDocuments.courseReport(state,docTarget.value):BenitoRTIDocuments.teacherSupport(state,docTarget.value);documentOutput.value=currentDoc;BenitoSecurityAudit.log('rti_document_generated',{resource:docType.value,level:'institutional'})};
+downloadDoc.onclick=()=>{if(!currentDoc)return;BenitoRTIDocuments.download(`benito-rti-${docType.value}.txt`,currentDoc)};
+function showMemory(items){memoryResults.innerHTML=items.map(e=>`<div class="card"><span class="badge">${e.type}</span><strong> ${e.title}</strong><p>${e.detail}</p><div class="muted">${e.date}</div></div>`).join('')||'<p>No se encontraron registros.</p>'}
+searchMemory.onclick=()=>showMemory(BenitoInstitutionalMemory.search(state.memory,memoryQuery.value));
+addMemory.onclick=()=>{if(!memoryTitle.value.trim()||!memoryDetail.value.trim())return;state=BenitoRTIStore.addMemory({title:memoryTitle.value.trim(),type:memoryType.value.trim()||'registro',detail:memoryDetail.value.trim()});memoryTitle.value=memoryType.value=memoryDetail.value='';render();BenitoSecurityAudit.log('institutional_memory_added',{level:'institutional'})};
+render();
+</script></body></html>
