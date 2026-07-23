@@ -142,20 +142,20 @@
       actions: [['Ver equipo institucional','../institucion.html#equipo']]
     },
     {
-      id: 'certificados', priority: 12,
-      phrases: ['certificado de alumno regular','constancia de alumno regular','necesito un certificado','necesito una constancia','pedir certificado','solicitar constancia'],
+      id: 'certificados', priority: 16,
+      phrases: ['certificado de alumno regular','constancia de alumno regular','necesito un certificado','necesito una constancia','pedir certificado','solicitar constancia','generar constancia en sage'],
       keywords: ['certificado','certificados','constancia','constancias','regular','escolaridad'],
-      title: 'Certificados y constancias',
-      html: 'Las constancias y certificaciones se gestionan en <strong>Administración o Secretaría</strong>. La atención administrativa es de lunes a viernes, de 7:30 a 13:00. Para confirmar requisitos y plazo de entrega, comunicate por un canal oficial.',
-      actions: [['Escribir a Secretaría','mailto:secretaria31benitojuarez@gmail.com'],['Ver contacto','../contacto.html']]
+      title: 'Constancia de alumno regular',
+      html: 'La opción más rápida es ingresar a <strong>SAGE</strong>, generar la constancia de alumno regular e imprimirla. Luego, si necesitás firma, sello institucional o no podés acceder a SAGE, acercate a <strong>Secretaría o Administración</strong>, de lunes a viernes, de 7:30 a 13:00.',
+      actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com'],['Ver contacto','../contacto.html']]
     },
     {
-      id: 'pase', priority: 12,
-      phrases: ['necesito un pase','solicitar pase escolar','pase a otra escuela','cambiar de escuela'],
+      id: 'pase', priority: 16,
+      phrases: ['necesito un pase','solicitar pase escolar','pase a otra escuela','cambiar de escuela','pase desde otra escuela'],
       keywords: ['pase','traslado','transferencia','cambiarme'],
       title: 'Pase o traslado escolar',
-      html: 'Los pases o traslados se gestionan en <strong>Secretaría</strong>. Como la documentación requerida depende de cada situación, primero comunicate con la escuela o acercate en el horario administrativo: lunes a viernes, de 7:30 a 13:00.',
-      actions: [['Escribir a Secretaría','mailto:secretaria31benitojuarez@gmail.com'],['Ver contacto','../contacto.html']]
+      html: 'Para orientarte correctamente necesito distinguir el tipo de pase. Elegí una opción:',
+      flow: 'pase'
     },
     {
       id: 'inscripcion', priority: 12,
@@ -166,12 +166,12 @@
       actions: [['Escribir a Secretaría','mailto:secretaria31benitojuarez@gmail.com'],['Ver contacto','../contacto.html']]
     },
     {
-      id: 'sage', priority: 11,
-      phrases: ['como entrar a sage','solicitar usuario sage','no puedo entrar a sage','ver notas en sage','ver calificaciones'],
-      keywords: ['sage','calificaciones','notas','boletin','usuario','contraseña','asistencia'],
-      title: 'SAGE Entre Ríos',
-      html: 'SAGE permite consultar información escolar y realizar gestiones habilitadas para familias y personal. Desde Recursos podés ingresar a SAGE o solicitar un usuario. Si el inconveniente corresponde a datos o registros escolares, comunicate con Secretaría.',
-      actions: [['Abrir Recursos','../recursos.html#familias'],['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Solicitar usuario SAGE','https://sage.entrerios.gov.ar/solicitarUsuario/index.php']]
+      id: 'sage', priority: 17,
+      phrases: ['como entrar a sage','solicitar usuario sage','no puedo entrar a sage','no puedo ingresar a sage','ver notas en sage','ver calificaciones','olvide mi contraseña de sage','error en sage'],
+      keywords: ['sage','calificaciones','notas','boletin','usuario','contraseña','clave','asistencia','error'],
+      title: 'Ayuda con SAGE',
+      html: 'Puedo orientarte según el problema que tengas. Elegí la opción que más se aproxima a tu situación:',
+      flow: 'sage'
     },
     {
       id: 'aula-digital', priority: 11,
@@ -190,12 +190,12 @@
       actions: [['Abrir Aula Digital','../aula-digital.html'],['Ver Recursos','../recursos.html']]
     },
     {
-      id: 'becas', priority: 11,
-      phrases: ['becas progresar','como anotarse a progresar','estado de mi beca','instituto becario'],
-      keywords: ['beca','becas','progresar','becario'],
-      title: 'Becas y programas de acompañamiento',
-      html: 'En la sección Recursos están disponibles los accesos oficiales a <strong>Becas Progresar</strong>, su plataforma de inscripción y el <strong>Instituto Becario de Entre Ríos</strong>. Para verificar tu situación académica o la documentación escolar necesaria, consultá con Secretaría.',
-      actions: [['Ver Recursos y enlaces oficiales','../recursos.html#enlaces'],['Becas Progresar','https://www.argentina.gob.ar/educacion/progresar'],['Instituto Becario','https://www.institutobecario.gov.ar/']]
+      id: 'becas', priority: 15,
+      phrases: ['becas progresar','como anotarse a progresar','como me inscribo a una beca progresar','estado de mi beca','instituto becario'],
+      keywords: ['beca','becas','progresar','becario','inscribirme'],
+      title: 'Becas y acompañamiento',
+      html: '¿Sobre qué programa necesitás información?',
+      flow: 'becas'
     },
     {
       id: 'mesas-examen', priority: 11,
@@ -258,6 +258,91 @@
       html: 'Puedo orientarte sobre <strong>trámites, autoridades, horarios, contacto, ubicación, Aula Digital, SAGE, becas, mesas de exámenes, actividades, programas y servicios de la escuela</strong>. Escribí la consulta con tus propias palabras.'
     }
   ];
+
+
+  const flows = {
+    sage: [
+      {
+        label: 'Olvidé mi contraseña',
+        title: 'Recuperar acceso a SAGE',
+        html: 'Ingresá a SAGE y utilizá la opción de recuperación de contraseña. Si no podés completar el proceso o tus datos no coinciden, comunicate con <strong>Secretaría</strong> para verificar el registro.',
+        actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com']]
+      },
+      {
+        label: 'No tengo usuario',
+        title: 'Solicitar usuario de SAGE',
+        html: 'Podés iniciar la solicitud de usuario desde el sitio oficial de SAGE. Si necesitás verificar datos del estudiante o del adulto responsable, consultá con <strong>Secretaría</strong>.',
+        actions: [['Solicitar usuario SAGE','https://sage.entrerios.gov.ar/solicitarUsuario/index.php'],['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com']]
+      },
+      {
+        label: 'Me aparece un error',
+        title: 'Error de acceso a SAGE',
+        html: 'Primero verificá que el usuario y la contraseña estén escritos correctamente y probá nuevamente. Si el error continúa, anotá o capturá el mensaje que aparece y comunicate con <strong>Secretaría</strong> para recibir orientación.',
+        actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Ver contacto','../contacto.html']]
+      },
+      {
+        label: 'No encuentro mis calificaciones',
+        title: 'Calificaciones en SAGE',
+        html: 'Ingresá a SAGE con tu usuario y revisá la sección correspondiente al estudiante. Si las calificaciones todavía no aparecen o detectás un dato incorrecto, consultá con <strong>Preceptoría o Secretaría</strong>; Benito no accede ni muestra información académica personal.',
+        actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Ver contacto','../contacto.html']]
+      },
+      {
+        label: 'Generar constancia',
+        title: 'Constancia de alumno regular en SAGE',
+        html: 'Ingresá a <strong>SAGE</strong>, generá la constancia de alumno regular e imprimila. Si necesitás firma, sello institucional o no podés completar el trámite, acercate a Secretaría o Administración, de lunes a viernes, de 7:30 a 13:00.',
+        actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com']]
+      }
+    ],
+    pase: [
+      {
+        label: 'Pase hacia otra escuela',
+        title: 'Pase hacia otra institución',
+        html: 'El pase se gestiona en <strong>Secretaría</strong>. Acercate o comunicate con la escuela para iniciar el trámite y confirmar la documentación requerida según tu situación. La atención administrativa es de lunes a viernes, de 7:30 a 13:00.',
+        actions: [['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com'],['Ver contacto','../contacto.html']]
+      },
+      {
+        label: 'Ingreso desde otra escuela',
+        title: 'Ingreso con pase desde otra institución',
+        html: 'Para ingresar con pase desde otra escuela, comunicate con <strong>Secretaría</strong>. Allí te indicarán la documentación vigente, la disponibilidad y los pasos para completar la incorporación.',
+        actions: [['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com'],['Ver contacto','../contacto.html']]
+      },
+      {
+        label: 'Retiro antes del horario',
+        title: 'Retiro anticipado',
+        html: 'Si la consulta es por retirarte antes del horario habitual, comunicate con <strong>Preceptoría</strong>. En el caso de estudiantes menores de edad, el retiro debe ajustarse a las autorizaciones y procedimientos institucionales.',
+        actions: [['Ver equipo institucional','../institucion.html#equipo'],['Contactar a la escuela','../contacto.html']]
+      }
+    ],
+    becas: [
+      {
+        label: 'Becas Progresar',
+        title: 'Becas Progresar',
+        html: 'La inscripción y el seguimiento se realizan mediante los canales oficiales de Progresar. Para constancias o verificación de la situación académica, podés generar la constancia de alumno regular desde SAGE o consultar con Secretaría.',
+        actions: [['Abrir Progresar','https://www.argentina.gob.ar/educacion/progresar'],['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com']]
+      },
+      {
+        label: 'Instituto Becario',
+        title: 'Instituto Becario de Entre Ríos',
+        html: 'Consultá convocatorias, requisitos y estado de trámites en el sitio oficial del Instituto Becario. Si necesitás documentación escolar, podés solicitar orientación en Secretaría.',
+        actions: [['Abrir Instituto Becario','https://www.institutobecario.gov.ar/'],['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com']]
+      },
+      {
+        label: 'Otra beca',
+        title: 'Consulta sobre otra beca',
+        html: 'Indicá el nombre de la beca o programa para que pueda orientarte mejor. Cuando el trámite requiere documentación escolar, la gestión se realiza mediante Secretaría o Administración.',
+        actions: [['Ver recursos y enlaces','../recursos.html#enlaces'],['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com']]
+      }
+    ]
+  };
+
+  function directIntent(question) {
+    const text = normalize(question);
+    if (/\b(sage)\b/.test(text)) return 'sage';
+    if (/\b(constancia|certificado)\b/.test(text) && /\b(alumno|regular|escolar)\b/.test(text)) return 'certificados';
+    if (/\b(pase|traslado|transferencia)\b/.test(text)) return 'pase';
+    if (/\b(beca|becas|progresar|becario)\b/.test(text)) return 'becas';
+    return null;
+  }
 
   function meetsRequired(item, text, queryTokens) {
     if (!item.required || !item.required.length) return true;
@@ -342,6 +427,26 @@
     bubble.appendChild(wrap);
   }
 
+
+  function addFlowButtons(bubble, flowName) {
+    const options = flows[flowName] || [];
+    if (!options.length) return;
+    const wrap = document.createElement('div');
+    wrap.className = 'clarifications';
+    options.forEach((option) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.textContent = option.label;
+      button.addEventListener('click', () => {
+        addMessage(escapeHtml(option.label), 'user');
+        const response = addMessage(option.html, 'assistant', option.title);
+        addActions(response, option.actions);
+      });
+      wrap.appendChild(button);
+    });
+    bubble.appendChild(wrap);
+  }
+
   function addClarificationButtons(bubble) {
     const wrap = document.createElement('div');
     wrap.className = 'clarifications';
@@ -361,10 +466,15 @@
   }
 
   function answer(question) {
-    const match = findBestAnswer(question);
+    const routedId = directIntent(question);
+    const match = routedId
+      ? knowledge.find((item) => item.id === routedId)
+      : findBestAnswer(question);
+
     if (match) {
       const bubble = addMessage(match.html, 'assistant', match.title);
       addActions(bubble, match.actions);
+      if (match.flow) addFlowButtons(bubble, match.flow);
       return;
     }
 
