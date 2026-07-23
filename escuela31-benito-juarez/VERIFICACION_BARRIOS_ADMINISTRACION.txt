@@ -1,0 +1,14 @@
+VERIFICACIÓN DE ACTUALIZACIÓN
+
+Cambios realizados:
+- Se reemplazó el flyer anterior de Barrio Mendieta por el flyer Barrio Mendieta y El Blanqueado.
+- Se agregó el nuevo sub-bloque Barrio Villa Adela dentro de Programas > La Escuela va al Barrio.
+- Se incorporaron las imágenes nuevas en assets/imagenes/proyectos/.
+- Se eliminó la frase "Equipo directivo ampliado" del bloque de Carina Galarza.
+- Se eliminó el apartado completo "Atención administrativa / Administración institucional" para evitar redundancia.
+
+Archivos modificados:
+- programas.html
+- institucion.html
+- assets/imagenes/proyectos/escuela-barrio-mendieta-blanqueado.png
+- assets/imagenes/proyectos/escuela-barrio-villa-adela.png
