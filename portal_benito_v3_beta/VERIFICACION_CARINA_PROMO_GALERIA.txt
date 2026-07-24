@@ -1,9 +1,0 @@
-VERIFICACIÓN ACTUALIZACIÓN INCREMENTAL
-
-- Carina Galarza actualizada como Administrativa institucional: True
-- Horario Carina: lunes a viernes de 7:30 a 13:00 hs: True
-- Funciones administrativas ampliadas: True
-- Bloque Galería Promo 2026 preparado con acceso interno: True
-- Sección de galería Promo 2026 con ancla #galeria-promo: True
-- No se reconstruyó el sitio completo: True
-- Se preservan portada, historia, vida escolar, lightbox, programas y multimedia existentes: True
