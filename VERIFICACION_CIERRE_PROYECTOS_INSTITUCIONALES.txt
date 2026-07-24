@@ -1,0 +1,3 @@
+Bloque Proyectos Institucionales cerrado y refinado.
+Orden: Nos cuidamos en comunidad; La Escuela va al Barrio; Alfabetización Digital Situada 2026; Tesoros ocultos de la escuela.
+Incluye jerarquía visual, estados, introducción institucional, diseño responsive y enlaces existentes.

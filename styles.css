@@ -744,3 +744,158 @@ a[data-lightbox="institucional"] img{cursor:zoom-in;}
   #alumno-solidario .campaign-card{grid-template-columns:1fr}
   #alumno-solidario .campaign-card img{height:auto;max-height:420px;object-fit:contain;background:#f8fbf9}
 }
+
+/* ===== CIERRE DEL BLOQUE PROYECTOS INSTITUCIONALES ===== */
+.projects-page-title{
+  background:linear-gradient(135deg,#ffffff 0%,#f2f8f4 58%,#fff9df 100%);
+  overflow:hidden;
+}
+.projects-page-title p{max-width:900px}
+.projects-summary{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+  margin-top:24px;
+}
+.projects-summary div{
+  background:rgba(255,255,255,.82);
+  border:1px solid rgba(11,90,53,.12);
+  border-radius:18px;
+  padding:18px;
+  box-shadow:0 8px 22px rgba(0,0,0,.04);
+}
+.projects-summary strong{
+  display:block;
+  color:var(--verde-oscuro);
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:1.45rem;
+  margin-bottom:4px;
+}
+.projects-summary span{color:#53615b;font-weight:800;font-size:.9rem}
+.projects-side-menu a{line-height:1.35}
+.projects-content{min-width:0}
+.project-showcase{
+  position:relative;
+  background:linear-gradient(135deg,#ffffff 0%,#f7fbf8 100%);
+  border-top:7px solid var(--verde);
+}
+.project-showcase::before{
+  content:"";
+  position:absolute;
+  width:180px;
+  height:180px;
+  right:-62px;
+  top:-62px;
+  border-radius:50%;
+  background:rgba(214,187,66,.14);
+  pointer-events:none;
+}
+.project-showcase-header,.project-card-topline{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:16px;
+}
+.project-showcase-header>div{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.project-kicker{
+  color:var(--verde-oscuro);
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.6px;
+  font-size:.78rem;
+}
+.project-status,.project-year{
+  display:inline-flex;
+  align-items:center;
+  min-height:34px;
+  padding:7px 13px;
+  border-radius:999px;
+  font-size:.78rem;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.35px;
+}
+.project-year{background:#f2f4f3;color:#4f5b56}
+.status-development{background:#dff3e7;color:#17633e}
+.status-execution{background:#fff1b8;color:#755d00}
+.status-permanent{background:#e4eefb;color:#1f5796}
+.status-historic{background:#ecebea;color:#595754}
+.project-meta-grid,.project-card-details{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  margin:20px 0;
+}
+.project-meta-grid div,.project-card-details div{
+  border:1px solid rgba(11,90,53,.11);
+  background:#fff;
+  border-radius:15px;
+  padding:15px;
+}
+.project-meta-grid span,.project-card-details span{
+  display:block;
+  color:#65716c;
+  font-size:.76rem;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.4px;
+  margin-bottom:5px;
+}
+.project-meta-grid strong,.project-card-details strong{color:var(--verde-oscuro);line-height:1.45}
+.projects-catalog{margin-top:30px}
+.section-heading-inline{
+  padding:10px 4px 20px;
+  margin-bottom:4px;
+}
+.section-heading-inline h2{
+  font-family:Georgia,'Times New Roman',serif;
+  color:var(--verde-oscuro);
+  font-size:clamp(1.9rem,3vw,2.7rem);
+  margin-bottom:10px;
+}
+.section-heading-inline p{color:var(--gris);line-height:1.75;max-width:860px}
+.project-card{
+  position:relative;
+  background:#fff;
+  border:1px solid var(--borde);
+  border-left:7px solid var(--verde);
+  border-radius:24px;
+  padding:28px;
+  margin:22px 0;
+  box-shadow:var(--sombra);
+  scroll-margin-top:120px;
+}
+.project-card-territory{border-left-color:var(--amarillo)}
+.project-card-digital{border-left-color:#3d78b8}
+.project-card-history{border-left-color:#8b8985}
+.project-card h3{
+  font-family:Georgia,'Times New Roman',serif;
+  color:var(--verde-oscuro);
+  font-size:clamp(1.65rem,2.5vw,2.25rem);
+  margin-bottom:12px;
+}
+.project-card-lead{color:#4f5c57;line-height:1.78;font-size:1.03rem}
+.project-card-evidence{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:18px 0 4px;
+}
+.project-card-evidence a{
+  display:inline-flex;
+  align-items:center;
+  padding:9px 13px;
+  border-radius:999px;
+  background:var(--verde-suave);
+  color:var(--verde-oscuro);
+  font-weight:900;
+  font-size:.85rem;
+}
+.project-card-evidence a:hover{background:var(--verde);color:#fff}
+@media(max-width:800px){
+  .projects-summary,.project-meta-grid,.project-card-details{grid-template-columns:1fr}
+  .project-showcase,.project-card{padding:22px}
+  .project-showcase-header,.project-card-topline{align-items:flex-start}
+}
