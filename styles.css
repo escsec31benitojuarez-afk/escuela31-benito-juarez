@@ -712,3 +712,35 @@ a[data-lightbox="institucional"] img{cursor:zoom-in;}
 .project-photo-grid img{width:100%;height:330px;object-fit:cover;display:block;transition:transform .25s ease}
 .project-photo-grid a:hover img{transform:scale(1.025)}
 @media (max-width:800px){.project-highlight-grid{grid-template-columns:1fr}.project-cover-photo img{height:260px}.project-photo-grid{grid-template-columns:1fr}.project-photo-grid img{height:auto;max-height:420px}.project-page-shell{width:min(100% - 20px,1180px)}}
+
+
+/* Ajuste puntual Vida Escolar 2026-07-24: recuperar formato compacto y horizontal */
+@media (min-width:701px){
+  #alumno-solidario .campaign-card{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    align-items:stretch;
+  }
+  #alumno-solidario .campaign-card > a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-width:0;
+  }
+  #alumno-solidario .campaign-card img{
+    width:100%;
+    height:420px;
+    max-height:420px;
+    object-fit:contain;
+    background:#f8fbf9;
+  }
+  #alumno-solidario .campaign-card > div{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    min-width:0;
+  }
+}
+@media (max-width:700px){
+  #alumno-solidario .campaign-card{grid-template-columns:1fr}
+  #alumno-solidario .campaign-card img{height:auto;max-height:420px;object-fit:contain;background:#f8fbf9}
+}
