@@ -1,0 +1,201 @@
+{
+  "meta": {
+    "version": "4.0.0",
+    "institution": "Escuela Secundaria N.º 31 “Benito Juárez”",
+    "governance": {
+      "platformOwner": "Alfredo Esquivel",
+      "platformOwnerInstitutionalRole": "RTI",
+      "principle": "Separación entre gobierno tecnológico y gobierno institucional."
+    }
+  },
+  "roles": [
+    {
+      "id": "platform_owner",
+      "name": "Propietario de la Plataforma / Superadministrador",
+      "holder": "Alfredo Esquivel",
+      "scope": "global",
+      "technicalAuthority": true,
+      "institutionalAuthority": false,
+      "permissions": [
+        "*"
+      ],
+      "dataLevels": [
+        "public",
+        "institutional",
+        "reserved",
+        "confidential"
+      ]
+    },
+    {
+      "id": "rti",
+      "name": "RTI",
+      "holder": "Alfredo Esquivel",
+      "scope": "institutional",
+      "permissions": [
+        "view:public",
+        "view:institutional",
+        "view:reserved:authorized",
+        "manage:aula_digital",
+        "manage:resources",
+        "manage:multimedia",
+        "manage:innovation",
+        "manage:knowledge_base",
+        "view:technology_metrics",
+        "create:pedagogical_documents",
+        "use:multiagent"
+      ],
+      "dataLevels": [
+        "public",
+        "institutional",
+        "reserved"
+      ]
+    },
+    {
+      "id": "rector",
+      "name": "Rector",
+      "scope": "institutional",
+      "permissions": [
+        "view:public",
+        "view:institutional",
+        "view:reserved",
+        "view:confidential:authorized",
+        "view:executive_dashboard",
+        "view:trajectories",
+        "view:institutional_reports",
+        "approve:institutional_content",
+        "use:multiagent"
+      ],
+      "dataLevels": [
+        "public",
+        "institutional",
+        "reserved",
+        "confidential"
+      ]
+    },
+    {
+      "id": "pedagogical_advisor",
+      "name": "Asesora Pedagógica",
+      "scope": "pedagogical",
+      "permissions": [
+        "view:public",
+        "view:institutional",
+        "view:reserved",
+        "view:trajectories",
+        "manage:support_plans",
+        "view:pedagogical_indicators",
+        "create:pedagogical_documents",
+        "use:multiagent"
+      ],
+      "dataLevels": [
+        "public",
+        "institutional",
+        "reserved"
+      ]
+    },
+    {
+      "id": "secretary",
+      "name": "Secretaría",
+      "scope": "administrative",
+      "permissions": [
+        "view:public",
+        "view:institutional",
+        "view:confidential:administrative",
+        "manage:administrative_documents",
+        "manage:student_records:limited",
+        "use:administrative_agent"
+      ],
+      "dataLevels": [
+        "public",
+        "institutional",
+        "confidential"
+      ]
+    },
+    {
+      "id": "tutor",
+      "name": "Tutor",
+      "scope": "assigned_students",
+      "permissions": [
+        "view:public",
+        "view:institutional",
+        "view:reserved:assigned_students",
+        "manage:support_plans:assigned_students",
+        "use:tutor_agent"
+      ],
+      "dataLevels": [
+        "public",
+        "institutional",
+        "reserved"
+      ]
+    },
+    {
+      "id": "preceptor",
+      "name": "Preceptor",
+      "scope": "assigned_courses",
+      "permissions": [
+        "view:public",
+        "view:institutional",
+        "view:reserved:assigned_courses",
+        "view:attendance:assigned_courses",
+        "use:preceptor_tools"
+      ],
+      "dataLevels": [
+        "public",
+        "institutional",
+        "reserved"
+      ]
+    },
+    {
+      "id": "teacher",
+      "name": "Docente",
+      "scope": "assigned_courses",
+      "permissions": [
+        "view:public",
+        "view:institutional",
+        "view:reserved:assigned_courses",
+        "manage:own_resources",
+        "create:teaching_documents",
+        "use:teacher_agent"
+      ],
+      "dataLevels": [
+        "public",
+        "institutional",
+        "reserved"
+      ]
+    },
+    {
+      "id": "family",
+      "name": "Familia",
+      "scope": "linked_student",
+      "permissions": [
+        "view:public",
+        "view:linked_student:limited"
+      ],
+      "dataLevels": [
+        "public"
+      ]
+    },
+    {
+      "id": "student",
+      "name": "Estudiante",
+      "scope": "self",
+      "permissions": [
+        "view:public",
+        "view:self:limited"
+      ],
+      "dataLevels": [
+        "public"
+      ]
+    },
+    {
+      "id": "public",
+      "name": "Público",
+      "scope": "public",
+      "permissions": [
+        "view:public"
+      ],
+      "dataLevels": [
+        "public"
+      ]
+    }
+  ]
+}
