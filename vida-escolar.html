@@ -7,6 +7,12 @@
 <meta content="Sitio institucional de la Escuela Secundaria Nº 31 Benito Juárez, Estación Yuquerí, Concordia, Entre Ríos." name="description"/>
 <title>Vida Escolar | Escuela Secundaria Nº 31 “Benito Juárez”</title>
 <link href="styles.css" rel="stylesheet"/>
+<style>
+.student-photo-real{display:block;overflow:hidden;border-radius:20px;min-height:330px;background:#eef6f1;border:1px solid #c8ddd1}
+.student-photo-real img{width:100%;height:100%;min-height:330px;object-fit:cover;object-position:center top;display:block}
+.button-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+@media (max-width:760px){.student-photo-real img{min-height:280px}.button-row .btn{width:100%;text-align:center}}
+</style>
 </head>
 <body>
 <div class="topbar">
@@ -39,6 +45,7 @@
 <a href="#reconocimientos">Reconocimientos</a>
 <a href="#participacion">Participación estudiantil</a>
 <a href="#identidad">Identidad institucional</a>
+<a href="#convivencia">Convivencia escolar</a>
 <a href="#comunicaciones">Comunicaciones institucionales</a>
 </aside>
 <div>
@@ -55,11 +62,9 @@
 </div>
 </div>
 <div class="solidario-grid">
-<div aria-label="Espacio reservado para la fotografía del Alumno Solidario 2026" class="student-photo-placeholder">
-<span aria-hidden="true" class="student-photo-icon">👤</span>
-<strong>Fotografía del estudiante</strong>
-<small>Próximamente</small>
-</div>
+<a class="student-photo-real" data-caption="Axel Omar Castro - Alumno Solidario 2026" data-lightbox="institucional" href="assets/imagenes/novedades/axel-omar-castro-alumno-solidario-2026.jpeg">
+<img alt="Axel Omar Castro, Alumno Solidario 2026" src="assets/imagenes/novedades/axel-omar-castro-alumno-solidario-2026.jpeg"/>
+</a>
 <a class="solidario-plaque" data-caption="Reconocimiento al Alumno Solidario 2026" data-lightbox="institucional" href="assets/imagenes/novedades/alumno-solidario-2026.png">
 <img alt="Reconocimiento al Alumno Solidario 2026" src="assets/imagenes/novedades/alumno-solidario-2026.png"/>
 </a>
@@ -98,6 +103,28 @@
 <a data-caption="Promo 2026 - vida escolar" data-lightbox="institucional" href="assets/imagenes/galeria/vida-institucional-09.jpg"><img alt="Promo 2026" src="assets/imagenes/galeria/vida-institucional-09.jpg"/></a>
 <div><span class="tag gold">Futuros egresados</span><h3>La huella que dejamos</h3><p>Fotos, recuerdos, producciones, mensajes y momentos significativos de la promoción.</p><a class="btn gold" href="promo-2026.html">Ir al espacio Promo 2026</a></div>
 </div>
+</section>
+<section class="card life-section" id="convivencia">
+<span class="eyebrow-section">Convivencia, participación y cuidado</span>
+<h2>Acuerdo Escolar de Convivencia 2026</h2>
+<p class="section-intro">Documento institucional aprobado que orienta la convivencia democrática, los derechos, las responsabilidades y los acuerdos construidos por la comunidad educativa.</p>
+<div class="two-grid">
+<article class="info-card">
+<span class="tag green">Documento institucional</span>
+<h3>Convivir también es aprender</h3>
+<p>El AEC establece pautas para el respeto, el diálogo, la resolución pacífica de conflictos, el uso responsable de dispositivos, el cuidado del patrimonio escolar y la participación de estudiantes y familias.</p>
+</article>
+<article class="info-card">
+<span class="tag gold">AEC 2026</span>
+<h3>Consultar el documento aprobado</h3>
+<p>Podés leerlo en línea o descargarlo en formato PDF.</p>
+<div class="button-row">
+<a class="btn" href="assets/documentos/acuerdo-escolar-convivencia-2026.pdf" target="_blank" rel="noopener">Leer AEC 2026</a>
+<a class="btn gold" href="assets/documentos/acuerdo-escolar-convivencia-2026.pdf" download>Descargar PDF</a>
+</div>
+</article>
+</div>
+<div class="note">Para consultas institucionales sobre convivencia escolar: <a href="mailto:secretaria31benitojuarez@gmail.com">secretaria31benitojuarez@gmail.com</a></div>
 </section>
 <section class="card life-section" id="comunicaciones">
 <span class="eyebrow-section">Información para la comunidad educativa</span>
