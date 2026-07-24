@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Sitio institucional de la Escuela Secundaria Nº 31 Benito Juárez, Estación Yuquerí, Concordia, Entre Ríos." name="description"/>
+<title>Servicios Institucionales | Escuela Secundaria Nº 31 “Benito Juárez”</title>
+<link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="topbar">
+<span><a href="tel:+543454949814">Cel.: +543454949814</a></span>
+<span><a href="mailto:secundaria31.cd@entrerios.edu.ar">Correo: secundaria31.cd@entrerios.edu.ar</a></span>
+<span><a href="https://www.facebook.com/profile.php?id=100057420641002&amp;mibextid=ZbWKwL" rel="noopener" target="_blank">Facebook institucional</a></span>
+</div>
+<header class="site-header">
+<div class="header-inner">
+<a class="brand" href="index.html">
+<img alt="Escudo Escuela Secundaria Nº 31 Benito Juárez" src="assets/imagenes/logo-benito-juarez.png"/>
+<div>
+<strong>Escuela Secundaria Nº 31</strong>
+<span>“Benito Juárez”</span>
+<small>Estación Yuquerí · Concordia</small>
+</div>
+</a>
+<nav aria-label="Navegación principal" class="nav-links"><a class="" href="index.html">Inicio</a><a class="" href="institucion.html">Institución</a><a class="" href="historia.html">Historia</a><a class="" href="recursos.html">Recursos</a><a class="" href="aula-digital.html">Aula Digital</a><a class="" href="actividades.html">Actividades</a><a class="" href="vida-escolar.html">Vida Escolar</a><a class="" href="promo-2026.html">Promo 2026</a><a class="" href="programas.html">Programas</a><a class="" href="comunidad.html">Comunidad</a><a class="" href="multimedia.html">Multimedia</a><a href="proyectos.html">Proyectos</a><a href="biblioteca.html">Biblioteca</a><a class="active" href="servicios.html">Servicios</a><a class="" href="contacto.html">Contacto</a><a aria-label="Acceso privado a Benito IA" class="benito-access" href="benito/login.html">🔒 Benito IA</a></nav>
+</div>
+</header>
+<main><div class="page-title"><span class="eyebrow">Portal Inteligente</span><h1>Servicios para estudiantes, familias y comunidad</h1><p>Accesos directos, orientación por perfiles y búsqueda institucional para resolver consultas frecuentes de manera simple y rápida.</p></div><div class="module-shell"><aside class="side-menu"><h3>Servicios</h3><a href="#accesos">Accesos rápidos</a><a href="#perfiles">Ayuda por perfiles</a><a href="#buscador">Buscador</a><a href="benito/index.html">Benito IA</a></aside><div>
+<section class="card life-section" id="accesos"><span class="eyebrow-section">Accesos rápidos</span><h2>¿Qué necesitás hacer?</h2><p class="section-intro">Elegí una opción para acceder directamente al servicio, la información o el canal institucional correspondiente.</p>
+<div class="service-grid">
+<a class="service-card" href="benito/index.html?q=Necesito%20una%20constancia"><span>📄</span><h3>Solicitar una constancia</h3><p>Orientación para generarla en SAGE o gestionarla en Secretaría.</p></a>
+<a class="service-card" href="https://sage.entrerios.gov.ar/" rel="noopener" target="_blank"><span>🖥️</span><h3>Ingresar a SAGE</h3><p>Calificaciones, constancias y gestiones escolares.</p></a>
+<a class="service-card" href="aula-digital.html"><span>🎓</span><h3>Aula Digital</h3><p>Recursos, actividades y repositorios organizados por curso.</p></a>
+<a class="service-card" href="biblioteca.html"><span>📚</span><h3>Biblioteca Institucional</h3><p>Acuerdos, proyectos y documentos públicos.</p></a>
+<a class="service-card" href="vida-escolar.html#comunicaciones"><span>📅</span><h3>Fechas y comunicaciones</h3><p>Mesas, campañas, jornadas y novedades institucionales.</p></a>
+<a class="service-card" href="mailto:secretaria31benitojuarez@gmail.com"><span>✉️</span><h3>Contactar Secretaría</h3><p>Consultas administrativas y documentación escolar.</p></a>
+</div></section>
+<section class="card life-section" id="perfiles"><span class="eyebrow-section">Centro de ayuda</span><h2>Servicios por perfil</h2><div class="profile-grid"><article><span>👩‍🎓</span><h3>Soy estudiante</h3><p>Aula Digital, materias previas, tutorías, SAGE, convivencia y participación.</p><a class="btn" href="benito/index.html?q=Soy%20estudiante">Recibir orientación</a></article><article><span>👨‍👩‍👧</span><h3>Soy familia</h3><p>Asistencia, calificaciones, constancias, acompañamiento y canales de comunicación.</p><a class="btn" href="benito/index.html?q=Soy%20familia">Recibir orientación</a></article><article><span>👩‍🏫</span><h3>Soy docente</h3><p>Programas, recursos, proyectos, documentación y acompañamiento pedagógico-digital.</p><a class="btn" href="recursos.html">Ver recursos</a></article><article><span>🏘️</span><h3>Soy parte de la comunidad</h3><p>Proyectos, noticias, actividades, historia y medios de contacto.</p><a class="btn" href="comunidad.html">Explorar comunidad</a></article></div></section>
+<section class="card life-section" id="buscador"><span class="eyebrow-section">Buscador institucional</span><h2>Encontrá información en el portal</h2><div class="portal-search"><input id="portalSearch" placeholder="Escribí: AEC, becas, SAGE, proyecto, tutorías…" type="search"/><button class="btn" id="portalSearchBtn" type="button">Buscar</button></div><div aria-live="polite" class="search-results" id="portalSearchResults"></div></section>
+<script>
+(function(){const data=[['Acuerdo Escolar de Convivencia','biblioteca.html','AEC, convivencia, normas, celular, uniforme, sanciones'],['Nos cuidamos en comunidad','proyectos.html','Proyecto institucional, salud, hábitos saludables, reconocimiento provincial'],['Alumno Solidario 2026','vida-escolar.html#alumno-solidario','Axel Omar Castro, reconocimiento, solidaridad'],['Aula Digital','aula-digital.html','Cursos, materiales, actividades, repositorios'],['SAGE','https://sage.entrerios.gov.ar/','Calificaciones, constancias, usuario, contraseña'],['Secretaría','contacto.html','Trámites, documentación, correo, constancias'],['Tutorías y equipo institucional','institucion.html#equipo','Tutores, asesoría, preceptoría, acompañamiento'],['Comunicaciones institucionales','vida-escolar.html#comunicaciones','Fechas, mesas, campañas, jornadas']];const input=document.getElementById('portalSearch'),btn=document.getElementById('portalSearchBtn'),out=document.getElementById('portalSearchResults');function norm(s){return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}function run(){const q=norm(input.value.trim());if(!q){out.innerHTML='<p class="note">Escribí una palabra o una consulta breve.</p>';return}const results=data.filter(x=>norm(x.join(' ')).includes(q));out.innerHTML=results.length?results.map(x=>`<a href="${x[1]}" class="search-result"><strong>${x[0]}</strong><span>${x[2]}</span></a>`).join(''):'<div class="note">No encontramos una coincidencia exacta. <a href="benito/index.html?q='+encodeURIComponent(input.value)+'">Consultá a Benito IA</a>.</div>'}btn.addEventListener('click',run);input.addEventListener('keydown',e=>{if(e.key==='Enter')run()});})();
+</script></div></div></main>
+<footer class="footer">
+<div class="footer-grid">
+<div>
+<h3>Escuela Secundaria Nº 31</h3>
+<p>“Benito Juárez”</p>
+<p class="footer-location">Estación Yuquerí — Concordia, Entre Ríos</p>
+<p>CUE: 3002566</p>
+</div>
+<div>
+<h3>Contacto</h3>
+<a href="tel:+543454949814">Cel.: +543454949814</a>
+<a href="mailto:secundaria31.cd@entrerios.edu.ar">Correo: secundaria31.cd@entrerios.edu.ar</a>
+<a href="mailto:secretaria31benitojuarez@gmail.com">Secretaria: secretaria31benitojuarez@gmail.com</a>
+<a href="https://www.facebook.com/profile.php?id=100057420641002&amp;mibextid=ZbWKwL" rel="noopener" target="_blank">Facebook institucional</a>
+<a href="proyectos.html">Proyectos Institucionales</a><a href="biblioteca.html">Biblioteca Institucional</a><a href="servicios.html">Servicios</a></div>
+<div>
+<h3>Información institucional</h3>
+<a href="institucion.html">Institución</a>
+<a href="historia.html">Historia</a>
+<a href="vida-escolar.html">Vida Escolar</a>
+<a href="programas.html">Programas</a>
+<a href="comunidad.html">Comunidad</a>
+</div>
+<div>
+<h3>Comunidad educativa</h3>
+<a href="recursos.html">Recursos</a>
+<a href="aula-digital.html">Aula Digital</a>
+<a href="actividades.html">Actividades y producciones</a>
+<a href="promo-2026.html">Promo 2026</a>
+<a href="multimedia.html">Multimedia</a>
+<a href="contacto.html">Contacto</a>
+</div>
+<div><h3>Acceso interno</h3><a href="benito/login.html">🔒 Benito IA</a></div></div>
+<div class="footer-bottom">Sitio institucional educativo diseñado, desarrollado y acompañado pedagógicamente por Alfredo Esquivel.</div>
+</footer>
+<div aria-hidden="true" aria-label="Visor de imágenes institucionales con zoom" class="lightbox-modal" id="lightboxModal" role="dialog">
+<div class="lightbox-stage" id="lightboxStage">
+<img alt="Imagen institucional ampliada" draggable="false" id="lightboxImage" src=""/>
+</div>
+<div class="lightbox-caption" id="lightboxCaption"></div>
+<div aria-label="Controles del visor" class="lightbox-toolbar">
+<button aria-label="Alejar imagen" class="lightbox-zoom-out" type="button">−</button>
+<button aria-label="Restablecer zoom" class="lightbox-zoom-reset" type="button">100%</button>
+<button aria-label="Acercar imagen" class="lightbox-zoom-in" type="button">+</button>
+</div>
+<button aria-label="Cerrar imagen" class="lightbox-close" type="button">×</button>
+<button aria-label="Imagen anterior" class="lightbox-prev" type="button">‹</button>
+<button aria-label="Imagen siguiente" class="lightbox-next" type="button">›</button>
+</div>
+<script>
+    (function(){
+      const items = Array.from(document.querySelectorAll('[data-lightbox="institucional"]'));
+      if(!items.length) return;
+      const modal = document.getElementById('lightboxModal');
+      const stage = document.getElementById('lightboxStage');
+      const img = document.getElementById('lightboxImage');
+      const caption = document.getElementById('lightboxCaption');
+      const closeBtn = modal.querySelector('.lightbox-close');
+      const prevBtn = modal.querySelector('.lightbox-prev');
+      const nextBtn = modal.querySelector('.lightbox-next');
+      const zoomInBtn = modal.querySelector('.lightbox-zoom-in');
+      const zoomOutBtn = modal.querySelector('.lightbox-zoom-out');
+      const zoomResetBtn = modal.querySelector('.lightbox-zoom-reset');
+      let current = 0;
+      let scale = 1;
+      let translateX = 0;
+      let translateY = 0;
+      let dragging = false;
+      let dragStartX = 0;
+      let dragStartY = 0;
+      let baseX = 0;
+      let baseY = 0;
+      const pointers = new Map();
+      let pinchStartDistance = 0;
+      let pinchStartScale = 1;
+
+      function clamp(value, min, max){ return Math.min(max, Math.max(min, value)); }
+      function updateTransform(){
+        img.style.transform = `translate3d(${translateX}px, ${translateY}px, 0) scale(${scale})`;
+        modal.classList.toggle('is-zoomed', scale > 1.02);
+        zoomResetBtn.textContent = Math.round(scale * 100) + '%';
+      }
+      function resetZoom(){
+        scale = 1;
+        translateX = 0;
+        translateY = 0;
+        updateTransform();
+      }
+      function setZoom(nextScale){
+        scale = clamp(nextScale, 1, 6);
+        if(scale <= 1.01){ scale = 1; translateX = 0; translateY = 0; }
+        updateTransform();
+      }
+      function getHref(item){
+        return item.getAttribute('href') || item.dataset.src || (item.querySelector('img') && item.querySelector('img').src) || '';
+      }
+      function openAt(index){
+        current = index;
+        const item = items[current];
+        const innerImg = item.querySelector('img');
+        img.onload = resetZoom;
+        img.src = getHref(item);
+        img.alt = (innerImg && innerImg.getAttribute('alt')) || item.getAttribute('data-caption') || 'Imagen institucional ampliada';
+        caption.textContent = item.getAttribute('data-caption') || (innerImg && innerImg.getAttribute('alt')) || '';
+        resetZoom();
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden','false');
+        document.body.style.overflow = 'hidden';
+      }
+      function close(){
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden','true');
+        img.src = '';
+        document.body.style.overflow = '';
+        pointers.clear();
+        resetZoom();
+      }
+      function move(step){ openAt((current + step + items.length) % items.length); }
+
+      items.forEach((item,index)=>{
+        item.classList.add('lightbox-enabled');
+        item.removeAttribute('target');
+        item.addEventListener('click', function(event){
+          event.preventDefault();
+          openAt(index);
+        });
+      });
+
+      zoomInBtn.addEventListener('click', ()=>setZoom(scale + 0.35));
+      zoomOutBtn.addEventListener('click', ()=>setZoom(scale - 0.35));
+      zoomResetBtn.addEventListener('click', resetZoom);
+      closeBtn.addEventListener('click', close);
+      prevBtn.addEventListener('click', ()=>move(-1));
+      nextBtn.addEventListener('click', ()=>move(1));
+
+      stage.addEventListener('dblclick', function(event){
+        event.preventDefault();
+        setZoom(scale > 1.05 ? 1 : 2.25);
+      });
+      stage.addEventListener('wheel', function(event){
+        event.preventDefault();
+        const delta = event.deltaY < 0 ? 0.18 : -0.18;
+        setZoom(scale + delta);
+      }, {passive:false});
+
+      stage.addEventListener('pointerdown', function(event){
+        pointers.set(event.pointerId, {x:event.clientX, y:event.clientY});
+        stage.setPointerCapture(event.pointerId);
+        if(pointers.size === 1 && scale > 1.02){
+          dragging = true;
+          dragStartX = event.clientX;
+          dragStartY = event.clientY;
+          baseX = translateX;
+          baseY = translateY;
+        }
+        if(pointers.size === 2){
+          const pts = Array.from(pointers.values());
+          pinchStartDistance = Math.hypot(pts[0].x - pts[1].x, pts[0].y - pts[1].y);
+          pinchStartScale = scale;
+          dragging = false;
+        }
+      });
+      stage.addEventListener('pointermove', function(event){
+        if(!pointers.has(event.pointerId)) return;
+        pointers.set(event.pointerId, {x:event.clientX, y:event.clientY});
+        if(pointers.size === 2){
+          const pts = Array.from(pointers.values());
+          const distance = Math.hypot(pts[0].x - pts[1].x, pts[0].y - pts[1].y);
+          if(pinchStartDistance){ setZoom(pinchStartScale * (distance / pinchStartDistance)); }
+          return;
+        }
+        if(dragging && scale > 1.02){
+          translateX = baseX + (event.clientX - dragStartX);
+          translateY = baseY + (event.clientY - dragStartY);
+          updateTransform();
+        }
+      });
+      function endPointer(event){
+        pointers.delete(event.pointerId);
+        dragging = false;
+      }
+      stage.addEventListener('pointerup', endPointer);
+      stage.addEventListener('pointercancel', endPointer);
+      stage.addEventListener('pointerleave', function(event){ if(event.pointerType === 'mouse') dragging = false; });
+
+      modal.addEventListener('click', function(event){
+        if(event.target === modal) close();
+      });
+      document.addEventListener('keydown', function(event){
+        if(!modal.classList.contains('open')) return;
+        if(event.key === 'Escape') close();
+        if(event.key === 'ArrowLeft') move(-1);
+        if(event.key === 'ArrowRight') move(1);
+        if(event.key === '+' || event.key === '=') setZoom(scale + 0.35);
+        if(event.key === '-' || event.key === '_') setZoom(scale - 0.35);
+        if(event.key === '0') resetZoom();
+      });
+    })();
+  </script>
+</body>
+</html>
