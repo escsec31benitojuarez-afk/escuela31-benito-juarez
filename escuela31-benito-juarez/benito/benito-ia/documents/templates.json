@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "version": "3.0.0"
+  },
+  "templates": [
+    {
+      "id": "institutional-plan",
+      "title": "Plan institucional",
+      "sections": [
+        "Título",
+        "Fundamentación",
+        "Propósito",
+        "Objetivos",
+        "Destinatarios",
+        "Responsables",
+        "Cronograma",
+        "Recursos",
+        "Evaluación"
+      ]
+    },
+    {
+      "id": "family-communication",
+      "title": "Comunicado a familias",
+      "sections": [
+        "Encabezado",
+        "Motivo",
+        "Información principal",
+        "Fecha y horario",
+        "Indicaciones",
+        "Canal de contacto",
+        "Cierre"
+      ]
+    },
+    {
+      "id": "teaching-sequence",
+      "title": "Secuencia didáctica",
+      "sections": [
+        "Área",
+        "Curso",
+        "Propósitos",
+        "Saberes",
+        "Inicio",
+        "Desarrollo",
+        "Cierre",
+        "Evaluación",
+        "Recursos",
+        "Adecuaciones"
+      ]
+    },
+    {
+      "id": "support-plan",
+      "title": "Plan de acompañamiento",
+      "sections": [
+        "Situación inicial",
+        "Prioridades",
+        "Metas",
+        "Acciones",
+        "Responsables",
+        "Frecuencia",
+        "Indicadores",
+        "Revisión"
+      ]
+    }
+  ]
+}

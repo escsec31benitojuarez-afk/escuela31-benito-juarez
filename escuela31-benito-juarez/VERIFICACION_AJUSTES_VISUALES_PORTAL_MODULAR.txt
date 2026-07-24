@@ -1,0 +1,8 @@
+VERIFICACIÓN AJUSTES VISUALES PORTAL MODULAR - ETAPA 2
+css_cabecera_compacta: True
+css_hero_reducido: True
+cuadro_honor_destacado: True
+footer_location_class: True
+imagenes_cuadro_honor: True
+assets_incluido: True
+paginas_modulares: True

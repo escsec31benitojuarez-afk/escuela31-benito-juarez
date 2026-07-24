@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Benito IA, asistente virtual oficial de la Escuela Secundaria N.º 31 Benito Juárez.">
+  <title>Benito IA | Escuela Secundaria N.º 31</title>
+  <link rel="stylesheet" href="benito-publico.css?v=1.4.0">
+</head>
+<body>
+  <header class="site-header">
+    <a class="back-link" href="../index.html">← Volver al sitio institucional</a>
+    <a class="private-link" href="login.html">🔒 Plataforma institucional</a>
+  </header>
+
+  <main class="assistant-shell">
+    <section class="assistant-intro" aria-labelledby="benito-title">
+      <div class="assistant-mark" aria-hidden="true">BJ</div>
+      <div>
+        <p class="eyebrow">Recepción Digital</p>
+        <h1 id="benito-title">Benito IA</h1>
+        <p>Asistente virtual oficial de la Escuela Secundaria N.º 31 “Benito Juárez”.</p>
+      </div>
+    </section>
+
+    <section class="chat-card" aria-label="Conversación con Benito IA">
+      <div id="messages" class="messages" role="log" aria-live="polite" aria-relevant="additions"></div>
+
+      <div class="suggestions" aria-label="Consultas frecuentes">
+        <button type="button" data-question="¿Cómo me comunico con la escuela?">Contacto</button>
+        <button type="button" data-question="¿Dónde está la escuela?">Ubicación</button>
+        <button type="button" data-question="¿Cómo accedo al Aula Digital?">Aula Digital</button>
+        <button type="button" data-question="¿Quiénes integran el equipo institucional?">Equipo institucional</button>
+        <button type="button" data-question="Necesito información sobre certificados y constancias">Trámites</button>
+        <button type="button" data-question="Quiero conocer las actividades y producciones de la escuela">Actividades</button>
+        <button type="button" data-question="¿Cómo ingreso a SAGE o consulto calificaciones?">SAGE</button>
+        <button type="button" data-question="¿Dónde consulto las becas Progresar?">Becas</button>
+      </div>
+
+      <form id="chatForm" class="composer">
+        <label class="sr-only" for="question">Escribí tu consulta</label>
+        <input id="question" name="question" autocomplete="off" maxlength="300" placeholder="Escribí tu consulta..." required>
+        <button type="submit">Enviar</button>
+      </form>
+      <p class="privacy-note">Las respuestas se basan en la información publicada por la institución. No compartas datos personales, calificaciones ni información sensible.</p>
+    </section>
+  </main>
+
+  <script src="conocimiento/benito-conocimiento.js?v=1.4.0"></script>
+  <script src="motor/benito-motor.js?v=1.4.0"></script>
+</body>
+</html>
