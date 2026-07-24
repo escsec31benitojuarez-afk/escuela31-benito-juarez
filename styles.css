@@ -696,54 +696,19 @@ a[data-lightbox="institucional"] img{cursor:zoom-in;}
   scroll-margin-top:120px;
 }
 
-/* Producciones estudiantiles y repositorio curricular */
-.docente-programas-pendiente{padding:20px}.docente-programas-pendiente h3{color:var(--verde-oscuro);margin-bottom:8px}.docente-programas-pendiente p{color:#4c5b55;line-height:1.7;margin-bottom:14px}.docente-programas-pendiente small{display:block;color:#65736d;margin-top:12px;font-weight:700}.btn.disabled{display:inline-flex;opacity:.72;cursor:not-allowed;background:#d8dedb!important;color:#48534e!important;box-shadow:none!important;pointer-events:none}.featured-production{border-top:7px solid var(--verde)}.production-heading{display:grid;grid-template-columns:1.5fr .8fr;gap:24px;align-items:start}.production-meta{display:grid;gap:10px;background:#f4faf6;border:1px solid rgba(11,90,53,.12);border-radius:18px;padding:18px}.production-meta span{color:#42514b;line-height:1.45}.production-meta strong{display:block;color:var(--verde-oscuro)}.production-cover{display:grid;grid-template-columns:1.2fr .8fr;gap:26px;align-items:center;margin-top:26px}.production-cover>a{display:block;border-radius:22px;overflow:hidden;box-shadow:var(--sombra);background:#eef4f0}.production-cover img{width:100%;max-height:620px;object-fit:cover;display:block}.production-cover h3,.production-video h3{color:var(--verde-oscuro);font-size:1.45rem;margin-bottom:10px}.production-cover p,.production-video p{color:#4c5b55;line-height:1.75}.production-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}.production-gallery .gallery-item{min-height:235px}.production-video{margin-top:32px;padding-top:28px;border-top:1px solid var(--borde)}.external-video{margin-top:16px}.area-card a{display:inline-block;margin-top:12px;color:var(--verde);font-weight:900;border-bottom:1px solid rgba(11,90,53,.28)}
-@media(max-width:900px){.production-heading,.production-cover{grid-template-columns:1fr}.production-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:560px){.production-gallery{grid-template-columns:1fr}.production-gallery .gallery-item{min-height:240px}}
 
-/* ===== VIDA ESCOLAR: ARQUITECTURA 2026 ===== */
-.life-section{scroll-margin-top:150px}
-.life-section>h2{margin-bottom:10px}
-.recognition-block{margin-top:26px;padding:24px;border-radius:22px;background:linear-gradient(135deg,#f8fbf9,#fff);border:1px solid rgba(11,90,53,.13)}
-.recognition-block+.recognition-block{margin-top:28px}
-.recognition-heading h3,.honor-block>h3{color:var(--verde-oscuro);font-size:1.55rem;margin:10px 0 8px}
-.recognition-heading p,.honor-block>p{color:#4c5b55;line-height:1.7}
-.solidario-grid{display:grid;grid-template-columns:.7fr 1fr 1.1fr;gap:24px;align-items:center;margin-top:22px}
-.student-photo-placeholder{min-height:330px;border:2px dashed rgba(11,90,53,.34);border-radius:22px;background:linear-gradient(145deg,#eef7f1,#fff);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;color:var(--verde-oscuro)}
-.student-photo-placeholder strong{font-size:1.08rem;margin-top:10px}
-.student-photo-placeholder small{margin-top:6px;color:#68756f;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
-.student-photo-icon{width:90px;height:90px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--verde-suave);font-size:2.7rem;border:1px solid rgba(11,90,53,.16)}
-.solidario-plaque{display:block;border-radius:20px;overflow:hidden;background:#063d24;box-shadow:0 12px 28px rgba(0,0,0,.12)}
-.solidario-plaque img{display:block;width:100%;height:330px;object-fit:contain}
-.solidario-copy h3{color:var(--verde-oscuro);font-size:1.65rem;margin-bottom:10px}
-.solidario-copy p{color:#4c5b55;line-height:1.75;margin-bottom:16px}
-.honor-block{border-left:6px solid var(--amarillo)}
-.honor-block .honor-preview-grid{margin-top:20px}
-#comunicaciones .visual-news-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-@media(max-width:1050px){.solidario-grid{grid-template-columns:1fr 1fr}.solidario-copy{grid-column:1/-1}.student-photo-placeholder,.solidario-plaque img{min-height:300px;height:300px}}
-@media(max-width:760px){.solidario-grid,#comunicaciones .visual-news-grid{grid-template-columns:1fr}.student-photo-placeholder,.solidario-plaque img{min-height:280px;height:280px}.recognition-block{padding:18px}}
-
-
-/* BENITO_IA_INTEGRACION_2026_07_22 */
-.nav-links .benito-access {
-  background: #143f2a;
-  color: #fff !important;
-  border: 1px solid rgba(255,255,255,.35);
-  border-radius: 999px;
-  padding: .55rem .85rem;
-  white-space: nowrap;
-  font-weight: 800;
-}
-.nav-links .benito-access:hover,
-.nav-links .benito-access:focus-visible {
-  background: #f0b429;
-  color: #173a27 !important;
-}
-.portal-card-private {
-  border: 2px solid #143f2a;
-  background: linear-gradient(145deg,#f5fbf7,#e5f2e9);
-}
-.portal-card-private h3 { color:#143f2a; }
-@media (max-width: 1100px) {
-  .nav-links .benito-access { margin-top:.25rem; }
-}
+/* Proyecto institucional: Nos cuidamos en comunidad */
+.project-featured{border-top:5px solid var(--green, #2f7d58)}
+.project-highlight-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(280px,.7fr);gap:28px;align-items:center}
+.project-cover-photo{display:block;border-radius:18px;overflow:hidden;box-shadow:0 18px 45px rgba(0,0,0,.16)}
+.project-cover-photo img{width:100%;height:320px;object-fit:cover;display:block}
+.project-page-shell{width:min(1180px,calc(100% - 32px));margin:0 auto 70px;display:grid;gap:24px}
+.rector-intro{background:linear-gradient(135deg,#fff 0%,#f7f2e8 100%)}
+.rector-intro blockquote{margin:22px 0;padding:22px 26px;border-left:5px solid #c99a36;background:rgba(255,255,255,.78);border-radius:0 16px 16px 0}
+.rector-intro blockquote p{font-size:1.12rem;line-height:1.75;margin:0 0 12px}
+.rector-intro blockquote footer{font-weight:700;color:#6d5524}
+.project-photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.project-photo-grid a{display:block;border-radius:16px;overflow:hidden;background:#eee;box-shadow:0 12px 30px rgba(0,0,0,.12)}
+.project-photo-grid img{width:100%;height:330px;object-fit:cover;display:block;transition:transform .25s ease}
+.project-photo-grid a:hover img{transform:scale(1.025)}
+@media (max-width:800px){.project-highlight-grid{grid-template-columns:1fr}.project-cover-photo img{height:260px}.project-photo-grid{grid-template-columns:1fr}.project-photo-grid img{height:auto;max-height:420px}.project-page-shell{width:min(100% - 20px,1180px)}}
