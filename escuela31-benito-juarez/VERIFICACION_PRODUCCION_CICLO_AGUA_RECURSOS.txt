@@ -1,9 +1,0 @@
-Actualización realizada:
-- Recursos: “Ver programas” cambiado por “Ver proyectos”.
-- Recursos para docentes: agregado bloque “Programas de estudio” como Próximamente, administrado por Asesoría Pedagógica.
-- Actividades y producciones: incorporada producción “El ciclo del agua”, 2.º Año B, Ciencias Naturales.
-- Galería de 7 fotografías optimizadas con Lightbox.
-- Video de YouTube incrustado mediante youtube-nocookie.
-- Se evitó duplicar el proyecto en Multimedia o Aula Digital.
-
-- Docente responsable incorporada: Alejandra Martínez.

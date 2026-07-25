@@ -1,6 +1,0 @@
-VERIFICACIÓN RECTOR FOTO CORRECTA V2
-
-- institucion.html referencia: assets/imagenes/equipo/rector-julio-gallardo-foto.png
-- Se incluye también rector-julio-gallardo.png actualizado por compatibilidad.
-- Se cambió el nombre del archivo para evitar caché del navegador/GitHub Pages.
-- ZIP total con index, páginas HTML, styles.css y assets completos.
