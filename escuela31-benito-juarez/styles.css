@@ -760,6 +760,11 @@ a[data-lightbox="institucional"] img{cursor:zoom-in;}
   background: #f0b429;
   color: #173a27 !important;
 }
+.portal-card-private {
+  border: 2px solid #143f2a;
+  background: linear-gradient(145deg,#f5fbf7,#e5f2e9);
+}
+.portal-card-private h3 { color:#143f2a; }
 @media (max-width: 1100px) {
   .nav-links .benito-access { margin-top:.25rem; }
 }
