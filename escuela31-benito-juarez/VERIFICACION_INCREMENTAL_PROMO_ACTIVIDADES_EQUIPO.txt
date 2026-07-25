@@ -1,0 +1,54 @@
+VERIFICACIÓN - ACTUALIZACIÓN INCREMENTAL PROMO 2026 / ACTIVIDADES / EQUIPO / RECURSOS
+
+Base utilizada:
+- escuela31-benito-juarez_AULA_DIGITAL_PROMO_COMUNIDAD.zip
+
+Regla aplicada:
+- No se reconstruyó el sitio.
+- Se agregaron módulos y contenidos sobre la última versión compartida.
+- Se actualizaron únicamente horarios del equipo institucional y datos de administración.
+
+Cambios realizados:
+1. Nuevo módulo: actividades.html
+   - Espacio de visualización de actividades y producciones.
+   - Organización preparada para crecimiento progresivo por áreas, cursos, materias y tipo de actividad.
+   - Flujo de publicación sugerido: recepción, clasificación, publicación y archivo vivo.
+
+2. Aula Digital:
+   - Se agregó acceso destacado a "Actividades y producciones".
+   - Se reforzó la función del portal como repositorio de materiales y memoria pedagógica.
+
+3. Promo 2026:
+   - Se eliminó el botón externo a Drive.
+   - Se incorporaron 4 imágenes iniciales en assets/imagenes/promo-2026/.
+   - Se dejó galería interna con lightbox institucional.
+   - Se preparó el bloque para crecer con más fotos, videos, mensajes y recuerdos.
+
+4. Institución / Equipo institucional:
+   - Se incorporó Carina Galarza como Administrativa.
+   - Horario: lunes a viernes de 7:30 a 13:00 hs.
+   - Se actualizó el bloque Administración institucional.
+   - Se actualizaron horarios del equipo pedagógico:
+     * Daiana Mohr: lunes 8:00 a 11:00 hs; miércoles 8:00 a 11:00 hs; viernes 8:00 a 10:00 hs.
+     * Julián Mahler: lunes 11:40 a 12:50 hs; miércoles 8:20 a 9:40 hs; jueves 7:20 a 12:50 hs.
+     * Maximiliano Acevedo: lunes 8:00 a 10:00 hs.
+     * Luciano Velázquez: viernes 9:25 a 10:45 hs.
+
+5. Recursos:
+   - Se agregaron enlaces de interés para estudiantes y familias:
+     * Instituto Becario Entre Ríos.
+     * Consejo General de Educación de Entre Ríos.
+     * Aula Digital institucional.
+     * Actividades y producciones.
+   - Se conservaron Becas Progresar, Educ.ar, Mi Argentina y SAGE.
+
+6. Navegación:
+   - Se agregó "Actividades" al menú principal en todas las páginas.
+   - Se agregó "Actividades y producciones" al footer.
+
+7. Verificación técnica:
+   - No se detectaron enlaces internos rotos hacia assets.
+   - Se conservaron estilos, lightbox, zoom, portada, historia, vida escolar, multimedia, programas y contacto.
+
+Última versión generada:
+- escuela31-benito-juarez_INCREMENTAL_PROMO_ACTIVIDADES_EQUIPO.zip

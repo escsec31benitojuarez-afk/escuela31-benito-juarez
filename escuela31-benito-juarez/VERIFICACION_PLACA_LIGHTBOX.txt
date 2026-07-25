@@ -1,0 +1,22 @@
+VERIFICACIÓN DE ACTUALIZACIÓN - PLACA Y LIGHTBOX
+
+Cambios aplicados:
+1. Se reemplazó la placa institucional del bloque Inicio por la versión mejorada compartida por Alfredo.
+2. Se incorporó un visor Lightbox institucional para la galería fotográfica.
+3. Las imágenes de Multimedia ya no abren como archivo directo reducido en el navegador.
+4. Al seleccionar una imagen, se abre sobre fondo oscuro, ampliada y adaptada a pantalla.
+5. Se agregaron controles de cerrar, anterior y siguiente.
+6. El bloque “Nuestro nombre, nuestra identidad” conserva la placa y también permite abrirla ampliada.
+7. Se conservaron todos los módulos del portal y los assets existentes.
+
+Archivos principales modificados:
+- index.html
+- multimedia.html
+- styles.css
+- assets/imagenes/institucion/placa-benito-juarez.jpeg
+
+Validación interna:
+- Existe assets/imagenes/institucion/placa-benito-juarez.jpeg
+- Existen las 10 imágenes de galería institucional.
+- multimedia.html contiene data-lightbox="institucional" en las imágenes de galería.
+- index.html contiene data-lightbox="institucional" en la placa.

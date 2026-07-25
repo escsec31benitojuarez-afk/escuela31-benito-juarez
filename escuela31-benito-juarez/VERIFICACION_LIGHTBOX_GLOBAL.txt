@@ -1,0 +1,15 @@
+VERIFICACIÓN LIGHTBOX GLOBAL
+
+index.html: data-lightbox=2, modal=True
+institucion.html: data-lightbox=1, modal=True
+historia.html: data-lightbox=1, modal=True
+recursos.html: data-lightbox=1, modal=True
+vida-escolar.html: data-lightbox=15, modal=True
+programas.html: data-lightbox=4, modal=True
+multimedia.html: data-lightbox=11, modal=True
+contacto.html: data-lightbox=1, modal=True
+CSS amplia imagen: True
+Alumno Solidario: True
+Tipo institucional: True
+
+Se aplicó el mismo visor ampliado a enlaces de imágenes en todo el portal. Al seleccionar la imagen o el botón, debe abrirse el lightbox institucional con fondo oscuro, navegación anterior/siguiente y cierre.

@@ -1,0 +1,16 @@
+BENITO IA · MVP INSTITUCIONAL
+
+Se incorporó un asistente flotante funcional en todas las páginas HTML del sitio.
+
+Características:
+- Identidad institucional Benito IA.
+- Diseño responsive para PC y celular.
+- Preguntas sugeridas.
+- Respuestas sobre Aula Digital, Recursos, Becas, Contacto, Vida Escolar, Promo 2026, Programas, Comunidad y Multimedia.
+- Orientación pedagógica basada en Aprender a Aprender: recuperación activa, Cornell, estudio espaciado y bloques de 25 + 5 minutos.
+- Enlaces internos directos a las secciones correspondientes.
+- Aviso de privacidad para no compartir datos personales.
+- Funciona sin claves API y sin conexión a un servicio externo.
+
+Nota técnica:
+Esta versión es un MVP basado en una base de conocimiento institucional curada en JavaScript. Está preparada para la demostración institucional. En una segunda etapa puede conectarse a una API o backend para respuestas generativas y consulta documental.
