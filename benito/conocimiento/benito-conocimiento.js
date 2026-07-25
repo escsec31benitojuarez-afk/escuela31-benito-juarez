@@ -364,3 +364,10 @@ window.BENITO_FLUJOS = {
       }
     ]
   };
+
+/* PORTAL_INTELIGENTE_V3_0_2026 */
+window.BENITO_PORTAL_INTELIGENTE = {
+  aec: { titulo: "Acuerdo Escolar de Convivencia 2026", url: "../biblioteca.html", resumen: "Documento aprobado que orienta derechos, responsabilidades, convivencia, uso pedagógico del celular, medidas reparatorias y Consejo Escolar de Convivencia." },
+  proyecto: { titulo: "Nos cuidamos en comunidad", url: "../programas.html", resumen: "Proyecto interdisciplinario sobre hábitos saludables, actividad física, ambiente y participación comunitaria, reconocido a nivel provincial. El equipo de colaboradores permanece abierto." },
+  servicios: { titulo: "Portal de servicios", url: "../servicios.html", correoSecretaria: "secretaria31benitojuarez@gmail.com" }
+};
