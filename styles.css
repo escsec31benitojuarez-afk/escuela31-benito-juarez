@@ -1090,13 +1090,13 @@ a[data-lightbox="institucional"] img{cursor:zoom-in;}
 .contact-page .contact-social-button{
   align-self:flex-start;
   margin-top:auto;
-  background:#1877f2;
+  background:var(--verde);
   color:#fff;
-  box-shadow:0 8px 18px rgba(24,119,242,.23);
+  box-shadow:0 8px 18px rgba(11,90,53,.22);
 }
 .contact-page .contact-social-button:hover,
 .contact-page .contact-social-button:focus-visible{
-  background:#145dbf;
+  background:var(--verde-oscuro);
   color:#fff;
 }
 .contact-page .footer{
