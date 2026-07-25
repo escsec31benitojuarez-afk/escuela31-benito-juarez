@@ -1,0 +1,12 @@
+index_quote: True
+placa_asset: True
+rector_logo_removed: True
+rector_placeholder_ready: True
+vida_fechas_corregida: True
+vida_preceptores_corregida: True
+programas_subbloques: True
+ads_pdf: True
+tesoros_pdf: True
+barrio_flyers: True
+
+Nota: se reemplazó el logo del Rector por un espacio gráfico institucional preparado para su fotografía individual. Cuando se comparta una foto individual del Rector, reemplazar assets/imagenes/equipo/rector-julio-gallardo.png manteniendo el mismo nombre de archivo.

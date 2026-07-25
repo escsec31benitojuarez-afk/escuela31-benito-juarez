@@ -1,0 +1,9 @@
+VERIFICACIÓN - FOTO DEL RECTOR
+
+Actualización realizada:
+- Se reemplazó el archivo assets/imagenes/equipo/rector-julio-gallardo.png por la fotografía correcta compartida por Alfredo.
+- Se conserva la estructura del portal modular.
+- Se conservan placa institucional mejorada, lightbox, galería, programas, vida escolar y assets completos.
+
+Instrucción de reemplazo:
+Copiar todo el contenido del ZIP dentro de la carpeta escuela31-benito-juarez, aceptando reemplazar/combinar archivos.

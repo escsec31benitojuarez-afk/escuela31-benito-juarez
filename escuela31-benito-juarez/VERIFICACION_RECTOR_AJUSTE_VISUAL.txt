@@ -1,0 +1,5 @@
+Actualización aplicada:
+- Eliminada la línea "Rector institucional" debajo del nombre del Rector.
+- Se mantiene la estructura: Rector / Mg. Julio Gallardo / fotografía / botón Ver CV.
+- Foto correcta del Rector actualizada en ambos nombres de archivo para evitar caché y mantener compatibilidad.
+- Se conserva el portal modular, assets completos, placa institucional y lightbox de galería.

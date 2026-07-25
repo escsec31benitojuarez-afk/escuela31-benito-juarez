@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Centro de Conocimiento · Benito IA</title>
+<link rel="stylesheet" href="benito-ia/admin/admin.css">
+</head>
+<body>
+<header>
+  <h1>Centro de Conocimiento Institucional</h1>
+  <p>Benito IA v2.1 · Entorno privado de gestión y validación</p>
+</header>
+<main>
+  <div class="toolbar">
+    <button id="exportKnowledge">Exportar conocimiento</button>
+    <button id="exportRag">Exportar para RAG</button>
+    <label class="btn">Importar JSON<input id="importKnowledge" type="file" accept=".json" hidden></label>
+    <a class="btn" href="index.html">Volver a Benito IA</a>
+  </div>
+
+  <section class="stats">
+    <div class="stat"><strong id="total">0</strong><span>entidades</span></div>
+    <div class="stat"><strong id="validated">0</strong><span>validadas</span></div>
+    <div class="stat"><strong id="pending">0</strong><span>pendientes</span></div>
+    <div class="stat"><strong id="modules">0</strong><span>módulos</span></div>
+  </section>
+
+  <section class="filters">
+    <input id="search" placeholder="Buscar por título, resumen o palabra clave">
+    <select id="moduleFilter"></select>
+    <select id="statusFilter">
+      <option value="">Todos los estados</option>
+      <option value="validado">Validado</option>
+      <option value="pendiente">Pendiente</option>
+      <option value="observado">Observado</option>
+    </select>
+  </section>
+
+  <section id="cards" class="grid"></section>
+
+  <div class="note">
+    Los cambios realizados aquí permanecen en la sesión hasta exportar el archivo JSON. No se modifica el sitio público.
+  </div>
+</main>
+
+<dialog id="editDialog">
+  <div class="modal-head"><strong>Editar entidad de conocimiento</strong></div>
+  <form id="editForm" class="modal-body">
+    <input id="editId" type="hidden">
+    <div class="form-grid">
+      <label>Título<input id="editTitle" required></label>
+      <label>Módulo<input id="editModule" required></label>
+      <label class="full">Resumen<textarea id="editSummary" rows="4" required></textarea></label>
+      <label class="full">Palabras clave<input id="editKeywords"></label>
+      <label>Estado<select id="editStatus"><option>pendiente</option><option>validado</option><option>observado</option></select></label>
+    </div>
+    <div class="toolbar" style="margin-top:18px">
+      <button type="submit">Guardar cambios</button>
+      <button type="button" class="secondary" id="cancelEdit">Cancelar</button>
+    </div>
+  </form>
+</dialog>
+
+<script src="benito-ia/knowledge/index.js"></script>
+<script src="benito-ia/knowledge/knowledge-loader.js"></script>
+<script src="benito-ia/rag/chunker.js"></script>
+<script src="benito-ia/rag/export-rag.js"></script>
+<script src="benito-ia/admin/admin.js"></script>
+<script src="benito-ia/governance/roles.js"></script><script src="benito-ia/governance/data-classification.js"></script><script src="benito-ia/auth/demo-users.js"></script><script src="benito-ia/audit/security-audit.js"></script><script src="benito-ia/auth/auth-manager.js"></script><script src="benito-ia/access/access-control.js"></script><script>BenitoAccess.requirePage({permission:'manage:knowledge_base',level:'institutional',resource:'admin.html'});</script></body>
+</html>

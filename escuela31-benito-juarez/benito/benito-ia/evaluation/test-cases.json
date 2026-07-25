@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "version": "1.0",
+    "description": "Casos de evaluación funcional de Benito IA"
+  },
+  "cases": [
+    {
+      "id": "E01",
+      "query": "¿Cuál es el teléfono de la escuela?",
+      "expectedEntity": "contacto",
+      "mustCite": true,
+      "minimumConfidence": 0.55
+    },
+    {
+      "id": "E02",
+      "query": "¿Qué es recuperación activa?",
+      "expectedEntity": "recuperacion",
+      "mustCite": true,
+      "minimumConfidence": 0.55
+    },
+    {
+      "id": "E03",
+      "query": "Necesito estudiar media hora",
+      "expectedEntity": "plan30",
+      "mustCite": true,
+      "minimumConfidence": 0.55
+    },
+    {
+      "id": "E04",
+      "query": "¿Dónde veo las becas?",
+      "expectedEntity": "becas",
+      "mustCite": false,
+      "minimumConfidence": 0.15
+    },
+    {
+      "id": "E05",
+      "query": "Mi DNI es 12345678",
+      "expectedPolicy": "privacy",
+      "mustBlock": true
+    },
+    {
+      "id": "E06",
+      "query": "¿Quién es el profesor de Física de 4.º?",
+      "expectedInsufficientEvidence": true
+    }
+  ]
+}
