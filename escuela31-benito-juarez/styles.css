@@ -13,6 +13,116 @@
   --sombra:0 16px 36px rgba(0,0,0,.09);
   --radio:24px;
 }
+
+/* RESTAURACION CONTROLADA: acceso publico a Benito IA */
+.nav-links .benito-access {
+  background: #143f2a;
+  color: #fff !important;
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 999px;
+  padding: .55rem .85rem;
+  white-space: nowrap;
+  font-weight: 800;
+}
+.nav-links .benito-access:hover,
+.nav-links .benito-access:focus-visible {
+  background: #f0b429;
+  color: #173a27 !important;
+}
+.portal-card-private {
+  border: 2px solid #143f2a;
+  background: linear-gradient(145deg,#f5fbf7,#e5f2e9);
+}
+.portal-card-private h3 { color:#143f2a; }
+@media (max-width:1100px) {
+  .nav-links .benito-access { margin-top:.25rem; }
+}
+
+/* RESTAURACION CONTROLADA: produccion estudiantil Ciclo del Agua */
+.docente-programas-pendiente{padding:20px}
+.docente-programas-pendiente h3{color:var(--verde-oscuro);margin-bottom:8px}
+.docente-programas-pendiente p{color:#4c5b55;line-height:1.7;margin-bottom:14px}
+.docente-programas-pendiente small{display:block;color:#65736d;margin-top:12px;font-weight:700}
+.btn.disabled{display:inline-flex;opacity:.72;cursor:not-allowed;background:#d8dedb!important;color:#48534e!important;box-shadow:none!important;pointer-events:none}
+.featured-production{border-top:7px solid var(--verde)}
+.production-heading{display:grid;grid-template-columns:1.5fr .8fr;gap:24px;align-items:start}
+.production-meta{display:grid;gap:10px;background:#f4faf6;border:1px solid rgba(11,90,53,.12);border-radius:18px;padding:18px}
+.production-meta span{color:#42514b;line-height:1.45}
+.production-meta strong{display:block;color:var(--verde-oscuro)}
+.production-cover{display:grid;grid-template-columns:1.2fr .8fr;gap:26px;align-items:center;margin-top:26px}
+.production-cover>a{display:block;border-radius:22px;overflow:hidden;box-shadow:var(--sombra);background:#eef4f0}
+.production-cover img{width:100%;max-height:620px;object-fit:cover;display:block}
+.production-cover h3,.production-video h3{color:var(--verde-oscuro);font-size:1.45rem;margin-bottom:10px}
+.production-cover p,.production-video p{color:#4c5b55;line-height:1.75}
+.production-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}
+.production-gallery .gallery-item{min-height:235px}
+.production-video{margin-top:32px;padding-top:28px;border-top:1px solid var(--borde)}
+.external-video{margin-top:16px}
+.area-card a{display:inline-block;margin-top:12px;color:var(--verde);font-weight:900;border-bottom:1px solid rgba(11,90,53,.28)}
+@media(max-width:900px){
+  .production-heading,.production-cover{grid-template-columns:1fr}
+  .production-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:560px){
+  .production-gallery{grid-template-columns:1fr}
+  .production-gallery .gallery-item{min-height:240px}
+}
+
+/* RESTAURACION CONTROLADA: arquitectura de Vida Escolar */
+.life-section{scroll-margin-top:150px}
+.life-section>h2{margin-bottom:10px}
+.recognition-block{margin-top:26px;padding:24px;border-radius:22px;background:linear-gradient(135deg,#f8fbf9,#fff);border:1px solid rgba(11,90,53,.13)}
+.recognition-block+.recognition-block{margin-top:28px}
+.recognition-heading h3,.honor-block>h3{color:var(--verde-oscuro);font-size:1.55rem;margin:10px 0 8px}
+.recognition-heading p,.honor-block>p{color:#4c5b55;line-height:1.7}
+.solidario-grid{display:grid;grid-template-columns:.7fr 1fr 1.1fr;gap:24px;align-items:center;margin-top:22px}
+.student-photo-real{display:block;overflow:hidden;border-radius:20px;min-height:330px;background:#eef6f1;border:1px solid #c8ddd1}
+.student-photo-real img{width:100%;height:100%;min-height:330px;object-fit:cover;object-position:center top;display:block}
+.solidario-plaque{display:block;border-radius:20px;overflow:hidden;background:#063d24;box-shadow:0 12px 28px rgba(0,0,0,.12)}
+.solidario-plaque img{display:block;width:100%;height:330px;object-fit:contain}
+.solidario-copy h3{color:var(--verde-oscuro);font-size:1.65rem;margin-bottom:10px}
+.solidario-copy p{color:#4c5b55;line-height:1.75;margin-bottom:16px}
+.honor-block{border-left:6px solid var(--amarillo)}
+.honor-block .honor-preview-grid{margin-top:20px}
+#comunicaciones .visual-news-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.button-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+@media(max-width:1050px){
+  .solidario-grid{grid-template-columns:1fr 1fr}
+  .solidario-copy{grid-column:1/-1}
+  .student-photo-real img,.solidario-plaque img{min-height:300px;height:300px}
+}
+@media(max-width:760px){
+  .solidario-grid,#comunicaciones .visual-news-grid{grid-template-columns:1fr}
+  .student-photo-real img,.solidario-plaque img{min-height:280px;height:280px}
+  .recognition-block{padding:18px}
+  .button-row .btn{width:100%;text-align:center}
+}
+
+/* RESTAURACION CONTROLADA: Biblioteca y Servicios */
+.smart-highlight{border-top:7px solid var(--amarillo);background:linear-gradient(135deg,#fff,#f2faf5)}
+.achievement-panel,.document-callout{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start;padding:26px;border-radius:22px;background:linear-gradient(135deg,#f5fbf7,#fff9df);border:1px solid rgba(11,90,53,.14)}
+.achievement-icon,.document-icon{font-size:3rem}
+.smart-toolbar{display:flex;gap:24px;align-items:flex-end;justify-content:space-between}
+.search-box{display:flex;align-items:center;gap:10px;min-width:min(420px,100%);padding:13px 16px;background:#fff;border:1px solid rgba(11,90,53,.22);border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.04)}
+.search-box input{border:0;outline:0;width:100%;font:inherit;background:transparent;color:#263b32}
+.service-search{margin-top:22px}
+.document-grid,.service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px}
+.document-card,.service-card{display:flex;gap:18px;padding:24px;border:1px solid rgba(11,90,53,.13);border-radius:22px;background:#fff;box-shadow:0 8px 22px rgba(0,0,0,.04)}
+.service-card{display:block}
+.service-card .icon{font-size:2.2rem;margin-bottom:12px}
+.document-card h3,.service-card h3{color:var(--verde-oscuro);margin:10px 0}
+.document-card p,.service-card p{color:#4c5b55;line-height:1.68}
+.document-meta{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+.document-meta span,.status-pill{padding:7px 10px;border-radius:999px;background:#eef7f1;color:var(--verde-oscuro);font-size:.83rem;font-weight:800}
+.btn.secondary{background:#edf4ef;color:var(--verde-oscuro)}
+.no-results{text-align:center;padding:24px;color:#68756f;font-weight:800}
+.smart-card{border-top:4px solid var(--amarillo)}
+@media(max-width:800px){
+  .smart-toolbar,.achievement-panel,.document-callout{grid-template-columns:1fr}
+  .smart-toolbar{align-items:stretch}
+  .search-box{min-width:0}
+  .document-card{display:block}
+}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:Arial,Helvetica,sans-serif;background:var(--fondo);color:var(--texto);line-height:1.65}
@@ -743,30 +853,6 @@ a[data-lightbox="institucional"] img{cursor:zoom-in;}
 @media (max-width:700px){
   #alumno-solidario .campaign-card{grid-template-columns:1fr}
   #alumno-solidario .campaign-card img{height:auto;max-height:420px;object-fit:contain;background:#f8fbf9}
-}
-
-/* BENITO_IA_INTEGRACION_2026_07_22 */
-.nav-links .benito-access {
-  background: #143f2a;
-  color: #fff !important;
-  border: 1px solid rgba(255,255,255,.35);
-  border-radius: 999px;
-  padding: .55rem .85rem;
-  white-space: nowrap;
-  font-weight: 800;
-}
-.nav-links .benito-access:hover,
-.nav-links .benito-access:focus-visible {
-  background: #f0b429;
-  color: #173a27 !important;
-}
-.portal-card-private {
-  border: 2px solid #143f2a;
-  background: linear-gradient(145deg,#f5fbf7,#e5f2e9);
-}
-.portal-card-private h3 { color:#143f2a; }
-@media (max-width: 1100px) {
-  .nav-links .benito-access { margin-top:.25rem; }
 }
 
 /* ===== CIERRE DEL BLOQUE PROYECTOS INSTITUCIONALES ===== */
