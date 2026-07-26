@@ -2,11 +2,9 @@ BENITO IA v5.0 ALFA — APLICACIÓN RTI
 
 INICIO
 1. Abra index.html.
-2. Ingrese al área privada.
-3. Use:
-   Usuario: alfredo.demo
-   Contraseña: Benito-Local-2026!
-4. Abra “Benito RTI”.
+2. El área privada está temporalmente desactivada.
+3. No hay usuarios ni credenciales habilitados.
+4. Benito RTI quedará disponible cuando se complete una autenticación segura.
 
 PRUEBAS SUGERIDAS
 - Marcar tareas como completadas.

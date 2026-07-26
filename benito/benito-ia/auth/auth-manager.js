@@ -29,6 +29,10 @@ window.BenitoAuth=(function(){
     try{sessionStorage.removeItem('benitoIA_v40_session');}catch(e){}
   }
   function login(username,password){
+    if(cfg().privateAreaEnabled===false){
+      clearSession();
+      return{ok:false,error:'La plataforma institucional se encuentra en preparación.'};
+    }
     username=String(username||'').trim();
     const attempts=failed();
     const blocked=attempts[username];
@@ -55,6 +59,7 @@ window.BenitoAuth=(function(){
     return{ok:true,session};
   }
   function getSession(){
+    if(cfg().privateAreaEnabled===false){clearSession();return null;}
     let session=readJSON(localStorage,SESSION_KEY,null);
     if(!session){
       session=readJSON(sessionStorage,SESSION_KEY,null)||readJSON(sessionStorage,'benitoIA_v40_session',null);

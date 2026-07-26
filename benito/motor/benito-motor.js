@@ -270,6 +270,7 @@
 
   function directIntent(question) {
     const text = normalize(question);
+    if (/\b(?:como te llamas|cual es tu nombre|quien sos|quien eres|decime tu nombre|nombre del asistente|presentate)\b/.test(text)) return 'identidad';
     if (/\b(?:guardas|almacenas|recordas|memoria|conversaciones?)\b/.test(text) ||
         (/\bpreguntas?\b/.test(text) && /\b(?:ayer|anteriores?|otras?)\b/.test(text))) return 'privacidad-chat';
     if ((/\b(?:contraseña|contrasena|clave|credenciales?)\b/.test(text) &&

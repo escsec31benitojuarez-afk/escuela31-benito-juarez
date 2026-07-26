@@ -38,7 +38,7 @@ window.BENITO_IA_CONFIG={
    warningAttendanceRate:85
   }
  },
- security:{enabled:true,environment:'staging',authMode:'local-demo',sessionTimeoutMinutes:20,maxFailedAttempts:5,auditEnabled:true,requireAuthenticationForPrivate:true,productionReady:false},
+ security:{enabled:false,privateAreaEnabled:false,environment:'disabled',authMode:'disabled',sessionTimeoutMinutes:20,maxFailedAttempts:5,auditEnabled:false,requireAuthenticationForPrivate:true,productionReady:false},
 cognitive:{
   enabled:true,
   orchestration:true,
@@ -85,3 +85,11 @@ cognitive:{
   visitante:{label:'Visitante',icon:'👥'}
  }
 };
+
+(function disablePrivateArea(){
+  if(BENITO_IA_CONFIG.security.privateAreaEnabled!==false)return;
+  const currentPage=location.pathname.split('/').pop();
+  if(currentPage&&currentPage!=='index.html'&&currentPage!=='login.html'){
+    location.replace('login.html');
+  }
+})();

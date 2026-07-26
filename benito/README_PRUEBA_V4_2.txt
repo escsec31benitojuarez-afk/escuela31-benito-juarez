@@ -1,11 +1,9 @@
 BENITO IA v4.2 — MOTOR PREDICTIVO RESPONSABLE
 
 1. Abra index.html.
-2. Ingrese al área privada.
-3. Credencial:
-   Usuario: alfredo.demo
-   Contraseña: Benito-Local-2026!
-4. Abra “Motor Predictivo Responsable”.
+2. El área privada está temporalmente desactivada.
+3. No hay usuarios ni credenciales habilitados.
+4. El Motor Predictivo Responsable quedará disponible cuando se complete una autenticación segura.
 5. Revise:
    - proyecciones por curso;
    - factores explicativos;

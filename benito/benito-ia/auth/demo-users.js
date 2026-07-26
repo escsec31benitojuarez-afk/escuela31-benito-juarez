@@ -1,1 +1,7 @@
-window.BENITO_DEMO_USERS={"meta": {"mode": "local-demo", "warning": "Credenciales exclusivamente demostrativas. No usar en producción."}, "users": [{"id": "alfredo", "displayName": "Alfredo Esquivel", "username": "alfredo.demo", "passwordDemo": "Benito-Local-2026!", "availableProfiles": ["platform_owner", "rti"], "defaultProfile": "platform_owner", "active": true}, {"id": "rector-demo", "displayName": "Rector — Demostración", "username": "rector.demo", "passwordDemo": "Rector-Local-2026!", "availableProfiles": ["rector"], "defaultProfile": "rector", "active": true}]};
+window.BENITO_DEMO_USERS={
+  meta:{
+    mode:'disabled',
+    warning:'La plataforma institucional se encuentra en preparación. No hay usuarios habilitados.'
+  },
+  users:[]
+};

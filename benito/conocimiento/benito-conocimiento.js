@@ -1,5 +1,13 @@
 window.BENITO_CONOCIMIENTO = [
     {
+      id: 'identidad', priority: 30,
+      phrases: ['como te llamas','como te llamás','cual es tu nombre','cuál es tu nombre','quien sos','quién sos','quien eres','quién eres','decime tu nombre'],
+      keywords: ['benito','nombre','llamas','identidad'],
+      synonyms: ['tu nombre','como se llama el asistente','nombre del asistente','presentate'],
+      title: 'Soy Benito IA',
+      html: 'Soy <strong>Benito IA</strong>, el asistente virtual oficial de la Escuela Secundaria N.º 31 “Benito Juárez”. Puedo orientarte con información institucional publicada.'
+    },
+    {
       id: 'contacto', priority: 8,
       phrases: ['como me comunico', 'datos de contacto', 'contactar la escuela', 'contactar a la escuela', 'contactar a la secundaria', 'telefono de la escuela', 'correo institucional'],
       keywords: ['telefono','celular','correo','mail','email','contacto','comunicar','whatsapp','llamar'],

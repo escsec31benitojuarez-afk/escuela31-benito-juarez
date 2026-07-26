@@ -1,12 +1,10 @@
 BENITO IA v4.1 — MOTOR ANALÍTICO INSTITUCIONAL
 
 1. Abra index.html.
-2. Ingrese al área privada.
-3. Use:
-   Usuario: alfredo.demo
-   Contraseña: Benito-Local-2026!
-4. Cambie al perfil Propietario de la Plataforma o RTI.
-5. Abra “Motor Analítico Institucional”.
+2. El área privada está temporalmente desactivada.
+3. No hay usuarios ni credenciales habilitados.
+4. El Motor Analítico Institucional quedará disponible cuando se complete una autenticación segura.
+5. Cuando se habilite, revise:
 6. Revise:
    - KPIs.
    - Riesgo por curso.
@@ -14,7 +12,7 @@ BENITO IA v4.1 — MOTOR ANALÍTICO INSTITUCIONAL
    - Alertas.
    - Comparación por ciclo.
    - Calidad del dato.
-7. Como Propietario, abra analytics-data-lab.html para validar JSON agregado.
+7. La validación del laboratorio de datos queda pendiente hasta la habilitación segura.
 
 IMPORTANTE
 Los datos son completamente ficticios. No representan resultados reales.

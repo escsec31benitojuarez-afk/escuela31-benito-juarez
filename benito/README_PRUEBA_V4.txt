@@ -1,8 +1,7 @@
 BENITO IA v4.0
 
-Abra index.html y luego Área privada.
-Usuario: alfredo.demo
-Contraseña: Benito-Local-2026!
+Abra index.html para probar el asistente público.
+El área privada está temporalmente desactivada.
+No hay usuarios ni credenciales habilitados.
 
-Pruebe los perfiles Propietario de la Plataforma y RTI.
 No usar con datos reales.

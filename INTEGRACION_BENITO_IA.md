@@ -6,8 +6,9 @@
 - Retorno al sitio institucional agregado en login y paneles principales.
 - Diseñado para funcionar en GitHub Pages bajo el mismo repositorio.
 
-Credenciales de demostración:
-- Usuario: `alfredo.demo`
-- Contraseña: `Benito-Local-2026!`
+Estado actual:
+- La plataforma institucional está temporalmente desactivada.
+- No hay usuarios ni credenciales habilitados.
+- El asistente público Benito IA continúa disponible.
 
-Advertencia: entorno demostrativo. No utilizar con datos reales o sensibles.
+Advertencia: no utilizar los módulos privados con datos reales o sensibles hasta completar una autenticación segura.
