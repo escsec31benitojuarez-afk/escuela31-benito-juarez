@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "2.2.0",
-    "institution": "Escuela Secundaria N.º 31 “Benito Juárez”",
+    "institution": "Escuela Secundaria Nº 31 “Benito Juárez”",
     "updated": "2026-07-22",
     "status": "prototipo privado",
     "language": "es-AR",
@@ -102,7 +102,7 @@
       "module": "institucion",
       "title": "Contacto institucional",
       "icon": "📍",
-      "summary": "Escuela Secundaria N.º 31, Estación Yuquerí, Concordia, Entre Ríos.",
+      "summary": "Escuela Secundaria Nº 31, Estación Yuquerí, Concordia, Entre Ríos.",
       "details": [
         "Teléfono: +54 345 4949814",
         "Correo: secundaria31.cd@entrerios.edu.ar"

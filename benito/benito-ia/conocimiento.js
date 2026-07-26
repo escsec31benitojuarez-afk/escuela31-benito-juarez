@@ -7,7 +7,7 @@
       patterns:['hola','buen dia','buenas tardes','buenas noches','quien sos','que sos','para que servis'],
       title:'Benito IA',
       icon:'🤖',
-      response:'Soy el <strong>asistente pedagógico y digital</strong> de la Escuela Secundaria N.º 31 “Benito Juárez”. Puedo orientarte dentro del sitio, ayudarte a encontrar materiales y acompañarte con estrategias de estudio.',
+      response:'Soy el <strong>asistente pedagógico y digital</strong> de la Escuela Secundaria Nº 31 “Benito Juárez”. Puedo orientarte dentro del sitio, ayudarte a encontrar materiales y acompañarte con estrategias de estudio.',
       followups:['Aula Digital','Necesito estudiar','Contacto']
     },
     {
@@ -104,7 +104,7 @@
       patterns:['contacto','telefono','correo','email','direccion','donde queda','comunicarme','hablar con la escuela','preseptor','preceptor'],
       title:'Contacto institucional',
       icon:'📍',
-      badge:'Escuela Secundaria N.º 31',
+      badge:'Escuela Secundaria Nº 31',
       response:'La escuela está ubicada en <strong>Estación Yuquerí, Concordia, Entre Ríos</strong>.',
       bullets:['Teléfono: +54 345 4949814','Correo: secundaria31.cd@entrerios.edu.ar'],
       actions:[

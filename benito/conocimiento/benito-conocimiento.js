@@ -5,7 +5,7 @@ window.BENITO_CONOCIMIENTO = [
       keywords: ['nombre','llamas','identidad'],
       synonyms: ['tu nombre','como se llama el asistente','nombre del asistente','presentate'],
       title: 'Soy Benito IA',
-      html: 'Soy <strong>Benito IA</strong>, el asistente virtual oficial de la Escuela Secundaria N.º 31 “Benito Juárez”. Puedo orientarte con información institucional publicada.'
+      html: 'Soy <strong>Benito IA</strong>, el asistente virtual oficial de la Escuela Secundaria Nº 31 “Benito Juárez”. Puedo orientarte con información institucional publicada.'
     },
     {
       id: 'contacto', priority: 18,
@@ -42,7 +42,7 @@ window.BENITO_CONOCIMIENTO = [
       keywords: ['ubicacion','direccion','queda','llegar','mapa','ruta','yuqueri'],
       synonyms: ['donde queda el colegio','como llego a la escuela','como llego a la secundaria 31','como llego hasta la secundaria 31','la dire del colegio','ir a la escuela'],
       title: 'Ubicación de la escuela',
-      html: 'La Escuela Secundaria N.º 31 “Benito Juárez” está ubicada en <strong>Ruta Provincial 22 y vías del ferrocarril, Estación Yuquerí, Concordia, Entre Ríos</strong>.',
+      html: 'La Escuela Secundaria Nº 31 “Benito Juárez” está ubicada en <strong>Ruta Provincial 22 y vías del ferrocarril, Estación Yuquerí, Concordia, Entre Ríos</strong>.',
       actions: [['Ver datos institucionales','../institucion.html#datos']]
     },
     {
@@ -51,7 +51,7 @@ window.BENITO_CONOCIMIENTO = [
       keywords: ['cue','modalidad','orientacion','gestion','estatal','naturales'],
       synonyms: ['que bachiller tiene','es publica la escuela','es publica la secundaria','oferta educativa','ciencias naturales'],
       title: 'Datos institucionales',
-      html: '<ul><li><strong>Nombre:</strong> Escuela Secundaria N.º 31 “Benito Juárez”.</li><li><strong>CUE:</strong> 3002566.</li><li><strong>Gestión:</strong> estatal.</li><li><strong>Nivel:</strong> Secundario.</li><li><strong>Modalidad:</strong> común orientada en Ciencias Naturales.</li></ul>',
+      html: '<ul><li><strong>Nombre:</strong> Escuela Secundaria Nº 31 “Benito Juárez”.</li><li><strong>CUE:</strong> 3002566.</li><li><strong>Gestión:</strong> estatal.</li><li><strong>Nivel:</strong> Secundario.</li><li><strong>Modalidad:</strong> común orientada en Ciencias Naturales.</li></ul>',
       actions: [['Ver Institución','../institucion.html']]
     },
     {

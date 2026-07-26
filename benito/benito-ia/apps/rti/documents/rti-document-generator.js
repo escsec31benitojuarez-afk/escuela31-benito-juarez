@@ -1,6 +1,6 @@
 window.BenitoRTIDocuments=(function(){
  function header(title,audience){
-  return `ESCUELA SECUNDARIA N.º 31 “BENITO JUÁREZ”\n${title.toUpperCase()}\nDestinatario: ${audience}\nFecha: ${new Date().toLocaleDateString('es-AR')}\n\n`;
+  return `ESCUELA SECUNDARIA Nº 31 “BENITO JUÁREZ”\n${title.toUpperCase()}\nDestinatario: ${audience}\nFecha: ${new Date().toLocaleDateString('es-AR')}\n\n`;
  }
  function executive(state){
   const critical=state.courses.filter(c=>c.status==='critical');

@@ -2,7 +2,7 @@ window.BENITO_IA_CONFIG={
  version:'5.0.0-alpha-rti-operativa',
  assistantName:'Benito IA',
  assistantSubtitle:'Asistente pedagógico y digital',
- schoolName:'Escuela Secundaria N.º 31 “Benito Juárez”',
+ schoolName:'Escuela Secundaria Nº 31 “Benito Juárez”',
  storageKey:'benitoIA_v2_state',
  typingDelay:420,maxHistory:40,fuzzyThreshold:.68,provider:'cognitive',
  rtiApp:{

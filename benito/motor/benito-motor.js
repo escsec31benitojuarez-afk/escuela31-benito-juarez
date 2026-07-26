@@ -658,7 +658,7 @@
   });
 
   addMessage(
-    'Hola. Soy <strong>Benito IA</strong>, el asistente virtual de la Escuela Secundaria N.º 31 “Benito Juárez”.<br><br>Puedo orientarte con información institucional publicada sobre trámites, horarios, autoridades, Aula Digital, SAGE, becas, asistencia, trayectorias, actividades y servicios. ¿Qué necesitás saber?',
+    'Hola. Soy <strong>Benito IA</strong>, el asistente virtual de la Escuela Secundaria Nº 31 “Benito Juárez”.<br><br>Puedo orientarte con información institucional publicada sobre trámites, horarios, autoridades, Aula Digital, SAGE, becas, asistencia, trayectorias, actividades y servicios. ¿Qué necesitás saber?',
     'assistant',
     'Bienvenido'
   );
