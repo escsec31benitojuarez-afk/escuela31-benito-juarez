@@ -1032,6 +1032,9 @@ a[data-lightbox="institucional"] img{cursor:zoom-in;}
   overflow:hidden;
   border-radius:22px;
 }
+.contact-page .contact-card > .tag{
+  text-align:center;
+}
 .contact-page .contact-card::after{
   content:"";
   position:absolute;
