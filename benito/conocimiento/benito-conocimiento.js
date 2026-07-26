@@ -1,24 +1,27 @@
 window.BENITO_CONOCIMIENTO = [
     {
       id: 'contacto', priority: 8,
-      phrases: ['como me comunico', 'datos de contacto', 'contactar la escuela', 'telefono de la escuela', 'correo institucional'],
+      phrases: ['como me comunico', 'datos de contacto', 'contactar la escuela', 'contactar a la escuela', 'contactar a la secundaria', 'telefono de la escuela', 'correo institucional'],
       keywords: ['telefono','celular','correo','mail','email','contacto','comunicar','whatsapp','llamar'],
+      synonyms: ['numero de la escuela','numero del colegio','mandar un mensaje','pasas el numero','escribir a la escuela'],
       title: 'Contacto institucional',
       html: 'Estos son los canales oficiales de la escuela:<ul><li><strong>Celular:</strong> +54 345 4949814</li><li><strong>Correo institucional:</strong> secundaria31.cd@entrerios.edu.ar</li><li><strong>Secretaría:</strong> secretaria31benitojuarez@gmail.com</li></ul>',
       actions: [['Ver contacto','../contacto.html'],['Llamar','tel:+543454949814'],['Escribir a Secretaría','mailto:secretaria31benitojuarez@gmail.com']]
     },
     {
       id: 'ubicacion', priority: 8,
-      phrases: ['donde queda la escuela','como llegar a la escuela','direccion de la escuela'],
+      phrases: ['donde queda la escuela','donde esta la escuela','como llegar a la escuela','direccion de la escuela','dnde qeda la escuiela'],
       keywords: ['ubicacion','direccion','queda','llegar','mapa','ruta','yuqueri'],
+      synonyms: ['donde queda el colegio','como llego a la escuela','como llego a la secundaria 31','como llego hasta la secundaria 31','la dire del colegio','ir a la escuela'],
       title: 'Ubicación de la escuela',
       html: 'La Escuela Secundaria N.º 31 “Benito Juárez” está ubicada en <strong>Ruta Provincial 22 y vías del ferrocarril, Estación Yuquerí, Concordia, Entre Ríos</strong>.',
       actions: [['Ver datos institucionales','../institucion.html#datos']]
     },
     {
       id: 'datos-institucionales', priority: 7,
-      phrases: ['cual es el cue','datos institucionales','modalidad de la escuela','orientacion de la escuela'],
+      phrases: ['cual es el cue','datos institucionales','modalidad de la escuela','orientacion de la escuela','que orientacion ofrece la escuela'],
       keywords: ['cue','modalidad','orientacion','gestion','estatal','naturales'],
+      synonyms: ['que bachiller tiene','es publica la escuela','es publica la secundaria','oferta educativa','ciencias naturales'],
       title: 'Datos institucionales',
       html: '<ul><li><strong>Nombre:</strong> Escuela Secundaria N.º 31 “Benito Juárez”.</li><li><strong>CUE:</strong> 3002566.</li><li><strong>Gestión:</strong> estatal.</li><li><strong>Nivel:</strong> Secundario.</li><li><strong>Modalidad:</strong> común orientada en Ciencias Naturales.</li></ul>',
       actions: [['Ver Institución','../institucion.html']]
@@ -26,13 +29,15 @@ window.BENITO_CONOCIMIENTO = [
     {
       id: 'rector', priority: 10,
       phrases: ['quien es el rector','nombre del rector'], keywords: ['rector','rectoria','director','gallardo'],
+      synonyms: ['quien esta a cargo','quien dirige la escuela','autoridad principal'],
       title: 'Rectoría',
       html: 'El rector es el <strong>Mg. Julio Gallardo</strong>. Tiene a su cargo la conducción general, la organización escolar, la articulación pedagógica y la representación institucional.',
       actions: [['Ver equipo institucional','../institucion.html#equipo']]
     },
     {
       id: 'secretaria-persona', priority: 10,
-      phrases: ['quien es la secretaria','nombre de la secretaria'], keywords: ['romina','benitti'],
+      phrases: ['quien es la secretaria','nombre de la secretaria','necesito hablar con secretaria'], keywords: ['romina','benitti'],
+      synonyms: ['hablar con secretaria','hablar con la secretaria','buscar a la secretaria','encontrar a la secretaria','donde esta secretaria'],
       title: 'Secretaría',
       html: 'La secretaria es la <strong>Prof. Romina Benitti</strong>. Su función comprende la organización administrativa, la documentación institucional, las certificaciones, las comunicaciones y el seguimiento de registros escolares.',
       actions: [['Ver equipo institucional','../institucion.html#equipo'],['Escribir a Secretaría','mailto:secretaria31benitojuarez@gmail.com']]
@@ -47,13 +52,14 @@ window.BENITO_CONOCIMIENTO = [
     {
       id: 'preceptoria', priority: 10,
       phrases: ['quienes son los preceptores','horario de preceptoria','hablar con preceptoria'], keywords: ['preceptor','preceptores','preceptoria','lucas','acosta','flavia','romani','asistencia','inasistencia'],
+      synonyms: ['necesito un preceptor','hablar con un preceptor'],
       title: 'Preceptoría',
       html: 'Los preceptores son <strong>Lucas Gastón Acosta</strong> y <strong>Flavia Romani</strong>. Realizan el seguimiento de asistencia, convivencia escolar, comunicación con las familias y organización cotidiana.<br><strong>Horario:</strong> lunes a viernes, de 7:20 a 13:00.',
       actions: [['Ver equipo institucional','../institucion.html#equipo'],['Contactar a la escuela','../contacto.html']]
     },
     {
       id: 'administracion', priority: 10,
-      phrases: ['quien atiende administracion','horario administrativo','horario de administracion'], keywords: ['administracion','administrativa','carina','galarza','legajo','certificacion'],
+      phrases: ['quien atiende administracion','horario administrativo','horario de administracion','necesito hablar con administracion'], keywords: ['administracion','administrativa','carina','galarza','legajo','certificacion'],
       title: 'Administración institucional',
       html: 'La administrativa es <strong>Carina Galarza</strong>. Atiende a estudiantes y familias, gestiona constancias, certificaciones, legajos y trámites escolares, y brinda apoyo a Secretaría.<br><strong>Horario:</strong> lunes a viernes, de 7:30 a 13:00.',
       actions: [['Ver equipo institucional','../institucion.html#equipo'],['Escribir a Secretaría','mailto:secretaria31benitojuarez@gmail.com']]
@@ -80,26 +86,57 @@ window.BENITO_CONOCIMIENTO = [
       actions: [['Ver tutorías','../institucion.html#equipo']]
     },
     {
-      id: 'tutorias', priority: 8,
-      phrases: ['quienes son los tutores','necesito una tutoria','hablar con un tutor'], keywords: ['tutor','tutores','tutoria','tutorias','acompañamiento'],
-      title: 'Tutorías y orientación',
-      html: 'La escuela cuenta con orientación educacional y tutorías específicas para 4.º y 5.º año. Estos espacios acompañan las trayectorias, la organización escolar y las dificultades que puedan surgir durante la cursada.',
-      actions: [['Consultar responsables y horarios','../institucion.html#equipo'],['Contactar a la escuela','../contacto.html']]
-    },
-    {
       id: 'rti', priority: 10,
-      phrases: ['quien es el rti','horario del rti','ayuda con tecnologia'], keywords: ['rti','alfredo','esquivel','tecnologia','digital','computadora','netbook'],
+      phrases: ['quien es el rti','horario del rti','ayuda con tecnologia','que hace el rti'], keywords: ['rti','alfredo','esquivel','tecnologia','digital','computadora','netbook'],
+      synonyms: ['ayuda con la computadora','ayuda con las computadoras','problema con la netbook','se trabo la netbook'],
       title: 'RTI y Tecnología Educativa',
       html: 'El RTI es <strong>Alfredo Esquivel</strong>. Brinda acompañamiento pedagógico-digital, alfabetización digital situada, integración tecnológica, producción de recursos y desarrollo de proyectos.<ul><li><strong>Martes:</strong> 7:30 a 11:40.</li><li><strong>Jueves:</strong> 7:30 a 10:00.</li></ul>',
       actions: [['Ver equipo institucional','../institucion.html#equipo']]
     },
     {
+      id: 'equipo-institucional', priority: 10,
+      phrases: ['quienes integran el equipo institucional','equipo institucional','quienes trabajan en la escuela'],
+      keywords: ['equipo','autoridades','responsables'],
+      synonyms: ['equipo de la escuela','personal de la escuela'],
+      title: 'Equipo institucional',
+      html: 'El equipo institucional reúne a Rectoría, Secretaría, Asesoría Pedagógica, Preceptoría, Administración, Orientación Educacional, Tutorías y RTI. En la sección Institución podés consultar responsables, funciones y horarios publicados.',
+      actions: [['Ver equipo institucional','../institucion.html#equipo']]
+    },
+    {
       id: 'certificados', priority: 16,
-      phrases: ['certificado de alumno regular','constancia de alumno regular','necesito un certificado','necesito una constancia','pedir certificado','solicitar constancia','generar constancia en sage'],
+      phrases: ['certificado de alumno regular','constancia de alumno regular','necesito un certificado','necesito una constancia','pedir certificado','solicitar constancia','generar constancia en sage','certificados y constancias'],
       keywords: ['certificado','certificados','constancia','constancias','regular','escolaridad'],
+      synonyms: ['papel de alumno regular','papel que dice alumno regular','certificado escolar','constancia regular'],
       title: 'Constancia de alumno regular',
-      html: 'La opción más rápida es ingresar a <strong>SAGE</strong>, generar la constancia de alumno regular e imprimirla. Luego, si necesitás firma, sello institucional o no podés acceder a SAGE, acercate a <strong>Secretaría o Administración</strong>, de lunes a viernes, de 7:30 a 13:00.',
-      actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com'],['Ver contacto','../contacto.html']]
+      html: 'Sí. El estudiante o un familiar puede generar la constancia de alumno regular desde <strong>SAGE</strong>.<ol><li>Ingresá a SAGE.</li><li>Buscá la opción <strong>“Constancia de alumno regular”</strong>.</li><li>Generá el documento, descargalo e imprimilo.</li></ol>Si no podés ingresar, utilizá primero las opciones de recuperación o ayuda de SAGE. Si aun así no lográs obtenerla, acercate a <strong>Secretaría o Administración</strong>, de lunes a viernes, de 7:30 a 13:00.',
+      actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com'],['Ver contacto','../contacto.html']],
+      followUps: [
+        {
+          id: 'certificados-sage',
+          priority: 21,
+          phrases: ['se puede generar desde sage','la constancia se genera desde sage','y desde sage','desde sage','se descarga desde sage','se imprime desde sage'],
+          keywords: ['sage','generar','descargar','imprimir'],
+          title: 'Sí, se genera desde SAGE',
+          html: 'Sí. El estudiante o un familiar puede ingresar a <strong>SAGE</strong>, buscar <strong>“Constancia de alumno regular”</strong>, generar el documento, descargarlo e imprimirlo. Si no podés acceder, usá primero la recuperación o ayuda de SAGE; si el problema continúa, acercate a Secretaría o Administración.',
+          actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com']]
+        },
+        {
+          id: 'certificados-acceso',
+          priority: 21,
+          phrases: ['no puedo entrar','no puedo ingresar','no logro acceder','no me deja entrar','no me deja ingresar'],
+          synonyms: ['tengo problemas para entrar','no abre'],
+          target: 'sage'
+        },
+        {
+          id: 'certificados-firma',
+          priority: 20,
+          phrases: ['necesito firma y sello','necesito firma','necesito sello','tiene que estar firmada','debe llevar sello'],
+          keywords: ['firma','sello','firmada','sellada'],
+          title: 'Firma o sello de la constancia',
+          html: 'Si la institución donde vas a presentarla exige firma o sello, comunicate con <strong>Secretaría o Administración</strong> para confirmar el procedimiento antes de acercarte. La atención es de lunes a viernes, de 7:30 a 13:00.',
+          actions: [['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com'],['Ver contacto','../contacto.html']]
+        }
+      ]
     },
     {
       id: 'pase', priority: 16,
@@ -111,10 +148,20 @@ window.BENITO_CONOCIMIENTO = [
     },
     {
       id: 'inscripcion', priority: 12,
-      phrases: ['como inscribirse','inscribir a mi hijo','inscripcion a la escuela','quiero anotarme'],
+      phrases: ['como inscribirse','inscribir a mi hijo','inscripcion a la escuela','quiero anotarme','que papeles llevo para inscribirme'],
       keywords: ['inscripcion','inscribir','anotar','matricula','ingreso'],
+      synonyms: ['anotar a mi hijo','anotar a mi hija','quiero inscribirme','matricular a mi hijo','matricular a mi hija','ingresar a primer año'],
       title: 'Inscripción escolar',
       html: 'La inscripción se gestiona mediante <strong>Secretaría o Administración</strong>. Benito no publica una lista cerrada de requisitos porque puede variar según el año y la situación del estudiante. Consultá directamente para recibir la información vigente.',
+      actions: [['Escribir a Secretaría','mailto:secretaria31benitojuarez@gmail.com'],['Ver contacto','../contacto.html']]
+    },
+    {
+      id: 'equivalencias', priority: 14,
+      phrases: ['necesito saber por equivalencias','consulta por equivalencias','tramitar equivalencias'],
+      keywords: ['equivalencia','equivalencias'],
+      synonyms: ['reconocer materias','me reconocen materias','materias de otra escuela'],
+      title: 'Equivalencias',
+      html: 'Las equivalencias requieren la revisión de <strong>Secretaría</strong> según la trayectoria y la documentación académica de cada estudiante. Comunicate con el área para confirmar los pasos y requisitos vigentes sin presentar información innecesaria.',
       actions: [['Escribir a Secretaría','mailto:secretaria31benitojuarez@gmail.com'],['Ver contacto','../contacto.html']]
     },
     {
@@ -122,21 +169,24 @@ window.BENITO_CONOCIMIENTO = [
       phrases: ['como entrar a sage','solicitar usuario sage','no puedo entrar a sage','no puedo ingresar a sage','ver notas en sage','ver calificaciones','olvide mi contraseña de sage','error en sage'],
       keywords: ['sage','calificaciones','notas','boletin','usuario','contraseña','clave','asistencia','error'],
       title: 'Ayuda con SAGE',
-      html: 'Puedo orientarte según el problema que tengas. Elegí la opción que más se aproxima a tu situación:',
+      html: 'Entiendo que necesitás resolver una gestión en <strong>SAGE</strong>. Elegí qué sucede y te indico el paso correspondiente:',
       flow: 'sage'
     },
     {
       id: 'aula-digital', priority: 11,
-      phrases: ['como accedo al aula digital','donde estan los materiales','materiales de mi curso','repositorio de mi curso'],
+      phrases: ['como accedo al aula digital','donde estan los materiales','materiales de mi curso','repositorio de mi curso','donde estan las tareas','material de 2 b','apuntes de mi curso'],
       keywords: ['aula','digital','repositorio','materiales','curso','apuntes','tareas','actividades'],
+      synonyms: ['trabajo practico','trabajos practicos','material de clase','consigna de la profe','consigna que dejo la profe','actividades que dejo la profe','subieron el trabajo','archivo de clase'],
       title: 'Aula Digital',
-      html: 'El Aula Digital reúne materiales de estudio, actividades, recursos interactivos y producciones organizados por curso. Hay accesos para <strong>1.º A, 1.º B, 2.º A, 2.º B, 3.º, 4.º, 5.º y 6.º año</strong>.',
-      actions: [['Abrir Aula Digital','../aula-digital.html']]
+      html: 'El Aula Digital reúne materiales, actividades y recursos organizados por curso. Podés abrir el acceso general o elegir tu curso para ir directamente a su repositorio:',
+      actions: [['Abrir Aula Digital','../aula-digital.html']],
+      flow: 'aula'
     },
     {
       id: 'recursos-estudio', priority: 8,
       phrases: ['como puedo estudiar','necesito ayuda para estudiar','tecnicas de estudio','recursos para aprender'],
       keywords: ['estudiar','estudio','aprender','repasar','tecnica','organizarme','examen'],
+      synonyms: ['no se como estudiar','como me organizo para rendir','ayuda para estudiar','preparar una prueba'],
       title: 'Recursos para estudiar y aprender',
       html: 'Podés comenzar por el Aula Digital, donde los materiales están organizados por curso. También está disponible la sección Recursos, con accesos educativos y herramientas de acompañamiento. Para una dificultad específica con una materia, conviene hablar con el docente, Preceptoría, Tutoría u Orientación.',
       actions: [['Abrir Aula Digital','../aula-digital.html'],['Ver Recursos','../recursos.html']]
@@ -144,7 +194,8 @@ window.BENITO_CONOCIMIENTO = [
     {
       id: 'becas', priority: 15,
       phrases: ['becas progresar','como anotarse a progresar','como me inscribo a una beca progresar','estado de mi beca','instituto becario'],
-      keywords: ['beca','becas','progresar','becario','inscribirme'],
+      keywords: ['beca','becas','progresar','becario'],
+      synonyms: ['ayuda economica','beca estudiantil','apoyo economico'],
       title: 'Becas y acompañamiento',
       html: '¿Sobre qué programa necesitás información?',
       flow: 'becas'
@@ -159,8 +210,9 @@ window.BENITO_CONOCIMIENTO = [
     },
     {
       id: 'actividades', priority: 8,
-      phrases: ['actividades de la escuela','producciones de estudiantes','proyectos realizados','que hacen los estudiantes'],
+      phrases: ['actividades de la escuela','que actividades hace la escuela','producciones de estudiantes','proyectos realizados','que hacen los estudiantes'],
       keywords: ['actividad','actividades','produccion','producciones','proyecto','proyectos','galeria','ciclo','agua'],
+      synonyms: ['que hicieron los alumnos','trabajos de estudiantes','trabajos de alumnos'],
       title: 'Actividades y producciones',
       html: 'La sección Actividades reúne experiencias y producciones estudiantiles. Actualmente incluye, entre otras, una propuesta de <strong>Ciencias Naturales de 2.º Año B sobre el ciclo del agua</strong>, con investigación, maqueta, trabajo colaborativo y video explicativo.',
       actions: [['Ver Actividades','../actividades.html'],['Ver Multimedia','../multimedia.html']]
@@ -169,14 +221,16 @@ window.BENITO_CONOCIMIENTO = [
       id: 'programas', priority: 9,
       phrases: ['programas de la escuela','proyectos institucionales','la escuela va al barrio','tesoros ocultos'],
       keywords: ['programas','tesoros','ocultos','barrio','alfabetizacion','abp'],
-      title: 'Programas y proyectos institucionales',
-      html: 'La escuela desarrolla proyectos vinculados con memoria, participación comunitaria, trayectorias e integración tecnológica. Entre ellos se encuentran <strong>Tesoros ocultos de la escuela</strong>, <strong>La Escuela va al Barrio</strong>, <strong>Alfabetización Digital</strong> y <strong>Aula Digital</strong>.',
-      actions: [['Ver Programas','../programas.html']]
+      synonyms: ['planes institucionales','proyectos de la escuela','que proyectos tiene la escuela'],
+      title: 'Proyectos institucionales',
+      html: 'La escuela desarrolla proyectos vinculados con memoria, participación comunitaria, cuidado, trayectorias e integración tecnológica. En el Portal se encuentran <strong>Nos cuidamos en comunidad</strong>, <strong>La Escuela va al Barrio</strong>, <strong>Alfabetización Digital Situada 2026</strong>, <strong>Tesoros ocultos de la escuela</strong> y <strong>Aula Digital</strong>.',
+      actions: [['Ver Proyectos','../programas.html']]
     },
     {
       id: 'historia', priority: 9,
       phrases: ['historia de la escuela','cuando se creo la escuela','origen de la escuela','por que se llama benito juarez'],
       keywords: ['historia','origen','memoria','nombre','benito','juarez','25 años'],
+      synonyms: ['cuando empezo la escuela','aniversario de la escuela','fundacion de la escuela','aniversario'],
       title: 'Historia e identidad institucional',
       html: 'La institución surgió entre fines de la década de 1990 y comienzos de los años 2000 para ampliar las oportunidades educativas de jóvenes de Estación Yuquerí y zonas cercanas. Su identidad se construyó junto a las familias, desde la pertenencia, la participación y el acompañamiento de las trayectorias.',
       actions: [['Conocer la historia','../historia.html']]
@@ -184,6 +238,7 @@ window.BENITO_CONOCIMIENTO = [
     {
       id: 'biblioteca', priority: 10,
       phrases: ['horario de biblioteca','prestamo de libros','hay biblioteca'], keywords: ['biblioteca','libro','libros','lectura','prestamo'],
+      synonyms: ['sacar un libro','pedir un libro','bibliotecaria'],
       title: 'Biblioteca escolar',
       html: 'La biblioteca ofrece lectura, consulta, préstamo de materiales, acompañamiento al estudio y apoyo a proyectos. <strong>El horario todavía figura como pendiente de confirmación</strong> en el sitio institucional.',
       actions: [['Ver Comunidad','../comunidad.html'],['Consultar a la escuela','../contacto.html']]
@@ -191,21 +246,24 @@ window.BENITO_CONOCIMIENTO = [
     {
       id: 'comedor', priority: 10,
       phrases: ['horario del comedor','hay comedor','informacion del comedor'], keywords: ['comedor','comida','almuerzo','alimentario'],
+      synonyms: ['dan de comer','comer en la escuela','servicio de comedor'],
       title: 'Comedor escolar',
       html: 'La escuela cuenta con comedor como espacio de cuidado y acompañamiento a la permanencia educativa. <strong>La información específica sobre horarios y organización todavía está pendiente de publicación</strong>.',
       actions: [['Ver Comunidad','../comunidad.html'],['Consultar a la escuela','../contacto.html']]
     },
     {
       id: 'facebook', priority: 8,
-      phrases: ['facebook de la escuela','redes sociales','novedades en facebook'], keywords: ['facebook','redes','sociales'],
+      phrases: ['facebook de la escuela','redes sociales','novedades en facebook','cual es el facebook institucional'], keywords: ['facebook','redes','sociales'],
+      synonyms: ['red social de la escuela','pagina de facebook'],
       title: 'Facebook institucional',
       html: 'En el Facebook institucional se comparten actividades, proyectos, comunicados, imágenes y novedades de la comunidad educativa.',
       actions: [['Abrir Facebook','https://www.facebook.com/profile.php?id=100057420641002&mibextid=ZbWKwL']]
     },
     {
       id: 'saludo', priority: 1,
-      phrases: ['hola benito','buen dia','buenas tardes','buenas noches','que podes hacer','en que ayudas'],
+      phrases: ['hola benito','buen dia','buenas','buenas tardes','buenas noches','que podes hacer','que hace benito','en que ayudas','necesito ayuda'],
       keywords: ['hola','buenas','ayuda'],
+      synonyms: ['que sabes hacer','para que servis','en que me podes ayudar'],
       title: '¿En qué puedo ayudarte?',
       html: 'Puedo orientarte sobre <strong>trámites, autoridades, horarios, contacto, ubicación, Aula Digital, SAGE, becas, mesas de exámenes, actividades, programas y servicios de la escuela</strong>. Escribí la consulta con tus propias palabras.'
     },
@@ -219,8 +277,9 @@ window.BENITO_CONOCIMIENTO = [
     },
     {
       id: 'asistencia', priority: 15,
-      phrases: ['cuantas faltas tengo','consultar inasistencias','justificar una falta','certificado medico','falta justificada','inasistencias'],
+      phrases: ['cuantas faltas tengo','consultar inasistencias','justificar una falta','certificado medico','falta justificada','inasistencias','estoy faltando mucho'],
       keywords: ['falta','faltas','inasistencia','inasistencias','justificar','justificacion','medico'],
+      synonyms: ['justifico que no fui','falte a clase','no fui a la escuela','ausente'],
       title: 'Asistencia e inasistencias',
       html: 'Las consultas sobre asistencia, inasistencias y justificaciones se realizan con <strong>Preceptoría</strong>. Presentá la documentación correspondiente según el procedimiento institucional. Benito no accede a datos personales ni al registro individual de asistencia.',
       actions: [['Ver equipo institucional','../institucion.html#equipo'],['Contactar a la escuela','../contacto.html']]
@@ -229,22 +288,25 @@ window.BENITO_CONOCIMIENTO = [
       id: 'horario-clases', priority: 14,
       phrases: ['a que hora entran','horario de entrada','horario de salida','horario escolar','hora de clases'],
       keywords: ['entrada','salida','horario','clases','turno'],
+      synonyms: ['a que hora salen','cuando entran','cuando salen'],
       title: 'Horario escolar',
       html: 'Para confirmar el horario de entrada, salida o una modificación puntual, consultá las comunicaciones institucionales o comunicate con <strong>Preceptoría</strong>. Los cambios excepcionales se informan por los canales oficiales.',
       actions: [['Ver novedades','../vida-escolar.html'],['Contactar a la escuela','../contacto.html']]
     },
     {
       id: 'materias-previas', priority: 16,
-      phrases: ['tengo materias previas','debo materias','quiero rendir previas','cuando rindo materias previas','materias pendientes'],
+      phrases: ['tengo materias previas','debo materias','quiero rendir previas','cuando rindo materias previas','materias pendientes','me quedo una materia'],
       keywords: ['previas','previa','pendientes','debo','adeudo','rendir'],
+      synonyms: ['me lleve una materia','me lleve matematica','rendir lo que debo','materia que me quedo'],
       title: 'Materias previas o pendientes',
       html: 'Para organizar la preparación de materias previas o pendientes, revisá las convocatorias de mesas de examen y consultá con <strong>Preceptoría, Tutoría o Asesoría Pedagógica</strong>. Allí podrán orientarte sobre fechas, inscripción y acompañamiento.',
       actions: [['Ver Vida Escolar','../vida-escolar.html'],['Ver equipo institucional','../institucion.html#equipo']]
     },
     {
       id: 'tutorias', priority: 14,
-      phrases: ['necesito una tutoria','quiero hablar con un tutor','apoyo escolar','acompañamiento pedagogico','me cuesta una materia'],
-      keywords: ['tutoria','tutor','apoyo','acompañamiento','dificultad','materia'],
+      phrases: ['quienes son los tutores','necesito una tutoria','hablar con un tutor','quiero hablar con un tutor','apoyo escolar','acompañamiento pedagogico','me cuesta una materia','me cuesta matematica','materias desaprobadas'],
+      keywords: ['tutoria','tutor','tutores','apoyo','acompañamiento','dificultad','materia','matematica','desaprobadas'],
+      synonyms: ['me va mal en varias materias','dar una mano con matematica','no entiendo una materia','ayuda escolar'],
       title: 'Tutorías y acompañamiento',
       html: 'La escuela dispone de espacios de tutoría y acompañamiento para fortalecer las trayectorias escolares. Podés consultar con <strong>Preceptoría, Tutoría o Asesoría Pedagógica</strong> para identificar el apoyo más adecuado.',
       actions: [['Ver equipo institucional','../institucion.html#equipo'],['Contactar a la escuela','../contacto.html']]
@@ -253,6 +315,7 @@ window.BENITO_CONOCIMIENTO = [
       id: 'convivencia', priority: 14,
       phrases: ['problema de convivencia','tengo un conflicto','acoso escolar','bullying','me molestan en la escuela'],
       keywords: ['convivencia','conflicto','acoso','bullying','molestan','violencia'],
+      synonyms: ['me cargan en la escuela','un compañero me carga','me pegan en la escuela','problema con compañeros'],
       title: 'Convivencia y cuidado',
       html: 'Si estás atravesando un conflicto o una situación que afecta tu bienestar, buscá acompañamiento de un adulto de confianza de la escuela: <strong>Preceptoría, Tutoría, Asesoría Pedagógica o Rectoría</strong>. Ante una situación urgente, no la enfrentes en soledad.',
       actions: [['Ver equipo institucional','../institucion.html#equipo'],['Contactar a la escuela','../contacto.html']]
@@ -261,6 +324,7 @@ window.BENITO_CONOCIMIENTO = [
       id: 'docente-aula', priority: 15,
       phrases: ['soy docente y quiero subir materiales','cargar recursos al aula digital','publicar actividad','agregar materiales'],
       keywords: ['docente','subir','cargar','publicar','materiales','recursos'],
+      synonyms: ['soy profe y quiero subir','cargar material docente','subir un archivo al aula'],
       title: 'Publicación de materiales docentes',
       html: 'Para incorporar materiales, actividades o producciones al Aula Digital, comunicate con el <strong>RTI</strong>. El acompañamiento se realiza de manera pedagógica y digital, respetando la organización por curso y área.',
       actions: [['Ver equipo institucional','../institucion.html#equipo']]
@@ -269,17 +333,55 @@ window.BENITO_CONOCIMIENTO = [
       id: 'familias-seguimiento', priority: 14,
       phrases: ['quiero saber como va mi hijo','hablar por la trayectoria de mi hijo','mi hijo tiene dificultades','seguimiento escolar'],
       keywords: ['hijo','hija','familia','trayectoria','seguimiento','dificultades'],
+      synonyms: ['como va mi hijo','como le esta yendo a mi hijo','seguimiento de mi hija'],
       title: 'Acompañamiento a familias',
       html: 'Para conversar sobre la trayectoria escolar de un estudiante, comunicate con <strong>Preceptoría, Tutoría o Asesoría Pedagógica</strong>. Por resguardo de la privacidad, Benito no brinda calificaciones, asistencia ni datos personales.',
       actions: [['Ver equipo institucional','../institucion.html#equipo'],['Contactar a la escuela','../contacto.html']]
     },
     {
       id: 'calendario', priority: 13,
-      phrases: ['calendario escolar','proximas fechas','cuando no hay clases','feriado escolar','jornada institucional'],
-      keywords: ['calendario','fecha','fechas','feriado','jornada','receso','vacaciones'],
+      phrases: ['calendario escolar','proximas fechas','cuando no hay clases','feriado escolar','jornada institucional','cual es el proximo evento'],
+      keywords: ['calendario','fecha','fechas','feriado','jornada','evento','receso','vacaciones'],
+      synonyms: ['que hay esta semana','proxima fecha','que actividad hay esta semana'],
       title: 'Calendario y fechas institucionales',
-      html: 'Las fechas, actos, jornadas, mesas y novedades se publican en los espacios institucionales del sitio. Para una modificación de último momento, verificá la comunicación más reciente de la escuela.',
+      html: 'La comunicación vigente anuncia la <strong>III Jornada Institucional “Del cuidado y sostenimiento de las trayectorias escolares”</strong>, prevista para el <strong>miércoles 29 de julio, de 8:00 a 12:00 h</strong>. Para una modificación de último momento, verificá Vida Escolar.',
       actions: [['Ver Vida Escolar','../vida-escolar.html'],['Ver Actividades','../actividades.html']]
+    },
+    {
+      id: 'vida-escolar', priority: 12,
+      phrases: ['cuadro de honor','quiero ver el cuadro de honor','alumno solidario','vida escolar'],
+      keywords: ['honor','solidario','reconocimiento'],
+      synonyms: ['quien salio alumno solidario','reconocimientos de estudiantes'],
+      title: 'Vida Escolar y reconocimientos',
+      html: 'En <strong>Vida Escolar</strong> podés consultar el Alumno Solidario 2026, el Cuadro de Honor del Ciclo Básico Común y el Cuadro de Honor del Ciclo Orientado en Ciencias Naturales.',
+      actions: [['Abrir Vida Escolar','../vida-escolar.html']]
+    },
+    {
+      id: 'comunicaciones', priority: 14,
+      phrases: ['comunicaciones institucionales','hay comunicaciones institucionales nuevas','comunicacion vigente'],
+      keywords: ['comunicaciones','comunicacion','comunicado','novedad'],
+      synonyms: ['avisos nuevos','novedades de la escuela','ultimo aviso','ultimo comunicado'],
+      title: 'Comunicaciones institucionales',
+      html: 'La comunicación vigente anuncia la <strong>III Jornada Institucional “Del cuidado y sostenimiento de las trayectorias escolares”</strong>, el <strong>miércoles 29 de julio, de 8:00 a 12:00 h</strong>.',
+      actions: [['Ver comunicación vigente','../vida-escolar.html#comunicaciones']]
+    },
+    {
+      id: 'seguridad-accesos', priority: 19,
+      phrases: ['cual es la contraseña de la plataforma privada','dame la clave de la plataforma','podes entrar a sage por mi','ingresa a mi cuenta'],
+      keywords: ['contraseña','clave','credenciales','privada'],
+      synonyms: ['decime la contraseña','pasame la clave','entra por mi','accede a mi cuenta'],
+      title: 'Seguridad de accesos',
+      html: 'Benito no brinda contraseñas ni credenciales, y tampoco puede ingresar a <strong>SAGE</strong> o a una cuenta en nombre de otra persona. Para recuperar un acceso, utilizá las opciones oficiales de la plataforma; si necesitás verificar datos institucionales, comunicate con Secretaría.',
+      actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com']]
+    },
+    {
+      id: 'privacidad-chat', priority: 19,
+      phrases: ['guardas las preguntas','guardas mis preguntas','recordas lo que pregunte ayer','tenes memoria','almacenas conversaciones'],
+      keywords: ['guardas','almacenas','recordas','memoria','conversaciones'],
+      synonyms: ['te acordas de ayer','guardas el chat','recordas otras conversaciones'],
+      title: 'Privacidad de la conversación',
+      html: 'No. Benito no almacena la conversación ni recuerda consultas de otros días. Solo mantiene un <strong>contexto temporal dentro de esta conversación abierta</strong> para entender preguntas de seguimiento. Al recargar o cerrar la página, ese hilo se pierde.',
+      actions: [['Ver contacto institucional','../contacto.html']]
     },
     {
       id: 'privacidad', priority: 18,
@@ -293,70 +395,279 @@ window.BENITO_CONOCIMIENTO = [
 window.BENITO_FLUJOS = {
     sage: [
       {
+        id: 'sage-password',
+        priority: 20,
+        phrases: ['olvide mi contraseña de sage','recuperar contraseña de sage','olvide mi clave de sage'],
+        keywords: ['contraseña','clave'],
+        synonyms: ['no recuerdo la clave de sage','perdi la contraseña de sage','sage contraseña olvidada'],
+        required: ['sage'],
         label: 'Olvidé mi contraseña',
         title: 'Recuperar acceso a SAGE',
         html: 'Ingresá a SAGE y utilizá la opción de recuperación de contraseña. Si no podés completar el proceso o tus datos no coinciden, comunicate con <strong>Secretaría</strong> para verificar el registro.',
         actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com']]
       },
       {
+        id: 'sage-user',
+        priority: 20,
+        phrases: ['no tengo usuario de sage','solicitar usuario de sage','crear usuario de sage'],
+        keywords: ['usuario','registrarme'],
+        synonyms: ['no tengo cuenta para entrar a sage','no tengo cuenta para entrar al sage','crear cuenta en sage','dar de alta usuario sage'],
+        required: ['sage'],
         label: 'No tengo usuario',
         title: 'Solicitar usuario de SAGE',
         html: 'Podés iniciar la solicitud de usuario desde el sitio oficial de SAGE. Si necesitás verificar datos del estudiante o del adulto responsable, consultá con <strong>Secretaría</strong>.',
         actions: [['Solicitar usuario SAGE','https://sage.entrerios.gov.ar/solicitarUsuario/index.php'],['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com']]
       },
       {
+        id: 'sage-error',
+        priority: 20,
+        phrases: ['sage esta caido','sage no carga','sage no funciona','me aparece un error en sage'],
+        keywords: ['caido','error','carga'],
+        synonyms: ['sage no abre','sage tira error','problema para abrir sage','el sitio no carga','la pagina no carga','el sitio no abre'],
+        required: ['sage'],
         label: 'Me aparece un error',
         title: 'Error de acceso a SAGE',
         html: 'Primero verificá que el usuario y la contraseña estén escritos correctamente y probá nuevamente. Si el error continúa, anotá o capturá el mensaje que aparece y comunicate con <strong>Secretaría</strong> para recibir orientación.',
         actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Ver contacto','../contacto.html']]
       },
       {
+        id: 'sage-grades',
+        priority: 20,
+        phrases: ['donde veo mis calificaciones en sage','ver calificaciones en sage','ver notas en sage','no encuentro mis calificaciones en sage'],
+        keywords: ['calificaciones','notas','boletin'],
+        synonyms: ['donde esta el boletin en sage','buscar el boletin en sage'],
+        required: ['sage'],
         label: 'No encuentro mis calificaciones',
         title: 'Calificaciones en SAGE',
         html: 'Ingresá a SAGE con tu usuario y revisá la sección correspondiente al estudiante. Si las calificaciones todavía no aparecen o detectás un dato incorrecto, consultá con <strong>Preceptoría o Secretaría</strong>; Benito no accede ni muestra información académica personal.',
         actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Ver contacto','../contacto.html']]
       },
       {
+        id: 'sage-constancia',
+        priority: 21,
+        phrases: ['generar una constancia en sage','generar constancia en sage','constancia de alumno regular en sage'],
+        keywords: ['constancia','certificado'],
+        synonyms: ['sacar constancia por sage','descargar constancia de sage'],
+        required: ['sage'],
         label: 'Generar constancia',
         title: 'Constancia de alumno regular en SAGE',
-        html: 'Ingresá a <strong>SAGE</strong>, generá la constancia de alumno regular e imprimila. Si necesitás firma, sello institucional o no podés completar el trámite, acercate a Secretaría o Administración, de lunes a viernes, de 7:30 a 13:00.',
-        actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com']]
+        html: 'Sí. El estudiante o un familiar puede ingresar a <strong>SAGE</strong>, buscar <strong>“Constancia de alumno regular”</strong>, generar el documento, descargarlo e imprimirlo. Si no podés acceder, usá primero las opciones de recuperación o ayuda de SAGE. Si el inconveniente continúa, acercate a Secretaría o Administración, de lunes a viernes, de 7:30 a 13:00.',
+        actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com']],
+        followUps: [
+          {
+            id: 'sage-constancia-acceso',
+            priority: 21,
+            phrases: ['no puedo entrar','no puedo ingresar','no logro acceder','no me deja entrar','no me deja ingresar'],
+            synonyms: ['tengo problemas para entrar','no abre'],
+            target: 'sage'
+          },
+          {
+            id: 'sage-constancia-firma',
+            priority: 20,
+            phrases: ['necesito firma y sello','necesito firma','necesito sello','tiene que estar firmada'],
+            keywords: ['firma','sello','firmada','sellada'],
+            title: 'Firma o sello de la constancia',
+            html: 'Si necesitás firma o sello institucional, comunicate con <strong>Secretaría o Administración</strong> para confirmar el procedimiento. La atención es de lunes a viernes, de 7:30 a 13:00.',
+            actions: [['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com'],['Ver contacto','../contacto.html']]
+          }
+        ]
       }
     ],
     pase: [
       {
+        id: 'pase-out',
+        priority: 20,
+        phrases: ['quiero pedir un pase a otra escuela','pase a otra escuela','cambiarme a otra escuela','traslado a otra escuela'],
+        keywords: ['pase','traslado'],
+        synonyms: ['pase otra escuela','me cambio de escuela','hacer el traslado','hacia otra escuela','a otra escuela','salir hacia otra escuela'],
+        required: ['pase'],
         label: 'Pase hacia otra escuela',
         title: 'Pase hacia otra institución',
         html: 'El pase se gestiona en <strong>Secretaría</strong>. Acercate o comunicate con la escuela para iniciar el trámite y confirmar la documentación requerida según tu situación. La atención administrativa es de lunes a viernes, de 7:30 a 13:00.',
-        actions: [['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com'],['Ver contacto','../contacto.html']]
+        actions: [['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com'],['Ver contacto','../contacto.html']],
+        followUps: [
+          {
+            id: 'pase-out-documentacion',
+            priority: 21,
+            phrases: ['que documentacion necesito','que papeles necesito','que requisitos necesito','que tengo que llevar','documentacion para el pase'],
+            keywords: ['documentacion','papeles','requisitos','llevar'],
+            title: 'Documentación para el pase hacia otra institución',
+            html: 'Para este <strong>pase hacia otra escuela</strong>, Secretaría debe confirmar la documentación según la situación del estudiante y la institución de destino. Comunicate con la escuela antes de acercarte para recibir la lista vigente y evitar presentar documentación innecesaria.',
+            actions: [['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com'],['Ver contacto','../contacto.html']]
+          },
+          {
+            id: 'pase-out-pasos',
+            priority: 20,
+            phrases: ['como sigo','cual es el siguiente paso','que hago ahora','donde lo inicio'],
+            keywords: ['pasos','seguir','inicio','iniciar'],
+            title: 'Cómo iniciar el pase',
+            html: 'El siguiente paso es comunicarte con <strong>Secretaría</strong> para iniciar el pase hacia la otra institución. Allí confirmarán la documentación y el procedimiento correspondiente a tu situación.',
+            actions: [['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com'],['Ver contacto','../contacto.html']]
+          }
+        ]
       },
       {
+        id: 'pase-in',
+        priority: 20,
+        phrases: ['ingreso desde otra escuela','pase desde otra escuela','vengo de otra escuela'],
+        keywords: ['ingreso','pase'],
+        synonyms: ['vengo de otro colegio','entrar desde otra escuela','llego con pase'],
+        required: ['pase'],
         label: 'Ingreso desde otra escuela',
         title: 'Ingreso con pase desde otra institución',
         html: 'Para ingresar con pase desde otra escuela, comunicate con <strong>Secretaría</strong>. Allí te indicarán la documentación vigente, la disponibilidad y los pasos para completar la incorporación.',
-        actions: [['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com'],['Ver contacto','../contacto.html']]
+        actions: [['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com'],['Ver contacto','../contacto.html']],
+        followUps: [
+          {
+            id: 'pase-in-documentacion',
+            priority: 21,
+            phrases: ['que documentacion necesito','que papeles necesito','que requisitos necesito','que tengo que llevar','documentacion para ingresar'],
+            keywords: ['documentacion','papeles','requisitos','llevar'],
+            title: 'Documentación para ingresar con pase',
+            html: 'Para el <strong>ingreso desde otra escuela</strong>, Secretaría debe confirmar la documentación vigente, la disponibilidad y los pasos según la trayectoria del estudiante. Comunicate antes de acercarte para recibir la indicación correcta.',
+            actions: [['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com'],['Ver contacto','../contacto.html']]
+          }
+        ]
       },
       {
+        id: 'pase-early-exit',
+        priority: 20,
+        phrases: ['retiro antes del horario','retiro anticipado','retirarme antes del horario'],
+        keywords: ['retiro anticipado','antes del horario'],
+        synonyms: ['irme antes de hora','me tengo que ir antes de hora','salir antes del horario'],
         label: 'Retiro antes del horario',
         title: 'Retiro anticipado',
         html: 'Si la consulta es por retirarte antes del horario habitual, comunicate con <strong>Preceptoría</strong>. En el caso de estudiantes menores de edad, el retiro debe ajustarse a las autorizaciones y procedimientos institucionales.',
         actions: [['Ver equipo institucional','../institucion.html#equipo'],['Contactar a la escuela','../contacto.html']]
       }
     ],
+    aula: [
+      {
+        id: 'aula-1a',
+        priority: 20,
+        phrases: ['aula de 1 a','aula de primero a','materiales de 1 a','la de 1 a'],
+        keywords: ['1 a','primero a'],
+        synonyms: ['primer año a','1 año a'],
+        required: ['aula'],
+        label: '1.º A',
+        title: 'Aula Digital de 1.º A',
+        html: 'Este es el acceso directo al repositorio de <strong>1.º Año A</strong>, donde se organizan los materiales y actividades compartidos para el curso.',
+        actions: [['Abrir 1.º A','https://drive.google.com/drive/folders/1GE2AULDtGoTl5LD3pB_NPHKIQ-OJeu2i?usp=drive_link'],['Ver Aula Digital','../aula-digital.html']]
+      },
+      {
+        id: 'aula-1b',
+        priority: 20,
+        phrases: ['aula de 1 b','aula de primero b','materiales de 1 b','la de 1 b'],
+        keywords: ['1 b','primero b'],
+        synonyms: ['primer año b','1 año b'],
+        required: ['aula'],
+        label: '1.º B',
+        title: 'Aula Digital de 1.º B',
+        html: 'Este es el acceso directo al repositorio de <strong>1.º Año B</strong>, donde se organizan los materiales y actividades compartidos para el curso.',
+        actions: [['Abrir 1.º B','https://drive.google.com/drive/folders/1Y-FL9tGLNdAIZTEgpWvhGFEqSC1dqb3B?usp=drive_link'],['Ver Aula Digital','../aula-digital.html']]
+      },
+      {
+        id: 'aula-2a',
+        priority: 20,
+        phrases: ['aula de 2 a','aula de segundo a','materiales de 2 a','la de 2 a'],
+        keywords: ['2 a','segundo a'],
+        synonyms: ['segundo año a','2 año a'],
+        required: ['aula'],
+        label: '2.º A',
+        title: 'Aula Digital de 2.º A',
+        html: 'Este es el acceso directo al repositorio de <strong>2.º Año A</strong>, donde se organizan los materiales y actividades compartidos para el curso.',
+        actions: [['Abrir 2.º A','https://drive.google.com/drive/folders/1Jibq7SqqrnxAo56xE7IIwSg3BTpvRpZv?usp=drive_link'],['Ver Aula Digital','../aula-digital.html']]
+      },
+      {
+        id: 'aula-2b',
+        priority: 20,
+        phrases: ['aula de 2 b','aula de segundo b','materiales de 2 b','la de 2 b'],
+        keywords: ['2 b','segundo b'],
+        synonyms: ['segundo año b','2 año b'],
+        required: ['aula'],
+        label: '2.º B',
+        title: 'Aula Digital de 2.º B',
+        html: 'Este es el acceso directo al repositorio de <strong>2.º Año B</strong>, donde se organizan los materiales y actividades compartidos para el curso.',
+        actions: [['Abrir 2.º B','https://drive.google.com/drive/folders/1odPjWQ4YFyiYJCwJS-GIQAMBomgGN2_j?usp=drive_link'],['Ver Aula Digital','../aula-digital.html']]
+      },
+      {
+        id: 'aula-3',
+        priority: 20,
+        phrases: ['aula de 3','aula de tercero','materiales de 3','la de 3'],
+        keywords: ['3','tercero'],
+        synonyms: ['tercer año','3 año'],
+        required: ['aula'],
+        label: '3.º Año',
+        title: 'Aula Digital de 3.º Año',
+        html: 'Este es el acceso directo al repositorio de <strong>3.º Año</strong>, donde se organizan los materiales y actividades compartidos para el curso.',
+        actions: [['Abrir 3.º Año','https://drive.google.com/drive/folders/19dNH2PGVW27QyGeTHpK9BiPegCziAzZs?usp=drive_link'],['Ver Aula Digital','../aula-digital.html']]
+      },
+      {
+        id: 'aula-4',
+        priority: 20,
+        phrases: ['aula de 4','aula de cuarto','materiales de 4','la de 4'],
+        keywords: ['4','cuarto'],
+        synonyms: ['cuarto año','4 año'],
+        required: ['aula'],
+        label: '4.º Año',
+        title: 'Aula Digital de 4.º Año',
+        html: 'Este es el acceso directo al repositorio de <strong>4.º Año</strong>, donde se organizan los materiales y actividades compartidos para el curso.',
+        actions: [['Abrir 4.º Año','https://drive.google.com/drive/folders/1sAlEO7mq-fhoRD0ediFmQIYvYcnKD5Wf?usp=sharing'],['Ver Aula Digital','../aula-digital.html']]
+      },
+      {
+        id: 'aula-5',
+        priority: 20,
+        phrases: ['aula de 5','aula de quinto','materiales de 5','la de 5'],
+        keywords: ['5','quinto'],
+        synonyms: ['quinto año','5 año'],
+        required: ['aula'],
+        label: '5.º Año',
+        title: 'Aula Digital de 5.º Año',
+        html: 'Este es el acceso directo al repositorio de <strong>5.º Año</strong>, donde se organizan los materiales y actividades compartidos para el curso.',
+        actions: [['Abrir 5.º Año','https://drive.google.com/drive/folders/1Et7h5kwBIJd19L0VW_y3uS8cSVNFeVDU?usp=drive_link'],['Ver Aula Digital','../aula-digital.html']]
+      },
+      {
+        id: 'aula-6',
+        priority: 20,
+        phrases: ['aula de 6','aula de sexto','materiales de 6','la de 6'],
+        keywords: ['6','sexto'],
+        synonyms: ['sexto año','6 año'],
+        required: ['aula'],
+        label: '6.º Año',
+        title: 'Aula Digital de 6.º Año',
+        html: 'Este es el acceso directo al repositorio de <strong>6.º Año</strong>, donde se organizan los materiales y actividades compartidos para el curso.',
+        actions: [['Abrir 6.º Año','https://drive.google.com/drive/folders/1gAc-6ZfTB8FTzx2nz7u5hVyW2WGmxhsQ?usp=drive_link'],['Ver Aula Digital','../aula-digital.html']]
+      }
+    ],
     becas: [
       {
+        id: 'becas-progresar',
+        priority: 20,
+        phrases: ['progresar','becas progresar','beca progresar','beca progresa'],
+        keywords: ['progresar','progresa'],
+        synonyms: ['progre','progresal'],
         label: 'Becas Progresar',
         title: 'Becas Progresar',
         html: 'La inscripción y el seguimiento se realizan mediante los canales oficiales de Progresar. Para constancias o verificación de la situación académica, podés generar la constancia de alumno regular desde SAGE o consultar con Secretaría.',
         actions: [['Abrir Progresar','https://www.argentina.gob.ar/educacion/progresar'],['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com']]
       },
       {
+        id: 'becas-instituto',
+        priority: 20,
+        phrases: ['instituto becario','instituto becario de entre rios'],
+        keywords: ['becario'],
+        synonyms: ['beca de entre rios','beca provincial','instituto de becas'],
         label: 'Instituto Becario',
         title: 'Instituto Becario de Entre Ríos',
         html: 'Consultá convocatorias, requisitos y estado de trámites en el sitio oficial del Instituto Becario. Si necesitás documentación escolar, podés solicitar orientación en Secretaría.',
         actions: [['Abrir Instituto Becario','https://www.institutobecario.gov.ar/'],['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com']]
       },
       {
+        id: 'becas-otra',
+        priority: 18,
+        phrases: ['otra beca','otras becas'],
+        keywords: ['otra'],
+        required: ['beca'],
         label: 'Otra beca',
         title: 'Consulta sobre otra beca',
         html: 'Indicá el nombre de la beca o programa para que pueda orientarte mejor. Cuando el trámite requiere documentación escolar, la gestión se realiza mediante Secretaría o Administración.',

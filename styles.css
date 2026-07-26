@@ -85,8 +85,6 @@
 .honor-block{border-left:6px solid var(--amarillo)}
 .honor-block .honor-preview-grid{margin-top:20px}
 #comunicaciones .visual-news-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-#comunicaciones .visual-news-grid.single-news-item{grid-template-columns:minmax(0,560px);justify-content:center}
-#comunicaciones .visual-news-grid.single-news-item .visual-card img{height:auto;object-fit:contain;background:#f8fbf9}
 .button-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
 @media(max-width:1050px){
   .solidario-grid{grid-template-columns:1fr 1fr}
@@ -1033,13 +1031,6 @@ a[data-lightbox="institucional"] img{cursor:zoom-in;}
   padding:27px;
   overflow:hidden;
   border-radius:22px;
-}
-.contact-page .contact-card > .tag{
-  text-align:center;
-}
-#estudiantes .resource-card .btn,
-#familias .resource-card .btn{
-  text-align:center;
 }
 .contact-page .contact-card::after{
   content:"";
