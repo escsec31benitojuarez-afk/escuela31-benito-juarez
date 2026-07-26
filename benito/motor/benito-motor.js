@@ -270,7 +270,9 @@
 
   function directIntent(question) {
     const text = normalize(question);
-    if (/\b(?:como te llamas|cual es tu nombre|quien sos|quien eres|decime tu nombre|nombre del asistente|presentate)\b/.test(text)) return 'identidad';
+    if (/^benito$/.test(text) ||
+        /\b(?:como te llamas|cual es tu nombre|quien sos|quien eres|decime tu nombre|nombre del asistente|presentate)\b/.test(text)) return 'identidad';
+    if (/\b(?:que hace benito|que podes hacer|en que ayudas|en que me podes ayudar|para que servis)\b/.test(text)) return 'saludo';
     if (/\b(?:guardas|almacenas|recordas|memoria|conversaciones?)\b/.test(text) ||
         (/\bpreguntas?\b/.test(text) && /\b(?:ayer|anteriores?|otras?)\b/.test(text))) return 'privacidad-chat';
     if ((/\b(?:contraseña|contrasena|clave|credenciales?)\b/.test(text) &&
@@ -282,6 +284,15 @@
         /\b(?:informacion|datos)\s+(?:personales?\s+)?(?:sobre|de)\s+(?:un|una|otro|otra)\s+(?:alumno|alumna|estudiante)\b/.test(text) ||
         (/\b(?:mi hijo|mi hija|un alumno|una alumna|un estudiante|una estudiante|otro alumno|otra alumna|otro estudiante|otra estudiante)\b/.test(text) &&
          /\b(notas|calificaciones|faltas|inasistencias|asistencia|datos)\b/.test(text))) return 'privacidad';
+    if ((/\b(?:cambiar|cambiarlo|cambiarla|cambiarme)\b/.test(text) &&
+         /\b(?:escuela|colegio|institucion)\b/.test(text)) ||
+        (/\b(?:retirar|sacar)\b/.test(text) &&
+         /\b(?:definitivamente|otra escuela|otro colegio|otra institucion)\b/.test(text))) return 'pase';
+    if (/\b(?:retirar|retiro|buscar|sacar)\b/.test(text) &&
+        /\b(?:mi hijo|mi hija|al hijo|a la hija|al alumno|a la alumna|al estudiante|a la estudiante)\b/.test(text) &&
+        !/\b(?:titulo|analitico|diploma|documentacion)\b/.test(text)) return 'retiro-estudiante';
+    if (/\b(?:retirarlo|retirarla|buscarlo|buscarla)\b/.test(text) &&
+        !/\b(?:titulo|analitico|diploma|documentacion)\b/.test(text)) return 'retiro-estudiante';
     if (hasActiveTerm(text, 'sage')) return 'sage';
     if (/\b(constancia|certificado)\b/.test(text) && /\b(alumno|regular|escolar)\b/.test(text)) return 'certificados';
     if (hasActiveTerm(text, 'pase|traslado|transferencia')) return 'pase';
@@ -291,9 +302,17 @@
     if (/\bequivalencias?\b/.test(text) || /\breconocen?\b.*\bmaterias?\b/.test(text)) return 'equivalencias';
     if (/\b(inasistencia|inasistencias|justificar|falta|faltas)\b/.test(text)) return 'asistencia';
     if (hasActiveTerm(text, 'preceptor|preceptores|preceptoria')) return 'preceptoria';
+    const specificArea = /\b(?:secretaria|preceptor|preceptores|preceptoria|asesora|asesoria|tutor|tutoria|rti|rector|rectoria|administracion)\b/.test(text);
+    const contactChannel = /\b(?:telefono|telefonicamente|celular|numero|whatsapp|correo|mail|email|llamar)\b/.test(text);
+    const schoolContact = /\b(?:comunicarme|comunicarse|comunicar|contactar|llamar|hablar)\b/.test(text) &&
+      /\b(?:escuela|secundaria|colegio)\b/.test(text);
+    if (!specificArea && (contactChannel || schoolContact ||
+        /^(?:contacto|telefono|telefonicamente|celular|numero|whatsapp|correo|mail|email|llamar)$/.test(text))) return 'contacto';
     if (/\b(?:recursos?|tecnicas?)\b.*\b(?:estudiar|estudio|aprender)\b/.test(text)) return 'recursos-estudio';
     if (/\b(?:actividad|actividades|material|materiales|tareas|apuntes)\b/.test(text) &&
         /\b(?:curso|año)\b/.test(text)) return 'aula-digital';
+    if (/\b(?:actividad|actividades|trabajo|trabajos|tarea|tareas|consigna|consignas)\b/.test(text) &&
+        /\b(?:profe|profesor|profesora|docente|clase)\b/.test(text)) return 'aula-digital';
     if (hasActiveTerm(text, 'actividad|actividades|produccion|producciones') &&
         !/\b(?:subir|cargar|publicar|agregar)\b/.test(text)) return 'actividades';
     if (!/^(?:horario|horarios)$/.test(text) && hasActiveTerm(text, 'horario|horarios')) return 'horario-clases';
@@ -312,6 +331,10 @@
 
   function meetsRequired(item, text, queryTokens, contextFlow = '') {
     if (!item.required || !item.required.length) return true;
+    const explicitMultiwordMatch = [...(item.phrases || []), ...(item.synonyms || [])]
+      .map((value) => normalize(value))
+      .some((value) => value.includes(' ') && (text === value || text.includes(value)));
+    if (explicitMultiwordMatch) return true;
     return item.required.every((required) => {
       const normalizedRequired = normalize(required);
       return normalizedRequired === normalize(contextFlow) ||

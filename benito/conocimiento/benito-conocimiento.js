@@ -2,19 +2,39 @@ window.BENITO_CONOCIMIENTO = [
     {
       id: 'identidad', priority: 30,
       phrases: ['como te llamas','como te llamás','cual es tu nombre','cuál es tu nombre','quien sos','quién sos','quien eres','quién eres','decime tu nombre'],
-      keywords: ['benito','nombre','llamas','identidad'],
+      keywords: ['nombre','llamas','identidad'],
       synonyms: ['tu nombre','como se llama el asistente','nombre del asistente','presentate'],
       title: 'Soy Benito IA',
       html: 'Soy <strong>Benito IA</strong>, el asistente virtual oficial de la Escuela Secundaria N.º 31 “Benito Juárez”. Puedo orientarte con información institucional publicada.'
     },
     {
-      id: 'contacto', priority: 8,
-      phrases: ['como me comunico', 'datos de contacto', 'contactar la escuela', 'contactar a la escuela', 'contactar a la secundaria', 'telefono de la escuela', 'correo institucional'],
+      id: 'contacto', priority: 18,
+      phrases: ['como me comunico', 'quiero comunicarme con la escuela', 'necesito comunicarme con la escuela', 'quiero hablar con la escuela', 'datos de contacto', 'contactar la escuela', 'contactar a la escuela', 'contactar a la secundaria', 'quiero llamar a la escuela', 'telefono de la escuela', 'correo institucional'],
       keywords: ['telefono','celular','correo','mail','email','contacto','comunicar','whatsapp','llamar'],
-      synonyms: ['numero de la escuela','numero del colegio','mandar un mensaje','pasas el numero','escribir a la escuela'],
+      synonyms: ['comunicarme con la escuela','hablar con la escuela','llamar a la escuela','telefonicamente','por telefono','numero de la escuela','numero del colegio','mandar un mensaje','pasas el numero','escribir a la escuela'],
       title: 'Contacto institucional',
       html: 'Estos son los canales oficiales de la escuela:<ul><li><strong>Celular:</strong> +54 345 4949814</li><li><strong>Correo institucional:</strong> secundaria31.cd@entrerios.edu.ar</li><li><strong>Secretaría:</strong> secretaria31benitojuarez@gmail.com</li></ul>',
-      actions: [['Ver contacto','../contacto.html'],['Llamar','tel:+543454949814'],['Escribir a Secretaría','mailto:secretaria31benitojuarez@gmail.com']]
+      actions: [['Ver contacto','../contacto.html'],['Llamar','tel:+543454949814'],['Escribir a Secretaría','mailto:secretaria31benitojuarez@gmail.com']],
+      followUps: [
+        {
+          id: 'contacto-telefono',
+          priority: 24,
+          phrases: ['telefonicamente','por telefono','quiero llamar','necesito llamar','pasame el numero','cual es el telefono','al celular'],
+          keywords: ['telefonicamente','telefono','celular','numero','llamar'],
+          title: 'Contacto telefónico',
+          html: 'Podés comunicarte telefónicamente con la escuela al <strong>+54 345 4949814</strong>.',
+          actions: [['Llamar a la escuela','tel:+543454949814'],['Ver contacto','../contacto.html']]
+        },
+        {
+          id: 'contacto-correo',
+          priority: 23,
+          phrases: ['por correo','por mail','quiero escribir','necesito escribir','cual es el correo','cual es el mail'],
+          keywords: ['correo','mail','email','escribir'],
+          title: 'Contacto por correo',
+          html: 'Podés escribir al correo institucional <strong>secundaria31.cd@entrerios.edu.ar</strong>. Para trámites de Secretaría también está disponible <strong>secretaria31benitojuarez@gmail.com</strong>.',
+          actions: [['Escribir a la escuela','mailto:secundaria31.cd@entrerios.edu.ar'],['Escribir a Secretaría','mailto:secretaria31benitojuarez@gmail.com']]
+        }
+      ]
     },
     {
       id: 'ubicacion', priority: 8,
@@ -291,6 +311,33 @@ window.BENITO_CONOCIMIENTO = [
       title: 'Asistencia e inasistencias',
       html: 'Las consultas sobre asistencia, inasistencias y justificaciones se realizan con <strong>Preceptoría</strong>. Presentá la documentación correspondiente según el procedimiento institucional. Benito no accede a datos personales ni al registro individual de asistencia.',
       actions: [['Ver equipo institucional','../institucion.html#equipo'],['Contactar a la escuela','../contacto.html']]
+    },
+    {
+      id: 'retiro-estudiante', priority: 20,
+      phrases: ['quiero retirar a mi hijo de la escuela','quiero retirar a mi hija de la escuela','necesito retirar a mi hijo','necesito retirar a mi hija','como retiro a mi hijo','como retiro a mi hija','voy a buscar a mi hijo','voy a buscar a mi hija'],
+      keywords: ['retirar','retiro','buscarlo','buscarla'],
+      synonyms: ['retirar a mi hijo','retirar a mi hija','buscar a mi hijo','buscar a mi hija','sacar a mi hijo antes','sacar a mi hija antes','mi hijo sale antes','mi hija sale antes'],
+      title: 'Retiro de un estudiante',
+      html: 'Si necesitás retirar a tu hijo o hija <strong>durante la jornada escolar</strong>, comunicate con <strong>Preceptoría</strong> para avisar y confirmar el procedimiento y las autorizaciones vigentes. Podés llamar a la escuela al <strong>+54 345 4949814</strong>.<br><br>Si en cambio querés cambiarlo definitivamente de institución, el trámite correspondiente es un <strong>pase escolar</strong>.',
+      actions: [['Llamar a la escuela','tel:+543454949814'],['Ver Preceptoría','../institucion.html#equipo']],
+      followUps: [
+        {
+          id: 'retiro-autorizacion',
+          priority: 23,
+          phrases: ['quien puede retirarlo','quien puede retirarla','puede ir otra persona','que autorizacion necesito','tengo que avisar','debo avisar'],
+          keywords: ['autorizacion','autorizado','persona','avisar'],
+          title: 'Autorización para el retiro',
+          html: 'Consultá previamente con <strong>Preceptoría</strong> quién puede realizar el retiro y qué autorización o identificación corresponde presentar en tu caso. Podés llamar al <strong>+54 345 4949814</strong>.',
+          actions: [['Llamar a la escuela','tel:+543454949814'],['Ver Preceptoría','../institucion.html#equipo']]
+        },
+        {
+          id: 'retiro-pase',
+          priority: 23,
+          phrases: ['quiero cambiarlo de escuela','quiero cambiarla de escuela','definitivamente','es para otra escuela','quiero pedir el pase'],
+          keywords: ['cambiarlo','cambiarla','definitivamente','pase'],
+          target: 'pase'
+        }
+      ]
     },
     {
       id: 'horario-clases', priority: 14,
