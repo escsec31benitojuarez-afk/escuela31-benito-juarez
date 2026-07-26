@@ -247,6 +247,60 @@ main{
   background:var(--verde);
 }
 
+/* Novedades destacadas: combinación visual alineada con el bloque Contacto. */
+.featured-news-grid .news-card{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  overflow:hidden;
+  border-radius:22px;
+  padding:25px;
+}
+.featured-news-grid .news-card::after{
+  content:"";
+  position:absolute;
+  right:-42px;
+  bottom:-42px;
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  pointer-events:none;
+}
+.featured-news-grid .news-card > *{
+  position:relative;
+  z-index:1;
+}
+.featured-news-grid .news-card .btn{
+  align-self:flex-start;
+  margin-top:auto;
+}
+.featured-news-grid .news-card-red{
+  background:linear-gradient(145deg,#fff 0%,#fffafa 100%);
+  border-top:6px solid var(--rojo);
+}
+.featured-news-grid .news-card-red::after{
+  background:rgba(179,38,30,.08);
+}
+.featured-news-grid .news-card-gold{
+  background:linear-gradient(145deg,#fff 0%,#fffdf3 100%);
+  border-top:6px solid var(--amarillo);
+}
+.featured-news-grid .news-card-gold::after{
+  background:rgba(214,187,66,.14);
+}
+.featured-news-grid .news-card-green{
+  background:linear-gradient(145deg,#f4fbf7 0%,#edf7f1 100%);
+  border-color:rgba(11,90,53,.18);
+  border-top:6px solid #b7d7c5;
+}
+.featured-news-grid .news-card-green::after{
+  background:rgba(11,90,53,.08);
+}
+.featured-news-grid .news-card.news-featured{
+  border-left:1px solid var(--borde);
+}
+
 /* Footer: más equilibrado y sin cortes innecesarios en datos institucionales. */
 .footer{
   padding:30px 6% 28px !important;
