@@ -1035,6 +1035,10 @@ a[data-lightbox="institucional"] img{cursor:zoom-in;}
 .contact-page .contact-card > .tag{
   text-align:center;
 }
+#estudiantes .resource-card .btn,
+#familias .resource-card .btn{
+  text-align:center;
+}
 .contact-page .contact-card::after{
   content:"";
   position:absolute;
