@@ -572,7 +572,7 @@
       conversation.lastIntent = match.contextIntent || match.id;
       conversation.lastFlow = match.contextFlow || match.flow || null;
       conversation.lastAnswer = match.contextSource || match;
-      conversation.pendingFlow = match.flow || null;
+      conversation.pendingFlow = match.flow || match.contextFlow || null;
       const bubble = addMessage(match.html, 'assistant', match.title);
       addActions(bubble, match.actions);
       if (match.flow) addFlowButtons(bubble, match.flow);

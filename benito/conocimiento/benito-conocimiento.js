@@ -118,7 +118,7 @@ window.BENITO_CONOCIMIENTO = [
       phrases: ['quien es el rti','horario del rti','ayuda con tecnologia','que hace el rti'], keywords: ['rti','alfredo','esquivel','tecnologia','digital','computadora','netbook'],
       synonyms: ['ayuda con la computadora','ayuda con las computadoras','problema con la netbook','se trabo la netbook'],
       title: 'RTI y Tecnología Educativa',
-      html: 'El RTI es <strong>Alfredo Esquivel</strong>. Brinda acompañamiento pedagógico-digital, alfabetización digital situada, integración tecnológica, producción de recursos y desarrollo de proyectos.<ul><li><strong>Martes:</strong> 7:30 a 11:40.</li><li><strong>Jueves:</strong> 7:30 a 10:00.</li></ul>',
+      html: 'El RTI es <strong>Alfredo Esquivel</strong>. Brinda acompañamiento pedagógico-digital, alfabetización digital situada, integración tecnológica, producción de recursos, desarrollo de proyectos y asesoramiento para el acceso y uso de <strong>SAGE</strong>.<ul><li><strong>Martes:</strong> 7:30 a 11:40.</li><li><strong>Jueves:</strong> 7:30 a 10:00.</li></ul>',
       actions: [['Ver equipo institucional','../institucion.html#equipo']]
     },
     {
@@ -136,8 +136,8 @@ window.BENITO_CONOCIMIENTO = [
       keywords: ['certificado','certificados','constancia','constancias','regular','escolaridad'],
       synonyms: ['papel de alumno regular','papel que dice alumno regular','certificado escolar','constancia regular'],
       title: 'Constancia de alumno regular',
-      html: 'Sí. El estudiante o un familiar puede generar la constancia de alumno regular desde <strong>SAGE</strong>.<ol><li>Ingresá a SAGE.</li><li>Buscá la opción <strong>“Constancia de alumno regular”</strong>.</li><li>Generá el documento, descargalo e imprimilo.</li></ol>Si no podés ingresar, utilizá primero las opciones de recuperación o ayuda de SAGE. Si aun así no lográs obtenerla, acercate a <strong>Secretaría o Administración</strong>, de lunes a viernes, de 7:30 a 13:00.',
-      actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com'],['Ver contacto','../contacto.html']],
+      html: 'Sí. El estudiante o un familiar puede generar la constancia de alumno regular desde <strong>SAGE</strong>.<ol><li>Ingresá a SAGE.</li><li>Buscá la opción <strong>“Constancia de alumno regular”</strong>.</li><li>Generá el documento, descargalo e imprimilo.</li></ol>Si necesitás ayuda para ingresar o realizar estos pasos en SAGE, comunicate con el <strong>RTI</strong>. Si no lográs obtener la constancia, podés acercarte a <strong>Secretaría o Administración</strong>, de lunes a viernes, de 7:30 a 13:00.',
+      actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Ver horario del RTI','../institucion.html#equipo'],['Ver contacto','../contacto.html']],
       followUps: [
         {
           id: 'certificados-sage',
@@ -145,8 +145,8 @@ window.BENITO_CONOCIMIENTO = [
           phrases: ['se puede generar desde sage','la constancia se genera desde sage','y desde sage','desde sage','se descarga desde sage','se imprime desde sage'],
           keywords: ['sage','generar','descargar','imprimir'],
           title: 'Sí, se genera desde SAGE',
-          html: 'Sí. El estudiante o un familiar puede ingresar a <strong>SAGE</strong>, buscar <strong>“Constancia de alumno regular”</strong>, generar el documento, descargarlo e imprimirlo. Si no podés acceder, usá primero la recuperación o ayuda de SAGE; si el problema continúa, acercate a Secretaría o Administración.',
-          actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com']]
+          html: 'Sí. El estudiante o un familiar puede ingresar a <strong>SAGE</strong>, buscar <strong>“Constancia de alumno regular”</strong>, generar el documento, descargarlo e imprimirlo. Si necesitás ayuda para ingresar o usar SAGE, comunicate con el <strong>RTI</strong>. Si no lográs obtener la constancia, acercate a Secretaría o Administración.',
+          actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Ver horario del RTI','../institucion.html#equipo']]
         },
         {
           id: 'certificados-acceso',
@@ -197,7 +197,8 @@ window.BENITO_CONOCIMIENTO = [
       phrases: ['como entrar a sage','solicitar usuario sage','no puedo entrar a sage','no puedo ingresar a sage','ver notas en sage','ver calificaciones','olvide mi contraseña de sage','error en sage'],
       keywords: ['sage','calificaciones','notas','boletin','usuario','contraseña','clave','asistencia','error'],
       title: 'Ayuda con SAGE',
-      html: 'Entiendo que necesitás resolver una gestión en <strong>SAGE</strong>. Elegí qué sucede y te indico el paso correspondiente:',
+      html: 'Si necesitás asesoramiento para ingresar o utilizar <strong>SAGE</strong>, comunicate con el <strong>RTI</strong>. También podés elegir qué sucede para recibir una orientación más precisa:',
+      actions: [['Ver horario del RTI','../institucion.html#equipo'],['Ingresar a SAGE','https://sage.entrerios.gov.ar/']],
       flow: 'sage'
     },
     {
@@ -426,8 +427,8 @@ window.BENITO_CONOCIMIENTO = [
       keywords: ['contraseña','clave','credenciales','privada'],
       synonyms: ['decime la contraseña','pasame la clave','entra por mi','accede a mi cuenta'],
       title: 'Seguridad de accesos',
-      html: 'Benito no brinda contraseñas ni credenciales, y tampoco puede ingresar a <strong>SAGE</strong> o a una cuenta en nombre de otra persona. Para recuperar un acceso, utilizá las opciones oficiales de la plataforma; si necesitás verificar datos institucionales, comunicate con Secretaría.',
-      actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com']]
+      html: 'Benito no brinda contraseñas ni credenciales, y tampoco puede ingresar a <strong>SAGE</strong> o a una cuenta en nombre de otra persona. Para recuperar el acceso, utilizá las opciones oficiales de la plataforma. Si necesitás asesoramiento para hacerlo, comunicate con el <strong>RTI</strong>.',
+      actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Ver horario del RTI','../institucion.html#equipo']]
     },
     {
       id: 'privacidad-chat', priority: 19,
@@ -443,8 +444,8 @@ window.BENITO_CONOCIMIENTO = [
       phrases: ['decime mis notas','mostrame mis calificaciones','cuantas faltas tiene mi hijo','datos de un alumno'],
       keywords: ['mis notas','calificaciones personales','datos personales','faltas de mi hijo'],
       title: 'Protección de datos personales',
-      html: 'Benito no accede ni muestra calificaciones, asistencia, legajos u otros datos personales. Esa información debe consultarse mediante <strong>SAGE</strong> o con el área institucional correspondiente, respetando la identidad y autorización de la persona interesada.',
-      actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Contactar a la escuela','../contacto.html']]
+      html: 'Benito no accede ni muestra calificaciones, asistencia, legajos u otros datos personales. Esa información debe consultarse mediante <strong>SAGE</strong> o con el área institucional correspondiente, respetando la identidad y autorización de la persona interesada. Si necesitás ayuda para ingresar o utilizar SAGE, comunicate con el <strong>RTI</strong>.',
+      actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Ver horario del RTI','../institucion.html#equipo'],['Contactar a la escuela','../contacto.html']]
     }
   ];
 window.BENITO_FLUJOS = {
@@ -458,8 +459,8 @@ window.BENITO_FLUJOS = {
         required: ['sage'],
         label: 'Olvidé mi contraseña',
         title: 'Recuperar acceso a SAGE',
-        html: 'Ingresá a SAGE y utilizá la opción de recuperación de contraseña. Si no podés completar el proceso o tus datos no coinciden, comunicate con <strong>Secretaría</strong> para verificar el registro.',
-        actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com']]
+        html: 'Ingresá a SAGE y utilizá la opción de recuperación de contraseña. Si no podés completar el proceso o necesitás asesoramiento, comunicate con el <strong>RTI</strong>. No compartas tu contraseña ni códigos de recuperación.',
+        actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Ver horario del RTI','../institucion.html#equipo']]
       },
       {
         id: 'sage-user',
@@ -470,8 +471,8 @@ window.BENITO_FLUJOS = {
         required: ['sage'],
         label: 'No tengo usuario',
         title: 'Solicitar usuario de SAGE',
-        html: 'Podés iniciar la solicitud de usuario desde el sitio oficial de SAGE. Si necesitás verificar datos del estudiante o del adulto responsable, consultá con <strong>Secretaría</strong>.',
-        actions: [['Solicitar usuario SAGE','https://sage.entrerios.gov.ar/solicitarUsuario/index.php'],['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com']]
+        html: 'Podés iniciar la solicitud de usuario desde el sitio oficial de SAGE. Si necesitás asesoramiento para completar el registro, comunicate con el <strong>RTI</strong>. No compartas contraseñas ni códigos de verificación.',
+        actions: [['Solicitar usuario SAGE','https://sage.entrerios.gov.ar/solicitarUsuario/index.php'],['Ver horario del RTI','../institucion.html#equipo']]
       },
       {
         id: 'sage-error',
@@ -482,8 +483,8 @@ window.BENITO_FLUJOS = {
         required: ['sage'],
         label: 'Me aparece un error',
         title: 'Error de acceso a SAGE',
-        html: 'Primero verificá que el usuario y la contraseña estén escritos correctamente y probá nuevamente. Si el error continúa, anotá o capturá el mensaje que aparece y comunicate con <strong>Secretaría</strong> para recibir orientación.',
-        actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Ver contacto','../contacto.html']]
+        html: 'Primero verificá que el usuario esté escrito correctamente y probá nuevamente. Si el error continúa, anotá o capturá el mensaje que aparece —sin mostrar tu contraseña— y comunicate con el <strong>RTI</strong> para recibir asesoramiento.',
+        actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Ver horario del RTI','../institucion.html#equipo']]
       },
       {
         id: 'sage-grades',
@@ -494,8 +495,8 @@ window.BENITO_FLUJOS = {
         required: ['sage'],
         label: 'No encuentro mis calificaciones',
         title: 'Calificaciones en SAGE',
-        html: 'Ingresá a SAGE con tu usuario y revisá la sección correspondiente al estudiante. Si las calificaciones todavía no aparecen o detectás un dato incorrecto, consultá con <strong>Preceptoría o Secretaría</strong>; Benito no accede ni muestra información académica personal.',
-        actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Ver contacto','../contacto.html']]
+        html: 'Ingresá a SAGE con tu usuario y revisá la sección correspondiente al estudiante. Si necesitás ayuda para encontrarla o usar la plataforma, comunicate con el <strong>RTI</strong>. Si una calificación no aparece o es incorrecta, consultá con <strong>Preceptoría o Secretaría</strong>. Benito no accede ni muestra información académica personal.',
+        actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Ver horario del RTI','../institucion.html#equipo'],['Ver contacto','../contacto.html']]
       },
       {
         id: 'sage-constancia',
@@ -506,8 +507,8 @@ window.BENITO_FLUJOS = {
         required: ['sage'],
         label: 'Generar constancia',
         title: 'Constancia de alumno regular en SAGE',
-        html: 'Sí. El estudiante o un familiar puede ingresar a <strong>SAGE</strong>, buscar <strong>“Constancia de alumno regular”</strong>, generar el documento, descargarlo e imprimirlo. Si no podés acceder, usá primero las opciones de recuperación o ayuda de SAGE. Si el inconveniente continúa, acercate a Secretaría o Administración, de lunes a viernes, de 7:30 a 13:00.',
-        actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com']],
+        html: 'Sí. El estudiante o un familiar puede ingresar a <strong>SAGE</strong>, buscar <strong>“Constancia de alumno regular”</strong>, generar el documento, descargarlo e imprimirlo. Si necesitás ayuda para ingresar o realizar estos pasos en SAGE, comunicate con el <strong>RTI</strong>. Si no lográs obtener la constancia, acercate a Secretaría o Administración, de lunes a viernes, de 7:30 a 13:00.',
+        actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Ver horario del RTI','../institucion.html#equipo'],['Ver contacto','../contacto.html']],
         followUps: [
           {
             id: 'sage-constancia-acceso',
@@ -526,6 +527,18 @@ window.BENITO_FLUJOS = {
             actions: [['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com'],['Ver contacto','../contacto.html']]
           }
         ]
+      },
+      {
+        id: 'sage-rti',
+        priority: 22,
+        phrases: ['necesito asesoramiento sobre sage','necesito ayuda para usar sage','quien me ayuda con sage','con quien hablo por sage','no se usar sage'],
+        keywords: ['asesoramiento','ayuda','usar','orientacion'],
+        synonyms: ['necesito que me expliquen sage','no entiendo sage','ayuda para entrar a sage','ayuda con el sage'],
+        required: ['sage'],
+        label: 'Necesito asesoramiento',
+        title: 'Asesoramiento sobre SAGE',
+        html: 'Para recibir asesoramiento sobre el ingreso, la recuperación de acceso o el uso de <strong>SAGE</strong>, comunicate con el <strong>RTI, Alfredo Esquivel</strong>.<ul><li><strong>Martes:</strong> 7:30 a 11:40.</li><li><strong>Jueves:</strong> 7:30 a 10:00.</li></ul>No compartas tu contraseña ni códigos de recuperación.',
+        actions: [['Ver horario del RTI','../institucion.html#equipo'],['Ingresar a SAGE','https://sage.entrerios.gov.ar/']]
       }
     ],
     pase: [
@@ -703,8 +716,8 @@ window.BENITO_FLUJOS = {
         synonyms: ['progre','progresal'],
         label: 'Becas Progresar',
         title: 'Becas Progresar',
-        html: 'La inscripción y el seguimiento se realizan mediante los canales oficiales de Progresar. Para constancias o verificación de la situación académica, podés generar la constancia de alumno regular desde SAGE o consultar con Secretaría.',
-        actions: [['Abrir Progresar','https://www.argentina.gob.ar/educacion/progresar'],['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com']]
+        html: 'La inscripción y el seguimiento se realizan mediante los canales oficiales de Progresar. Para una constancia de alumno regular, podés generarla desde SAGE. Si necesitás asesoramiento para usar SAGE, comunicate con el <strong>RTI</strong>; para verificar datos académicos o documentación, consultá con Secretaría.',
+        actions: [['Abrir Progresar','https://www.argentina.gob.ar/educacion/progresar'],['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Ver horario del RTI','../institucion.html#equipo'],['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com']]
       },
       {
         id: 'becas-instituto',
