@@ -1090,14 +1090,14 @@ a[data-lightbox="institucional"] img{cursor:zoom-in;}
 .contact-page .contact-social-button{
   align-self:flex-start;
   margin-top:auto;
-  background:var(--verde);
-  color:#fff;
-  box-shadow:0 8px 18px rgba(11,90,53,.22);
+  background:var(--amarillo);
+  color:var(--verde-oscuro);
+  box-shadow:0 8px 18px rgba(0,0,0,.12);
 }
 .contact-page .contact-social-button:hover,
 .contact-page .contact-social-button:focus-visible{
-  background:var(--verde-oscuro);
-  color:#fff;
+  background:var(--amarillo);
+  color:var(--verde-oscuro);
 }
 .contact-page .footer{
   margin-top:30px;
