@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+Disallow: /escuela31-benito-juarez/benito/access-matrix.html
+Disallow: /escuela31-benito-juarez/benito/admin.html
+Disallow: /escuela31-benito-juarez/benito/analytics-dashboard.html
+Disallow: /escuela31-benito-juarez/benito/analytics-data-lab.html
+Disallow: /escuela31-benito-juarez/benito/audit.html
+Disallow: /escuela31-benito-juarez/benito/dashboard.html
+Disallow: /escuela31-benito-juarez/benito/data-governance.html
+Disallow: /escuela31-benito-juarez/benito/evaluation.html
+Disallow: /escuela31-benito-juarez/benito/login.html
+Disallow: /escuela31-benito-juarez/benito/memory.html
+Disallow: /escuela31-benito-juarez/benito/multiagent-lab.html
+Disallow: /escuela31-benito-juarez/benito/pilot-dashboard.html
+Disallow: /escuela31-benito-juarez/benito/pilot-settings.html
+Disallow: /escuela31-benito-juarez/benito/platform-owner.html
+Disallow: /escuela31-benito-juarez/benito/predictive-dashboard.html
+Disallow: /escuela31-benito-juarez/benito/predictive-governance.html
+Disallow: /escuela31-benito-juarez/benito/private-dashboard.html
+Disallow: /escuela31-benito-juarez/benito/protected-placeholder.html
+Disallow: /escuela31-benito-juarez/benito/rag-lab.html
+Disallow: /escuela31-benito-juarez/benito/rti-app.html
+Disallow: /escuela31-benito-juarez/benito/security-audit.html
+Disallow: /escuela31-benito-juarez/benito/settings.html
+
+Sitemap: https://escsec31benitojuarez-afk.github.io/escuela31-benito-juarez/sitemap.xml
