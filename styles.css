@@ -228,7 +228,7 @@ main{
 
 /* Novedades destacadas: el Cuadro de Honor pasa a ser el destacado principal. */
 .featured-news-grid{
-  grid-template-columns:1.25fr .9fr .9fr !important;
+  grid-template-columns:1.25fr 1fr !important;
   align-items:stretch;
 }
 .news-card.news-featured{
