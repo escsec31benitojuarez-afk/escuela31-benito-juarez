@@ -23,4 +23,4 @@ Disallow: /escuela31-benito-juarez/benito/rti-app.html
 Disallow: /escuela31-benito-juarez/benito/security-audit.html
 Disallow: /escuela31-benito-juarez/benito/settings.html
 
-Sitemap: https://escsec31benitojuarez-afk.github.io/escuela31-benito-juarez/sitemap.xml
+Sitemap: https://escsec31benitojuarez-afk.github.io/escuela31-benito-juarez/sitemap_index.xml
