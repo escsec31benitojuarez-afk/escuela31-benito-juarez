@@ -14,6 +14,13 @@
   --radio:24px;
 }
 
+/* El QR de inscripción debe mostrarse completo dentro de su tarjeta. */
+.visual-card img[alt^="Código QR"]{
+  object-fit:contain;
+  background:#fff;
+  padding:18px;
+}
+
 /* RESTAURACION CONTROLADA: acceso publico a Benito IA */
 .nav-links .benito-access {
   background: var(--amarillo-vivo);
