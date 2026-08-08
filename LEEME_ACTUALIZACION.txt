@@ -1,0 +1,12 @@
+ACTUALIZACIÓN DE MANTENIMIENTO
+
+Contenido:
+- assets/imagenes/novedades/programa-alfabetizacion-digital-2026.png
+
+Instrucciones:
+1. Descomprimir este ZIP.
+2. Copiar la carpeta 'assets' sobre la carpeta raíz del Portal Benito Juárez.
+3. Permitir reemplazar/agregar archivos cuando Windows lo solicite.
+
+Esta actualización únicamente incorpora el nuevo flyer.
+No modifica HTML, CSS ni JavaScript.
