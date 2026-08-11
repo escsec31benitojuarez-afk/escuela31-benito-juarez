@@ -160,6 +160,7 @@ details.accordion{background:linear-gradient(135deg,#eef7f1,#f8fbf9);border:1px 
 .project-video-card{background:#f7faf8;border:1px solid var(--borde);border-radius:18px;padding:16px}
 .project-video-card video{display:block;width:100%;border-radius:12px;background:#000}
 .project-video-card h3{color:var(--verde-oscuro);margin:12px 0 4px}
+.project-video-featured{max-width:820px;margin:22px auto 0}
 @media(max-width:820px){.project-evidence-feature,.project-video-grid{grid-template-columns:1fr}}
 
 
