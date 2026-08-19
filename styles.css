@@ -1201,3 +1201,226 @@ a[data-lightbox="institucional"] img{cursor:zoom-in;}
     margin-top:14px;
   }
 }
+
+/* ===== REFINAMIENTO VISUAL, TIPOGRÁFICO Y RESPONSIVE 2026-08-19 ===== */
+/* Ajustes globales seguros: no alteran contenidos, rutas ni funcionamiento. */
+body{
+  line-height:1.68;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+p,li,blockquote{
+  text-wrap:pretty;
+  overflow-wrap:break-word;
+}
+h1,h2,h3{
+  text-wrap:balance;
+  overflow-wrap:break-word;
+  hyphens:none;
+}
+
+/* Jerarquía tipográfica: diferencia el título de página de los títulos internos. */
+.page-title h1{
+  font-size:clamp(2.2rem,3.7vw,3.35rem);
+  line-height:1.1;
+  letter-spacing:-.65px;
+}
+.card h2{
+  font-size:clamp(1.78rem,2.55vw,2.65rem);
+  line-height:1.16;
+  letter-spacing:-.35px;
+}
+.page-title p,.section-intro{
+  max-width:78ch;
+  font-size:clamp(1rem,1.2vw,1.08rem);
+  line-height:1.74;
+}
+.portal-card h3,.quick-card h3,.mini-card h3,.resource-card h3,
+.news-card h3,.info-card h3,.service-card h3,.community-card h3,
+.course-card h3,.document-card h3{
+  line-height:1.3;
+}
+
+/* Componentes más consistentes y con contraste institucional sobrio. */
+.card,.page-title,.portal-card,.quick-card,.mini-card,.resource-card,
+.news-card,.info-card,.service-card,.community-card,.course-card,
+.document-card,.subblock{
+  border-color:rgba(11,90,53,.17);
+}
+.portal-card,.quick-card,.resource-card,.news-card,.info-card,
+.service-card,.community-card,.course-card{
+  height:100%;
+}
+.btn{
+  min-height:44px;
+  padding:12px 20px;
+  line-height:1.25;
+  text-align:center;
+}
+.btn:focus-visible,.nav-links a:focus-visible,.side-menu a:focus-visible,
+.portal-menu-toggle:focus-visible,details summary:focus-visible{
+  outline:3px solid var(--amarillo-vivo);
+  outline-offset:3px;
+}
+
+/* Las comunicaciones son afiches y placas: deben verse completas, no recortadas. */
+.visual-card > a{
+  display:block;
+  background:#f4f7f5;
+}
+.visual-card img{
+  height:320px;
+  padding:10px;
+  object-fit:contain;
+  object-position:center;
+  background:#f4f7f5;
+}
+
+/* El desplazamiento a secciones contempla la cabecera fija. */
+section,[id]{
+  scroll-margin-top:150px;
+}
+.side-menu{
+  top:150px;
+}
+
+@media(max-width:1100px){
+  .side-menu{
+    top:auto;
+  }
+  .nav-links a{
+    line-height:1.25;
+  }
+}
+
+@media(max-width:760px){
+  main{
+    width:calc(100% - 24px);
+    margin:24px auto;
+  }
+  section{
+    margin:26px 0;
+  }
+  .card,.page-title{
+    padding:21px;
+    border-radius:19px;
+  }
+  .page-title{
+    margin-bottom:24px;
+  }
+  .page-title h1{
+    font-size:clamp(2rem,9.3vw,2.65rem);
+    line-height:1.12;
+    letter-spacing:-.35px;
+    padding-bottom:12px;
+    margin-bottom:15px;
+  }
+  .card h2{
+    font-size:clamp(1.62rem,7.2vw,2rem);
+    line-height:1.18;
+    letter-spacing:-.2px;
+    padding-bottom:11px;
+    margin-bottom:15px;
+  }
+  .page-title p,.section-intro{
+    font-size:1rem;
+    line-height:1.68;
+    margin-bottom:19px;
+  }
+  .portal-grid,.quick-grid,.resource-grid,.news-grid,.info-grid,
+  .document-grid,.service-grid,.course-grid,.subblock-grid{
+    gap:16px;
+  }
+  .portal-card,.quick-card,.mini-card,.resource-card,.news-card,
+  .info-card,.service-card,.community-card,.course-card,.document-card,
+  .subblock{
+    padding:20px;
+    border-radius:17px;
+  }
+  .visual-card{
+    padding:0;
+  }
+  .visual-card img{
+    width:100%;
+    height:auto;
+    max-height:520px;
+    padding:8px;
+  }
+  .visual-card div{
+    padding:20px;
+  }
+  .hero-actions .btn,.honor-actions .btn{
+    flex:1 1 210px;
+  }
+  .footer{
+    padding:28px 20px !important;
+    margin-top:36px;
+  }
+  .footer-grid{
+    gap:22px !important;
+  }
+}
+
+@media(max-width:480px){
+  .topbar{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:3px;
+    padding:7px 12px !important;
+    text-align:center;
+    line-height:1.35;
+  }
+  .header-inner{
+    gap:10px !important;
+  }
+  .brand{
+    gap:9px !important;
+    min-width:0 !important;
+  }
+  .brand > div{
+    min-width:0;
+  }
+  .brand img{
+    width:44px !important;
+    height:44px !important;
+    flex:0 0 44px;
+  }
+  .brand strong{
+    font-size:.84rem !important;
+    line-height:1.15;
+  }
+  .brand span,.brand small{
+    font-size:.68rem !important;
+    line-height:1.2;
+  }
+  .portal-menu-toggle{
+    padding:9px 11px;
+    font-size:.84rem;
+  }
+  .nav-links{
+    grid-template-columns:1fr 1fr;
+    gap:7px !important;
+    padding-top:10px;
+  }
+  .nav-links a{
+    min-height:44px;
+    padding:8px !important;
+    white-space:normal;
+  }
+  .nav-links .benito-access{
+    grid-column:1/-1;
+  }
+  .card,.page-title{
+    padding:18px;
+  }
+  .project-showcase,.project-card{
+    padding:18px;
+  }
+  .button-row,.hero-actions,.honor-actions{
+    gap:10px;
+  }
+  .button-row .btn,.hero-actions .btn,.honor-actions .btn{
+    width:100%;
+    flex-basis:100%;
+  }
+}
