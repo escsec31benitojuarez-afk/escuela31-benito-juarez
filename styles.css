@@ -1424,3 +1424,177 @@ section,[id]{
     flex-basis:100%;
   }
 }
+
+/* ===== CORRECCIÓN VISIBLE DEL REFINAMIENTO 2026-08-19 ===== */
+/* Refuerza la presentación institucional sin cambiar estructura ni contenido. */
+body{
+  background:
+    radial-gradient(circle at 8% 18%,rgba(214,187,66,.08),transparent 24rem),
+    linear-gradient(180deg,#f1f6f3 0%,#f8faf9 42%,#eef4f0 100%);
+}
+.topbar a{
+  font-weight:700;
+}
+.site-header{
+  border-bottom:1px solid rgba(255,255,255,.16);
+}
+.hero{
+  border-bottom:5px solid var(--amarillo);
+}
+.hero-card{
+  border:1px solid rgba(255,255,255,.75);
+  border-left:7px solid var(--amarillo);
+  box-shadow:0 22px 48px rgba(0,0,0,.28);
+  backdrop-filter:blur(6px);
+}
+.hero-actions .btn{
+  border:2px solid rgba(255,255,255,.2);
+}
+
+/* Bloques principales más definidos y fáciles de recorrer visualmente. */
+.card,.page-title{
+  border-color:rgba(6,63,37,.2);
+  box-shadow:0 14px 34px rgba(6,63,37,.1);
+}
+.page-title{
+  border-left:7px solid var(--verde);
+  background:
+    radial-gradient(circle at 94% 12%,rgba(214,187,66,.14),transparent 15rem),
+    linear-gradient(135deg,#fff 0%,#f5faf7 100%);
+}
+.hero + main > .card{
+  margin-block:30px;
+}
+.hero + main > .card:not(.identity-highlight){
+  border-top:5px solid rgba(11,90,53,.72);
+}
+.eyebrow,.eyebrow-section,.tag{
+  border:1px solid rgba(11,90,53,.12);
+}
+
+/* Accesos del inicio: mayor contraste, alturas parejas y código visual común. */
+.portal-grid{
+  align-items:stretch;
+}
+.portal-card{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  min-height:205px;
+  overflow:hidden;
+  border:1px solid rgba(11,90,53,.18);
+  border-top:5px solid var(--verde);
+  background:linear-gradient(145deg,#fff 0%,#f6faf7 100%);
+  box-shadow:0 9px 22px rgba(6,63,37,.07);
+}
+.portal-card:nth-child(3n+2){
+  border-top-color:var(--amarillo);
+}
+.portal-card:nth-child(3n){
+  border-top-color:var(--rojo);
+}
+.portal-card::after{
+  content:"";
+  position:absolute;
+  right:-34px;
+  bottom:-34px;
+  width:82px;
+  height:82px;
+  border-radius:50%;
+  background:rgba(11,90,53,.055);
+  pointer-events:none;
+}
+.portal-card .icon{
+  width:56px;
+  height:56px;
+  border-radius:16px;
+  background:linear-gradient(145deg,#e4f2e9,#f8fbf9);
+  border:1px solid rgba(11,90,53,.14);
+  box-shadow:0 6px 14px rgba(6,63,37,.08);
+}
+.portal-card h3{
+  font-size:1.22rem;
+  margin-bottom:10px;
+}
+.portal-card p{
+  flex:1;
+}
+.portal-card:hover{
+  border-color:rgba(11,90,53,.34);
+  transform:translateY(-5px);
+  box-shadow:0 16px 32px rgba(6,63,37,.14);
+}
+
+/* Menús laterales, novedades y pie con una lógica visual compartida. */
+.side-menu{
+  border-top:5px solid var(--verde);
+  box-shadow:0 12px 28px rgba(6,63,37,.1);
+}
+.side-menu a + a{
+  border-top:1px solid rgba(11,90,53,.08);
+}
+.featured-news-grid{
+  gap:20px;
+}
+.featured-news-grid .news-card{
+  border-color:rgba(11,90,53,.18);
+  box-shadow:0 10px 24px rgba(6,63,37,.08);
+}
+.footer-grid > div{
+  padding-left:18px;
+  border-left:2px solid rgba(214,187,66,.34);
+}
+.footer-bottom{
+  text-align:center;
+}
+
+@media(max-width:760px){
+  body{
+    background:linear-gradient(180deg,#f2f6f3 0%,#f8faf9 100%);
+  }
+  .hero{
+    border-bottom-width:4px;
+  }
+  .hero-card{
+    box-shadow:0 14px 30px rgba(0,0,0,.22);
+  }
+  .hero + main > .card{
+    margin-block:22px;
+  }
+  .hero + main > .card:not(.identity-highlight){
+    border-top-width:4px;
+  }
+  .portal-card{
+    min-height:0;
+    padding:19px;
+  }
+  .portal-card .icon{
+    width:50px;
+    height:50px;
+    border-radius:14px;
+  }
+  .page-title{
+    border-left-width:5px;
+  }
+  .footer-grid > div{
+    padding-left:14px;
+  }
+}
+
+@media(max-width:480px){
+  .badge{
+    max-width:100%;
+    white-space:normal;
+    line-height:1.25;
+  }
+  .footer-grid > div{
+    padding-left:0;
+    padding-top:16px;
+    border-left:0;
+    border-top:1px solid rgba(214,187,66,.3);
+  }
+  .footer-grid > div:first-child{
+    padding-top:0;
+    border-top:0;
+  }
+}
