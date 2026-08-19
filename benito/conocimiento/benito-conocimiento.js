@@ -13,8 +13,8 @@ window.BENITO_CONOCIMIENTO = [
       keywords: ['telefono','celular','correo','mail','email','contacto','comunicar','whatsapp','llamar'],
       synonyms: ['comunicarme con la escuela','hablar con la escuela','llamar a la escuela','telefonicamente','por telefono','numero de la escuela','numero del colegio','mandar un mensaje','pasas el numero','escribir a la escuela'],
       title: 'Contacto institucional',
-      html: 'Estos son los canales oficiales de la escuela:<ul><li><strong>Celular:</strong> +54 345 4949814</li><li><strong>Correo institucional:</strong> secundaria31.cd@entrerios.edu.ar</li><li><strong>Secretaría:</strong> secretaria31benitojuarez@gmail.com</li></ul>',
-      actions: [['Ver contacto','../contacto.html'],['Llamar','tel:+543454949814'],['Escribir a Secretaría','mailto:secretaria31benitojuarez@gmail.com']],
+      html: 'Estos son los canales oficiales de la escuela:<ul><li><strong>Celular:</strong> +54 345 4949814</li><li><strong>Correo institucional:</strong> secundaria31.cd@entrerios.edu.ar</li><li><strong>Secretaría:</strong> secretaria31benitojuarez@gmail.com</li><li><strong>Asesoría Pedagógica:</strong> asesoriabenitojuarez@gmail.com</li></ul>',
+      actions: [['Ver contacto','../contacto.html'],['Llamar','tel:+543454949814'],['Escribir a Secretaría','mailto:secretaria31benitojuarez@gmail.com'],['Escribir a Asesoría Pedagógica','mailto:asesoriabenitojuarez@gmail.com']],
       followUps: [
         {
           id: 'contacto-telefono',
@@ -74,8 +74,8 @@ window.BENITO_CONOCIMIENTO = [
       id: 'asesoria', priority: 10,
       phrases: ['quien es la asesora','horario de la asesora','asesoria pedagogica'], keywords: ['asesora','asesoria','daiana','mohr','pedagogica'],
       title: 'Asesoría Pedagógica',
-      html: 'La asesora pedagógica es la <strong>Prof. Daiana Mohr</strong>. Acompaña pedagógicamente a la institución y realiza el seguimiento de trayectorias educativas.<ul><li><strong>Lunes:</strong> 8:00 a 11:00.</li><li><strong>Miércoles:</strong> 8:00 a 11:00.</li><li><strong>Viernes:</strong> 8:00 a 10:00.</li></ul>',
-      actions: [['Ver equipo y horarios','../institucion.html#equipo']]
+      html: 'La asesora pedagógica es la <strong>Prof. Daiana Mohr</strong>. Acompaña pedagógicamente a la institución y realiza el seguimiento de trayectorias educativas.<ul><li><strong>Lunes:</strong> 8:00 a 11:00.</li><li><strong>Miércoles:</strong> 8:00 a 11:00.</li><li><strong>Viernes:</strong> 8:00 a 10:00.</li></ul><strong>Correo:</strong> asesoriabenitojuarez@gmail.com',
+      actions: [['Ver equipo y horarios','../institucion.html#equipo'],['Escribir a Asesoría Pedagógica','mailto:asesoriabenitojuarez@gmail.com']]
     },
     {
       id: 'preceptoria', priority: 10,
@@ -231,11 +231,11 @@ window.BENITO_CONOCIMIENTO = [
     },
     {
       id: 'mesas-examen', priority: 11,
-      phrases: ['mesas de examen','inscripcion a mesas','materias previas','rendir una previa','turno de examen'],
-      keywords: ['mesa','mesas','previa','previas','rendir','examenes','libre','movilidad'],
+      phrases: ['mesas de examen','inscripcion a mesas','inscripcion a mesas de agosto','materias previas','rendir una previa','turno de examen','movilidad estudiantil'],
+      keywords: ['mesa','mesas','previa','previas','rendir','examenes','libre'],
       title: 'Mesas de exámenes',
-      html: 'La información publicada sobre mesas de exámenes se encuentra en <strong>Vida Escolar</strong>. Allí se difunden convocatorias para estudiantes con espacios curriculares previos, libres o por movilidad estudiantil. Para confirmar fechas o inscripción vigente, consultá la comunicación institucional más reciente.',
-      actions: [['Ver comunicaciones institucionales','../vida-escolar.html'],['Contactar a la escuela','../contacto.html']]
+      html: 'La inscripción publicada para las <strong>mesas de exámenes de agosto de 2026</strong> está destinada a estudiantes con espacios curriculares previos, libres o por movilidad estudiantil. Podés completar el formulario en línea o consultar la comunicación institucional correspondiente.',
+      actions: [['Abrir formulario de inscripción','https://docs.google.com/forms/d/e/1FAIpQLSc6QZ1PYL78aqBqMsUtyCbVuFFq7p56jPuzPXerWEXgydsEWQ/viewform?usp=dialog'],['Ver comunicaciones institucionales','../vida-escolar.html#comunicaciones-institucionales'],['Contactar a la escuela','../contacto.html']]
     },
     {
       id: 'huerta-6to-alejandra', priority: 18,
@@ -245,6 +245,57 @@ window.BENITO_CONOCIMIENTO = [
       title: 'Proyecto de la huerta · 6.º Año',
       html: 'En el marco de <strong>“Nos cuidamos en comunidad”</strong>, estudiantes de <strong>6.º Año</strong> trabajaron junto a la <strong>profesora Alejandra Martínez</strong> en la preparación y el acondicionamiento de la tierra, el llenado de bandejas y la siembra en almácigos. El Portal reúne fotografías y un video de la experiencia, y también permite consultar el registro completo de la huerta.',
       actions: [['Ver el proyecto en el Portal','../proyecto-nos-cuidamos.html#continuidad-6to-alejandra'],['Abrir el registro completo de la huerta','https://drive.google.com/drive/folders/1637XJyLLSVLFbAgKwCHtRB29otia5VWt?usp=sharing']]
+    },
+    {
+      id: 'nos-cuidamos', priority: 19,
+      phrases: ['nos cuidamos en comunidad','proyecto nos cuidamos','me activo me cuido nos cuidamos'],
+      keywords: ['cuidamos','saludables','cuidado'],
+      synonyms: ['proyecto de hábitos saludables','proyecto de cuidado comunitario'],
+      title: 'Nos cuidamos en comunidad',
+      html: 'Es un <strong>proyecto institucional interdisciplinario de 2026</strong> que promueve hábitos saludables, movimiento, participación estudiantil y cuidado colectivo en Estación Yuquerí. Integra actividades de Educación Física con 5.º Año, la huerta con 6.º Año y acciones vinculadas con alimentación, hidratación, higiene bucal y trabajo comunitario.',
+      actions: [['Conocer el proyecto','../proyecto-nos-cuidamos.html'],['Ver documento completo','../assets/documentos/proyecto-nos-cuidamos-en-comunidad-2026.pdf']]
+    },
+    {
+      id: 'movilidad-5to-javier', priority: 19,
+      phrases: ['movilidad articular de quinto año','movilidad articular de 5 año','educacion fisica con javier','actividad del profesor javier','trabajo corporal en quinto'],
+      keywords: ['movilidad','articular','javier','brazos','piernas'],
+      synonyms: ['ejercicios de quinto año','tren superior e inferior','actividad física de quinto'],
+      title: 'Movilidad articular · Educación Física · 5.º Año',
+      html: 'En el marco de <strong>“Nos cuidamos en comunidad”</strong>, el profesor Javier trabajó con estudiantes de <strong>5.º Año</strong> ejercicios de movilidad y articulación del tren superior e inferior, con movimientos de brazos y piernas para favorecer la preparación corporal y el cuidado durante la actividad física. El Portal incluye una fotografía y dos videos.',
+      actions: [['Ver actividad, foto y videos','../proyecto-nos-cuidamos.html#educacion-fisica-5to']]
+    },
+    {
+      id: 'escuela-barrio', priority: 17,
+      phrases: ['la escuela va al barrio','escuela va al barrio','escuela se acerca a los barrios'],
+      keywords: ['barrio','barrios','mendieta','cohelo','blanqueado'],
+      title: 'La Escuela va al Barrio',
+      html: 'Es un proyecto territorial de 2026, denominado <strong>“Cuidar el cuerpo, cuidar la vida”</strong>, que acerca la escuela a los barrios de Estación Yuquerí y articula con el Centro de Salud y referentes barriales. Trabaja prevención, salud integral, alimentación, hidratación e higiene bucal.',
+      actions: [['Ver proyecto y registros','../programas.html#barrio']]
+    },
+    {
+      id: 'alfabetizacion-digital', priority: 17,
+      phrases: ['alfabetizacion digital situada','programa de alfabetizacion digital','alfabetizacion digital 2026'],
+      keywords: ['alfabetizacion','ciudadania','inclusion'],
+      required: ['digital'],
+      title: 'Alfabetización Digital Situada 2026',
+      html: 'Es un programa institucional transversal y permanente que fortalece capacidades digitales para estudiar, producir, comunicar y participar con tecnologías. Se desarrolla de manera progresiva y situada durante el ciclo lectivo 2026.',
+      actions: [['Ver programa en Proyectos','../programas.html#alfabetizacion-digital'],['Abrir documento institucional','../assets/documentos/programa-alfabetizacion-digital-2026.pdf']]
+    },
+    {
+      id: 'tesoros-ocultos', priority: 17,
+      phrases: ['tesoros ocultos de la escuela','proyecto tesoros ocultos','museo vivo'],
+      keywords: ['tesoros','ocultos','memorias','testimonios'],
+      title: 'Tesoros ocultos de la escuela',
+      html: 'Fue la primera experiencia institucional de <strong>Aprendizaje Basado en Proyectos</strong>, desarrollada en 2025 para recuperar memorias, testimonios, fotografías y huellas de la Escuela Secundaria Nº 31. Sus producciones incluyen entrevistas, relatos, registros y un Museo Vivo.',
+      actions: [['Ver proyecto','../programas.html#tesoros'],['Explorar presentación','../assets/documentos/tesoros-ocultos-benito-juarez.pdf']]
+    },
+    {
+      id: 'ciclo-agua', priority: 16,
+      phrases: ['ciclo del agua','proyecto del ciclo del agua','maqueta del ciclo del agua'],
+      keywords: ['ciclo','agua','maqueta'],
+      title: 'El ciclo del agua · 2.º Año B',
+      html: 'Es una producción de <strong>Ciencias Naturales de 2.º Año B</strong> que integró investigación con netbooks, construcción de una maqueta, trabajo colaborativo y un video explicativo sobre el ciclo del agua.',
+      actions: [['Ver producción completa','../actividades.html#ciclo-del-agua-2b']]
     },
     {
       id: 'actividades', priority: 8,
@@ -261,7 +312,7 @@ window.BENITO_CONOCIMIENTO = [
       keywords: ['programas','tesoros','ocultos','barrio','alfabetizacion','abp'],
       synonyms: ['planes institucionales','proyectos de la escuela','que proyectos tiene la escuela'],
       title: 'Proyectos institucionales',
-      html: 'La escuela desarrolla proyectos vinculados con memoria, participación comunitaria, cuidado, trayectorias e integración tecnológica. En el Portal se encuentran <strong>Nos cuidamos en comunidad</strong>, <strong>La Escuela va al Barrio</strong>, <strong>Alfabetización Digital Situada 2026</strong>, <strong>Tesoros ocultos de la escuela</strong> y <strong>Aula Digital</strong>.',
+      html: 'El Portal presenta cuatro proyectos institucionales: <strong>Nos cuidamos en comunidad</strong>, <strong>La Escuela va al Barrio</strong>, <strong>Alfabetización Digital Situada 2026</strong> y <strong>Tesoros ocultos de la escuela</strong>. Cada uno cuenta con su descripción, estado y materiales o registros disponibles.',
       actions: [['Ver Proyectos','../programas.html']]
     },
     {
@@ -386,6 +437,23 @@ window.BENITO_CONOCIMIENTO = [
       actions: [['Ver equipo institucional','../institucion.html#equipo'],['Contactar a la escuela','../contacto.html']]
     },
     {
+      id: 'aec-2026', priority: 18,
+      phrases: ['acuerdo escolar de convivencia','aec 2026','acuerdo de convivencia'],
+      keywords: ['aec','normas','responsabilidades','derechos'],
+      title: 'Acuerdo Escolar de Convivencia 2026',
+      html: 'El <strong>AEC 2026</strong> es el documento institucional aprobado que orienta la convivencia democrática, los derechos, las responsabilidades, el diálogo, la resolución pacífica de conflictos, el uso responsable de dispositivos y el cuidado del patrimonio escolar.',
+      actions: [['Leer AEC 2026','../assets/documentos/acuerdo-escolar-convivencia-2026.pdf'],['Ver Convivencia Escolar','../vida-escolar.html#convivencia']]
+    },
+    {
+      id: 'protocolo-conflictos', priority: 18,
+      phrases: ['protocolo de conflictos en el aula','protocolo de actuacion ante conflictos','situaciones de conflicto en el aula'],
+      keywords: ['protocolo','actuacion','intervencion'],
+      required: ['conflicto'],
+      title: 'Protocolo ante conflictos en el aula',
+      html: 'El protocolo publicado propone una intervención gradual ante situaciones de conflicto en el aula, basada en el <strong>diálogo, el registro, el acompañamiento y las acciones pedagógicas y reparatorias</strong>. No reemplaza la intervención de las autoridades ni la atención de situaciones urgentes.',
+      actions: [['Ver protocolo completo','../assets/imagenes/novedades/protocolo-conflictos-aula-2026.jpeg'],['Ver comunicaciones institucionales','../vida-escolar.html#comunicaciones-institucionales']]
+    },
+    {
       id: 'docente-aula', priority: 15,
       phrases: ['soy docente y quiero subir materiales','cargar recursos al aula digital','publicar actividad','agregar materiales'],
       keywords: ['docente','subir','cargar','publicar','materiales','recursos'],
@@ -409,8 +477,49 @@ window.BENITO_CONOCIMIENTO = [
       keywords: ['calendario','fecha','fechas','feriado','jornada','evento','receso','vacaciones'],
       synonyms: ['que hay esta semana','proxima fecha','que actividad hay esta semana'],
       title: 'Calendario y fechas institucionales',
-      html: 'La comunicación vigente anuncia la <strong>III Jornada Institucional “Del cuidado y sostenimiento de las trayectorias escolares”</strong>, prevista para el <strong>miércoles 29 de julio, de 8:00 a 12:00 h</strong>. Para una modificación de último momento, verificá Vida Escolar.',
-      actions: [['Ver Vida Escolar','../vida-escolar.html'],['Ver Actividades','../actividades.html']]
+      html: 'El calendario publicado destaca el período del <strong>24 de agosto al 4 de septiembre de 2026</strong>, con integración de saberes, finalización e inicio de trimestres, comisión evaluadora y articulación con escuelas primarias de la zona. Para consultar el detalle, abrí la comunicación institucional.',
+      actions: [['Ver fechas completas','../vida-escolar.html#comunicaciones-institucionales']]
+    },
+    {
+      id: 'alumno-solidario', priority: 17,
+      phrases: ['alumno solidario 2026','quien es el alumno solidario','quien salio alumno solidario'],
+      keywords: ['axel','castro','solidario'],
+      title: 'Alumno Solidario 2026',
+      html: 'El reconocimiento de <strong>Alumno Solidario 2026</strong> fue otorgado a <strong>Axel Omar Castro</strong> por representar valores de solidaridad, compañerismo, respeto, compromiso y colaboración con la comunidad educativa.',
+      actions: [['Ver reconocimiento','../vida-escolar.html#alumno-solidario']]
+    },
+    {
+      id: 'cuadro-honor', priority: 17,
+      phrases: ['cuadro de honor','cuadro de honor institucional','estudiantes destacados'],
+      keywords: ['honor','academico','destacados'],
+      title: 'Cuadro de Honor Institucional',
+      html: 'El Cuadro de Honor reconoce a estudiantes destacados por su desempeño académico durante el <strong>Primer Trimestre de 2026</strong>. El Portal publica los cuadros del Ciclo Básico Común y del Ciclo Orientado en Ciencias Naturales.',
+      actions: [['Ver cuadros de honor','../vida-escolar.html#cuadro-honor']]
+    },
+    {
+      id: 'centro-estudiantes', priority: 17,
+      phrases: ['centro de estudiantes','primer centro de estudiantes','participacion estudiantil'],
+      keywords: ['centro','representacion','democratica'],
+      required: ['estudiante'],
+      title: 'Primer Centro de Estudiantes',
+      html: 'La escuela avanza en la conformación de su <strong>primer Centro de Estudiantes</strong>, con participación de representantes de 1.º a 6.º Año. El espacio busca fortalecer la representación, la participación democrática y la construcción colectiva de la vida institucional.',
+      actions: [['Ver estudiantes participantes','../vida-escolar.html#participacion']]
+    },
+    {
+      id: 'promo-2026', priority: 16,
+      phrases: ['promo 2026','promocion 2026','egresados 2026','futuros egresados'],
+      keywords: ['promo','egreso','egresados'],
+      title: 'Promo 2026',
+      html: 'La sección <strong>Promo 2026</strong> reúne fotos, recuerdos, producciones, mensajes y momentos significativos de los futuros egresados bajo la identidad <strong>“La huella que dejamos”</strong>.',
+      actions: [['Ir a Promo 2026','../promo-2026.html']]
+    },
+    {
+      id: 'multimedia', priority: 15,
+      phrases: ['galeria multimedia','seccion multimedia','fotos y videos de la escuela','identidad sonora'],
+      keywords: ['multimedia','galeria','audios','videos','canciones'],
+      title: 'Multimedia e identidad sonora',
+      html: 'La sección Multimedia reúne la galería fotográfica institucional, videos y producciones de identidad sonora vinculadas con la historia, la escuela y su comunidad.',
+      actions: [['Abrir Multimedia','../multimedia.html']]
     },
     {
       id: 'vida-escolar', priority: 12,
@@ -427,8 +536,25 @@ window.BENITO_CONOCIMIENTO = [
       keywords: ['comunicaciones','comunicacion','comunicado','novedad'],
       synonyms: ['avisos nuevos','novedades de la escuela','ultimo aviso','ultimo comunicado'],
       title: 'Comunicaciones institucionales',
-      html: 'La comunicación vigente anuncia la <strong>III Jornada Institucional “Del cuidado y sostenimiento de las trayectorias escolares”</strong>, el <strong>miércoles 29 de julio, de 8:00 a 12:00 h</strong>.',
-      actions: [['Ver comunicación vigente','../vida-escolar.html#comunicaciones']]
+      html: 'Las comunicaciones publicadas incluyen la inscripción a las <strong>mesas de agosto</strong>, el protocolo de actuación ante conflictos en el aula, las fechas importantes de agosto y septiembre, los antecedentes de Formación Docente Continua y los avisos de Secretaría para el personal docente.',
+      actions: [['Ver comunicaciones institucionales','../vida-escolar.html#comunicaciones-institucionales']]
+    },
+    {
+      id: 'antecedentes-docentes', priority: 17,
+      phrases: ['antecedentes de formacion docente','formacion docente continua','antecedentes cargados en sage'],
+      keywords: ['antecedentes','folios','foliados','autenticadas'],
+      title: 'Antecedentes de Formación Docente Continua',
+      html: 'El aviso publicado informó que las copias autenticadas de antecedentes de <strong>Formación Docente Continua</strong> cargados en SAGE se recibían del <strong>3 al 14 de agosto de 2026</strong>, ordenadas y foliadas. Ese período ya finalizó; para una consulta posterior, comunicate con Secretaría.',
+      actions: [['Ver aviso publicado','../vida-escolar.html#comunicaciones-institucionales'],['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com']]
+    },
+    {
+      id: 'avisos-secretaria', priority: 17,
+      phrases: ['avisos de secretaria','consideraciones de secretaria','comunicacion y organizacion institucional'],
+      keywords: ['ausencias','licencias','documentacion','retiros'],
+      required: ['secretaria'],
+      title: 'Avisos de Secretaría para el personal docente',
+      html: 'La comunicación publicada reúne consideraciones para el personal docente sobre <strong>ausencias, documentación, licencias, retiros anticipados, prioridades institucionales y asistencia diaria</strong>. Para situaciones particulares, corresponde consultar directamente con Secretaría.',
+      actions: [['Ver aviso completo','../assets/imagenes/novedades/avisos-secretaria-personal-docente-2026.jpeg'],['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com']]
     },
     {
       id: 'seguridad-accesos', priority: 19,

@@ -293,11 +293,36 @@
         !/\b(?:titulo|analitico|diploma|documentacion)\b/.test(text)) return 'retiro-estudiante';
     if (/\b(?:retirarlo|retirarla|buscarlo|buscarla)\b/.test(text) &&
         !/\b(?:titulo|analitico|diploma|documentacion)\b/.test(text)) return 'retiro-estudiante';
+    if (/\b(?:horario|correo|mail|email|quien|nombre)\b/.test(text) && /\brti\b/.test(text)) return 'rti';
+    if (/\b(?:horario|correo|mail|email|quien|nombre)\b/.test(text) && /\b(?:asesora|asesoria)\b/.test(text)) return 'asesoria';
+    if (/\b(?:horario|quien|nombre)\b/.test(text) && /\b(?:orientador|orientacion educacional)\b/.test(text)) return 'orientador';
+    if (/\b(?:tutor|tutoria)\b/.test(text) && /\b(?:4|cuarto)\b/.test(text)) return 'tutor-cuarto';
+    if (/\b(?:tutor|tutoria)\b/.test(text) && /\b(?:5|quinto)\b/.test(text)) return 'tutor-quinto';
+    if (/\b(?:mesa|mesas)\b/.test(text) && /\b(?:inscripcion|inscribir|inscribirme|anotar|agosto|examen|examenes)\b/.test(text)) return 'mesas-examen';
+    if (/\b(?:nos cuidamos en comunidad|proyecto nos cuidamos|me activo me cuido nos cuidamos)\b/.test(text)) return 'nos-cuidamos';
+    if (hasActiveTerm(text, 'huerta|almacigo|almacigos|plantin|plantines|siembra') ||
+        (/\balejandra\b/.test(text) && /\b(?:proyecto|actividad|sexto|6)\b/.test(text))) return 'huerta-6to-alejandra';
+    if ((/\b(?:movilidad|articulacion|articular|brazos|piernas)\b/.test(text) && /\b(?:5|quinto|javier|educacion fisica)\b/.test(text)) ||
+        (/\bjavier\b/.test(text) && /\b(?:actividad|ejercicio|educacion fisica)\b/.test(text))) return 'movilidad-5to-javier';
+    if (/\bla escuela va al barrio\b/.test(text) || /\bescuela se acerca a los barrios\b/.test(text)) return 'escuela-barrio';
+    if (/\balfabetizacion digital(?: situada)?\b/.test(text)) return 'alfabetizacion-digital';
+    if (/\btesoros ocultos\b/.test(text) || /\bmuseo vivo\b/.test(text)) return 'tesoros-ocultos';
+    if (/\bciclo del agua\b/.test(text)) return 'ciclo-agua';
+    if (/\b(?:acuerdo escolar de convivencia|aec 2026|aec)\b/.test(text)) return 'aec-2026';
+    if (/\bprotocolo\b/.test(text) && /\b(?:conflicto|conflictos|aula)\b/.test(text)) return 'protocolo-conflictos';
+    if (/\bcentro de estudiantes\b/.test(text) || /\bparticipacion estudiantil\b/.test(text)) return 'centro-estudiantes';
+    if (/\balumno solidario\b/.test(text) || /\baxel(?: omar)? castro\b/.test(text)) return 'alumno-solidario';
+    if (/\bcuadro de honor\b/.test(text)) return 'cuadro-honor';
+    if (/\b(?:promo|promocion) 2026\b/.test(text) || /\bfuturos egresados\b/.test(text)) return 'promo-2026';
+    if (/\b(?:multimedia|identidad sonora|galeria multimedia)\b/.test(text)) return 'multimedia';
+    if (/\bantecedentes\b/.test(text) && /\b(?:formacion docente|sage|folios|foliados)\b/.test(text)) return 'antecedentes-docentes';
+    if (/\b(?:avisos|consideraciones)\b/.test(text) && /\bsecretaria\b/.test(text)) return 'avisos-secretaria';
+    if (/\b(?:comunicaciones institucionales|comunicados institucionales)\b/.test(text)) return 'comunicaciones';
     if (hasActiveTerm(text, 'sage')) return 'sage';
     if (/\b(constancia|certificado)\b/.test(text) && /\b(alumno|regular|escolar)\b/.test(text)) return 'certificados';
     if (hasActiveTerm(text, 'pase|traslado|transferencia')) return 'pase';
     if (hasActiveTerm(text, 'beca|becas|progresar|becario')) return 'becas';
-    if (/\b(inscripcion|inscribir|inscribirme|inscribirse|anotar|anotarme|matricula)\b/.test(text)) return 'inscripcion';
+    if (/\b(inscripcion|inscribir|inscribo|inscribirme|inscribirse|anotar|anotarme|matricula|matricular)\b/.test(text)) return 'inscripcion';
     if (/\b(?:ingresar|entrar)\b/.test(text) && /\b(?:primer|primero|1|escuela)\b/.test(text)) return 'inscripcion';
     if (/\bequivalencias?\b/.test(text) || /\breconocen?\b.*\bmaterias?\b/.test(text)) return 'equivalencias';
     if (/\b(inasistencia|inasistencias|justificar|falta|faltas)\b/.test(text)) return 'asistencia';
@@ -309,8 +334,6 @@
     if (!specificArea && (contactChannel || schoolContact ||
         /^(?:contacto|telefono|telefonicamente|celular|numero|whatsapp|correo|mail|email|llamar)$/.test(text))) return 'contacto';
     if (/\b(?:recursos?|tecnicas?)\b.*\b(?:estudiar|estudio|aprender)\b/.test(text)) return 'recursos-estudio';
-    if (hasActiveTerm(text, 'huerta|almacigo|almacigos|plantin|plantines|siembra') ||
-        (/\balejandra\b/.test(text) && /\b(?:proyecto|actividad|sexto|6)\b/.test(text))) return 'huerta-6to-alejandra';
     if (/\b(?:actividad|actividades|material|materiales|tareas|apuntes)\b/.test(text) &&
         /\b(?:curso|año)\b/.test(text)) return 'aula-digital';
     if (/\b(?:actividad|actividades|trabajo|trabajos|tarea|tareas|consigna|consignas)\b/.test(text) &&
