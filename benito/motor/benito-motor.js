@@ -309,6 +309,8 @@
     if (!specificArea && (contactChannel || schoolContact ||
         /^(?:contacto|telefono|telefonicamente|celular|numero|whatsapp|correo|mail|email|llamar)$/.test(text))) return 'contacto';
     if (/\b(?:recursos?|tecnicas?)\b.*\b(?:estudiar|estudio|aprender)\b/.test(text)) return 'recursos-estudio';
+    if (hasActiveTerm(text, 'huerta|almacigo|almacigos|plantin|plantines|siembra') ||
+        (/\balejandra\b/.test(text) && /\b(?:proyecto|actividad|sexto|6)\b/.test(text))) return 'huerta-6to-alejandra';
     if (/\b(?:actividad|actividades|material|materiales|tareas|apuntes)\b/.test(text) &&
         /\b(?:curso|año)\b/.test(text)) return 'aula-digital';
     if (/\b(?:actividad|actividades|trabajo|trabajos|tarea|tareas|consigna|consignas)\b/.test(text) &&

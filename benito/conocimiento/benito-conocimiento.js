@@ -238,6 +238,15 @@ window.BENITO_CONOCIMIENTO = [
       actions: [['Ver comunicaciones institucionales','../vida-escolar.html'],['Contactar a la escuela','../contacto.html']]
     },
     {
+      id: 'huerta-6to-alejandra', priority: 18,
+      phrases: ['proyecto de la huerta','huerta escolar','huerta de sexto año','huerta de 6 año','actividad de la profesora alejandra','siembra en almacigos','preparacion de la tierra'],
+      keywords: ['huerta','almacigo','almacigos','siembra','tierra','plantines','alejandra'],
+      synonyms: ['trabajo de sexto con alejandra','proyecto de alejandra','cultivo escolar','actividad de la huerta'],
+      title: 'Proyecto de la huerta · 6.º Año',
+      html: 'En el marco de <strong>“Nos cuidamos en comunidad”</strong>, estudiantes de <strong>6.º Año</strong> trabajaron junto a la <strong>profesora Alejandra Martínez</strong> en la preparación y el acondicionamiento de la tierra, el llenado de bandejas y la siembra en almácigos. El Portal reúne fotografías y un video de la experiencia, y también permite consultar el registro completo de la huerta.',
+      actions: [['Ver el proyecto en el Portal','../proyecto-nos-cuidamos.html#continuidad-6to-alejandra'],['Abrir el registro completo de la huerta','https://drive.google.com/drive/folders/1637XJyLLSVLFbAgKwCHtRB29otia5VWt?usp=sharing']]
+    },
+    {
       id: 'actividades', priority: 8,
       phrases: ['actividades de la escuela','que actividades hace la escuela','producciones de estudiantes','proyectos realizados','que hacen los estudiantes'],
       keywords: ['actividad','actividades','produccion','producciones','proyecto','proyectos','galeria','ciclo','agua'],
@@ -747,6 +756,6 @@ window.BENITO_FLUJOS = {
 /* PORTAL_INTELIGENTE_V3_0_2026 */
 window.BENITO_PORTAL_INTELIGENTE = {
   aec: { titulo: "Acuerdo Escolar de Convivencia 2026", url: "../biblioteca.html", resumen: "Documento aprobado que orienta derechos, responsabilidades, convivencia, uso pedagógico del celular, medidas reparatorias y Consejo Escolar de Convivencia." },
-  proyecto: { titulo: "Nos cuidamos en comunidad", url: "../programas.html", resumen: "Proyecto interdisciplinario sobre hábitos saludables, actividad física, ambiente y participación comunitaria, reconocido a nivel provincial. El equipo de colaboradores permanece abierto." },
+  proyecto: { titulo: "Nos cuidamos en comunidad", url: "../proyecto-nos-cuidamos.html", resumen: "Proyecto interdisciplinario sobre hábitos saludables, actividad física, ambiente y participación comunitaria. Incluye el proyecto de la huerta de 6.º Año con la profesora Alejandra Martínez, con preparación de la tierra, siembra en almácigos y registro completo en el Portal." },
   servicios: { titulo: "Portal de servicios", url: "../servicios.html", correoSecretaria: "secretaria31benitojuarez@gmail.com" }
 };
