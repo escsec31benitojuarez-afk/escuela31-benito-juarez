@@ -46,6 +46,15 @@ window.BENITO_CONOCIMIENTO = [
       actions: [['Ver datos institucionales','../institucion.html#datos']]
     },
     {
+      id: 'horario-atencion', priority: 22,
+      phrases: ['horario de atencion','horario de atencion de la escuela','a que hora atienden','cuando atienden','cuando esta abierta la escuela','a que hora abre la escuela','a que hora cierra la escuela','cuando puedo ir a la escuela','en que horario puedo acercarme'],
+      keywords: ['atencion','atienden','abren','abre','cierra','acercarme'],
+      synonyms: ['horario para hacer un tramite','horario para ir a la escuela','hasta que hora atienden','cuando puedo acercarme','a que hora puedo ir'],
+      title: 'Horario de atención institucional',
+      html: 'El horario de <strong>atención administrativa publicado</strong> es de <strong>lunes a viernes, de 7:30 a 13:00</strong>. Preceptoría atiende de lunes a viernes, de <strong>7:20 a 13:00</strong>.<br><br>Estos horarios corresponden a atención y acompañamiento institucional; no necesariamente coinciden con la entrada y salida de cada curso.',
+      actions: [['Ver equipo y horarios','../institucion.html#equipo'],['Ver contacto','../contacto.html']]
+    },
+    {
       id: 'datos-institucionales', priority: 7,
       phrases: ['cual es el cue','datos institucionales','modalidad de la escuela','orientacion de la escuela','que orientacion ofrece la escuela'],
       keywords: ['cue','modalidad','orientacion','gestion','estatal','naturales'],
@@ -63,12 +72,30 @@ window.BENITO_CONOCIMIENTO = [
       actions: [['Ver equipo institucional','../institucion.html#equipo']]
     },
     {
+      id: 'rectoria-horario', priority: 21,
+      phrases: ['horario de rectoria','horario del rector','cuando atiende el rector','cuando puedo hablar con el rector'],
+      keywords: ['rectoria','rector'],
+      required: ['horario'],
+      title: 'Horario de Rectoría',
+      html: 'El Portal identifica al rector, <strong>Mg. Julio Gallardo</strong>, pero <strong>no publica un horario específico de atención de Rectoría</strong>. Para solicitar una entrevista o confirmar disponibilidad, utilizá los canales oficiales de la escuela.',
+      actions: [['Ver equipo institucional','../institucion.html#equipo'],['Ver contacto','../contacto.html']]
+    },
+    {
       id: 'secretaria-persona', priority: 10,
-      phrases: ['quien es la secretaria','nombre de la secretaria','necesito hablar con secretaria'], keywords: ['romina','benitti'],
+      phrases: ['quien es la secretaria','nombre de la secretaria','necesito hablar con secretaria'], keywords: ['secretaria','romina','benitti','certificaciones'],
       synonyms: ['hablar con secretaria','hablar con la secretaria','buscar a la secretaria','encontrar a la secretaria','donde esta secretaria'],
       title: 'Secretaría',
       html: 'La secretaria es la <strong>Prof. Romina Benitti</strong>. Su función comprende la organización administrativa, la documentación institucional, las certificaciones, las comunicaciones y el seguimiento de registros escolares.',
       actions: [['Ver equipo institucional','../institucion.html#equipo'],['Escribir a Secretaría','mailto:secretaria31benitojuarez@gmail.com']]
+    },
+    {
+      id: 'secretaria-horario', priority: 21,
+      phrases: ['horario de secretaria','cuando atiende secretaria','a que hora esta secretaria','horario para hablar con secretaria'],
+      keywords: ['secretaria'],
+      required: ['horario'],
+      title: 'Atención de Secretaría',
+      html: 'El Portal <strong>no publica un horario exclusivo de Secretaría</strong>. Para trámites, constancias y documentación, la atención administrativa publicada es de <strong>lunes a viernes, de 7:30 a 13:00</strong>. También podés escribir a <strong>secretaria31benitojuarez@gmail.com</strong>.',
+      actions: [['Escribir a Secretaría','mailto:secretaria31benitojuarez@gmail.com'],['Ver equipo y horarios','../institucion.html#equipo']]
     },
     {
       id: 'asesoria', priority: 10,
@@ -118,7 +145,7 @@ window.BENITO_CONOCIMIENTO = [
       phrases: ['quien es el rti','horario del rti','ayuda con tecnologia','que hace el rti'], keywords: ['rti','alfredo','esquivel','tecnologia','digital','computadora','netbook'],
       synonyms: ['ayuda con la computadora','ayuda con las computadoras','problema con la netbook','se trabo la netbook'],
       title: 'RTI y Tecnología Educativa',
-      html: 'El RTI es <strong>Alfredo Esquivel</strong>. Brinda acompañamiento pedagógico-digital, alfabetización digital situada, integración tecnológica, producción de recursos, desarrollo de proyectos y asesoramiento para el acceso y uso de <strong>SAGE</strong>.<ul><li><strong>Martes:</strong> 7:30 a 11:40.</li><li><strong>Jueves:</strong> 7:30 a 10:00.</li></ul>',
+      html: 'El RTI es <strong>Alfredo Esquivel</strong>. Brinda acompañamiento pedagógico y digital, alfabetización digital situada, integración tecnológica, producción de recursos, desarrollo de proyectos y asesoramiento para el acceso y uso de <strong>SAGE</strong>.<ul><li><strong>Martes:</strong> 7:30 a 11:40.</li><li><strong>Jueves:</strong> 7:30 a 10:00.</li></ul>',
       actions: [['Ver equipo institucional','../institucion.html#equipo']]
     },
     {
@@ -197,8 +224,8 @@ window.BENITO_CONOCIMIENTO = [
       phrases: ['como entrar a sage','solicitar usuario sage','no puedo entrar a sage','no puedo ingresar a sage','ver notas en sage','ver calificaciones','olvide mi contraseña de sage','error en sage'],
       keywords: ['sage','calificaciones','notas','boletin','usuario','contraseña','clave','asistencia','error'],
       title: 'Ayuda con SAGE',
-      html: 'Si necesitás asesoramiento para ingresar o utilizar <strong>SAGE</strong>, comunicate con el <strong>RTI</strong>. También podés elegir qué sucede para recibir una orientación más precisa:',
-      actions: [['Ver horario del RTI','../institucion.html#equipo'],['Ingresar a SAGE','https://sage.entrerios.gov.ar/']],
+      html: '<strong>SAGE</strong> permite consultar información escolar y generar constancias. Podés abrir el sitio oficial ahora. Si tenés una dificultad específica, elegí la opción correspondiente para recibir pasos concretos:',
+      actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Solicitar usuario SAGE','https://sage.entrerios.gov.ar/solicitarUsuario/index.php']],
       flow: 'sage'
     },
     {
@@ -209,7 +236,34 @@ window.BENITO_CONOCIMIENTO = [
       title: 'Aula Digital',
       html: 'El Aula Digital reúne materiales, actividades y recursos organizados por curso. Podés abrir el acceso general o elegir tu curso para ir directamente a su repositorio:',
       actions: [['Abrir Aula Digital','../aula-digital.html']],
-      flow: 'aula'
+      flow: 'aula',
+      followUps: [
+        {
+          id: 'aula-acceso-seguimiento',
+          priority: 23,
+          phrases: ['no puedo entrar','no puedo ingresar','no puedo acceder','no abre','no me deja entrar','no me funciona'],
+          synonyms: ['tengo problemas para entrar','no carga el aula','no abre el repositorio'],
+          target: 'aula-acceso'
+        }
+      ]
+    },
+    {
+      id: 'aula-acceso', priority: 19,
+      phrases: ['no puedo entrar al aula','no puedo ingresar al aula digital','no puedo acceder al aula digital','no abre el aula digital','no me deja entrar al aula'],
+      keywords: ['aula','acceso'],
+      required: ['aula'],
+      title: 'Problema para acceder al Aula Digital',
+      html: 'El Aula Digital se abre desde el Portal y no tiene un inicio de sesión publicado. Abrí el acceso general y luego elegí tu curso. Si la página o el repositorio de un curso no abre, probá nuevamente y anotá cuál es el enlace afectado. Si el problema continúa, comunicate con el <strong>RTI</strong> para recibir acompañamiento.',
+      actions: [['Abrir Aula Digital','../aula-digital.html'],['Ver horario del RTI','../institucion.html#equipo']]
+    },
+    {
+      id: 'cursos', priority: 14,
+      phrases: ['que cursos hay','cuales son los cursos','años de la escuela','cursos del aula digital'],
+      keywords: ['cursos','años','secciones'],
+      synonyms: ['que años tiene la escuela','repositorios por curso'],
+      title: 'Cursos y repositorios',
+      html: 'El Aula Digital publica accesos para <strong>1.º A, 1.º B, 2.º A, 2.º B, 3.º Año, 4.º Año, 5.º Año y 6.º Año</strong>. Desde allí podés abrir el repositorio correspondiente a cada curso.',
+      actions: [['Ver cursos del Aula Digital','../aula-digital.html']]
     },
     {
       id: 'recursos-estudio', priority: 8,
@@ -402,12 +456,12 @@ window.BENITO_CONOCIMIENTO = [
     },
     {
       id: 'horario-clases', priority: 14,
-      phrases: ['a que hora entran','horario de entrada','horario de salida','horario escolar','hora de clases'],
-      keywords: ['entrada','salida','horario','clases','turno'],
-      synonyms: ['a que hora salen','cuando entran','cuando salen'],
-      title: 'Horario escolar',
-      html: 'Para confirmar el horario de entrada, salida o una modificación puntual, consultá las comunicaciones institucionales o comunicate con <strong>Preceptoría</strong>. Los cambios excepcionales se informan por los canales oficiales.',
-      actions: [['Ver novedades','../vida-escolar.html'],['Contactar a la escuela','../contacto.html']]
+      phrases: ['a que hora entran','a que hora entran los estudiantes','a que hora entran los chicos','horario de entrada','horario de salida','horario escolar','horario de clases','hora de clases'],
+      keywords: ['entrada','salida','clases','turno'],
+      synonyms: ['a que hora salen','cuando entran','cuando salen','entrada de estudiantes','salida de estudiantes'],
+      title: 'Horario de clases, entrada y salida',
+      html: 'Los horarios de entrada y salida pueden variar según el curso y la organización del ciclo lectivo. El Portal publica los <strong>horarios del ciclo lectivo 2026</strong> en Recursos. Para una modificación excepcional del día, consultá con <strong>Preceptoría</strong>.',
+      actions: [['Ver horarios del ciclo lectivo','../recursos.html#docentes'],['Ver Preceptoría','../institucion.html#equipo']]
     },
     {
       id: 'materias-previas', priority: 16,
@@ -536,7 +590,7 @@ window.BENITO_CONOCIMIENTO = [
       keywords: ['comunicaciones','comunicacion','comunicado','novedad'],
       synonyms: ['avisos nuevos','novedades de la escuela','ultimo aviso','ultimo comunicado'],
       title: 'Comunicaciones institucionales',
-      html: 'Las comunicaciones publicadas incluyen la inscripción a las <strong>mesas de agosto</strong>, el protocolo de actuación ante conflictos en el aula, las fechas importantes de agosto y septiembre, los antecedentes de Formación Docente Continua y los avisos de Secretaría para el personal docente.',
+      html: 'Las comunicaciones publicadas incluyen la inscripción a las <strong>mesas de agosto</strong>, el protocolo de actuación ante conflictos en el aula, las fechas importantes del <strong>24 de agosto al 4 de septiembre</strong> y los avisos de Secretaría para el personal docente.',
       actions: [['Ver comunicaciones institucionales','../vida-escolar.html#comunicaciones-institucionales']]
     },
     {
@@ -544,8 +598,8 @@ window.BENITO_CONOCIMIENTO = [
       phrases: ['antecedentes de formacion docente','formacion docente continua','antecedentes cargados en sage'],
       keywords: ['antecedentes','folios','foliados','autenticadas'],
       title: 'Antecedentes de Formación Docente Continua',
-      html: 'El aviso publicado informó que las copias autenticadas de antecedentes de <strong>Formación Docente Continua</strong> cargados en SAGE se recibían del <strong>3 al 14 de agosto de 2026</strong>, ordenadas y foliadas. Ese período ya finalizó; para una consulta posterior, comunicate con Secretaría.',
-      actions: [['Ver aviso publicado','../vida-escolar.html#comunicaciones-institucionales'],['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com']]
+      html: 'La recepción publicada de copias autenticadas de antecedentes de <strong>Formación Docente Continua</strong> finalizó el <strong>14 de agosto de 2026</strong>. El aviso ya no está vigente. Para conocer si existe una nueva instancia, consultá con Secretaría.',
+      actions: [['Contactar Secretaría','mailto:secretaria31benitojuarez@gmail.com'],['Ver contacto','../contacto.html']]
     },
     {
       id: 'avisos-secretaria', priority: 17,
@@ -585,6 +639,18 @@ window.BENITO_CONOCIMIENTO = [
   ];
 window.BENITO_FLUJOS = {
     sage: [
+      {
+        id: 'sage-access',
+        priority: 24,
+        phrases: ['como entrar a sage','como entro a sage','como ingreso a sage','no puedo entrar a sage','no puedo ingresar a sage','no me deja entrar a sage'],
+        keywords: ['entrar','ingresar','acceder','acceso'],
+        synonyms: ['tengo problemas para entrar a sage','no logro acceder a sage'],
+        required: ['sage'],
+        label: 'No puedo ingresar',
+        title: 'Acceso a SAGE',
+        html: 'Abrí <strong>SAGE</strong> e ingresá con tu usuario. Si no recordás la contraseña, utilizá la recuperación oficial; si todavía no tenés usuario, iniciá la solicitud de alta. Si después de esos pasos seguís sin poder acceder, comunicate con el <strong>RTI</strong> y describí el mensaje de error sin compartir tu contraseña.',
+        actions: [['Ingresar a SAGE','https://sage.entrerios.gov.ar/'],['Solicitar usuario SAGE','https://sage.entrerios.gov.ar/solicitarUsuario/index.php'],['Ver horario del RTI','../institucion.html#equipo']]
+      },
       {
         id: 'sage-password',
         priority: 20,

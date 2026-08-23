@@ -21,6 +21,13 @@
     [/\bubicasion\b/g, 'ubicacion'],
     [/\bequivalensias\b/g, 'equivalencias'],
     [/\bconstansia\b/g, 'constancia'],
+    [/\bconstacia\b/g, 'constancia'],
+    [/\b(?:orario|orrario)\b/g, 'horario'],
+    [/\b(?:presceptoria|preseptoria|preseptoria)\b/g, 'preceptoria'],
+    [/\bpresceptor(?:es)?\b/g, 'preceptor'],
+    [/\binscripsion\b/g, 'inscripcion'],
+    [/\bsertificado\b/g, 'certificado'],
+    [/\baseoria\b/g, 'asesoria'],
     [/\bdijital\b/g, 'digital'],
     [/\binasistensias\b/g, 'inasistencias'],
     [/\bsaje\b/g, 'sage'],
@@ -96,6 +103,7 @@
 
   function fuzzyTokenWeight(a, b) {
     if (a.length < 4 || b.length < 4) return 0;
+    if (a[0] !== b[0]) return 0;
     let bestDistance = Infinity;
     let longest = 0;
     tokenVariants(a).forEach((variantA) => {
@@ -200,21 +208,47 @@
       };
     }
 
-    if (/^(?:horario|horarios)$/.test(text)) {
+    if (/^(?:horario|horarios|horario escuela|horario de la escuela)$/.test(text)) {
       return {
         id: 'horario',
         title: '¿Qué horario necesitás?',
-        html: 'Podés consultar el horario escolar o el horario de un área o integrante del equipo.',
+        html: 'Indicame si buscás atención institucional, entrada y salida de estudiantes o el horario de un área específica.',
         options: [
-          ['Horario escolar', '¿Cuál es el horario de entrada y salida?'],
+          ['Atención institucional', '¿Cuál es el horario de atención?'],
+          ['Entrada y salida', '¿Cuál es el horario de entrada y salida de estudiantes?'],
           ['Preceptoría', '¿Cuál es el horario de Preceptoría?'],
-          ['Asesoría', '¿Cuál es el horario de la asesora pedagógica?'],
-          ['RTI', '¿Cuál es el horario del RTI?']
+          ['Otro integrante', 'Necesito el horario de un integrante del equipo']
         ]
       };
     }
 
-    if (/\b(?:no puedo|no logro|quiero)\s+(?:entrar|ingresar|acceder)\b/.test(text) &&
+    if (/^(?:(?:necesito|quiero|busco|pedir|solicitar)\s+(?:un\s+)?)?certificados?$/.test(text)) {
+      return {
+        id: 'certificado',
+        title: '¿Qué certificado necesitás?',
+        html: 'Puedo orientarte mejor si indicás de qué documento se trata.',
+        options: [
+          ['Alumno regular', 'Necesito una constancia de alumno regular'],
+          ['Certificado médico', 'Necesito justificar una falta con certificado médico'],
+          ['Título o analítico', 'Necesito retirar mi título o analítico']
+        ]
+      };
+    }
+
+    if (/^(?:inscripcion|inscribirme|anotarme)$/.test(text)) {
+      return {
+        id: 'inscripcion',
+        title: '¿A qué inscripción te referís?',
+        html: 'Elegí la opción correspondiente para evitar indicarte un trámite equivocado.',
+        options: [
+          ['Ingreso a la escuela', 'Quiero inscribirme en la escuela'],
+          ['Mesas de examen', 'Quiero inscribirme a las mesas de examen'],
+          ['Beca', 'Quiero inscribirme a una beca']
+        ]
+      };
+    }
+
+    if (/\b(?:(?:no puedo|no logro|quiero)\s+(?:entrar|ingresar|acceder)|como\s+(?:entro|ingreso|accedo))\b/.test(text) &&
         !/\b(?:sage|aula|portal|plataforma|facebook|primer|primero|1|escuela|inscripcion)\b/.test(text)) {
       return {
         id: 'acceso',
@@ -280,7 +314,9 @@
         (/\b(?:entrar|ingresar|acceder)\b/.test(text) &&
          /\b(?:sage|plataforma|cuenta)\b/.test(text) &&
          /\bpor mi\b/.test(text))) return 'seguridad-accesos';
+    if (hasActiveTerm(text, 'sage')) return 'sage';
     if (/\b(legajo|datos personales)\b/.test(text) ||
+        /\b(?:cuantas faltas tengo|mis faltas|mis inasistencias|mis calificaciones|mis notas)\b/.test(text) ||
         /\b(?:informacion|datos)\s+(?:personales?\s+)?(?:sobre|de)\s+(?:un|una|otro|otra)\s+(?:alumno|alumna|estudiante)\b/.test(text) ||
         (/\b(?:mi hijo|mi hija|un alumno|una alumna|un estudiante|una estudiante|otro alumno|otra alumna|otro estudiante|otra estudiante)\b/.test(text) &&
          /\b(notas|calificaciones|faltas|inasistencias|asistencia|datos)\b/.test(text))) return 'privacidad';
@@ -288,6 +324,7 @@
          /\b(?:escuela|colegio|institucion)\b/.test(text)) ||
         (/\b(?:retirar|sacar)\b/.test(text) &&
          /\b(?:definitivamente|otra escuela|otro colegio|otra institucion)\b/.test(text))) return 'pase';
+    if (/\b(?:retiro antes del horario|retiro anticipado|retirarme antes del horario|irme antes de hora|salir antes del horario)\b/.test(text)) return 'pase';
     if (/\b(?:retirar|retiro|buscar|sacar)\b/.test(text) &&
         /\b(?:mi hijo|mi hija|al hijo|a la hija|al alumno|a la alumna|al estudiante|a la estudiante)\b/.test(text) &&
         !/\b(?:titulo|analitico|diploma|documentacion)\b/.test(text)) return 'retiro-estudiante';
@@ -298,7 +335,16 @@
     if (/\b(?:horario|quien|nombre)\b/.test(text) && /\b(?:orientador|orientacion educacional)\b/.test(text)) return 'orientador';
     if (/\b(?:tutor|tutoria)\b/.test(text) && /\b(?:4|cuarto)\b/.test(text)) return 'tutor-cuarto';
     if (/\b(?:tutor|tutoria)\b/.test(text) && /\b(?:5|quinto)\b/.test(text)) return 'tutor-quinto';
+    if (/\b(?:no puedo|no logro|no me deja)\s+(?:entrar|ingresar|acceder)\b/.test(text) && /\baula(?: digital)?\b/.test(text)) return 'aula-acceso';
+    if (/\b(?:horario|hora|cuando)\b/.test(text) && /\b(?:secretaria)\b/.test(text)) return 'secretaria-horario';
+    if (/\b(?:horario|hora|cuando)\b/.test(text) && /\b(?:rector|rectoria)\b/.test(text)) return 'rectoria-horario';
+    if (/\b(?:horario|hora|cuando|atiende)\b/.test(text) && /\b(?:administracion|administrativa)\b/.test(text)) return 'administracion';
+    if (/\b(?:horario|hora|cuando|abre|cierra)\b/.test(text) && /\bbiblioteca\b/.test(text)) return 'biblioteca';
+    if (/\b(?:horario|hora|cuando|abre|cierra)\b/.test(text) && /\bcomedor\b/.test(text)) return 'comedor';
+    if (/\b(?:horario de atencion|a que hora atienden|cuando atienden|cuando esta abierta|a que hora abre|a que hora cierra|cuando abren|cuando cierran|cuando puedo ir|horario puedo acercarme|hasta que hora atienden)\b/.test(text)) return 'horario-atencion';
+    if (/\b(?:a que hora entran|a que hora salen|cuando entran|cuando salen|horario de entrada|horario de salida|horario de clases|hora de clases|entrada de estudiantes|salida de estudiantes|entran los chicos|salen los chicos)\b/.test(text) || /^(?:entrada|salida)$/.test(text)) return 'horario-clases';
     if (/\b(?:mesa|mesas)\b/.test(text) && /\b(?:inscripcion|inscribir|inscribirme|anotar|agosto|examen|examenes)\b/.test(text)) return 'mesas-examen';
+    if (/\b(?:24 de agosto|4 de septiembre|agosto al 4 de septiembre)\b/.test(text)) return 'calendario';
     if (/\b(?:nos cuidamos en comunidad|proyecto nos cuidamos|me activo me cuido nos cuidamos)\b/.test(text)) return 'nos-cuidamos';
     if (hasActiveTerm(text, 'huerta|almacigo|almacigos|plantin|plantines|siembra') ||
         (/\balejandra\b/.test(text) && /\b(?:proyecto|actividad|sexto|6)\b/.test(text))) return 'huerta-6to-alejandra';
@@ -327,20 +373,37 @@
     if (/\bequivalencias?\b/.test(text) || /\breconocen?\b.*\bmaterias?\b/.test(text)) return 'equivalencias';
     if (/\b(inasistencia|inasistencias|justificar|falta|faltas)\b/.test(text)) return 'asistencia';
     if (hasActiveTerm(text, 'preceptor|preceptores|preceptoria')) return 'preceptoria';
+    if (/^(?:secretaria|la secretaria)$/.test(text) || /\b(?:hablar|comunicarme)\b.*\bsecretaria\b/.test(text)) return 'secretaria-persona';
+    if (/^(?:rector|rectoria)$/.test(text) || /\bquien\b.*\brector\b/.test(text)) return 'rector';
+    if (/^(?:administracion|administrativa)$/.test(text)) return 'administracion';
+    if (/^(?:asesoria|asesora)$/.test(text)) return 'asesoria';
     const specificArea = /\b(?:secretaria|preceptor|preceptores|preceptoria|asesora|asesoria|tutor|tutoria|rti|rector|rectoria|administracion)\b/.test(text);
     const contactChannel = /\b(?:telefono|telefonicamente|celular|numero|whatsapp|correo|mail|email|llamar)\b/.test(text);
     const schoolContact = /\b(?:comunicarme|comunicarse|comunicar|contactar|llamar|hablar)\b/.test(text) &&
       /\b(?:escuela|secundaria|colegio)\b/.test(text);
     if (!specificArea && (contactChannel || schoolContact ||
         /^(?:contacto|telefono|telefonicamente|celular|numero|whatsapp|correo|mail|email|llamar)$/.test(text))) return 'contacto';
+    if (/^(?:ubicacion|direccion)$/.test(text) || /\b(?:donde queda|donde esta|como llegar|como llego)\b/.test(text)) return 'ubicacion';
+    if (/\b(?:escuela|secundaria)\b/.test(text) && /\b(?:publica|estatal|privada|modalidad|orientacion)\b/.test(text)) return 'datos-institucionales';
+    if (/^(?:biblioteca|libros)$/.test(text)) return 'biblioteca';
+    if (/^(?:comedor)$/.test(text)) return 'comedor';
+    if (/^(?:cursos|curso)$/.test(text) || /\bque cursos hay\b/.test(text)) return 'cursos';
+    if (/^(?:aula|aula digital)$/.test(text)) return 'aula-digital';
+    if (/^(?:novedades|comunicaciones|comunicados)$/.test(text) || /\b(?:comunicacion nueva|novedades de la escuela)\b/.test(text)) return 'comunicaciones';
+    if (/^(?:calendario|fechas)$/.test(text)) return 'calendario';
+    if (/^(?:proyecto|proyectos|programa|programas)$/.test(text)) return 'programas';
+    if (/^(?:multimedia|fotos|videos)$/.test(text)) return 'multimedia';
+    if (/^(?:equipo|autoridades)$/.test(text)) return 'equipo-institucional';
     if (/\b(?:recursos?|tecnicas?)\b.*\b(?:estudiar|estudio|aprender)\b/.test(text)) return 'recursos-estudio';
     if (/\b(?:actividad|actividades|material|materiales|tareas|apuntes)\b/.test(text) &&
         /\b(?:curso|año)\b/.test(text)) return 'aula-digital';
+    if (/\b(?:aula|repositorio|materiales)\b/.test(text) &&
+        /\b(?:1|2|3|4|5|6|primero|segundo|tercero|cuarto|quinto|sexto|curso|año)\b/.test(text)) return 'aula-digital';
     if (/\b(?:actividad|actividades|trabajo|trabajos|tarea|tareas|consigna|consignas)\b/.test(text) &&
         /\b(?:profe|profesor|profesora|docente|clase)\b/.test(text)) return 'aula-digital';
     if (hasActiveTerm(text, 'actividad|actividades|produccion|producciones') &&
         !/\b(?:subir|cargar|publicar|agregar)\b/.test(text)) return 'actividades';
-    if (!/^(?:horario|horarios)$/.test(text) && hasActiveTerm(text, 'horario|horarios')) return 'horario-clases';
+    if (hasActiveTerm(text, 'horario|horarios') && /\b(?:escolar|clases|entrada|salida|turno)\b/.test(text)) return 'horario-clases';
     if (/\borientacion\b/.test(text) &&
         !/\b(?:orientador|persona|quien|nombre|horario)\b/.test(text)) return 'datos-institucionales';
     if (/\bescuela virtual\b/.test(text)) return 'aula-digital';
@@ -608,17 +671,17 @@
   }
 
   function answer(question) {
-    const flowMatch = explicitFlowAnswer(question);
-    if (renderAnswer(flowMatch)) return;
-
     const routedId = directIntent(question);
-    const contextualMatch = contextualAnswer(question);
-    if (contextualMatch && contextCompatible(routedId) && renderAnswer(contextualMatch)) return;
-
-    const routedMatch = routedId
+    const routedRoot = routedId
       ? knowledge.find((item) => item.id === routedId)
       : null;
-    if (renderAnswer(routedMatch)) return;
+    const flowMatch = routedRoot && routedRoot.flow
+      ? explicitFlowAnswer(question, routedRoot.flow)
+      : null;
+    if (renderAnswer(flowMatch)) return;
+
+    const contextualMatch = contextualAnswer(question);
+    if (contextualMatch && contextCompatible(routedId) && renderAnswer(contextualMatch)) return;
 
     const clarification = clarificationFor(question);
     if (clarification) {
@@ -628,6 +691,11 @@
       addActions(clarificationBubble, clarification.actions || [['Ver contacto','../contacto.html']]);
       return;
     }
+
+    const routedMatch = routedId
+      ? knowledge.find((item) => item.id === routedId)
+      : null;
+    if (renderAnswer(routedMatch)) return;
 
     if (renderAnswer(findBestAnswer(question))) return;
 
@@ -689,5 +757,5 @@
   );
   const initialTopic = new URLSearchParams(window.location.search || '').get('tema');
   if (initialTopic) window.setTimeout(() => answerTopic(initialTopic), 0);
-  input.focus();
+  if (!window.matchMedia || window.matchMedia('(min-width: 700px)').matches) input.focus();
 }());

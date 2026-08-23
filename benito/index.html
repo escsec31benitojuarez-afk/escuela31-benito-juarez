@@ -6,7 +6,7 @@
   <meta name="description" content="Benito IA, asistente virtual oficial de la Escuela Secundaria Nº 31 Benito Juárez.">
   <title>Benito IA | Escuela Secundaria Nº 31</title>
   <link rel="canonical" href="https://escsec31benitojuarez-afk.github.io/escuela31-benito-juarez/benito/index.html">
-  <link rel="stylesheet" href="benito-publico.css?v=1.4.0">
+  <link rel="stylesheet" href="benito-publico.css?v=2.1.0">
 </head>
 <body>
   <header class="site-header">
@@ -24,33 +24,36 @@
       </div>
     </section>
 
-    <section class="chat-card" aria-label="Conversación con Benito IA">
-      <div id="messages" class="messages" role="log" aria-live="polite" aria-relevant="additions"></div>
+    <section class="chat-card" aria-labelledby="conversation-title">
+      <h2 id="conversation-title" class="sr-only">Conversación con Benito IA</h2>
+      <div id="messages" class="messages" role="log" aria-live="polite" aria-relevant="additions" tabindex="0"></div>
 
-      <div class="suggestions" aria-label="Consultas frecuentes">
+      <p class="quick-access-label" id="quick-access-title">Accesos rápidos</p>
+      <div class="suggestions" role="group" aria-labelledby="quick-access-title">
         <button type="button" data-question="¿Cómo me comunico con la escuela?">Contacto</button>
+        <button type="button" data-question="¿Cuál es el horario de atención?">Horarios</button>
         <button type="button" data-question="¿Dónde está la escuela?">Ubicación</button>
+        <button type="button" data-question="¿Cómo ingreso a SAGE o consulto calificaciones?">SAGE</button>
+        <button type="button" data-question="Necesito una constancia de alumno regular">Constancias</button>
         <button type="button" data-question="¿Cómo accedo al Aula Digital?">Aula Digital</button>
         <button type="button" data-question="¿Quiénes integran el equipo institucional?">Equipo institucional</button>
-        <button type="button" data-question="Necesito información sobre certificados y constancias">Trámites</button>
-        <button type="button" data-question="Quiero conocer las actividades y producciones de la escuela">Actividades</button>
-        <button type="button" data-question="Quiero conocer el proyecto de la huerta">Huerta escolar</button>
         <button type="button" data-question="¿Qué proyectos institucionales desarrolla la escuela?">Proyectos</button>
+        <button type="button" data-question="Quiero conocer el proyecto de la huerta">Huerta escolar</button>
+        <button type="button" data-question="Quiero conocer las actividades y producciones de la escuela">Actividades</button>
         <button type="button" data-question="Quiero ver las comunicaciones institucionales">Comunicaciones</button>
-        <button type="button" data-question="¿Cómo ingreso a SAGE o consulto calificaciones?">SAGE</button>
         <button type="button" data-question="¿Dónde consulto las becas Progresar?">Becas</button>
       </div>
 
       <form id="chatForm" class="composer">
         <label class="sr-only" for="question">Escribí tu consulta</label>
-        <input id="question" name="question" autocomplete="off" maxlength="300" placeholder="Escribí tu consulta..." required>
-        <button type="submit">Enviar</button>
+        <input id="question" name="question" autocomplete="off" maxlength="300" placeholder="Escribí tu consulta..." aria-describedby="privacy-note" enterkeyhint="send" spellcheck="true" required>
+        <button type="submit" aria-label="Enviar consulta">Enviar</button>
       </form>
-      <p class="privacy-note">Las respuestas se basan en la información publicada por la institución. No compartas datos personales, calificaciones ni información sensible.</p>
+      <p class="privacy-note" id="privacy-note">Las respuestas se basan en la información publicada por la institución. No compartas datos personales, calificaciones ni información sensible.</p>
     </section>
   </main>
 
-  <script src="conocimiento/benito-conocimiento.js?v=2.0.0"></script>
-  <script src="motor/benito-motor.js?v=2.0.0"></script>
+  <script src="conocimiento/benito-conocimiento.js?v=2.1.0"></script>
+  <script src="motor/benito-motor.js?v=2.1.0"></script>
 </body>
 </html>
