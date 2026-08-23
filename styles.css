@@ -398,6 +398,26 @@ main{
   font-weight:800 !important;
   text-align:center;
 }
+.institutional-quote{
+  margin:0;
+  padding:0;
+  border:0;
+}
+.institutional-quote p + p{
+  margin-top:1.05rem;
+}
+.institutional-quote footer{
+  margin-top:1.25rem;
+  padding-top:1rem;
+  border-top:1px solid rgba(11,90,53,.2);
+  text-align:center;
+}
+.institutional-quote cite{
+  color:var(--rojo);
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:1.04rem;
+  font-weight:900;
+}
 .quote-card strong{
   display:block;
   margin-top:14px;
@@ -416,6 +436,12 @@ main{
   grid-template-columns:1.05fr .95fr;
   gap:28px;
   align-items:center;
+}
+.identity-highlight-copy-only{
+  grid-template-columns:1fr;
+}
+.identity-highlight-copy-only > div{
+  max-width:82ch;
 }
 .identity-highlight blockquote{
   margin:22px 0 12px;
@@ -492,6 +518,18 @@ main{
 @media(max-width:900px){
   .identity-highlight-grid{grid-template-columns:1fr;}
   .identity-highlight blockquote{font-size:1.05rem;}
+}
+@media(max-width:760px){
+  .quote-card{
+    padding:26px 22px;
+  }
+  .quote-card p{
+    font-size:1rem !important;
+    line-height:1.58 !important;
+  }
+  .institutional-quote p + p{
+    margin-top:.9rem;
+  }
 }
 
 
