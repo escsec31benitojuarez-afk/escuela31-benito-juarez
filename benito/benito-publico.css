@@ -43,3 +43,19 @@
   .composer input{padding:12px}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+/* Refinamiento visual v2.1.1: misma interfaz y funcionalidad, menor peso visual. */
+body{color:#26362f;background:linear-gradient(180deg,#f1f5f2 0,#fafbfa 48%,#eef3f0 100%)}
+.site-header{min-height:60px;padding-block:11px;box-shadow:0 4px 16px #06452b0b}
+.private-link{border:1px solid #cbded2;background:#f0f6f2;color:var(--green-dark)}
+.assistant-shell{padding-top:30px}
+.assistant-intro{margin-bottom:18px}.assistant-intro h1{text-wrap:balance;letter-spacing:-.03em}
+.assistant-mark{width:62px;height:62px;border-radius:18px;box-shadow:0 8px 20px #06452b17}
+.chat-card{border-radius:20px;box-shadow:0 14px 38px #05351f14}
+.messages{background:#f7faf8}
+.bubble{box-shadow:0 3px 10px #00000008}
+.actions a{background:#eef6f1;color:var(--green-dark);border:1px solid #c8ddcf}
+.actions a:hover{background:#e2f0e7}
+.suggestions button{font-weight:700;background:#fbfcfb}
+.composer button{border:1px solid var(--green);border-radius:11px;padding-inline:18px}
+@media(max-width:640px){.site-header{gap:8px}.assistant-shell{padding-top:18px}.assistant-intro{gap:13px}.chat-card{border-radius:16px}}
