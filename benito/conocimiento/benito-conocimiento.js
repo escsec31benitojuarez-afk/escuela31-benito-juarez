@@ -230,11 +230,11 @@ window.BENITO_CONOCIMIENTO = [
     },
     {
       id: 'aula-digital', priority: 11,
-      phrases: ['como accedo al aula digital','donde estan los materiales','materiales de mi curso','repositorio de mi curso','donde estan las tareas','material de 2 b','apuntes de mi curso'],
+      phrases: ['como accedo al aula digital','donde entro al aula digital','quiero entrar al aula digital','donde estan los materiales','donde estan los materiales de matematica','materiales de mi curso','repositorio de mi curso','donde estan las tareas','material de 2 b','apuntes de mi curso','quiero entrar a 1 a','quiero entrar a 1 b','quiero entrar a 2 a','quiero entrar a 2 b','quiero entrar a 3 año','quiero entrar a 4 año','quiero entrar a 5 año','quiero entrar a 6 año'],
       keywords: ['aula','digital','repositorio','materiales','curso','apuntes','tareas','actividades'],
       synonyms: ['trabajo practico','trabajos practicos','material de clase','consigna de la profe','consigna que dejo la profe','actividades que dejo la profe','subieron el trabajo','archivo de clase'],
       title: 'Aula Digital',
-      html: 'El Aula Digital reúne materiales, actividades y recursos organizados por curso. Podés abrir el acceso general o elegir tu curso para ir directamente a su repositorio:',
+      html: 'El Aula Digital reúne materiales, actividades y recursos organizados por curso y materia. Por seguridad, el ingreso siempre se realiza desde el acceso general y requiere el usuario y la contraseña proporcionados por la escuela.',
       actions: [['Abrir Aula Digital','../aula-digital.html']],
       flow: 'aula',
       followUps: [
@@ -253,7 +253,7 @@ window.BENITO_CONOCIMIENTO = [
       keywords: ['aula','acceso'],
       required: ['aula'],
       title: 'Problema para acceder al Aula Digital',
-      html: 'El Aula Digital se abre desde el Portal y no tiene un inicio de sesión publicado. Abrí el acceso general y luego elegí tu curso. Si la página o el repositorio de un curso no abre, probá nuevamente y anotá cuál es el enlace afectado. Si el problema continúa, comunicate con el <strong>RTI</strong> para recibir acompañamiento.',
+      html: 'El Aula Digital se abre desde el Portal y requiere iniciar sesión. Abrí el acceso general, ingresá tu usuario y contraseña, y el sistema mostrará únicamente el curso o los espacios que tenés asignados. Si el problema continúa, comunicate con el <strong>RTI</strong> para recibir acompañamiento.',
       actions: [['Abrir Aula Digital','../aula-digital.html'],['Ver horario del RTI','../institucion.html#equipo']]
     },
     {
@@ -261,9 +261,9 @@ window.BENITO_CONOCIMIENTO = [
       phrases: ['que cursos hay','cuales son los cursos','años de la escuela','cursos del aula digital'],
       keywords: ['cursos','años','secciones'],
       synonyms: ['que años tiene la escuela','repositorios por curso'],
-      title: 'Cursos y repositorios',
-      html: 'El Aula Digital publica accesos para <strong>1.º A, 1.º B, 2.º A, 2.º B, 3.º Año, 4.º Año, 5.º Año y 6.º Año</strong>. Desde allí podés abrir el repositorio correspondiente a cada curso.',
-      actions: [['Ver cursos del Aula Digital','../aula-digital.html']]
+      title: 'Cursos del Aula Digital',
+      html: 'El Aula Digital incluye <strong>1.º A, 1.º B, 2.º A, 2.º B, 3.º Año, 4.º Año, 5.º Año y 6.º Año</strong>. Para proteger los materiales, el acceso a cualquier curso se realiza siempre desde el ingreso general con la cuenta institucional.',
+      actions: [['Ingresar al Aula Digital','../aula-digital.html']]
     },
     {
       id: 'recursos-estudio', priority: 8,
@@ -820,8 +820,8 @@ window.BENITO_FLUJOS = {
         required: ['aula'],
         label: '1.º A',
         title: 'Aula Digital de 1.º A',
-        html: 'Este es el acceso directo al repositorio de <strong>1.º Año A</strong>, donde se organizan los materiales y actividades compartidos para el curso.',
-        actions: [['Abrir 1.º A','https://drive.google.com/drive/folders/1GE2AULDtGoTl5LD3pB_NPHKIQ-OJeu2i?usp=drive_link'],['Ver Aula Digital','../aula-digital.html']]
+        html: 'Los materiales de <strong>1.º Año A</strong> están protegidos dentro del Aula Digital. Ingresá desde el acceso general con el usuario y la contraseña proporcionados por la escuela.',
+        actions: [['Ingresar al Aula Digital','../aula-digital.html']]
       },
       {
         id: 'aula-1b',
@@ -832,8 +832,8 @@ window.BENITO_FLUJOS = {
         required: ['aula'],
         label: '1.º B',
         title: 'Aula Digital de 1.º B',
-        html: 'Este es el acceso directo al repositorio de <strong>1.º Año B</strong>, donde se organizan los materiales y actividades compartidos para el curso.',
-        actions: [['Abrir 1.º B','https://drive.google.com/drive/folders/1Y-FL9tGLNdAIZTEgpWvhGFEqSC1dqb3B?usp=drive_link'],['Ver Aula Digital','../aula-digital.html']]
+        html: 'Los materiales de <strong>1.º Año B</strong> están protegidos dentro del Aula Digital. Ingresá desde el acceso general con el usuario y la contraseña proporcionados por la escuela.',
+        actions: [['Ingresar al Aula Digital','../aula-digital.html']]
       },
       {
         id: 'aula-2a',
@@ -844,8 +844,8 @@ window.BENITO_FLUJOS = {
         required: ['aula'],
         label: '2.º A',
         title: 'Aula Digital de 2.º A',
-        html: 'Este es el acceso directo al repositorio de <strong>2.º Año A</strong>, donde se organizan los materiales y actividades compartidos para el curso.',
-        actions: [['Abrir 2.º A','https://drive.google.com/drive/folders/1Jibq7SqqrnxAo56xE7IIwSg3BTpvRpZv?usp=drive_link'],['Ver Aula Digital','../aula-digital.html']]
+        html: 'Los materiales de <strong>2.º Año A</strong> están protegidos dentro del Aula Digital. Ingresá desde el acceso general con el usuario y la contraseña proporcionados por la escuela.',
+        actions: [['Ingresar al Aula Digital','../aula-digital.html']]
       },
       {
         id: 'aula-2b',
@@ -856,8 +856,8 @@ window.BENITO_FLUJOS = {
         required: ['aula'],
         label: '2.º B',
         title: 'Aula Digital de 2.º B',
-        html: 'Este es el acceso directo al repositorio de <strong>2.º Año B</strong>, donde se organizan los materiales y actividades compartidos para el curso.',
-        actions: [['Abrir 2.º B','https://drive.google.com/drive/folders/1odPjWQ4YFyiYJCwJS-GIQAMBomgGN2_j?usp=drive_link'],['Ver Aula Digital','../aula-digital.html']]
+        html: 'Los materiales de <strong>2.º Año B</strong> están protegidos dentro del Aula Digital. Ingresá desde el acceso general con el usuario y la contraseña proporcionados por la escuela.',
+        actions: [['Ingresar al Aula Digital','../aula-digital.html']]
       },
       {
         id: 'aula-3',
@@ -868,8 +868,8 @@ window.BENITO_FLUJOS = {
         required: ['aula'],
         label: '3.º Año',
         title: 'Aula Digital de 3.º Año',
-        html: 'Este es el acceso directo al repositorio de <strong>3.º Año</strong>, donde se organizan los materiales y actividades compartidos para el curso.',
-        actions: [['Abrir 3.º Año','https://drive.google.com/drive/folders/19dNH2PGVW27QyGeTHpK9BiPegCziAzZs?usp=drive_link'],['Ver Aula Digital','../aula-digital.html']]
+        html: 'Los materiales de <strong>3.º Año</strong> están protegidos dentro del Aula Digital. Ingresá desde el acceso general con el usuario y la contraseña proporcionados por la escuela.',
+        actions: [['Ingresar al Aula Digital','../aula-digital.html']]
       },
       {
         id: 'aula-4',
@@ -880,8 +880,8 @@ window.BENITO_FLUJOS = {
         required: ['aula'],
         label: '4.º Año',
         title: 'Aula Digital de 4.º Año',
-        html: 'Este es el acceso directo al repositorio de <strong>4.º Año</strong>, donde se organizan los materiales y actividades compartidos para el curso.',
-        actions: [['Abrir 4.º Año','https://drive.google.com/drive/folders/1sAlEO7mq-fhoRD0ediFmQIYvYcnKD5Wf?usp=sharing'],['Ver Aula Digital','../aula-digital.html']]
+        html: 'Los materiales de <strong>4.º Año</strong> están protegidos dentro del Aula Digital. Ingresá desde el acceso general con el usuario y la contraseña proporcionados por la escuela.',
+        actions: [['Ingresar al Aula Digital','../aula-digital.html']]
       },
       {
         id: 'aula-5',
@@ -892,8 +892,8 @@ window.BENITO_FLUJOS = {
         required: ['aula'],
         label: '5.º Año',
         title: 'Aula Digital de 5.º Año',
-        html: 'Este es el acceso directo al repositorio de <strong>5.º Año</strong>, donde se organizan los materiales y actividades compartidos para el curso.',
-        actions: [['Abrir 5.º Año','https://drive.google.com/drive/folders/1Et7h5kwBIJd19L0VW_y3uS8cSVNFeVDU?usp=drive_link'],['Ver Aula Digital','../aula-digital.html']]
+        html: 'Los materiales de <strong>5.º Año</strong> están protegidos dentro del Aula Digital. Ingresá desde el acceso general con el usuario y la contraseña proporcionados por la escuela.',
+        actions: [['Ingresar al Aula Digital','../aula-digital.html']]
       },
       {
         id: 'aula-6',
@@ -904,8 +904,8 @@ window.BENITO_FLUJOS = {
         required: ['aula'],
         label: '6.º Año',
         title: 'Aula Digital de 6.º Año',
-        html: 'Este es el acceso directo al repositorio de <strong>6.º Año</strong>, donde se organizan los materiales y actividades compartidos para el curso.',
-        actions: [['Abrir 6.º Año','https://drive.google.com/drive/folders/1gAc-6ZfTB8FTzx2nz7u5hVyW2WGmxhsQ?usp=drive_link'],['Ver Aula Digital','../aula-digital.html']]
+        html: 'Los materiales de <strong>6.º Año</strong> están protegidos dentro del Aula Digital. Ingresá desde el acceso general con el usuario y la contraseña proporcionados por la escuela.',
+        actions: [['Ingresar al Aula Digital','../aula-digital.html']]
       }
     ],
     becas: [

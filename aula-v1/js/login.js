@@ -6,6 +6,23 @@ const form = document.querySelector("#login-form");
 const userInput = document.querySelector("#user");
 const button = document.querySelector("#login-button");
 const message = document.querySelector("#login-message");
+const COURSE_USER_ALIASES = Object.freeze({
+  bj1a2026: "1a",
+  bj1b2026: "1b",
+  bj2a2026: "2a",
+  bj2b2026: "2b",
+  "bj3-2026": "3",
+  "bj4-2026": "4",
+  "bj5-2026": "5",
+  "bj6-2026": "6",
+});
+
+function resolveLoginUser(value) {
+  const normalized = String(value || "").trim().toLowerCase();
+  const courseCode = COURSE_USER_ALIASES[normalized];
+  return courseCode ? `${courseCode}@aula.benitojuarez.local` : normalized;
+}
+
 function showMessage(text, type = "error") { message.textContent = text; message.className = `message message--${type} is-visible`; }
 function clearMessage() { message.textContent = ""; message.className = "message"; }
 
@@ -40,7 +57,7 @@ async function initialize() {
 form.addEventListener("submit", async (event) => {
   event.preventDefault(); clearMessage(); button.disabled = true; button.textContent = "Ingresando…";
   const data = new FormData(form);
-  const user = String(data.get("user") || "").trim().toLowerCase();
+  const user = resolveLoginUser(data.get("user"));
   const password = String(data.get("password") || "");
   if (!user || !password) {
     showMessage("Completá el usuario y la contraseña.");

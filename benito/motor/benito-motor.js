@@ -368,6 +368,8 @@
     if (/\b(constancia|certificado)\b/.test(text) && /\b(alumno|regular|escolar)\b/.test(text)) return 'certificados';
     if (hasActiveTerm(text, 'pase|traslado|transferencia')) return 'pase';
     if (hasActiveTerm(text, 'beca|becas|progresar|becario')) return 'becas';
+    if (/\b(?:acceso|acceder|entrar|ingresar)\b/.test(text) &&
+        /\b(?:1 a|1 b|2 a|2 b|3|4|5|6|primero a|primero b|segundo a|segundo b|tercero|cuarto|quinto|sexto)\b/.test(text)) return 'aula-digital';
     if (/\b(inscripcion|inscribir|inscribo|inscribirme|inscribirse|anotar|anotarme|matricula|matricular)\b/.test(text)) return 'inscripcion';
     if (/\b(?:ingresar|entrar)\b/.test(text) && /\b(?:primer|primero|1|escuela)\b/.test(text)) return 'inscripcion';
     if (/\bequivalencias?\b/.test(text) || /\breconocen?\b.*\bmaterias?\b/.test(text)) return 'equivalencias';
