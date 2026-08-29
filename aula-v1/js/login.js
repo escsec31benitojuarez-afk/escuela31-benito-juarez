@@ -29,7 +29,10 @@ function clearMessage() { message.textContent = ""; message.className = "message
 async function continueToAuthorizedSpace(session) {
   const context = await getAuthorizedUserContext(session);
   if (context.status === "ok") {
-    window.location.replace(routeForRole(context.profile.role));
+    const route = routeForRole(context.profile.role);
+    const routeBase = String(form.dataset.routeBase || "");
+    const destination = routeBase ? `${routeBase}${route.replace(/^\.\//, "")}` : route;
+    window.location.replace(destination);
     return true;
   }
   clearStoredSession();
