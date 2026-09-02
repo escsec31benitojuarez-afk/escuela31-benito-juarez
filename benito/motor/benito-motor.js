@@ -393,7 +393,8 @@
     if (/^(?:comedor)$/.test(text)) return 'comedor';
     if (/^(?:cursos|curso)$/.test(text) || /\bque cursos hay\b/.test(text)) return 'cursos';
     if (/^(?:aula|aula digital)$/.test(text)) return 'aula-digital';
-    if (/^(?:novedades|comunicaciones|comunicados)$/.test(text) || /\b(?:comunicacion nueva|novedades de la escuela)\b/.test(text)) return 'comunicaciones';
+    if (/^(?:novedades)$/.test(text) || /\b(?:novedades recientes|novedades destacadas|novedades de la escuela)\b/.test(text)) return 'novedades-recientes';
+    if (/^(?:comunicaciones|comunicados)$/.test(text) || /\bcomunicacion nueva\b/.test(text)) return 'comunicaciones';
     if (/^(?:calendario|fechas)$/.test(text)) return 'calendario';
     if (/^(?:proyecto|proyectos|programa|programas)$/.test(text)) return 'programas';
     if (/^(?:multimedia|fotos|videos)$/.test(text)) return 'multimedia';

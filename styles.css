@@ -1771,40 +1771,68 @@ p,li,.section-intro{
   }
 }
 
-/* Reconocimientos destacados: piezas completas de Axel Omar Castro y Leonardo Salas */
+/* Reconocimientos: misma escala y disposición que el Cuadro de Honor. */
+.featured-news-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+}
 .recognition-news-card{
-  grid-column:1/-1;
-  display:grid;
-  grid-template-columns:minmax(240px,.72fr) minmax(0,1.28fr);
-  gap:26px;
-  align-items:center;
+  grid-column:auto;
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  gap:0;
+  padding:18px !important;
+  text-align:center;
 }
 .recognition-news-flyer{display:block}
 .recognition-news-flyer img{
   display:block;
   width:100%;
-  max-height:620px;
+  height:420px;
+  max-height:52vw;
   object-fit:contain;
   border-radius:18px;
-  background:#063d24;
+  margin-bottom:16px;
+  background:#f8fbf9;
 }
-.recognition-news-card h3{font-size:clamp(1.45rem,2.5vw,2rem)}
-.recognition-current-flyer{
-  display:block;
-  width:min(100%,760px);
-  margin:22px auto 0;
+.recognition-news-card > div{
+  display:flex;
+  flex:1;
+  flex-direction:column;
+  align-items:center;
 }
-.recognition-current-flyer img{
-  display:block;
-  width:100%;
-  height:auto;
-  max-height:900px;
-  object-fit:contain;
-  border-radius:20px;
-  background:#063d24;
-  box-shadow:0 12px 28px rgba(0,0,0,.12);
+.recognition-news-card h3{
+  font-size:1.2rem;
+  margin-bottom:12px;
 }
-@media(max-width:900px){
-  .recognition-news-card{grid-template-columns:1fr}
-  .recognition-news-flyer img{height:auto;max-height:none}
+.featured-news-grid .recognition-news-card .btn{
+  align-self:center;
+}
+.recognition-showcase-grid{
+  margin-top:20px;
+}
+.recognition-showcase-card{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.recognition-showcase-card .tag{
+  margin-bottom:14px;
+}
+.recognition-showcase-card p{
+  color:#4c5b55;
+  line-height:1.65;
+  margin-bottom:16px;
+}
+.recognition-showcase-card .btn{
+  margin-top:auto;
+}
+@media(max-width:800px){
+  .featured-news-grid{
+    grid-template-columns:1fr !important;
+  }
+  .recognition-news-flyer img{
+    height:auto;
+    max-height:520px;
+  }
 }

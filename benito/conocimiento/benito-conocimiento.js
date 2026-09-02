@@ -535,6 +535,15 @@ window.BENITO_CONOCIMIENTO = [
       actions: [['Ver fechas completas','../vida-escolar.html#comunicaciones-institucionales']]
     },
     {
+      id: 'novedades-recientes', priority: 21,
+      phrases: ['que novedades recientes tiene la escuela','cuales son las novedades destacadas','que hay de nuevo en el portal'],
+      keywords: ['novedades','recientes','destacadas'],
+      synonyms: ['ultimas novedades','novedades actuales','novedades de la escuela'],
+      title: 'Novedades destacadas',
+      html: 'Las novedades destacadas actuales son <strong>Axel Omar Castro — Alumno Solidario 2026</strong>, <strong>Leonardo Salas — Reconocimiento al Mérito</strong>, la distinción de la escuela en el certamen <strong>“Me Activo, Me Cuido, Nos Cuidamos”</strong> y el acceso al <strong>Repositorio de actividades del Aula Digital</strong>. El espacio “Huellas de la Benito 2026” continúa disponible en su sección institucional, pero ya no forma parte de las novedades destacadas.',
+      actions: [['Ver novedades','../index.html#novedades-destacadas']]
+    },
+    {
       id: 'alumno-solidario', priority: 17,
       phrases: ['alumno solidario 2026','quien es el alumno solidario','quien salio alumno solidario','donde puedo ver el reconocimiento de axel'],
       keywords: ['axel','castro','solidario'],
@@ -586,7 +595,7 @@ window.BENITO_CONOCIMIENTO = [
     },
     {
       id: 'vida-escolar', priority: 12,
-      phrases: ['cuadro de honor','quiero ver el cuadro de honor','alumno solidario','vida escolar','que reconocimientos recientes tiene la escuela'],
+      phrases: ['cuadro de honor','quiero ver el cuadro de honor','alumno solidario','vida escolar','que reconocimientos recientes tiene la escuela','que reconocimientos figuran actualmente en el portal'],
       keywords: ['honor','solidario','reconocimiento'],
       synonyms: ['quien salio alumno solidario','reconocimientos de estudiantes'],
       title: 'Vida Escolar y reconocimientos',
