@@ -288,8 +288,8 @@ window.BENITO_CONOCIMIENTO = [
       phrases: ['mesas de examen','inscripcion a mesas','inscripcion a mesas de agosto','materias previas','rendir una previa','turno de examen','movilidad estudiantil'],
       keywords: ['mesa','mesas','previa','previas','rendir','examenes','libre'],
       title: 'Mesas de exámenes',
-      html: 'La inscripción publicada para las <strong>mesas de exámenes de agosto de 2026</strong> está destinada a estudiantes con espacios curriculares previos, libres o por movilidad estudiantil. Podés completar el formulario en línea o consultar la comunicación institucional correspondiente.',
-      actions: [['Abrir formulario de inscripción','https://docs.google.com/forms/d/e/1FAIpQLSc6QZ1PYL78aqBqMsUtyCbVuFFq7p56jPuzPXerWEXgydsEWQ/viewform?usp=dialog'],['Ver comunicaciones institucionales','../vida-escolar.html#comunicaciones-institucionales'],['Contactar a la escuela','../contacto.html']]
+      html: 'No hay una inscripción a mesas de exámenes vigente publicada en el Portal. Para conocer la próxima convocatoria, consultá las comunicaciones institucionales o comunicate con la escuela.',
+      actions: [['Ver comunicaciones institucionales','../vida-escolar.html#comunicaciones-institucionales'],['Contactar a la escuela','../contacto.html']]
     },
     {
       id: 'huerta-6to-alejandra', priority: 18,
@@ -536,11 +536,20 @@ window.BENITO_CONOCIMIENTO = [
     },
     {
       id: 'alumno-solidario', priority: 17,
-      phrases: ['alumno solidario 2026','quien es el alumno solidario','quien salio alumno solidario'],
+      phrases: ['alumno solidario 2026','quien es el alumno solidario','quien salio alumno solidario','donde puedo ver el reconocimiento de axel'],
       keywords: ['axel','castro','solidario'],
       title: 'Alumno Solidario 2026',
       html: 'El reconocimiento de <strong>Alumno Solidario 2026</strong> fue otorgado a <strong>Axel Omar Castro</strong> por representar valores de solidaridad, compañerismo, respeto, compromiso y colaboración con la comunidad educativa.',
-      actions: [['Ver reconocimiento','../vida-escolar.html#alumno-solidario']]
+      actions: [['Ver reconocimiento','../vida-escolar.html#alumno-solidario'],['Ver novedades','../index.html#novedades-destacadas']]
+    },
+    {
+      id: 'leonardo-salas-merito', priority: 20,
+      phrases: ['quien recibio el reconocimiento al merito','que novedad hay sobre leonardo salas','que reconocimiento publico la escuela','donde puedo ver el reconocimiento de leonardo','reconocimiento al merito leonardo salas'],
+      keywords: ['leonardo','salas','merito','reconocimiento'],
+      synonyms: ['felicitaciones a leonardo','reconocimiento de leonardo','premio al merito'],
+      title: 'Reconocimiento al Mérito — Leonardo Salas',
+      html: 'La comunidad educativa de la Escuela Secundaria N.º 31 “Benito Juárez” reconoce a <strong>Leonardo Salas</strong>. La publicación destaca su <strong>esfuerzo, dedicación y compromiso</strong> y puede consultarse en las Novedades destacadas y en Vida Escolar del Portal.',
+      actions: [['Ver reconocimiento','../vida-escolar.html#leonardo-salas-merito'],['Ver novedades','../index.html#novedades-destacadas']]
     },
     {
       id: 'cuadro-honor', priority: 17,
@@ -577,11 +586,11 @@ window.BENITO_CONOCIMIENTO = [
     },
     {
       id: 'vida-escolar', priority: 12,
-      phrases: ['cuadro de honor','quiero ver el cuadro de honor','alumno solidario','vida escolar'],
+      phrases: ['cuadro de honor','quiero ver el cuadro de honor','alumno solidario','vida escolar','que reconocimientos recientes tiene la escuela'],
       keywords: ['honor','solidario','reconocimiento'],
       synonyms: ['quien salio alumno solidario','reconocimientos de estudiantes'],
       title: 'Vida Escolar y reconocimientos',
-      html: 'En <strong>Vida Escolar</strong> podés consultar el Alumno Solidario 2026, el Cuadro de Honor del Ciclo Básico Común y el Cuadro de Honor del Ciclo Orientado en Ciencias Naturales.',
+      html: 'Entre los reconocimientos recientes se encuentran <strong>Axel Omar Castro — Alumno Solidario 2026</strong> y <strong>Leonardo Salas — Reconocimiento al Mérito</strong>. En Vida Escolar también podés consultar los cuadros de honor del Ciclo Básico Común y del Ciclo Orientado en Ciencias Naturales.',
       actions: [['Abrir Vida Escolar','../vida-escolar.html']]
     },
     {
@@ -590,7 +599,7 @@ window.BENITO_CONOCIMIENTO = [
       keywords: ['comunicaciones','comunicacion','comunicado','novedad'],
       synonyms: ['avisos nuevos','novedades de la escuela','ultimo aviso','ultimo comunicado'],
       title: 'Comunicaciones institucionales',
-      html: 'Las comunicaciones publicadas incluyen la inscripción a las <strong>mesas de agosto</strong>, el protocolo de actuación ante conflictos en el aula, las fechas importantes del <strong>24 de agosto al 4 de septiembre</strong> y los avisos de Secretaría para el personal docente.',
+      html: 'Las comunicaciones vigentes incluyen el cronograma del segundo trimestre, el acompañamiento psicopedagógico, recursos de orientación en salud mental, el protocolo de actuación ante conflictos en el aula, las fechas importantes del <strong>24 de agosto al 4 de septiembre</strong> y los avisos de Secretaría para el personal docente.',
       actions: [['Ver comunicaciones institucionales','../vida-escolar.html#comunicaciones-institucionales']]
     },
     {

@@ -1770,3 +1770,41 @@ p,li,.section-intro{
     padding:18px;
   }
 }
+
+/* Reconocimientos destacados: piezas completas de Axel Omar Castro y Leonardo Salas */
+.recognition-news-card{
+  grid-column:1/-1;
+  display:grid;
+  grid-template-columns:minmax(240px,.72fr) minmax(0,1.28fr);
+  gap:26px;
+  align-items:center;
+}
+.recognition-news-flyer{display:block}
+.recognition-news-flyer img{
+  display:block;
+  width:100%;
+  max-height:620px;
+  object-fit:contain;
+  border-radius:18px;
+  background:#063d24;
+}
+.recognition-news-card h3{font-size:clamp(1.45rem,2.5vw,2rem)}
+.recognition-current-flyer{
+  display:block;
+  width:min(100%,760px);
+  margin:22px auto 0;
+}
+.recognition-current-flyer img{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:900px;
+  object-fit:contain;
+  border-radius:20px;
+  background:#063d24;
+  box-shadow:0 12px 28px rgba(0,0,0,.12);
+}
+@media(max-width:900px){
+  .recognition-news-card{grid-template-columns:1fr}
+  .recognition-news-flyer img{height:auto;max-height:none}
+}

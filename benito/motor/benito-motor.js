@@ -357,7 +357,9 @@
     if (/\b(?:acuerdo escolar de convivencia|aec 2026|aec)\b/.test(text)) return 'aec-2026';
     if (/\bprotocolo\b/.test(text) && /\b(?:conflicto|conflictos|aula)\b/.test(text)) return 'protocolo-conflictos';
     if (/\bcentro de estudiantes\b/.test(text) || /\bparticipacion estudiantil\b/.test(text)) return 'centro-estudiantes';
+    if (/\bleonardo(?: salas)?\b/.test(text) || /\breconocimiento(?: al)? merito\b/.test(text) || /\bque reconocimiento publico la escuela\b/.test(text)) return 'leonardo-salas-merito';
     if (/\balumno solidario\b/.test(text) || /\baxel(?: omar)? castro\b/.test(text)) return 'alumno-solidario';
+    if (/\breconocimientos? recientes?\b/.test(text)) return 'vida-escolar';
     if (/\bcuadro de honor\b/.test(text)) return 'cuadro-honor';
     if (/\b(?:promo|promocion) 2026\b/.test(text) || /\bfuturos egresados\b/.test(text)) return 'promo-2026';
     if (/\b(?:multimedia|identidad sonora|galeria multimedia)\b/.test(text)) return 'multimedia';
