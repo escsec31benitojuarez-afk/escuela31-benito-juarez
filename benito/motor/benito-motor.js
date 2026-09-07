@@ -344,6 +344,9 @@
     if (/\b(?:horario de atencion|a que hora atienden|cuando atienden|cuando esta abierta|a que hora abre|a que hora cierra|cuando abren|cuando cierran|cuando puedo ir|horario puedo acercarme|hasta que hora atienden)\b/.test(text)) return 'horario-atencion';
     if (/\b(?:a que hora entran|a que hora salen|cuando entran|cuando salen|horario de entrada|horario de salida|horario de clases|hora de clases|entrada de estudiantes|salida de estudiantes|entran los chicos|salen los chicos)\b/.test(text) || /^(?:entrada|salida)$/.test(text)) return 'horario-clases';
     if (/\b(?:mesa|mesas)\b/.test(text) && /\b(?:inscripcion|inscribir|inscribirme|anotar|agosto|examen|examenes)\b/.test(text)) return 'mesas-examen';
+    if (/\b(?:formulario|formularios|documentacion|requisitos|papeles)\b/.test(text) &&
+        /\b(?:descargar|descargo|presentar|presento|inscripcion|primer|primero|1|2027)\b/.test(text)) return 'inscripcion';
+    if (/\b(?:1|primer|primero)\b/.test(text) && /\b(?:2027|vacantes|inscripcion|inscribir|anotar)\b/.test(text)) return 'inscripcion';
     if (/\b(?:24 de agosto|4 de septiembre|agosto al 4 de septiembre)\b/.test(text)) return 'calendario';
     if (/\b(?:nos cuidamos en comunidad|proyecto nos cuidamos|me activo me cuido nos cuidamos)\b/.test(text)) return 'nos-cuidamos';
     if (hasActiveTerm(text, 'huerta|almacigo|almacigos|plantin|plantines|siembra') ||
@@ -393,8 +396,7 @@
     if (/^(?:comedor)$/.test(text)) return 'comedor';
     if (/^(?:cursos|curso)$/.test(text) || /\bque cursos hay\b/.test(text)) return 'cursos';
     if (/^(?:aula|aula digital)$/.test(text)) return 'aula-digital';
-    if (/^(?:novedades)$/.test(text) || /\b(?:novedades recientes|novedades destacadas|novedades de la escuela)\b/.test(text)) return 'novedades-recientes';
-    if (/^(?:comunicaciones|comunicados)$/.test(text) || /\bcomunicacion nueva\b/.test(text)) return 'comunicaciones';
+    if (/^(?:novedades|comunicaciones|comunicados)$/.test(text) || /\b(?:comunicacion nueva|novedades de la escuela)\b/.test(text)) return 'comunicaciones';
     if (/^(?:calendario|fechas)$/.test(text)) return 'calendario';
     if (/^(?:proyecto|proyectos|programa|programas)$/.test(text)) return 'programas';
     if (/^(?:multimedia|fotos|videos)$/.test(text)) return 'multimedia';

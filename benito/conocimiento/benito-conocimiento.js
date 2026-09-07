@@ -202,13 +202,13 @@ window.BENITO_CONOCIMIENTO = [
       flow: 'pase'
     },
     {
-      id: 'inscripcion', priority: 12,
-      phrases: ['como inscribirse','inscribir a mi hijo','inscripcion a la escuela','quiero anotarme','que papeles llevo para inscribirme'],
-      keywords: ['inscripcion','inscribir','anotar','matricula','ingreso'],
-      synonyms: ['anotar a mi hijo','anotar a mi hija','quiero inscribirme','matricular a mi hijo','matricular a mi hija','ingresar a primer año'],
-      title: 'Inscripción escolar',
-      html: 'La inscripción se gestiona mediante <strong>Secretaría o Administración</strong>. Benito no publica una lista cerrada de requisitos porque puede variar según el año y la situación del estudiante. Consultá directamente para recibir la información vigente.',
-      actions: [['Escribir a Secretaría','mailto:secretaria31benitojuarez@gmail.com'],['Ver contacto','../contacto.html']]
+      id: 'inscripcion', priority: 22,
+      phrases: ['como inscribirse','inscribir a mi hijo','inscripcion a la escuela','inscripcion a primer año 2027','cuando comienza la inscripcion a primer año 2027','que documentacion hay que presentar','donde se realiza la inscripcion','cual es el horario','donde descargo los formularios','quiero anotarme','que papeles llevo para inscribirme'],
+      keywords: ['inscripcion','inscribir','anotar','matricula','ingreso','2027','documentacion','formularios','vacantes'],
+      synonyms: ['anotar a mi hijo','anotar a mi hija','quiero inscribirme','matricular a mi hijo','matricular a mi hija','ingresar a primer año','ficha de inscripcion 2027','ficha unica de aptitud fisica'],
+      title: 'Inscripción a 1.º Año — Ciclo Lectivo 2027',
+      html: 'La inscripción a <strong>1.º Año para el ciclo lectivo 2027</strong> comienza el <strong>1 de octubre</strong> y continúa <strong>hasta agotar vacantes</strong>. Se realiza de <strong>8:00 a 12:00 h</strong> en la <strong>Secretaría de la institución</strong>.<br><br><strong>Documentación a presentar:</strong><ul><li>Ficha de inscripción y de salud 2027 (Educación Física).</li><li>Foto 4 × 4.</li><li>Fotocopia del DNI y CUIL del alumno.</li><li>Fotocopia del DNI y CUIL del tutor.</li><li>Fotocopia de partida de nacimiento actualizada.</li><li>Constancia de 6.º grado de primaria (alumno regular).</li><li>Certificado de vacunación completa.</li><li>Certificado de grupo sanguíneo.</li><li>Certificado de salud (Educación Física).</li><li>Certificado bucodental.</li><li>Carpeta de 3 solapas, preferentemente marrón.</li></ul>El flyer publicado incluye un <strong>código QR</strong> para descargar la Ficha de Inscripción 2027 y la Ficha Única de Aptitud Física (CGE).',
+      actions: [['Ver inscripción y QR','../vida-escolar.html#inscripcion-2027'],['Ver novedades','../index.html#inscripcion-primer-ano-2027']]
     },
     {
       id: 'equivalencias', priority: 14,
@@ -535,15 +535,6 @@ window.BENITO_CONOCIMIENTO = [
       actions: [['Ver fechas completas','../vida-escolar.html#comunicaciones-institucionales']]
     },
     {
-      id: 'novedades-recientes', priority: 21,
-      phrases: ['que novedades recientes tiene la escuela','cuales son las novedades destacadas','que hay de nuevo en el portal'],
-      keywords: ['novedades','recientes','destacadas'],
-      synonyms: ['ultimas novedades','novedades actuales','novedades de la escuela'],
-      title: 'Novedades destacadas',
-      html: 'Las novedades destacadas actuales son <strong>Axel Omar Castro — Alumno Solidario 2026</strong>, <strong>Leonardo Salas — Reconocimiento al Mérito</strong>, la distinción de la escuela en el certamen <strong>“Me Activo, Me Cuido, Nos Cuidamos”</strong> y el acceso al <strong>Repositorio de actividades del Aula Digital</strong>. El espacio “Huellas de la Benito 2026” continúa disponible en su sección institucional, pero ya no forma parte de las novedades destacadas.',
-      actions: [['Ver novedades','../index.html#novedades-destacadas']]
-    },
-    {
       id: 'alumno-solidario', priority: 17,
       phrases: ['alumno solidario 2026','quien es el alumno solidario','quien salio alumno solidario','donde puedo ver el reconocimiento de axel'],
       keywords: ['axel','castro','solidario'],
@@ -595,7 +586,7 @@ window.BENITO_CONOCIMIENTO = [
     },
     {
       id: 'vida-escolar', priority: 12,
-      phrases: ['cuadro de honor','quiero ver el cuadro de honor','alumno solidario','vida escolar','que reconocimientos recientes tiene la escuela','que reconocimientos figuran actualmente en el portal'],
+      phrases: ['cuadro de honor','quiero ver el cuadro de honor','alumno solidario','vida escolar','que reconocimientos recientes tiene la escuela'],
       keywords: ['honor','solidario','reconocimiento'],
       synonyms: ['quien salio alumno solidario','reconocimientos de estudiantes'],
       title: 'Vida Escolar y reconocimientos',
@@ -608,7 +599,7 @@ window.BENITO_CONOCIMIENTO = [
       keywords: ['comunicaciones','comunicacion','comunicado','novedad'],
       synonyms: ['avisos nuevos','novedades de la escuela','ultimo aviso','ultimo comunicado'],
       title: 'Comunicaciones institucionales',
-      html: 'Las comunicaciones vigentes incluyen el cronograma del segundo trimestre, el acompañamiento psicopedagógico, recursos de orientación en salud mental, el protocolo de actuación ante conflictos en el aula, las fechas importantes del <strong>24 de agosto al 4 de septiembre</strong> y los avisos de Secretaría para el personal docente.',
+      html: 'La comunicación prioritaria vigente es la <strong>Inscripción a 1.º Año — Ciclo Lectivo 2027</strong>, desde el <strong>1 de octubre</strong> y hasta agotar vacantes, de <strong>8:00 a 12:00 h</strong> en Secretaría. El Portal también conserva el acompañamiento psicopedagógico, recursos de orientación en salud mental, el protocolo de actuación ante conflictos en el aula y los avisos institucionales publicados.',
       actions: [['Ver comunicaciones institucionales','../vida-escolar.html#comunicaciones-institucionales']]
     },
     {
