@@ -531,8 +531,8 @@ window.BENITO_CONOCIMIENTO = [
       keywords: ['calendario','fecha','fechas','feriado','jornada','evento','receso','vacaciones'],
       synonyms: ['que hay esta semana','proxima fecha','que actividad hay esta semana'],
       title: 'Calendario y fechas institucionales',
-      html: 'El calendario publicado destaca el período del <strong>24 de agosto al 4 de septiembre de 2026</strong>, con integración de saberes, finalización e inicio de trimestres, comisión evaluadora y articulación con escuelas primarias de la zona. Para consultar el detalle, abrí la comunicación institucional.',
-      actions: [['Ver fechas completas','../vida-escolar.html#comunicaciones-institucionales']]
+      html: 'La fecha prioritaria publicada es el inicio de la <strong>Inscripción a 1.º Año para el ciclo lectivo 2027</strong>: comienza el <strong>1 de octubre</strong> y continúa hasta agotar vacantes. La atención es de <strong>8:00 a 12:00 h</strong> en Secretaría.',
+      actions: [['Ver inscripción y QR','../vida-escolar.html#inscripcion-2027']]
     },
     {
       id: 'alumno-solidario', priority: 17,
