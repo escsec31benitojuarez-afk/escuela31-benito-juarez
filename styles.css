@@ -1771,68 +1771,175 @@ p,li,.section-intro{
   }
 }
 
-/* Reconocimientos: misma escala y disposición que el Cuadro de Honor. */
-.featured-news-grid{
-  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
-}
+/* Reconocimientos destacados: piezas completas de Axel Omar Castro y Leonardo Salas */
 .recognition-news-card{
-  grid-column:auto;
-  display:flex;
-  flex-direction:column;
-  align-items:stretch;
-  gap:0;
-  padding:18px !important;
-  text-align:center;
+  grid-column:1/-1;
+  display:grid;
+  grid-template-columns:minmax(240px,.72fr) minmax(0,1.28fr);
+  gap:26px;
+  align-items:center;
 }
 .recognition-news-flyer{display:block}
 .recognition-news-flyer img{
   display:block;
   width:100%;
-  height:420px;
-  max-height:52vw;
+  max-height:620px;
   object-fit:contain;
   border-radius:18px;
-  margin-bottom:16px;
-  background:#f8fbf9;
+  background:#063d24;
 }
-.recognition-news-card > div{
+.recognition-news-card h3{font-size:clamp(1.45rem,2.5vw,2rem)}
+.recognition-current-flyer{
+  display:block;
+  width:min(100%,760px);
+  margin:22px auto 0;
+}
+.recognition-current-flyer img{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:900px;
+  object-fit:contain;
+  border-radius:20px;
+  background:#063d24;
+  box-shadow:0 12px 28px rgba(0,0,0,.12);
+}
+@media(max-width:900px){
+  .recognition-news-card{grid-template-columns:1fr}
+  .recognition-news-flyer img{height:auto;max-height:none}
+}
+
+/* ===== AJUSTE INTEGRAL: NOVEDADES, RECONOCIMIENTOS Y COMUNICACIONES ===== */
+#novedades-destacadas .balanced-news-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:22px;
+  align-items:stretch;
+}
+#novedades-destacadas .balanced-news-card{
+  grid-column:auto!important;
+  display:flex!important;
+  flex-direction:column!important;
+  min-width:0;
+  height:100%;
+  padding:0;
+  overflow:hidden;
+  background:#fff;
+  border:1px solid rgba(11,90,53,.16);
+  box-shadow:0 10px 24px rgba(0,0,0,.06);
+}
+.accent-green{border-top:6px solid var(--verde)!important}
+.accent-red{border-top:6px solid var(--rojo)!important}
+.accent-gold{border-top:6px solid var(--amarillo)!important}
+#novedades-destacadas .news-visual-link{
+  display:block;
+  height:clamp(320px,36vw,440px);
+  padding:12px;
+  background:#f3f6f4;
+}
+#novedades-destacadas .news-visual-link img{
+  display:block;
+  width:100%;
+  height:100%;
+  padding:0;
+  object-fit:contain;
+  object-position:center;
+  border:0;
+  background:transparent;
+}
+#novedades-destacadas .news-certamen-visual{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+  color:var(--verde-oscuro);
+  text-align:center;
+  background:linear-gradient(145deg,#eef7f1,#fff9df);
+}
+#novedades-destacadas .news-certamen-visual img{
+  width:min(48%,210px);
+  height:auto;
+  max-height:230px;
+}
+#novedades-destacadas .news-certamen-visual strong{
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:clamp(1.35rem,2.4vw,1.9rem);
+}
+#novedades-destacadas .balanced-news-body{
   display:flex;
   flex:1;
   flex-direction:column;
-  align-items:center;
+  align-items:flex-start;
+  padding:22px;
 }
-.recognition-news-card h3{
-  font-size:1.2rem;
-  margin-bottom:12px;
+#novedades-destacadas .balanced-news-body .btn{margin-top:auto}
+
+#reconocimientos .recognition-showcase-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
 }
-.featured-news-grid .recognition-news-card .btn{
-  align-self:center;
-}
-.recognition-showcase-grid{
-  margin-top:20px;
-}
-.recognition-showcase-card{
+#reconocimientos .recognition-showcase-card{
   display:flex;
   flex-direction:column;
-  align-items:center;
+  min-width:0;
+  overflow:hidden;
+  background:#fff;
+  border:1px solid rgba(11,90,53,.16);
+  border-radius:22px;
+  box-shadow:0 10px 24px rgba(0,0,0,.06);
 }
-.recognition-showcase-card .tag{
-  margin-bottom:14px;
+#reconocimientos .recognition-showcase-card>a:first-child{
+  display:block;
+  height:clamp(360px,44vw,520px);
+  padding:12px;
+  background:#f3f6f4;
 }
-.recognition-showcase-card p{
-  color:#4c5b55;
-  line-height:1.65;
+#reconocimientos .recognition-showcase-card>a:first-child img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center;
+}
+#reconocimientos .recognition-showcase-card>div{
+  display:flex;
+  flex:1;
+  flex-direction:column;
+  align-items:flex-start;
+  padding:20px;
+}
+#reconocimientos .recognition-showcase-card h3{
+  color:var(--verde-oscuro);
+  font-size:1.2rem;
+  line-height:1.35;
   margin-bottom:16px;
 }
-.recognition-showcase-card .btn{
-  margin-top:auto;
+#reconocimientos .recognition-showcase-card .btn{margin-top:auto}
+
+#comunicaciones-institucionales .visual-news-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  align-items:stretch!important;
 }
-@media(max-width:800px){
-  .featured-news-grid{
-    grid-template-columns:1fr !important;
-  }
-  .recognition-news-flyer img{
-    height:auto;
-    max-height:520px;
-  }
+#comunicaciones-institucionales .visual-news-grid>.news-card{
+  grid-column:auto!important;
+  min-width:0;
+  width:100%;
+  height:100%;
+  border:1px solid rgba(11,90,53,.16);
+  border-top:6px solid var(--verde)!important;
+  box-shadow:0 10px 24px rgba(0,0,0,.06);
+}
+#comunicaciones-institucionales .visual-news-grid>.news-card:nth-child(1),
+#comunicaciones-institucionales .visual-news-grid>.news-card:nth-child(5){border-top-color:var(--rojo)!important}
+#comunicaciones-institucionales .visual-news-grid>.news-card:nth-child(2),
+#comunicaciones-institucionales .visual-news-grid>.news-card:nth-child(6){border-top-color:var(--amarillo)!important}
+
+@media(max-width:760px){
+  #novedades-destacadas .balanced-news-grid,
+  #reconocimientos .recognition-showcase-grid,
+  #comunicaciones-institucionales .visual-news-grid{grid-template-columns:1fr!important}
+  #novedades-destacadas .news-visual-link,
+  #reconocimientos .recognition-showcase-card>a:first-child{height:auto;min-height:0;aspect-ratio:4/5}
 }

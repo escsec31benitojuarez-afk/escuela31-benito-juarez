@@ -585,12 +585,21 @@ window.BENITO_CONOCIMIENTO = [
       actions: [['Abrir Multimedia','../multimedia.html']]
     },
     {
+      id: 'novedades-destacadas', priority: 18,
+      phrases: ['novedades destacadas','novedades recientes','que hay en novedades','cuales son las novedades de la escuela'],
+      keywords: ['novedades','destacadas','recientes','actualidad'],
+      synonyms: ['ultimas novedades','que publico la escuela','contenidos destacados'],
+      title: 'Novedades destacadas',
+      html: 'Las Novedades destacadas vigentes se presentan por relevancia: <strong>Inscripción a 1.º Año — Ciclo Lectivo 2027</strong>; distinción de la escuela en el certamen <strong>“Me Activo, Me Cuido, Nos Cuidamos”</strong>; cuadros de honor del <strong>Segundo Trimestre 2026</strong> del Ciclo Básico Común y del Ciclo Orientado; <strong>Axel Omar Castro — Alumno Solidario 2026</strong>; y <strong>Leonardo Salas — Reconocimiento al Mérito</strong>.',
+      actions: [['Ver Novedades','../index.html#novedades-destacadas']]
+    },
+    {
       id: 'vida-escolar', priority: 12,
       phrases: ['cuadro de honor','quiero ver el cuadro de honor','alumno solidario','vida escolar','que reconocimientos recientes tiene la escuela'],
       keywords: ['honor','solidario','reconocimiento'],
       synonyms: ['quien salio alumno solidario','reconocimientos de estudiantes'],
       title: 'Vida Escolar y reconocimientos',
-      html: 'Entre los reconocimientos recientes se encuentran <strong>Axel Omar Castro — Alumno Solidario 2026</strong> y <strong>Leonardo Salas — Reconocimiento al Mérito</strong>. En Vida Escolar también podés consultar los cuadros de honor del Ciclo Básico Común y del Ciclo Orientado en Ciencias Naturales.',
+      html: 'Vida Escolar reúne los reconocimientos vigentes en dos grupos: los cuadros de honor del <strong>Segundo Trimestre 2026</strong> del Ciclo Básico Común y del Ciclo Orientado; y los reconocimientos de <strong>Axel Omar Castro — Alumno Solidario 2026</strong> y <strong>Leonardo Salas — Reconocimiento al Mérito</strong>.',
       actions: [['Abrir Vida Escolar','../vida-escolar.html']]
     },
     {
@@ -599,7 +608,7 @@ window.BENITO_CONOCIMIENTO = [
       keywords: ['comunicaciones','comunicacion','comunicado','novedad'],
       synonyms: ['avisos nuevos','novedades de la escuela','ultimo aviso','ultimo comunicado'],
       title: 'Comunicaciones institucionales',
-      html: 'La comunicación prioritaria vigente es la <strong>Inscripción a 1.º Año — Ciclo Lectivo 2027</strong>, desde el <strong>1 de octubre</strong> y hasta agotar vacantes, de <strong>8:00 a 12:00 h</strong> en Secretaría. El Portal también conserva el acompañamiento psicopedagógico, recursos de orientación en salud mental, el protocolo de actuación ante conflictos en el aula y los avisos institucionales publicados.',
+      html: 'Las Comunicaciones institucionales se ordenan por importancia y vigencia. La primera fila reúne la <strong>Inscripción a 1.º Año — Ciclo Lectivo 2027</strong> —desde el 1 de octubre, de 8:00 a 12:00 h en Secretaría— y el <strong>Cronograma de entrega de planillas del Segundo Trimestre</strong>. También se mantienen el acompañamiento psicopedagógico, la orientación en salud mental, el protocolo ante conflictos y los avisos de Secretaría.',
       actions: [['Ver comunicaciones institucionales','../vida-escolar.html#comunicaciones-institucionales']]
     },
     {

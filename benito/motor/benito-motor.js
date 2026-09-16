@@ -362,6 +362,7 @@
     if (/\bcentro de estudiantes\b/.test(text) || /\bparticipacion estudiantil\b/.test(text)) return 'centro-estudiantes';
     if (/\bleonardo(?: salas)?\b/.test(text) || /\breconocimiento(?: al)? merito\b/.test(text) || /\bque reconocimiento publico la escuela\b/.test(text)) return 'leonardo-salas-merito';
     if (/\balumno solidario\b/.test(text) || /\baxel(?: omar)? castro\b/.test(text)) return 'alumno-solidario';
+    if (/\b(?:novedades destacadas|novedades recientes|que hay en novedades|cuales son las novedades)\b/.test(text)) return 'novedades-destacadas';
     if (/\breconocimientos? recientes?\b/.test(text)) return 'vida-escolar';
     if (/\bcuadro de honor\b/.test(text)) return 'cuadro-honor';
     if (/\b(?:promo|promocion) 2026\b/.test(text) || /\bfuturos egresados\b/.test(text)) return 'promo-2026';
