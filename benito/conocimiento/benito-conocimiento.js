@@ -553,10 +553,10 @@ window.BENITO_CONOCIMIENTO = [
     },
     {
       id: 'cuadro-honor', priority: 17,
-      phrases: ['cuadro de honor','cuadro de honor institucional','estudiantes destacados'],
-      keywords: ['honor','academico','destacados'],
+      phrases: ['cuadro de honor','cuadro de honor institucional','estudiantes destacados','cuadro de honor segundo trimestre','cuadro de honor ciclo basico','cuadro de honor ciclo orientado'],
+      keywords: ['honor','academico','destacados','segundo trimestre','ciclo basico','ciclo orientado'],
       title: 'Cuadro de Honor Institucional',
-      html: 'El Cuadro de Honor reconoce a estudiantes destacados por su desempeño académico durante el <strong>Primer Trimestre de 2026</strong>. El Portal publica los cuadros del Ciclo Básico Común y del Ciclo Orientado en Ciencias Naturales.',
+      html: 'El Cuadro de Honor vigente corresponde al <strong>Segundo Trimestre de 2026</strong>.<br><br><strong>Ciclo Básico Común:</strong> Tadeo López; Rubí del Cielo Mendieta; Juan Ignacio Ragone; Francisco Pérez; Erika Gómez; Keila Cantero; Jazmín Cardozo; Judit Castro; Luna Pereira; Pedro López Romani; Aldana Merentiel; Franco Lautaro Sánchez.<br><br><strong>Ciclo Orientado:</strong> Alan Daniel Aquino; Agustín Barreto; Santiago Nicolás Morier; Agustín Nicolás Dal Molín; Ruth Celene Aguirre; Santiago Ariel Ferrero; Serena Agustina Rojas; Fiorella Guerrero; Milagros Luján Aguiar.',
       actions: [['Ver cuadros de honor','../vida-escolar.html#cuadro-honor']]
     },
     {
